@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Custom Bezier</title>
+</head>
+<body>
+<canvas id="lessonCanvas" width="500" height="500" style="border: 1px solid;" onclick="setupCanvas(event);" onmousemove="drawCurve(event);">
+<p>This example requires a browser that supports the 
+<a href="http://www.w3.org/html/wg/html5/">HTML5</a> 
+canvas feature.</p> </canvas>
+<p><div id="inst">Click where you want to place the starting point of the curve.</div></p>
+<p><div id="coord1"></div><br />
+<div id="coord2"></div><br />
+<div id="coord3"></div><br />
+<div id="coord4"></div></p>
+<input type="button" onclick="reset();" value="Reset"/>
+<script src="../js/bezier3.js"> </script>
+<div id="links">
+<a href="../html/bezier.html">Click here to place all four points manually!</a><br />
+<a href="../html/bezier2.html">Click here to have your mouse act as the end point!</a><br />
+<a href="../html/bezier3.html">Click here to have your mouse act as the control point!</a><br />
+<a href="../html/bezier4.html">Click here to select which control points to place!</a><br />
+</div>
+</body>
+</html>
