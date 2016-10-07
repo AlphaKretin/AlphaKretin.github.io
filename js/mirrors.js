@@ -1,9 +1,7 @@
 var B2state = 0;
 var B2image = "blank";
-document.getElementById("B2").addEventListener("click", updateB2(), false);
-
-function updateB2() { //to be called onclick
-	alert("butts"); //testing when called
+document.getElementById("B2").addEventListener("click", function() { //to be called onclick
+	//alert("butts"); //testing when called
 	B2state++;
 	if (B2state > 2 || B2state < 0) { //keeps state looping around from 0-2
 		B2state = 0;
@@ -16,5 +14,5 @@ function updateB2() { //to be called onclick
 	}
 	document.getElementById("B2").InnerHTML = "<img src=\"../images/mirrors/" + B2image + ".png\" />"; 
 	document.getElementById("links").InnerHTML = B2state;
-}
-	
+}, false);
+
