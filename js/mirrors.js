@@ -15,7 +15,7 @@ document.getElementById("B2").addEventListener("click", function() { //to be cal
 		default: B2image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(B2image); //debug
-	document.getElementById("B2").InnerHTML = "<img src=\"../images/mirrors/" + B2image + ".png\" />";
-	console.log(document.getElementById("B2").InnerHTML); //debug
+	document.getElementById("B2").innerHTML = "<img src=\"../images/mirrors/" + B2image + ".png\" />";
+	console.log(document.getElementById("B2").innerHTML); //debug
 }, false);
 
