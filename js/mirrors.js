@@ -1,3 +1,72 @@
+var isMoving = false;
+var currentCell;
+var destination;
+var tempImage;
+function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
+	isMoving = true;
+	currentCell = startPoint;
+	while (isMoving === true) {
+		switch (direction) {
+			case 0: destination.row = decrementLetter(currentCell.row);  destination.column = currentCell.column; break;
+			case 1: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
+			case 2: destination.row = incrementLetter(currentCell.row); destination.column = currentCell.column; break;
+			case 3: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
+			}
+		tempImage = document.getElementById(destination.row + destination.column).InnerHTML;
+		if (tempImage.indexOf("backslash") != -1) {
+			tempImage = "backslash";
+		} else if (tempImage.indexOf("slash") != -1) {
+			tempImage = "slash";
+		} else if (tempImage.indexOf("hole") != -1) {
+			tempImage = "hole";
+		} else if (tempImage.indexOf("blank") != -1) {
+			tempImage = "blank";
+		}
+		document.getElementById(destination.row + destination.column).InnerHTML = "<img src=\"../images/mirrors/ball.png\" />"
+		switch (tempImage){
+			case "slash": switch (direction) {
+				case 0: direction = 1; break;
+				case 1: direction = 0; break;
+				case 2: direction = 3; break;
+				case 3: direction = 2; break;
+			} break;
+			case "backslash": switch (direction) {
+				case 0: direction = 3; break;
+				case 1: direction = 2; break;
+				case 2: direction = 1; break;
+				case 3: direction = 0; break;
+			} break;
+			case "hole": isMoving = false; break;
+			case "blank": break;
+			default: break;
+		}
+	}
+}
+document.getElementById("G2").addEventListener("click", move(0, {row: g, column: 2}), false);
+
+function incrementLetter(letter) {
+	switch (letter) {
+	case "A": return "B";
+	case "B": return "C";
+	case "C": return "D";
+	case "D": return "E";
+	case "E": return "F";
+	case "F": return "G";
+	}
+}
+
+function decrementLetter(letter) {
+	switch (letter) {
+	case "B": return "A";
+	case "C": return "B";
+	case "D": return "C";
+	case "E": return "D";
+	case "F": return "E";
+	case "G": return "F";
+	}
+}
+
+//inner cells. what's OOP? :V
 var B2state = 0;
 var B2image = "blank";
 document.getElementById("B2").addEventListener("click", function() { //to be called onclick
