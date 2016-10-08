@@ -1,6 +1,7 @@
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
 	var isMoving = false;
 	var currentCell = {row: "B", column: 2};
+	var previousCell = {row: "B", column: 2};
 	var destination = {row: "B", column: 3}; 
 	var tempImage = "butts";
 	var timesLooped = 0;
@@ -20,7 +21,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 			case 3: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
 			}
 		if (timesLooped > 1) {
-			document.getElementById(currentCell.row + currentCell.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + tempImage + ".png\" />";
+			document.getElementById(previousCell.row + previousCell.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + tempImage + ".png\" />";
 		}
 		tempImage = document.getElementById(destination.row + destination.column.toString()).innerHTML;
 		if (tempImage.indexOf("backslash") != -1) {
@@ -50,6 +51,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 			case "blank": break;
 			default: break;
 		}
+		previousCell = currentCell;
 		currentCell = destination;
 	}
 }
