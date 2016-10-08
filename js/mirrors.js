@@ -2,11 +2,17 @@ var isMoving = false;
 var currentCell = {row: "B", column: 2};
 var destination = {row: "B", column: 3}; 
 var tempImage = "butts";
+var timesLooped = 0;
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
 	console.log("butts");
 	isMoving = true;
 	currentCell = startPoint;
 	while (isMoving === true) {
+		var timesLooped++;
+		if (timesLooped > 100) {
+			alert("loop probably infinite, wuh woh");
+			isMoving = false;
+		}
 		switch (direction) {
 			case 0: destination.row = decrementLetter(currentCell.row);  destination.column = currentCell.column; break;
 			case 1: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
