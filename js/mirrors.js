@@ -1,9 +1,9 @@
-var isMoving = false;
-var currentCell = {row: "B", column: 2};
-var destination = {row: "B", column: 3}; 
-var tempImage = "butts";
-var timesLooped = 0;
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
+	var isMoving = false;
+	var currentCell = {row: "B", column: 2};
+	var destination = {row: "B", column: 3}; 
+	var tempImage = "butts";
+	var timesLooped = 0;
 	console.log("butts");
 	isMoving = true;
 	currentCell = startPoint;
@@ -19,7 +19,9 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 			case 2: destination.row = incrementLetter(currentCell.row); destination.column = currentCell.column; break;
 			case 3: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
 			}
-		document.getElementById(currentCell.row + currentCell.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + tempImage + ".png\" />";
+		if (timesLooped > 0) {
+			document.getElementById(currentCell.row + currentCell.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + tempImage + ".png\" />";
+		}
 		tempImage = document.getElementById(destination.row + destination.column.toString()).innerHTML;
 		if (tempImage.indexOf("backslash") != -1) {
 			tempImage = "backslash";
