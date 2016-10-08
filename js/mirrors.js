@@ -1,7 +1,16 @@
 var isMoving = false;
-function move(direction) { //direction: 0=up, 1= right, 2=down, 3=left
+var location;
+function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
 	isMoving = true;
+	location = startPoint;
 	while (isMoving == true) {
+		switch (direction) {
+			case 0: location.row = decrementLetter(location.row); break;
+			case 1: location.column++; break;
+			case 2: location.row = incrementLetter(location.row); break;
+			case 3: breaklocation.column--; break;
+			}
+		}
 		//TODO implement actual movement
 		//TODO implement collision
 		switch (colliderState){
@@ -21,6 +30,28 @@ function move(direction) { //direction: 0=up, 1= right, 2=down, 3=left
 			case "blank": break;
 			default: break;
 		}
+	}
+}
+
+function incrementLetter(letter) {
+	switch (letter) {
+	case "A": return "B";
+	case "B": return "C";
+	case "C": return "D";
+	case "D": return "E";
+	case "E": return "F";
+	case "F": return "G";
+	}
+}
+
+function decrementLetter(letter) {
+	switch (letter) {
+	case "B": return "A";
+	case "C": return "B";
+	case "D": return "C";
+	case "E": return "D";
+	case "F": return "E";
+	case "G": return "F";
 	}
 }
 
