@@ -3,14 +3,13 @@ var location;
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
 	isMoving = true;
 	location = startPoint;
-	while (isMoving == true) {
+	while (isMoving === true) {
 		switch (direction) {
 			case 0: location.row = decrementLetter(location.row); break;
 			case 1: location.column++; break;
 			case 2: location.row = incrementLetter(location.row); break;
-			case 3: breaklocation.column--; break;
+			case 3: location.column--; break;
 			}
-		}
 		//TODO implement actual movement
 		//TODO implement collision
 		switch (colliderState){
@@ -26,7 +25,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 				case 2: direction = 1; break;
 				case 3: direction = 0; break;
 			} break;
-			case "hole": isMoving = false;
+			case "hole": isMoving = false; break;
 			case "blank": break;
 			default: break;
 		}
