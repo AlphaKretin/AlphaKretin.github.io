@@ -13,7 +13,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 			case 2: destination.row = incrementLetter(currentCell.row); destination.column = currentCell.column; break;
 			case 3: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
 			}
-		tempImage = document.getElementById(destination.row + destination.column).InnerHTML;
+		tempImage = document.getElementById(destination.row + destination.column.toString()).InnerHTML;
 		if (tempImage.indexOf("backslash") != -1) {
 			tempImage = "backslash";
 		} else if (tempImage.indexOf("slash") != -1) {
@@ -23,7 +23,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 		} else if (tempImage.indexOf("blank") != -1) {
 			tempImage = "blank";
 		}
-		document.getElementById(destination.row + destination.column).InnerHTML = "<img src=\"../images/mirrors/ball.png\" />";
+		document.getElementById(destination.row + destination.column.toString()).InnerHTML = "<img src=\"../images/mirrors/ball.png\" />";
 		switch (tempImage){
 			case "slash": switch (direction) {
 				case 0: direction = 1; break;
