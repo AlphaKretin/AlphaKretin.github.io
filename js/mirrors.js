@@ -1,7 +1,7 @@
 var isMoving = false;
-var currentCell;
-var destination;
-var tempImage;
+var currentCell = {row: "B", column: 2};
+var destination = {row: "B", column: 3}; 
+var tempImage = "butts";
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
 	console.log("butts");
 	isMoving = true;
