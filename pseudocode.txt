@@ -1,0 +1,20 @@
+when hole clicked, set ball's direction to appropriate value (up if on bottom row, left if on right side, etc.) and start movement loop
+while moving
+	move one cell in given direction
+	check collision
+	switch what hit
+		slash: 
+		switch direction
+			up: set direction to right
+			right: set to up
+			left: set to down
+			down: set to left
+		backslash:
+		switch direction
+			up: set to left
+			left: set to up
+			right: set to down
+			down: set to right
+		hole: stop moving
+		blank/default: don't change direction
+	loop
