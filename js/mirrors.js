@@ -18,7 +18,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 			case 0: destination.row = decrementLetter(currentCell.row);  destination.column = currentCell.column; break;
 			case 1: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
 			case 2: destination.row = incrementLetter(currentCell.row); destination.column = currentCell.column; break;
-			case 3: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
+			case 3: destination.column = currentCell.column - 1; destination.row = currentCell.row; break;
 			}
 		tempImage = document.getElementById(destination.row + destination.column.toString()).innerHTML;
 		if (tempImage.indexOf("backstroke") != -1) {
