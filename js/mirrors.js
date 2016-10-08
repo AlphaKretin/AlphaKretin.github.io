@@ -1,3 +1,30 @@
+var isMoving = false;
+function move(direction) { //direction: 0=up, 1= right, 2=down, 3=left
+	isMoving = true;
+	while (isMoving == true) {
+		//TODO implement actual movement
+		//TODO implement collision
+		switch (colliderState){
+			case "slash": switch (direction) {
+				case 0: direction = 1; break;
+				case 1: direction = 0; break;
+				case 2: direction = 3; break;
+				case 3: direction = 2; break;
+			} break;
+			case "backslash": switch (direction) {
+				case 0: direction = 3; break;
+				case 1: direction = 2; break;
+				case 2: direction = 1; break;
+				case 3: direction = 0; break;
+			} break;
+			case "hole": isMoving = false;
+			case "blank": break;
+			default: break;
+		}
+	}
+}
+
+//inner cells. what's OOP? :V
 var B2state = 0;
 var B2image = "blank";
 document.getElementById("B2").addEventListener("click", function() { //to be called onclick
