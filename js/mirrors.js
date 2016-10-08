@@ -20,7 +20,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 			case 2: destination.row = incrementLetter(currentCell.row); destination.column = currentCell.column; break;
 			case 3: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
 			}
-		if (timesLooped > 1) {
+		if (timesLooped > 2) {
 			document.getElementById(previousCell.row + previousCell.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + tempImage + ".png\" />";
 		}
 		tempImage = document.getElementById(destination.row + destination.column.toString()).innerHTML;
