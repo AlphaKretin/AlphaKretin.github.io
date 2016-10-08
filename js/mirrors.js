@@ -460,27 +460,6 @@ document.getElementById("F3").addEventListener("click", function() { //to be cal
 	console.log(document.getElementById("F3").innerHTML); //debug
 }, false);
 
-var F3state = 0;
-var F3image = "blank";
-document.getElementById("F3").addEventListener("click", function() { //to be called onclick
-	console.log(F3state); //debug
-	++F3state;
-	console.log(F3state); //debug
-	if (F3state > 2 || F3state < 0) { //keeps state looping around from 0-2
-		F3state = 0;
-	}
-	console.log(F3state); //debug
-	switch (F3state) {
-		case 0: F3image = "blank"; break;
-		case 1: F3image = "slash"; break;
-		case 2: F3image = "backslash"; break;
-		default: F3image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
-	}
-	console.log(F3image); //debug
-	document.getElementById("F3").innerHTML = "<img src=\"../images/mirrors/" + F3image + ".png\" />";
-	console.log(document.getElementById("F3").innerHTML); //debug
-}, false);
-
 var F4state = 0;
 var F4image = "blank";
 document.getElementById("F4").addEventListener("click", function() { //to be called onclick
