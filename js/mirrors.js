@@ -21,8 +21,8 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 			case 3: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
 			}
 		tempImage = document.getElementById(destination.row + destination.column.toString()).innerHTML;
-		if (tempImage.indexOf("backslash") != -1) {
-			tempImage = "backslash";
+		if (tempImage.indexOf("backstroke") != -1) {
+			tempImage = "backstroke";
 		} else if (tempImage.indexOf("slash") != -1) {
 			tempImage = "slash";
 		} else if (tempImage.indexOf("hole") != -1) {
@@ -38,7 +38,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 				case 2: direction = 3; break;
 				case 3: direction = 2; break;
 			} break;
-			case "backslash": switch (direction) {
+			case "backstroke": switch (direction) {
 				case 0: direction = 3; break;
 				case 1: direction = 2; break;
 				case 2: direction = 1; break;
@@ -90,7 +90,7 @@ document.getElementById("B2").addEventListener("click", function() { //to be cal
 	switch (B2state) {
 		case 0: B2image = "blank"; break;
 		case 1: B2image = "slash"; break;
-		case 2: B2image = "backslash"; break;
+		case 2: B2image = "backstroke"; break;
 		default: B2image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(B2image); //debug
@@ -111,7 +111,7 @@ document.getElementById("B3").addEventListener("click", function() { //to be cal
 	switch (B3state) {
 		case 0: B3image = "blank"; break;
 		case 1: B3image = "slash"; break;
-		case 2: B3image = "backslash"; break;
+		case 2: B3image = "backstroke"; break;
 		default: B3image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(B3image); //debug
@@ -132,7 +132,7 @@ document.getElementById("B4").addEventListener("click", function() { //to be cal
 	switch (B4state) {
 		case 0: B4image = "blank"; break;
 		case 1: B4image = "slash"; break;
-		case 2: B4image = "backslash"; break;
+		case 2: B4image = "backstroke"; break;
 		default: B4image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(B4image); //debug
@@ -153,7 +153,7 @@ document.getElementById("B5").addEventListener("click", function() { //to be cal
 	switch (B5state) {
 		case 0: B5image = "blank"; break;
 		case 1: B5image = "slash"; break;
-		case 2: B5image = "backslash"; break;
+		case 2: B5image = "backstroke"; break;
 		default: B5image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(B5image); //debug
@@ -174,7 +174,7 @@ document.getElementById("B6").addEventListener("click", function() { //to be cal
 	switch (B6state) {
 		case 0: B6image = "blank"; break;
 		case 1: B6image = "slash"; break;
-		case 2: B6image = "backslash"; break;
+		case 2: B6image = "backstroke"; break;
 		default: B6image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(B6image); //debug
@@ -195,7 +195,7 @@ document.getElementById("C2").addEventListener("click", function() { //to be cal
 	switch (C2state) {
 		case 0: C2image = "blank"; break;
 		case 1: C2image = "slash"; break;
-		case 2: C2image = "backslash"; break;
+		case 2: C2image = "backstroke"; break;
 		default: C2image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(C2image); //debug
@@ -216,7 +216,7 @@ document.getElementById("C3").addEventListener("click", function() { //to be cal
 	switch (C3state) {
 		case 0: C3image = "blank"; break;
 		case 1: C3image = "slash"; break;
-		case 2: C3image = "backslash"; break;
+		case 2: C3image = "backstroke"; break;
 		default: C3image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(C3image); //debug
@@ -237,7 +237,7 @@ document.getElementById("C4").addEventListener("click", function() { //to be cal
 	switch (C4state) {
 		case 0: C4image = "blank"; break;
 		case 1: C4image = "slash"; break;
-		case 2: C4image = "backslash"; break;
+		case 2: C4image = "backstroke"; break;
 		default: C4image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(C4image); //debug
@@ -258,7 +258,7 @@ document.getElementById("C5").addEventListener("click", function() { //to be cal
 	switch (C5state) {
 		case 0: C5image = "blank"; break;
 		case 1: C5image = "slash"; break;
-		case 2: C5image = "backslash"; break;
+		case 2: C5image = "backstroke"; break;
 		default: C5image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(C5image); //debug
@@ -279,7 +279,7 @@ document.getElementById("C6").addEventListener("click", function() { //to be cal
 	switch (C6state) {
 		case 0: C6image = "blank"; break;
 		case 1: C6image = "slash"; break;
-		case 2: C6image = "backslash"; break;
+		case 2: C6image = "backstroke"; break;
 		default: C6image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(C6image); //debug
@@ -300,7 +300,7 @@ document.getElementById("D2").addEventListener("click", function() { //to be cal
 	switch (D2state) {
 		case 0: D2image = "blank"; break;
 		case 1: D2image = "slash"; break;
-		case 2: D2image = "backslash"; break;
+		case 2: D2image = "backstroke"; break;
 		default: D2image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(D2image); //debug
@@ -321,7 +321,7 @@ document.getElementById("D3").addEventListener("click", function() { //to be cal
 	switch (D3state) {
 		case 0: D3image = "blank"; break;
 		case 1: D3image = "slash"; break;
-		case 2: D3image = "backslash"; break;
+		case 2: D3image = "backstroke"; break;
 		default: D3image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(D3image); //debug
@@ -342,7 +342,7 @@ document.getElementById("D4").addEventListener("click", function() { //to be cal
 	switch (D4state) {
 		case 0: D4image = "blank"; break;
 		case 1: D4image = "slash"; break;
-		case 2: D4image = "backslash"; break;
+		case 2: D4image = "backstroke"; break;
 		default: D4image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(D4image); //debug
@@ -363,7 +363,7 @@ document.getElementById("D5").addEventListener("click", function() { //to be cal
 	switch (D5state) {
 		case 0: D5image = "blank"; break;
 		case 1: D5image = "slash"; break;
-		case 2: D5image = "backslash"; break;
+		case 2: D5image = "backstroke"; break;
 		default: D5image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(D5image); //debug
@@ -384,7 +384,7 @@ document.getElementById("D6").addEventListener("click", function() { //to be cal
 	switch (D6state) {
 		case 0: D6image = "blank"; break;
 		case 1: D6image = "slash"; break;
-		case 2: D6image = "backslash"; break;
+		case 2: D6image = "backstroke"; break;
 		default: D6image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(D6image); //debug
@@ -405,7 +405,7 @@ document.getElementById("E2").addEventListener("click", function() { //to be cal
 	switch (E2state) {
 		case 0: E2image = "blank"; break;
 		case 1: E2image = "slash"; break;
-		case 2: E2image = "backslash"; break;
+		case 2: E2image = "backstroke"; break;
 		default: E2image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(E2image); //debug
@@ -426,7 +426,7 @@ document.getElementById("E3").addEventListener("click", function() { //to be cal
 	switch (E3state) {
 		case 0: E3image = "blank"; break;
 		case 1: E3image = "slash"; break;
-		case 2: E3image = "backslash"; break;
+		case 2: E3image = "backstroke"; break;
 		default: E3image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(E3image); //debug
@@ -447,7 +447,7 @@ document.getElementById("E4").addEventListener("click", function() { //to be cal
 	switch (E4state) {
 		case 0: E4image = "blank"; break;
 		case 1: E4image = "slash"; break;
-		case 2: E4image = "backslash"; break;
+		case 2: E4image = "backstroke"; break;
 		default: E4image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(E4image); //debug
@@ -468,7 +468,7 @@ document.getElementById("E5").addEventListener("click", function() { //to be cal
 	switch (E5state) {
 		case 0: E5image = "blank"; break;
 		case 1: E5image = "slash"; break;
-		case 2: E5image = "backslash"; break;
+		case 2: E5image = "backstroke"; break;
 		default: E5image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(E5image); //debug
@@ -489,7 +489,7 @@ document.getElementById("E6").addEventListener("click", function() { //to be cal
 	switch (E6state) {
 		case 0: E6image = "blank"; break;
 		case 1: E6image = "slash"; break;
-		case 2: E6image = "backslash"; break;
+		case 2: E6image = "backstroke"; break;
 		default: E6image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(E6image); //debug
@@ -510,7 +510,7 @@ document.getElementById("F2").addEventListener("click", function() { //to be cal
 	switch (F2state) {
 		case 0: F2image = "blank"; break;
 		case 1: F2image = "slash"; break;
-		case 2: F2image = "backslash"; break;
+		case 2: F2image = "backstroke"; break;
 		default: F2image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(F2image); //debug
@@ -531,7 +531,7 @@ document.getElementById("F3").addEventListener("click", function() { //to be cal
 	switch (F3state) {
 		case 0: F3image = "blank"; break;
 		case 1: F3image = "slash"; break;
-		case 2: F3image = "backslash"; break;
+		case 2: F3image = "backstroke"; break;
 		default: F3image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(F3image); //debug
@@ -552,7 +552,7 @@ document.getElementById("F4").addEventListener("click", function() { //to be cal
 	switch (F4state) {
 		case 0: F4image = "blank"; break;
 		case 1: F4image = "slash"; break;
-		case 2: F4image = "backslash"; break;
+		case 2: F4image = "backstroke"; break;
 		default: F4image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(F4image); //debug
@@ -573,7 +573,7 @@ document.getElementById("F5").addEventListener("click", function() { //to be cal
 	switch (F5state) {
 		case 0: F5image = "blank"; break;
 		case 1: F5image = "slash"; break;
-		case 2: F5image = "backslash"; break;
+		case 2: F5image = "backstroke"; break;
 		default: F5image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(F5image); //debug
@@ -594,7 +594,7 @@ document.getElementById("F6").addEventListener("click", function() { //to be cal
 	switch (F6state) {
 		case 0: F6image = "blank"; break;
 		case 1: F6image = "slash"; break;
-		case 2: F6image = "backslash"; break;
+		case 2: F6image = "backstroke"; break;
 		default: F6image = "blank"; alert("state out of bounds"); break; //should never happen, hence why i have it tell me if so
 	}
 	console.log(F6image); //debug
