@@ -22,7 +22,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 		} else if (tempImage.indexOf("blank") != -1) {
 			tempImage = "blank";
 		}
-		document.getElementById(destination.row + destination.column).InnerHTML = "<img src=\"../images/mirrors/ball.png\" />"
+		document.getElementById(destination.row + destination.column).InnerHTML = "<img src=\"../images/mirrors/ball.png\" />";
 		switch (tempImage){
 			case "slash": switch (direction) {
 				case 0: direction = 1; break;
@@ -42,7 +42,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 		}
 	}
 }
-document.getElementById("G2").addEventListener("click", move(0, {row: g, column: 2}), false);
+document.getElementById("G2").addEventListener("click", move(0, {row: "G", column: 2}), false);
 
 function incrementLetter(letter) {
 	switch (letter) {
