@@ -9,7 +9,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 	isMoving = true;
 	currentCell = startPoint;
 	while (isMoving === true) {
-		setTimeout(function() {timesLooped++;}, 1000);
+		setTimeout(function() {timesLooped++;}, 100);
 		if (timesLooped > 100) {
 			alert("loop probably infinite, wuh woh");
 			isMoving = false;
