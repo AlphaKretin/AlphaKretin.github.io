@@ -1,18 +1,29 @@
 var isMoving = false;
-var location;
+var currentCell;
+var destination;
+var tempImage;
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
 	isMoving = true;
-	location = startPoint;
+	currentCell = startPoint;
 	while (isMoving === true) {
 		switch (direction) {
-			case 0: location.row = decrementLetter(location.row); break;
-			case 1: location.column++; break;
-			case 2: location.row = incrementLetter(location.row); break;
-			case 3: location.column--; break;
+			case 0: destination.row = decrementLetter(currentCell.row);  destination.column = currentCell.column; break;
+			case 1: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
+			case 2: destination.row = incrementLetter(currentCell.row); destination.column = currentCell.column; break;
+			case 3: destination.column = currentCell.column + 1; destination.row = currentCell.row; break;
 			}
-		//TODO implement actual movement
-		//TODO implement collision
-		switch (colliderState){
+		tempImage = document.getElementById(destination.row + destination.column).InnerHTML;
+		if (tempImage.indexOf("backslash") != -1) {
+			tempImage = "backslash";
+		} else if (tempImage.indexOf("slash") != -1) {
+			tempImage = "slash";
+		} else if (tempImage.indexOf("hole") != -1) {
+			tempImage = "hole";
+		} else if (tempImage.indexOf("blank") != -1) {
+			tempImage = "blank";
+		}
+		document.getElementById(destination.row + destination.column).InnerHTML = "<img src=\"../images/mirrors/ball.png\" />"
+		switch (tempImage){
 			case "slash": switch (direction) {
 				case 0: direction = 1; break;
 				case 1: direction = 0; break;
@@ -31,6 +42,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 		}
 	}
 }
+document.getElementById("G2").addEventListener("click", move(0, {row: g, column: 2}), false);
 
 function incrementLetter(letter) {
 	switch (letter) {
