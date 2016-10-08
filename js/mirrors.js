@@ -8,7 +8,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 	isMoving = true;
 	currentCell = startPoint;
 	while (isMoving === true) {
-		var timesLooped++;
+		timesLooped++;
 		if (timesLooped > 100) {
 			alert("loop probably infinite, wuh woh");
 			isMoving = false;
