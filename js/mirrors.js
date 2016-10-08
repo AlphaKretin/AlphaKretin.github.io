@@ -52,7 +52,27 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 		currentCell = destination;
 	}
 }
+
 document.getElementById("G2").addEventListener("click", function(){ move(0, {row: "G", column: 2});}, false);
+document.getElementById("G3").addEventListener("click", function(){ move(0, {row: "G", column: 3});}, false);
+document.getElementById("G4").addEventListener("click", function(){ move(0, {row: "G", column: 4});}, false);
+document.getElementById("G5").addEventListener("click", function(){ move(0, {row: "G", column: 5});}, false);
+document.getElementById("G6").addEventListener("click", function(){ move(0, {row: "G", column: 6});}, false);
+document.getElementById("B1").addEventListener("click", function(){ move(1, {row: "B", column: 1});}, false);
+document.getElementById("C1").addEventListener("click", function(){ move(1, {row: "C", column: 1});}, false);
+document.getElementById("D1").addEventListener("click", function(){ move(1, {row: "D", column: 1});}, false);
+document.getElementById("E1").addEventListener("click", function(){ move(1, {row: "E", column: 1});}, false);
+document.getElementById("F1").addEventListener("click", function(){ move(1, {row: "F", column: 1});}, false);
+document.getElementById("A2").addEventListener("click", function(){ move(2, {row: "A", column: 2});}, false);
+document.getElementById("A3").addEventListener("click", function(){ move(2, {row: "A", column: 3});}, false);
+document.getElementById("A4").addEventListener("click", function(){ move(2, {row: "A", column: 4});}, false);
+document.getElementById("A5").addEventListener("click", function(){ move(2, {row: "A", column: 5});}, false);
+document.getElementById("A6").addEventListener("click", function(){ move(2, {row: "A", column: 6});}, false);
+document.getElementById("B7").addEventListener("click", function(){ move(3, {row: "B", column: 7});}, false);
+document.getElementById("C7").addEventListener("click", function(){ move(3, {row: "C", column: 7});}, false);
+document.getElementById("D7").addEventListener("click", function(){ move(3, {row: "D", column: 7});}, false);
+document.getElementById("E7").addEventListener("click", function(){ move(3, {row: "E", column: 7});}, false);
+document.getElementById("F7").addEventListener("click", function(){ move(3, {row: "F", column: 7});}, false);
 
 function incrementLetter(letter) {
 	switch (letter) {
