@@ -5,10 +5,16 @@
 <title>Word Game</title> 
 </head>
 <body>
-<div id="randomLetter">
+<div id="randomLetterDiv">
 Random Letter: <span id="randLetterResult"></span><br />
 <input type="button" value="Generate!" onclick="insertLetter()" />
 </div>
 <script src="../js/randomLetter.js"></script>
+<div id="combinatoricsDiv">
+Combinatorics:
+<input type="button" value="Combine!" onclick="combine()" />
+<div id="combinatoricsResultDiv"></div>
+</div>
+<script src="../js/combinatorics.js"></script>
 </body>
 </html>
