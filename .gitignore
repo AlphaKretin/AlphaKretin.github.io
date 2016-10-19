@@ -6,3 +6,4 @@ fefatesplan/images/*
 
 # Allow a few images
 !fefatesplan/images/*.png
+!fefatesplan/images/characters/*.jpg
