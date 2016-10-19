@@ -1,0 +1,80 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><div class="col-sm-6 col-xs-12" ng-class="statsContainer">
+  <div class="stats-window" ng-class="statsStatus">
+    <div class="row">
+      <div ng-if="!baseClass" ng-repeat="class in child.classes" class="col-xs-4 class-set">
+
+        <select ng-model="class" ng-if="child.name == 'Kana' &amp;&amp; class == child.classes[1]" ng-change="changeTalent(class)" class="select-talent" ng-class="versionColors">
+          <option selected="selected" value="Talent">Talent</option>
+          <!-- Monk/Priestess gendered to reflect Kana's classes, so gender-mismatched for Avatar -->
+          <option value="Apothecary">Apothecary</option>
+          <option value="Archer">Archer</option>
+          <option value="Cavalier">Cavalier</option>
+          <option value="Dark Mage">Mage</option>
+          <option value="Diviner">Diviner</option>
+          <option value="Wyvern Rider">Dragon</option>
+          <option value="Fighter">Fighter</option>
+          <option value="Knight">Knight</option>
+          <option value="Spear Fighter">Lancer</option>
+          <option value="Mercenary">Mercenary</option>
+          <option ng-if="!child.gender" title="Gendered for Kana" value="Monk">Monk</option>
+          <option value="Ninja">Ninja</option>
+          <option value="Oni Savage">Oni Savage</option>
+          <option value="Outlaw">Outlaw</option>
+          <option ng-if="child.gender" title="Gendered for Kana" value="Shrine Maiden">Priestess</option>
+          <option value="Samurai">Samurai</option>
+          <option value="Sky Knight">Sky Knight</option>
+          <option value="Troubadour">Troubadour</option>
+        </select>
+
+        <span ng-if="child.name != 'Kana' || (child.name == 'Kana' &amp;&amp; class != child.classes[1])" ng-click="setClass(class)" class="class-option">{{ class }}</span>
+      </div>
+
+      <!-- Base class chosen -->
+      <div ng-if="baseClass">
+        <div class="col-xs-4 class-set">
+          <span ng-click="setClass(baseClass)" class="class-option base-class">{{ baseClass }}</span>
+        </div>
+        <div ng-repeat="class in masterClasses track by $index" class="col-xs-4 class-set">
+          <span ng-click="setClass(class)" class="class-option master-class" ng-style="mainClass(class)">{{ class }}</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div ng-controller="SkillsController" class="row">
+
+      <div class="col-xs-2">
+        <img ng-src="{{ getSkillImage(child.skill.name) }}" alt="{{ child.skill.name }}" data-placement="bottom" data-html="true" data-original-title="
+        &lt;b&gt;{{ child.skill.name }}&lt;/b&gt;&lt;br&gt;{{ child.skill.description }}" class="skill-icon" tooltip="">
+      </div>
+
+      <div ng-repeat="skill in child.skills track by $index" class="col-xs-2">
+
+        <img ng-src="{{ child.skills[$index] &amp;&amp; getSkillImage(child.skills[$index]) || 'images/blankSkill.png' }}" ng-click="newSkill($index, $event, false)" data-placement="bottom" data-html="true" data-original-title="&lt;b&gt;{{ child.skills[$index] }}&lt;/b&gt;&lt;br&gt;{{ skills[child.skills[$index]] }}" class="skill-icon" tooltip="">
+      </div>
+
+    </div>
+    <div class="row">
+
+      <table class="table table-stats">
+        <tbody><tr ng-if="child.name == 'Kana'" tooltip="" data-original-title="Select boon and bane">
+          <td ng-repeat="stat in stats" ng-click="kanaStats(stat)" ng-style="boonAndBane(stat)" class="stats-kana">{{ stat }}</td>
+        </tr>
+        <tr ng-if="child.name != 'Kana'">
+          <td ng-repeat="stat in stats">{{ stat }}</td>
+        </tr>
+        <tr>
+          <td ng-repeat="stat in child.growthRates track by $index">
+            {{ stat }} <span ng-if="$index &gt; 0" ng-style="colorStat(child.maxStats[$index - 1])">({{ child.maxStats[$index - 1] }})</span>
+          </td>
+        </tr>
+      </tbody></table>
+
+    </div>
+  </div>
+  <div class="show-more">
+    <span class="glyphicon" ng-class="glyphicon" ng-click="openStats()"></span>
+  </div>
+</div>
+</body></html>
