@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html ng-app="InheritanceModule">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Gay Inheritance Calculator – Fire Emblem: Fates</title>
+    <link rel="stylesheet" href="vendor/bootstrap.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway|Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="vendor/select2.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+
+
+    <link rel="stylesheet" href="stylesheets/main.css">
+
+    <script src="vendor/angular.js"></script>
+    <script src="vendor/angular-animate.js"></script>
+    <script src="vendor/jquery-1.12.1.min.js"></script>
+    <script src="vendor/bootstrap.js"></script>
+    <script src="vendor/select2.full.min.js"></script>
+
+    <script src="js/data/characters.js"></script>
+    <script src="js/data/avatar.js"></script>
+    <script src="js/data/dads.js"></script>
+    <script src="js/data/moms.js"></script>
+    <script src="js/data/children.js"></script>
+
+    <script src="js/data/classes.js"></script>
+    <script src="js/data/skills.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-controller="InheritanceController" ng-class="versionColors">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid" ng-class="versionColors">
+        <div class="navbar-header">
+          <h2 class="h2 title">Gay Inheritance Calculator</h2>
+        </div>
+
+        <div class="nav navbar-right">
+          <select size="3" ng-model="game" class="select-version">
+            <option ng-repeat="version in versions">{{ version }}</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row row-header">
+        <div class="col-sm-2 col-xs-4">
+          <h3 class="h3">Child</h3>
+        </div>
+        <div class="col-sm-2 col-xs-4">
+          <h3 class="h3">Parent</h3>
+        </div>
+        <div class="col-sm-2 col-xs-4">
+          <h3 class="h3">Parent</h3>
+        </div>
+        <div class="col-sm-6 stats-header">
+          <h3 class="h3" tooltip>Classes, Skills, Stat Growths, Stat Caps</h3>
+        </div>
+      </div>
+
+      <!-- Kana -->
+
+      <div ng-controller="KanaController" ng-init="child = children[0]" class="row row-child">
+
+        <div class="col-sm-2 col-xs-4">
+          <div class="kana-overlay" ng-class="versionColors" ng-click="changeGender()" title="Change gender" tooltip></div>
+          <img ng-src="{{ child.image }}" class="child-image kana-image">
+          <p class="character-name">{{ child.name }}</p>
+        </div>
+
+        <div class="col-sm-2 col-xs-4">
+
+          <img ng-src="{{ child.dad && child.dad.image || 'images/blank.png' }}" class="parent-image" ng-class="dadImage">
+
+          <!-- could do avatar name change here; on change event, loop thru all parents and shift compatibilities, unshift avatar's new name -->
+          <p ng-if="!avatar.gender" class="character-name">{{ child.dad.name }}</p>
+
+          <select ng-model="child.newParent" ng-if="avatar.gender" ng-change="addParent()" class="select-parent" ng-class="versionColors">
+            <option value="">Father</option>
+            <option ng-repeat="c in child.parent.compatibilities | filter: filterKanaParents | orderBy: 'toString()'">{{ c }}</option>
+          </select>
+
+          <img ng-controller="SkillsController" ng-src="{{ child.skillFromDad && getSkillImage(child.skillFromDad) || 'images/blankSkill.png' }}" ng-click="newSkill(6, $event, true, 0)" tooltip data-placement="bottom" data-html="true" data-original-title="<b>{{ child.skillFromDad }}</b><br>{{ skills[child.skillFromDad] }}" ng-show="child.dad" ng-class="skillsStatus" class="skill-icon inherited-skill">
+
+        </div>
+
+        <div class="col-sm-2 col-xs-4">
+
+          <img ng-src="{{ child.mom && child.mom.image || 'images/blank.png' }}" class="parent-image" ng-class="momImage">
+
+          <p ng-if="avatar.gender" class="character-name">{{ child.mom.name }}</p>
+
+          <select ng-model="child.newParent" ng-if="!avatar.gender" ng-change="addParent()" class="select-parent" ng-class="versionColors">
+            <option value="">Mother</option>
+            <option ng-repeat="c in child.parent.compatibilities | filter: filterKanaParents | orderBy: 'toString()'">{{ c }}</option>
+          </select>
+
+          <img ng-controller="SkillsController" ng-src="{{ child.skillFromMom && getSkillImage(child.skillFromMom) || 'images/blankSkill.png' }}" tooltip data-html="true" data-original-title="<b>{{ child.skillFromMom }}</b><br>{{ skills[child.skillFromMom] }}" data-placement="bottom" ng-click="newSkill(6, $event, true, 1)" class="skill-icon inherited-skill" ng-class="skillsStatus" ng-show="child.mom">
+
+        </div>
+
+        <div stats-window></div>
+
+      </div>
+
+      <!-- Shigure -->
+      <div ng-controller="ChildController" ng-init="child = children[1]" class="row row-child">
+
+        <div class="col-sm-2 col-xs-4">
+          <img ng-src="{{ child.image }}" class="child-image">
+          <p class="character-name">{{ child.name }}</p>
+        </div>
+
+        <div class="col-sm-2 col-xs-4">
+
+          <img ng-src="{{ child.dad && child.dad.image || 'images/blank.png' }}" class="parent-image" ng-class="parentImage">
+
+          <select ng-model="child.newParent" ng-change="addParent()" class="select-parent" ng-class="versionColors">
+            <option value="">Father</option>
+            <option ng-repeat="dad in child.mom.compatibilities | filter: filterParents | orderBy: 'toString()' ">{{ dad }}</option>
+          </select>
+
+          <img ng-controller="SkillsController" ng-src="{{ child.skillFromDad && getSkillImage(child.skillFromDad) || 'images/blankSkill.png' }}" tooltip data-original-title="<b>{{ child.skillFromDad }}</b><br>{{ skills[child.skillFromDad] }}" ng-click="newSkill(6, $event, true, 0)" class="skill-icon inherited-skill" ng-class="skillsStatus" ng-show="child.dad">
+
+        </div>
+
+        <div class="col-sm-2 col-xs-4">
+
+          <img ng-src="{{ child.mom.image }}" class="parent-image">
+
+          <p class="character-name">{{ child.mom.name }}</p>
+
+          <img ng-controller="SkillsController" ng-src="{{ child.skillFromMom && getSkillImage(child.skillFromMom) || 'images/blankSkill.png' }}" ng-click="newSkill(7, $event, true, 1)" data-placement="bottom" data-html="true" data-original-title="<b>{{ child.skillFromMom }}</b><br>{{ skills[child.skillFromMom] }}" class="skill-icon inherited-skill" ng-class="skillsStatus" tooltip>
+
+        </div>
+
+        <div stats-window></div>
+
+      </div>
+
+      <div ng-controller="ChildController" ng-repeat="child in children" ng-if="$index > 1" class="row row-child">
+
+        <div class="col-sm-2 col-xs-4">
+          <img ng-src="{{ child.image }}" class="child-image">
+          <p class="character-name">{{ child.name }}</p>
+        </div>
+
+        <div class="col-sm-2 col-xs-4">
+
+          <img ng-src="{{ child.dad.image }}" class="parent-image">
+
+          <p class="character-name">{{ child.dad.name }}</p>
+
+          <img ng-controller="SkillsController" ng-src="{{ child.skillFromDad && getSkillImage(child.skillFromDad) || 'images/blankSkill.png' }}" ng-click="newSkill(6, $event, true, 0)" data-placement="bottom" data-html="true" data-original-title="<b>{{ child.skillFromDad }}</b><br>{{ skills[child.skillFromDad] }}" class="skill-icon inherited-skill" ng-class="skillsStatus" tooltip>
+
+        </div>
+
+        <div class="col-sm-2 col-xs-4">
+
+          <img ng-src="{{ child.mom && child.mom.image || 'images/blank.png' }}" class="parent-image" ng-class="parentImage">
+
+          <select ng-model="child.newParent" ng-change="addParent()" class="select-parent" ng-class="versionColors">
+            <option value="">Mother</option>
+            <option ng-repeat="mom in child.dad.compatibilities | filter: filterParents | orderBy: 'toString()' ">{{ mom }}</option>
+          </select>
+
+          <img ng-controller="SkillsController" ng-src="{{ child.skillFromMom && getSkillImage(child.skillFromMom) || 'images/blankSkill.png' }}" ng-click="newSkill(7, $event, true, 1)" data-placement="bottom" data-html="true" data-original-title="<b>{{ child.skillFromMom }}</b><br>{{ skills[child.skillFromMom] }}" class="skill-icon inherited-skill" ng-class="skillsStatus" ng-show="child.mom" tooltip>
+
+        </div>
+
+        <div stats-window></div>
+
+      </div>
+
+      <div class="row row-export">
+        <a type="button" class="btn btn-default btn-export" ng-click="exportData()">Save</a>
+      </div>
+
+    </div>
+  </body>
+</html>
