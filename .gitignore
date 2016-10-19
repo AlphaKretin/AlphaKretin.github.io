@@ -1,4 +1,3 @@
 *.DS_Store
-fefatesplan/images/*
-!fefatesplan/images/*.png
-!fefatesplan/images/characters/*.jpg
+fefatesplan/images/characters/children/*
+fefatesplan/images/skills/*
