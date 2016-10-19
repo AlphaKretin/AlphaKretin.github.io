@@ -1,8 +1,4 @@
-# Ignore images in fefatesplan
-fefatesplan/images/*
-
-# Ignore DS_Stores
 *.DS_Store
-
-# Allow a few images
+fefatesplan/images/*
 !fefatesplan/images/*.png
+!fefatesplan/images/characters/*.jpg
