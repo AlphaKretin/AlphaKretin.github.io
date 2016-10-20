@@ -80,3 +80,13 @@ function colourAssign() {
 function randomColour() {
 	return '#' + ("000000" + Math.random().toString(16).slice(2, 8).toUpperCase()).slice(-6);
 }
+
+function go(){
+	if (i == 31){
+		i = 0;
+		colourLoop()
+	}
+	else{
+		console.log('running')
+	}
+}
