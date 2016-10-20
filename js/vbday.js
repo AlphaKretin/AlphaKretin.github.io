@@ -29,6 +29,9 @@ document.getElementById("21").style.color = randomColour();
 document.getElementById("0").style.color = randomColour();
 document.getElementById("12").style.color = randomColour();
 document.getElementById("6").style.color = randomColour();
+document.getElementById("go").style.color = randomColour();
+document.getElementById("go").style.backgroundColor = randomColour();
+document.getElementById("go").style.borderColor = randomColour();
 var loops = 31;
 var i = 0;
 function colourLoop(){
@@ -75,6 +78,9 @@ function colourAssign() {
 	document.getElementById("0").style.color = randomColour();
 	document.getElementById("12").style.color = randomColour();
 	document.getElementById("6").style.color = randomColour();
+	document.getElementById("go").style.color = randomColour();
+	document.getElementById("go").style.backgroundColor = randomColour();
+	document.getElementById("go").style.borderColor = randomColour();
 }
 
 function randomColour() {
