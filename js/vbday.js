@@ -1,5 +1,18 @@
-//var going = true;
-//while (going) {
+var loops = 31;
+var i = 0;
+function colourLoop(){
+	setTimeout(function(){
+		colourAssign();
+		i++;
+		console.log("looped " + i);
+		if (i < 31) {
+		colourLoop();
+		}
+	}, 333);
+}
+colourLoop();
+
+function colourAssign() {
 	document.getElementById("container").style.backgroundColor = randomColour();
 	document.getElementById("H").style.color = randomColour();
 	document.getElementById("A").style.color = randomColour();
@@ -31,7 +44,7 @@
 	document.getElementById("0").style.color = randomColour();
 	document.getElementById("12").style.color = randomColour();
 	document.getElementById("6").style.color = randomColour();
-//}
+}
 
 function randomColour() {
     var letters = '0123456789ABCDEF';
