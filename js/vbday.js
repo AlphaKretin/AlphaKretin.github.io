@@ -32,6 +32,34 @@ document.getElementById("6").style.color = randomColour();
 document.getElementById("go").style.color = randomColour();
 document.getElementById("go").style.backgroundColor = randomColour();
 document.getElementById("go").style.borderColor = randomColour();
+document.getElementById("3").style.color = randomColour();
+document.getElementById("01").style.color = randomColour();
+document.getElementById("Y2").style.color = randomColour();
+document.getElementById("E1").style.color = randomColour();
+document.getElementById("A2").style.color = randomColour();
+document.getElementById("R").style.color = randomColour();
+document.getElementById("S").style.color = randomColour();
+document.getElementById("O").style.color = randomColour();
+document.getElementById("F").style.color = randomColour();
+document.getElementById("A3").style.color = randomColour();
+document.getElementById("G").style.color = randomColour();
+document.getElementById("E2").style.color = randomColour();
+document.getElementById("C").style.color = randomColour();
+document.getElementById("O1").style.color = randomColour();
+document.getElementById("N2").style.color = randomColour();
+document.getElementById("G").style.color = randomColour();
+document.getElementById("R1").style.color = randomColour();
+document.getElementById("A4").style.color = randomColour();
+document.getElementById("T2").style.color = randomColour();
+document.getElementById("U").style.color = randomColour();
+document.getElementById("L").style.color = randomColour();
+document.getElementById("A5").style.color = randomColour();
+document.getElementById("T3").style.color = randomColour();
+document.getElementById("I2").style.color = randomColour();
+document.getElementById("O2").style.color = randomColour();
+document.getElementById("N3").style.color = randomColour();
+document.getElementById("S1").style.color = randomColour();
+
 var loops = 31;
 var i = 0;
 function colourLoop(){
@@ -81,6 +109,33 @@ function colourAssign() {
 	document.getElementById("go").style.color = randomColour();
 	document.getElementById("go").style.backgroundColor = randomColour();
 	document.getElementById("go").style.borderColor = randomColour();
+	document.getElementById("3").style.color = randomColour();
+	document.getElementById("01").style.color = randomColour();
+	document.getElementById("Y2").style.color = randomColour();
+	document.getElementById("E1").style.color = randomColour();
+	document.getElementById("A2").style.color = randomColour();
+	document.getElementById("R").style.color = randomColour();
+	document.getElementById("S").style.color = randomColour();
+	document.getElementById("O").style.color = randomColour();
+	document.getElementById("F").style.color = randomColour();
+	document.getElementById("A3").style.color = randomColour();
+	document.getElementById("G").style.color = randomColour();
+	document.getElementById("E2").style.color = randomColour();
+	document.getElementById("C1").style.color = randomColour();
+	document.getElementById("O1").style.color = randomColour();
+	document.getElementById("N2").style.color = randomColour();
+	document.getElementById("G1").style.color = randomColour();
+	document.getElementById("R2").style.color = randomColour();
+	document.getElementById("A4").style.color = randomColour();
+	document.getElementById("T2").style.color = randomColour();
+	document.getElementById("U").style.color = randomColour();
+	document.getElementById("L").style.color = randomColour();
+	document.getElementById("A5").style.color = randomColour();
+	document.getElementById("T3").style.color = randomColour();
+	document.getElementById("I2").style.color = randomColour();
+	document.getElementById("O2").style.color = randomColour();
+	document.getElementById("N3").style.color = randomColour();
+	document.getElementById("S1").style.color = randomColour();
 }
 
 function randomColour() {
@@ -88,7 +143,7 @@ function randomColour() {
 }
 
 function go(){
-	if (i == 31){
+	if (i == loops){
 		i = 0;
 		colourLoop()
 	}
