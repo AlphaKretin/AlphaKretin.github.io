@@ -102,8 +102,8 @@ function submit() { //called onclick of a button
     if (isAWord === true) {
         document.getElementById("results").innerHTML = "You found a word!";
         for (var i = 0; i < wordsFound.length; i++) {
-            if (userWord === words[i]) {
-                isWordNew = false;
+            if (userWord === wordsFound[i]) {
+                isWordNew = false;		
             }
         }
         if (isWordNew) {
