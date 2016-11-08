@@ -17,7 +17,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 			if (isMoving === true) {
 			colourLoop();
 			}
-		}, 333);
+		}, 150);
 	}
 	colourLoop();
 	function colourAssign(){
