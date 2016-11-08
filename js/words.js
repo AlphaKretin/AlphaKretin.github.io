@@ -67,7 +67,7 @@ function randomLetter() {
 function generateStem() { //called onclick of a dedicated button
     console.log("generate stem called");
 	if (!firstStem){
-		document.getElementById("record").innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />;
+		document.getElementById("record").innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />";
 	}
 	firstStem = false;
     var stemGeneratedYet = false;
