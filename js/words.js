@@ -3,6 +3,7 @@ var wordStem;
 var wordsFound = ["blep"];
 var numFound = 0;
 var numFoundStem = 0;
+var firstStem = true;
 
 function randomLetter() {
     console.log("random letter called");
@@ -65,6 +66,10 @@ function randomLetter() {
 
 function generateStem() { //called onclick of a dedicated button
     console.log("generate stem called");
+	if (!firstStem){
+		document.getElementById("record").innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />;
+	}
+	firstStem = false;
     var stemGeneratedYet = false;
     do {
         wordStem = randomLetter().toLowerCase() + randomLetter().toLowerCase();
