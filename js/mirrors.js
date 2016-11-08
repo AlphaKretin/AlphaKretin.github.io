@@ -14,6 +14,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
     };
     var tempImage = "butts";
     var oldImage = "";
+    var olderImage = "";
     var timesLooped = 0;
     console.log("butts");
     isMoving = true;
@@ -106,10 +107,11 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
                 break;
         }
         if (timesLooped > 1){
-        	document.getElementById(currentCell.row + currentCell.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
+        	document.getElementById(currentCell.row + currentCell.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + olderImage + ".png\" />";
         }
         previousCell = currentCell;
         currentCell = destination;
+        olderImage = oldImage;
         oldImage = tempImage;
     }
 }
