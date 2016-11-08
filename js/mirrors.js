@@ -8,7 +8,19 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
 	console.log("butts");
 	isMoving = true;
 	currentCell = startPoint;
-	while (isMoving === true) {
+	var i = 0;
+	function colourLoop(){
+		setTimeout(function(){
+			colourAssign();
+			i++;
+			console.log("looped " + i);
+			if (isMoving === true) {
+			colourLoop();
+			}
+		}, 333);
+	}
+	colourLoop();
+	function colourAssign(){
 		timesLooped++;
 		if (timesLooped > 100) {
 			alert("loop probably infinite, wuh woh");
