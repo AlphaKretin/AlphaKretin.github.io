@@ -2,6 +2,7 @@ var words = ["aardvark", "aardvarks", "aback", "abacus", "abacuses", "abaft", "a
 var wordStem;
 var wordsFound = ["blep"];
 var numFound = 0;
+var numFoundStem = 0;
 
 function randomLetter() {
     console.log("random letter called");
@@ -72,6 +73,8 @@ function generateStem() { //called onclick of a dedicated button
         }
     } while (stemGeneratedYet === false);
     document.getElementById("wordStem").innerHTML = wordStem;
+	numFoundStem = 0;
+	document.getElementById("foundStem").innerHTML = numFoundStem;
 }
 
 function validateString(stem) {
@@ -108,8 +111,10 @@ function submit() { //called onclick of a button
         }
         if (isWordNew) {
             numFound++;
+			numFoundStem++;
             document.getElementById("found").innerHTML = numFound;
-	    wordsFound.push(userWord);
+			document.getElementById("foundStem").innerHTML = numFoundStem;
+	    	wordsFound.push(userWord);
         }
     } else {
         document.getElementById("results").innerHTML = "Sorry, that's not in my word list.";
