@@ -24,7 +24,7 @@ Known Issues
 
 - A bunch of images are temporarily removed while I look for a way to deal with them that doesn't involve hosting them all here.
 
-- Speaking of Corrin, the more complicated scripting for their special case means I can’t make them gay. The workaround for this, which I do feel vaguely uncomfortable suggesting, is to change their gender in the planner - it doesn’t affect Kana’s stats.
+- Corrin has more complicated scripting for their special case, which means I can’t make them gay. The workaround for this, which I do feel vaguely uncomfortable suggesting, is to change their gender in the planner - it doesn’t affect Kana’s stats.
 
 - When you select a father as the “mother” for another child, that child’s father will overwrite the original father instead of residing in that child’s “mother” slot, and that child’s row will act unpredictably until the page is refreshed. (For example, if you select Silas as Dwyer’s “mother”, Jakob will override Silas next to Sophie. http://i.imgur.com/0Wn2gJr.png ) This means you can’t make a comprehensive inheritance plan, which is the reason I’ve renamed it to a calculator. 
 
