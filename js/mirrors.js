@@ -17,13 +17,10 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
     console.log("butts");
     isMoving = true;
     currentCell = startPoint;
-    var i = 0;
 
     function colourLoop() {
         setTimeout(function() {
             colourAssign();
-            i++;
-            console.log("looped " + i);
             if (isMoving === true) {
                 colourLoop();
             }
@@ -106,6 +103,9 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
                 break;
             default:
                 break;
+        }
+        if (timesLooped > 1){
+        	document.getElementById(currrentCell.row + currentCell.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + tempImage + ".png\" />";
         }
         previousCell = currentCell;
         currentCell = destination;
