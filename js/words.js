@@ -105,7 +105,7 @@ function validateString(stem) {
 
 function submit() { //called onclick of a button
     console.log("submit called");
-    var userWord = document.getElementById("gameText").value;
+    var userWord = document.getElementById("gameText").value.toLowerCase();
     var isAWord = false;
     var isWordNew = true;
     for (var i = 0; i < words.length; i++) {
