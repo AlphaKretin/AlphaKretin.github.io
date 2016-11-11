@@ -12,6 +12,8 @@ var i = 0;
 var isAWord = false;
 var isWordNew = true;
 var wordsOut = "Words Found: ";
+var wordsLength = words.length;
+var foundLength = 0;
 var rec = document.getElementById("record");
 var stem = document.getElementById("wordStem");
 var stemFound = document.getElementById("foundStem");
@@ -63,7 +65,8 @@ function generateStem() { //called onclick of a dedicated button
 function validateString(stem) {
     console.log("validate string called");
     var isValid = false;
-    for (i = 0; i < words.length; i++) { //checks each word...
+    wordsLength = words.length;
+    for (i = 0; i < wordsLength; i++) { //checks each word...
         if (words[i].indexOf(stem) === 0) { //...to see if wordStem is at the start of it
             isValid = true; //it's never set back to false so if it ever happens, it stays true
         }
@@ -77,7 +80,8 @@ function submit() { //called onclick of a button
     userWord = box.value.toLowerCase();
     isAWord = false;
     isWordNew = true;
-    for (i = 0; i < words.length; i++) {
+    wordsLength = words.length;
+    for (i = 0; i < wordsLength; i++) {
         if (words[i] === userWord) {
             isAWord = true; //if word is in array, good start...
         }
@@ -136,7 +140,8 @@ function trimStem(){
 function printWordsFound() {
     wordsOut = "Words Found: ";
     wordsFound.sort();
-    for (i = 0; i < wordsFound.length; i++) {
+    foundLength = wordsFound.length;
+    for (i = 0; i < foundLength; i++) {
         wordsOut += wordsFound[i] + ", "
     }
     alert(wordsOut);
@@ -147,7 +152,8 @@ function printWordsFoundStem() {
     if (wordStem != ""){
             wordsOut = "Words Found This Stem: ";
             wordsFound.sort();
-            for (i = 0; i < wordsFound.length; i++) {
+            foundLength = wordsFound.length;
+            for (i = 0; i < foundLength; i++) {
                 if (wordsFound[i].indexOf(wordStem) === 0){ 
                     wordsOut += wordsFound[i] + ", "
                 }
