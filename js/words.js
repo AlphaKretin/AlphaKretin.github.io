@@ -129,7 +129,9 @@ function submit() { //called onclick of a button
             document.getElementById("found").innerHTML = numFound;
 			document.getElementById("foundStem").innerHTML = numFoundStem;
 	    	wordsFound.push(userWord);
-        }
+        } else {
+			document.getElementById("results").innerHTML = "You found a word! But it was a duplicate. :(";
+	}
     } else {
         document.getElementById("results").innerHTML = "Sorry, that's not in my word list.";
     }
