@@ -6,13 +6,13 @@ var numFoundStem = 0;
 var firstStem = true;
 var stemLength = 2;
 
-function printWordsFound(){
-	var wordsOut = "Words Found: ";
-	wordsFound.sort();
-	for (var i = 0; i < wordsFound.length; i++){
-		wordsOut += wordsFound[i] + ", "
-	}
-	alert(wordsOut);
+function printWordsFound() {
+    var wordsOut = "Words Found: ";
+    wordsFound.sort();
+    for (var i = 0; i < wordsFound.length; i++) {
+        wordsOut += wordsFound[i] + ", "
+    }
+    alert(wordsOut);
 }
 
 function randomLetter() {
@@ -76,22 +76,29 @@ function randomLetter() {
 
 function generateStem() { //called onclick of a dedicated button
     console.log("generate stem called");
-	if (!firstStem){
-		document.getElementById("record").innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />";
-	}
-	firstStem = false;
+    if (!firstStem) {
+        document.getElementById("record").innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />";
+    }
+    firstStem = false;
     var stemGeneratedYet = false;
+    var loops = 0;
     do {
-		for (var i = 0; i < stemLength; i++){
-			wordStem += randomLetter().toLowerCase()
-		}
-        if (validateString(wordStem) === true) { //calls function below
+        loops++;
+        wordStem = "";
+        for (var i = 0; i < stemLength; i++) {
+            wordStem += randomLetter().toLowerCase()
+        }
+        if (validateString(wordStem)) { //calls function below
+            stemGeneratedYet = true;
+        }
+        if (loops > 100){
+            alert("Too many loops, timing out!");
             stemGeneratedYet = true;
         }
     } while (stemGeneratedYet === false);
     document.getElementById("wordStem").innerHTML = wordStem;
-	numFoundStem = 0;
-	document.getElementById("foundStem").innerHTML = numFoundStem;
+    numFoundStem = 0;
+    document.getElementById("foundStem").innerHTML = numFoundStem;
 }
 
 function validateString(stem) {
@@ -123,18 +130,18 @@ function submit() { //called onclick of a button
         document.getElementById("results").innerHTML = "You found a word!";
         for (var i = 0; i < wordsFound.length; i++) {
             if (userWord === wordsFound[i]) {
-                isWordNew = false;		
+                isWordNew = false;
             }
         }
         if (isWordNew) {
             numFound++;
-			numFoundStem++;
+            numFoundStem++;
             document.getElementById("found").innerHTML = numFound;
-			document.getElementById("foundStem").innerHTML = numFoundStem;
-	    	wordsFound.push(userWord);
+            document.getElementById("foundStem").innerHTML = numFoundStem;
+            wordsFound.push(userWord);
         } else {
-			document.getElementById("results").innerHTML = "You found a word! But it was a duplicate. :(";
-	}
+            document.getElementById("results").innerHTML = "You found a word! But it was a duplicate. :(";
+        }
     } else {
         document.getElementById("results").innerHTML = "Sorry, that's not in my word list.";
     }
