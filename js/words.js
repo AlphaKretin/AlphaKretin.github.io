@@ -114,14 +114,14 @@ function submit() { //called onclick of a button
             num = parseInt(document.getElementById(len.toString()).innerHTML);
             num++;
             document.getElementById(len.toString()).innerHTML = num.toString();
-            box.value = wordStem;
-            box.focus();
         } else {
             res.innerHTML = "You found a word! But it was a duplicate. :(";
         }
     } else {
         res.innerHTML = "Sorry, that's not in my word list.";
     }
+    box.value = wordStem;
+    box.focus();
     //below code flashes results on submission, but it looked ugly af
     /*var temp = document.getElementById("results").style.backgroundColor;
     document.getElementById("results").style.backgroundColor = "yellow"
