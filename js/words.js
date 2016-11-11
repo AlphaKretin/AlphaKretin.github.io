@@ -94,6 +94,7 @@ function generateStem() { //called onclick of a dedicated button
         if (loops > 100){
             alert("Too many loops, timing out! Consider trying a shorter stem.");
             stemGeneratedYet = true;
+            firstStem = true; //shouldn't record borked stem on next generate
         }
     } while (stemGeneratedYet === false);
     document.getElementById("wordStem").innerHTML = wordStem;
