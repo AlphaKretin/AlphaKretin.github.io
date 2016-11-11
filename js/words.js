@@ -13,6 +13,18 @@ function printWordsFound() {
         wordsOut += wordsFound[i] + ", "
     }
     alert(wordsOut);
+    printWordsFoundStem();
+}
+
+function printWordsFoundStem() {
+    var wordsOut = "Words Found This Stem: ";
+    wordsFound.sort();
+    for (var i = 0; i < wordsFound.length; i++) {
+        if (wordsFound[i].indexOf(wordStem){
+            wordsOut += wordsFound[i] + ", "
+        }
+    }
+    alert(wordsOut);
 }
 
 function trimStem(){
