@@ -41,7 +41,7 @@ function generateStem() { //called onclick of a dedicated button
         loops++;
         wordStem = "";
         for (i = 0; i < stemLength; i++) {
-            wordStem += randomLetter().toLowerCase()
+            wordStem += randomLetter().toLowerCase();
         }
         if (validateString(wordStem)) { //calls function below
             stemGeneratedYet = true;
@@ -123,7 +123,7 @@ function submit() { //called onclick of a button
 }
 
 function trimStem(){
-    if (wordStem.length > 1 && wordStem != ""){
+    if (wordStem.length > 1 && wordStem !== ""){
         rec.innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />";
         stemLength = wordStem.length - 1;
         wordStem = wordStem.substring(0,stemLength);
@@ -142,20 +142,20 @@ function printWordsFound() {
     wordsFound.sort();
     foundLength = wordsFound.length;
     for (i = 0; i < foundLength; i++) {
-        wordsOut += wordsFound[i] + ", "
+        wordsOut += wordsFound[i] + ", ";
     }
     alert(wordsOut);
     printWordsFoundStem();
 }
 
 function printWordsFoundStem() { 
-    if (wordStem != ""){
+    if (wordStem !== ""){
             wordsOut = "Words Found This Stem: ";
             wordsFound.sort();
             foundLength = wordsFound.length;
             for (i = 0; i < foundLength; i++) {
                 if (wordsFound[i].indexOf(wordStem) === 0){ 
-                    wordsOut += wordsFound[i] + ", "
+                    wordsOut += wordsFound[i] + ", ";
                 }
             }
         alert(wordsOut);
