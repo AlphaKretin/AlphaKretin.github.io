@@ -36,6 +36,9 @@ function generateStem() { //called onclick of a dedicated button
     document.getElementById("wordStem").innerHTML = wordStem;
     numFoundStem = 0;
     document.getElementById("foundStem").innerHTML = numFoundStem;
+    for (var i = 4; i <= 10; i++){
+        document.getElementById(i.toString()).innerHTML = 0;
+    }
 }
 
 function validateString(stem) {
@@ -76,6 +79,12 @@ function submit() { //called onclick of a button
             document.getElementById("found").innerHTML = numFound;
             document.getElementById("foundStem").innerHTML = numFoundStem;
             wordsFound.push(userWord);
+            var len = userWord.length;
+            if (len === 3){ len = 4; }
+            if (len > 10){ len = 10; }
+            var num = parseInt(document.getElementById(len.toString()).innerHTML);
+            num++;
+            document.getElementById(len.toString()).innerHTML = num.toString();
         } else {
             document.getElementById("results").innerHTML = "You found a word! But it was a duplicate. :(";
         }
