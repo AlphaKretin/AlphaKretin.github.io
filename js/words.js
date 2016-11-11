@@ -21,7 +21,7 @@ var found = document.getElementById("found");
 var check = document.getElementById("checkButton");
 var userWord = box.value.toLowerCase();
 var len = userWord.length;
-var num = parseInt(document.getElementById(len.toString()).innerHTML);
+var num = 0;
 
 function generateStem() { //called onclick of a dedicated button
     console.log("generate stem called");
