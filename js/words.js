@@ -15,6 +15,19 @@ function printWordsFound() {
     alert(wordsOut);
 }
 
+function trimStem(){
+    if (wordStem.length > 1 && wordStem != ""){
+        document.getElementById("record").innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />";
+        stemLength = wordStem.length - 1;
+        wordStem = wordStem.substring(0,stemLength);
+        document.getElementById("wordStem").innerHTML = wordStem;
+        numFoundStem = 0;
+        document.getElementById("foundStem").innerHTML = numFoundStem;
+    } else {
+        alert("Stem too short to trim or does not exist!");
+    }
+}
+
 function randomLetter() {
     console.log("random letter called");
     var randNum = Math.floor((Math.random() * 26) + 1); //random no between 1 and 26
