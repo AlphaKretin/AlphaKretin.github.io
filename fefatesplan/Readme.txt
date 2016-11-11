@@ -9,7 +9,7 @@ Fire Emblem Fates and characters are the property of Nintendo, I do not own, wha
 
 Changelog
 ————————————
-19/10/16 - Moved online, with permission. Readme update accordingly.
+19/10/16 - Moved online, with permission. Readme updated accordingly. Changelog will not be updated from here on out, in favour of git commits.
 20/9/16 - Added pairings to accomodate new update
 20/5/16 - FE Fates EU release!!!! oh and i added some more pairings for an update or something
 25/4/16 - added new pairings to accomodate hack update, changed column headings to be gender-neutral
