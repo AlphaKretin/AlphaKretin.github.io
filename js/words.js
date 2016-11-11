@@ -91,6 +91,9 @@ function submit() { //called onclick of a button
     } else {
         document.getElementById("results").innerHTML = "Sorry, that's not in my word list.";
     }
+    var temp = document.getElementById("results").style.backgroundColor;
+    document.getElementById("results").style.backgroundColor = "yellow"
+    setTimeout(function(){ document.getElementById("results").style.backgroundColor = temp; }, 10);
 }
 
 function trimStem(){
