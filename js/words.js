@@ -6,99 +6,6 @@ var numFoundStem = 0;
 var firstStem = true;
 var stemLength = 2;
 
-function printWordsFound() {
-    var wordsOut = "Words Found: ";
-    wordsFound.sort();
-    for (var i = 0; i < wordsFound.length; i++) {
-        wordsOut += wordsFound[i] + ", "
-    }
-    alert(wordsOut);
-    printWordsFoundStem();
-}
-
-function printWordsFoundStem() {
-    var wordsOut = "Words Found This Stem: ";
-    wordsFound.sort();
-    for (var i = 0; i < wordsFound.length; i++) {
-        if (wordsFound[i].indexOf(wordStem){
-            wordsOut += wordsFound[i] + ", "
-        }
-    }
-    alert(wordsOut);
-}
-
-function trimStem(){
-    if (wordStem.length > 1 && wordStem != ""){
-        document.getElementById("record").innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />";
-        stemLength = wordStem.length - 1;
-        wordStem = wordStem.substring(0,stemLength);
-        document.getElementById("wordStem").innerHTML = wordStem;
-        numFoundStem = 0;
-        document.getElementById("foundStem").innerHTML = numFoundStem;
-    } else {
-        alert("Stem too short to trim or does not exist!");
-    }
-}
-
-function randomLetter() {
-    console.log("random letter called");
-    var randNum = Math.floor((Math.random() * 26) + 1); //random no between 1 and 26
-    switch (randNum) {
-        case 1:
-            return "A";
-        case 2:
-            return "B";
-        case 3:
-            return "C";
-        case 4:
-            return "D";
-        case 5:
-            return "E";
-        case 6:
-            return "F";
-        case 7:
-            return "G";
-        case 8:
-            return "H";
-        case 9:
-            return "I";
-        case 10:
-            return "J";
-        case 11:
-            return "K";
-        case 12:
-            return "L";
-        case 13:
-            return "M";
-        case 14:
-            return "N";
-        case 15:
-            return "O";
-        case 16:
-            return "P";
-        case 17:
-            return "Q";
-        case 18:
-            return "R";
-        case 19:
-            return "S";
-        case 20:
-            return "T";
-        case 21:
-            return "U";
-        case 22:
-            return "V";
-        case 23:
-            return "W";
-        case 24:
-            return "X";
-        case 25:
-            return "Y";
-        case 26:
-            return "Z";
-    }
-}
-
 function generateStem() { //called onclick of a dedicated button
     console.log("generate stem called");
     if (stemLength < 1) {
@@ -174,6 +81,101 @@ function submit() { //called onclick of a button
         }
     } else {
         document.getElementById("results").innerHTML = "Sorry, that's not in my word list.";
+    }
+}
+
+function trimStem(){
+    if (wordStem.length > 1 && wordStem != ""){
+        document.getElementById("record").innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />";
+        stemLength = wordStem.length - 1;
+        wordStem = wordStem.substring(0,stemLength);
+        document.getElementById("wordStem").innerHTML = wordStem;
+        numFoundStem = 0;
+        document.getElementById("foundStem").innerHTML = numFoundStem;
+    } else {
+        alert("Stem too short to trim or does not exist!");
+    }
+}
+
+function printWordsFound() {
+    var wordsOut = "Words Found: ";
+    wordsFound.sort();
+    for (var i = 0; i < wordsFound.length; i++) {
+        wordsOut += wordsFound[i] + ", "
+    }
+    alert(wordsOut);
+    printWordsFoundStem();
+}
+
+function printWordsFoundStem() { 
+    if (wordStem != ""){
+            var wordsOut = "Words Found This Stem: ";
+            wordsFound.sort();
+            for (var i = 0; i < wordsFound.length; i++) {
+                if (wordsFound[i].indexOf(wordStem) === 0){ 
+                    wordsOut += wordsFound[i] + ", "
+                }
+            }
+        alert(wordsOut);
+    }
+}
+
+function randomLetter() {
+    console.log("random letter called");
+    var randNum = Math.floor((Math.random() * 26) + 1); //random no between 1 and 26
+    switch (randNum) {
+        case 1:
+            return "A";
+        case 2:
+            return "B";
+        case 3:
+            return "C";
+        case 4:
+            return "D";
+        case 5:
+            return "E";
+        case 6:
+            return "F";
+        case 7:
+            return "G";
+        case 8:
+            return "H";
+        case 9:
+            return "I";
+        case 10:
+            return "J";
+        case 11:
+            return "K";
+        case 12:
+            return "L";
+        case 13:
+            return "M";
+        case 14:
+            return "N";
+        case 15:
+            return "O";
+        case 16:
+            return "P";
+        case 17:
+            return "Q";
+        case 18:
+            return "R";
+        case 19:
+            return "S";
+        case 20:
+            return "T";
+        case 21:
+            return "U";
+        case 22:
+            return "V";
+        case 23:
+            return "W";
+        case 24:
+            return "X";
+        case 25:
+            return "Y";
+        case 26:
+            return "Z";
     }
 }
 
