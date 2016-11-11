@@ -74,6 +74,15 @@ function randomLetter() {
     }
 }
 
+function setLength(){
+    var userLength = parseInt(document.getElementById("length").value);
+    if (isNaN(userLength){
+        alert("Chosen stem length is not a number! Please try again.");
+    } else {
+        stemLength = userLength;
+    }
+}
+
 function generateStem() { //called onclick of a dedicated button
     console.log("generate stem called");
     if (!firstStem) {
@@ -92,7 +101,7 @@ function generateStem() { //called onclick of a dedicated button
             stemGeneratedYet = true;
         }
         if (loops > 100){
-            alert("Too many loops, timing out!");
+            alert("Too many loops, timing out! Consider trying a shorter stem.");
             stemGeneratedYet = true;
         }
     } while (stemGeneratedYet === false);
