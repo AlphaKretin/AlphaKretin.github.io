@@ -76,6 +76,10 @@ function randomLetter() {
 
 function generateStem() { //called onclick of a dedicated button
     console.log("generate stem called");
+    if (stemLength < 1) {
+        console.log("Stem too short: " + stemLength + ", enforcing min.");
+        stemLength = 1;
+    }
     if (!firstStem) {
         document.getElementById("record").innerHTML += "Stem: " + wordStem + " Words found: " + numFoundStem + "<br />";
     }
