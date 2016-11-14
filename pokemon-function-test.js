@@ -8,7 +8,7 @@ var mons = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "cha
 
 function clicked(){
 	for (var i = 0; i < mons.length; i++){
-		document.getElementById("myDiv").innerHTML += "var " + mons[i] + " = {\r\n\tname: \"Venusaur\",\r\n\tdex: 3,\r\n\ttype: \"Grass\/Poison\",\r\n\tability: \"Overgrow, N\/A, Chlorophyll\",\r\n\tevolve: \"Mega\",\r\n\twiki: \"http:\/\/bulbapedia.bulbagarden.net\/wiki\/Venusaur_(Pok%C3%A9mon)\",\r\n\timage: \"\/\/TODO\"\r\n};<br />"
+		document.getElementById("myDiv").innerHTML += "var " + mons[i] + " = {<br />    name: \"Venusaur\",<br />    dex: 3,<br />    type: \"Grass\/Poison\",<br />    ability: \"Overgrow, N\/A, Chlorophyll\",<br />    evolve: \"Mega\",<br />    wiki: \"http:\/\/bulbapedia.bulbagarden.net\/wiki\/Venusaur_(Pok%C3%A9mon)\",<br />    image: \"\/\/TODO\"\r\n};<br />"
 	}
 }
 
