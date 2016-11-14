@@ -8,7 +8,10 @@ var mons = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "cha
 
 function clicked(){
 	for (var i = 0; i < mons.length; i++){
-		document.getElementById("myDiv").innerHTML += "var " + mons[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"Venusaur\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: 3,<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"Grass\/Poison\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"Overgrow, N\/A, Chlorophyll\",<br />&nbsp;&nbsp;&nbsp;&nbsp;evolve: \"Mega\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http:\/\/bulbapedia.bulbagarden.net\/wiki\/Venusaur_(Pok%C3%A9mon)\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"\/\/TODO\"<br />};<br /><br />"
+		document.getElementById("myDiv").innerHTML += "var " + mons[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + c(mons[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: " + (i + 1) + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"Grass\/Poison\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"Overgrow, N\/A, Chlorophyll\",<br />&nbsp;&nbsp;&nbsp;&nbsp;evolve: \"Mega\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http:\/\/bulbapedia.bulbagarden.net\/wiki\/" + c(mons[i]) + "_(Pok%C3%A9mon)\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"\/\/TODO\"<br />};<br /><br />"
 	}
 }
 
+function c(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
