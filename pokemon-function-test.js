@@ -7,36 +7,8 @@ var mons = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "cha
 });*/
 
 function clicked(){
-	var message = document.getElementById("textBox").value;
-	if (message.substring(0,8) === "!pokemon") {
-        	pokemon(message);
-    }
-}
-
-function pokemon(message){
-	var mon = message.substring(9);
-	mon = mon.toLowerCase();
-	if (mons.indexOf(mon) !== -1){
-		console.log("Image: " + window[mon].image + "\nName: " + window[mon].name + "\nPokédex No.: " + window[mon].dex + "\nType: " + window[mon].type + "\nAbility: " + window[mon].ability + "\nEvolution: " + window[mon].evolve + "\nWiki Link: " + window[mon].wiki);
+	for (var i = 0; i < mons.length; i++){
+		document.getElementById("myDiv").innerHTML += "var "mons[i]" = {\r\n\tname: \"Venusaur\",\r\n\tdex: 3,\r\n\ttype: \"Grass\/Poison\",\r\n\tability: \"Overgrow, N\/A, Chlorophyll\",\r\n\tevolve: \"Mega\",\r\n\twiki: \"http:\/\/bulbapedia.bulbagarden.net\/wiki\/Venusaur_(Pok%C3%A9mon)\",\r\n\timage: \"\/\/TODO\"\r\n};<br />"
 	}
 }
 
-var bulbasaur = {
-	name: "Bulbasaur",
-	dex: 1,
-	type: "Grass/Poison",
-	ability: "Overgrow, N/A, Chlorophyll",
-	evolve: "Level 16, Ivysaur",
-	wiki: "http://bulbapedia.bulbagarden.net/wiki/Bulbasaur_(Pok%C3%A9mon)",
-	image: "http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/240px-001Bulbasaur.png"
-}
-
-var ivysaur = {
-	name: "Ivysaur",
-	dex: 2,
-	type: "Grass/Poison",
-	ability: "Overgrow, N/A, Chlorophyll",
-	evolve: "Level 32, Venusaur",
-	wiki: "http://bulbapedia.bulbagarden.net/wiki/Ivysaur_(Pok%C3%A9mon)",
-	image: "http://cdn.bulbagarden.net/upload/thumb/7/73/002Ivysaur.png/240px-002Ivysaur.png"
-}
