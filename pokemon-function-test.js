@@ -9,7 +9,7 @@ var mons = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "cha
 function clicked(){
 	var message = document.getElementById("textBox").value;
 	if (message.substring(0,8) === "!pokemon") {
-        pokemon(user, userID, channelID, message, event);
+        	pokemon(message);
     }
 }
 
