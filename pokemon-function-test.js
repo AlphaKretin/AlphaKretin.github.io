@@ -2,7 +2,7 @@ var items = ["ability capsule", "ability urge", "abomasite", "absolite", "absorb
 
 function clicked(){
 	for (var i = 0; i < items.length; i++){
-		document.getElementById("myDiv").innerHTML += "var " + items[i].replace(/ /g,"_") + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + c(items[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;desc: \"A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http:\/\/bulbapedia.bulbagarden.net\/wiki\/" + u(items[i]) + "<br />};<br /><br />"
+		document.getElementById("myDiv").innerHTML += "var " + items[i].replace(/ /g,"_") + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + c(items[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;desc: \"A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http:\/\/bulbapedia.bulbagarden.net\/wiki\/" + u(items[i]) + "\"<br />};<br /><br />"
 	}
 }
 
