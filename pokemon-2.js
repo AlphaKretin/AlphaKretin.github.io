@@ -13,6 +13,6 @@ function c(str)
 
 function u(str)
 {
-	s = s.replace(/ /g,"");
+ var s = s.replace(/ /g,"");
     return s;	
 }
