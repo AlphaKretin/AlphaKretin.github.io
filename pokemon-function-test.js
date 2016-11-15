@@ -13,5 +13,13 @@ function c(string) {
 		var num = str.indexOf(" ");
 		str = str.slice(0, num - 1) + str.charAt(num).toUpperCase() + str.slice(num + 1);
 	}
+	if (str.indexOf(" ") !== -1){
+		var num = str.indexOf(" ");
+		str = str.slice(0, num - 1) + str.charAt(num).toUpperCase() + str.slice(num + 1);
+	}
+	if (str.indexOf("-") !== -1){
+		var num = str.indexOf("-");
+		str = str.slice(0, num - 1) + str.charAt(num).toUpperCase() + str.slice(num + 1);
+	}
     return str;
 }
