@@ -9,7 +9,7 @@ function clicked(){
 function c(str)
 {
 	var s = str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-	s = s.replace(/[[:blank:]]/g,"_");
+	s = s.replace(/ /g,"_");
     return s;	
 }
 
