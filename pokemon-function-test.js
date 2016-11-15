@@ -10,14 +10,14 @@ function clicked(){
 function c(str)
 {
 	var s = str.replace(/\b\w+/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-	s.replace(/-/g," ");
+	s = s.replace(/-/g," ");
     return s;	
 }
 
 function u(str)
 {
 	var s = str.replace(/\b\w+/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-	s.replace(/-/g,"_");
+	s = s.replace(/-/g,"_");
     return s;	
 }
 
