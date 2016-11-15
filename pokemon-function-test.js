@@ -3,7 +3,7 @@ var moves = ["pound", "karate-chop", "double-slap", "comet-punch", "mega-punch",
 
 function clicked(){
 	for (var i = 0; i < moves.length; i++){
-		document.getElementById("myDiv").innerHTML += "var " + moves[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + c(moves[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"Normal\",<br />&nbsp;&nbsp;&nbsp;&nbsp;cat: \"Physical\",<br />&nbsp;&nbsp;&nbsp;&nbsp;power: 40,<br />&nbsp;&nbsp;&nbsp;&nbsp;pp: 35,<br />&nbsp;&nbsp;&nbsp;&nbsp;acc: 100,<br />&nbsp;&nbsp;&nbsp;&nbsp;effect: \"N\/A\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http:\/\/bulbapedia.bulbagarden.net\/wiki\/" + c(moves[i]) + "_(Move)\"<br />};<br /><br />"
+		document.getElementById("myDiv").innerHTML += "var " + moves[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + c(moves[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"Normal\",<br />&nbsp;&nbsp;&nbsp;&nbsp;cat: \"Physical\",<br />&nbsp;&nbsp;&nbsp;&nbsp;power: 40,<br />&nbsp;&nbsp;&nbsp;&nbsp;pp: 35,<br />&nbsp;&nbsp;&nbsp;&nbsp;acc: 100,<br />&nbsp;&nbsp;&nbsp;&nbsp;effect: \"N\/A\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http:\/\/bulbapedia.bulbagarden.net\/wiki\/" + u(moves[i]) + "_(Move)\"<br />};<br /><br />"
 	}
 }
 
@@ -13,3 +13,11 @@ function c(str)
 	s.replace("-"," ");
     return s;	
 }
+
+function u(str)
+{
+	var s = str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+	s.replace("-","_");
+    return s;	
+}
+
