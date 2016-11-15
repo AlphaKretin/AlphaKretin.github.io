@@ -8,5 +8,10 @@ function clicked(){
 }
 
 function c(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+	var str = string.charAt(0).toUpperCase() + string.slice(1);
+	if (str.indexOf(" ") !== -1){
+		var num = str.indexOf(" ");
+		str = str.slice(0, num - 1) + str.charAt(num).toUpperCase() + str.slice(num + 1);
+	}
+    return str;
 }
