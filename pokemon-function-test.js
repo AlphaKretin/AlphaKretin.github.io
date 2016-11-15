@@ -2,7 +2,7 @@ var mons = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "cha
 var i = 0;
 function clicked(){
 	if (i < mons.length){
-		document.getElementById("myDiv").innerHTML += "var " + mons[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + c(mons[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: " + (i + 1) + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"Grass\/Poison\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"Overgrow, N\/A, Chlorophyll\",<br />&nbsp;&nbsp;&nbsp;&nbsp;evolve: \"Mega\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http://www.serebii.net/pokedex-xy/" + (i + 1) + ".shtml\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"http:\/\/www.serebii.net\/xy\/pokemon\/" + i + ".png\"<br />};<br /><br />";
+		document.getElementById("myDiv").innerHTML += "var " + mons[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + c(mons[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: " + (i + 1) + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"Grass\/Poison\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"Overgrow, N\/A, Chlorophyll\",<br />&nbsp;&nbsp;&nbsp;&nbsp;evolve: \"Mega\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http://www.serebii.net/pokedex-xy/" + (i + 1) + ".shtml\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"http:\/\/www.serebii.net\/xy\/pokemon\/" + (i + 1) + ".png\"<br />};<br /><br />";
 		console.log(i);
 		i++
 		setTimeout(function(){clicked();},10);
