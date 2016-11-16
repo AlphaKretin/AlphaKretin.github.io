@@ -8,11 +8,11 @@ function clicked(){
 	if (i < mons.length){
 		if (megas.indexOf(mons[i]) !== -1){
 			var index = megas.indexOf(mons[i]);
-			document.getElementById("myDiv").innerHTML += "var mega_" + mons[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"Mega " + c(mons[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: " + (i + 1) + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"" + types[index] + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"" + abilities[index] + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http://www.serebii.net/pokedex-xy/" + p((i + 1),3) + ".shtml\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"http:\/\/www.serebii.net\/xy\/pokemon\/" + p((i + 1),3) + "-m.png\"<br />};<br /><br />";
-			console.log(i);
-			i++;
-			setTimeout(function(){clicked();},10);
+			document.getElementById("myDiv").innerHTML += "var mega_" + mons[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"Mega " + c(mons[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: " + (i + 1) + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"" + types[index] + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"" + abilities[index] + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http://www.serebii.net/pokedex-xy/" + p((i + 1),3) + ".shtml\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"http:\/\/www.serebii.net\/xy\/pokemon\/" + p((i + 1),3) + "-m.png\"<br />};<br /><br />";			
 		}
+		console.log(i);
+		i++;
+		setTimeout(function(){clicked();},10);
 	}
 }
 
