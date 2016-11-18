@@ -5,7 +5,7 @@ var abs = ["Overgrow/None/Long Reach", "Overgrow/None/Long Reach", "Overgrow/Non
 var i = 0;
 function clicked(){
 	if (i < mons.length){
-		document.getElementById("myDiv").innerHTML += "var " + mons[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + c(mons[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: " + (i + 722) + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"" + t(i) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"" + abs[i] + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http://www.serebii.net/pokedex-sm/" + p((i + 722),3) + ".shtml\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"http:\/\/www.serebii.net\/sunmoon\/pokemon\/" + p((i + 1),3) + ".png\"<br />};<br /><br />";
+		document.getElementById("myDiv").innerHTML += "var " + mons[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + c(mons[i]) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: " + (i + 722) + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"" + t(i) + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"" + abs[i] + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"http://www.serebii.net/pokedex-sm/" + p((i + 722),3) + ".shtml\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"http:\/\/www.serebii.net\/sunmoon\/pokemon\/" + p((i + 722),3) + ".png\"<br />};<br /><br />";
 		console.log(i);
 		i++
 		setTimeout(function(){clicked();},10);
