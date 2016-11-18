@@ -32,7 +32,7 @@ function t(index){
 }
 
 function alolano(){
-	var no = "N/A";
+	var no = "-1";
 	for (var j = 0; j < alolans.length; j++){
 		if (alolans[j].indexOf(mons[i]) !== -1){
 			no = alolans[j].substring(0,3);
@@ -40,4 +40,4 @@ function alolano(){
 	}
 	return no;
 }
-console.log("new version");
+console.log("newer version");
