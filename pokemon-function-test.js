@@ -3,14 +3,14 @@ var alolans = ["alola:-1,", "alola:-1,", "alola:-1,", "alola:-1,", "alola:-1,", 
 var i = 0;
 function clicked(){
 	if (i < mons.length){
-		document.getElementById("myDiv").innerHTML += "var " + mons[i] + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + eval(mons[i]).name + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: " + eval(mons[i]).dex + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;alola: " + alolans[i] + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"" + eval(mons[i]).type + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"" + eval(mons[i]).ability + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"" + eval(mons[i]).wiki + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"" + eval(mons[i]).image + "\"<br />};<br /><br />";
+		document.getElementById("myDiv").innerHTML += "var " + mons[i].replace(/ /g, "_") + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + eval(mons[i].replace(/ /g, "_")).name + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;dex: " + eval(mons[i].replace(/ /g, "_")).dex + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;" + alolans[i] + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"" + eval(mons[i].replace(/ /g, "_")).type + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;ability: \"" + eval(mons[i].replace(/ /g, "_")).ability + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"" + eval(mons[i].replace(/ /g, "_")).wiki + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;image: \"" + eval(mons[i].replace(/ /g, "_")).image + "\"<br />};<br /><br />";
 		console.log(i);
 		i++;
 		setTimeout(function(){clicked();},10);
 	}
 }
 
-console.log("truncated version");
+console.log("truncated fixed version");
 
 var bulbasaur = {
     name: "Bulbasaur",
