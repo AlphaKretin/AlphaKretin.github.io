@@ -35,8 +35,9 @@ function alolano(){
 	var no = "N/A";
 	for (var j = 0; j < alolans.length; j++){
 		if (alolans[j].indexOf(mons[i]) !== -1){
-			no = alolans[i].substring(0,3);
+			no = alolans[j].substring(0,3);
 		}
 	}
 	return no;
 }
+console.log("new version");
