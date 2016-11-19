@@ -9,7 +9,7 @@ function clicked(){
 	}
 }
 
-console.log("fixeder version");
+console.log("FUCK FLABEBE");
 
 var bulbasaur = {
     name: "Bulbasaur",
@@ -6365,7 +6365,7 @@ var pyroar = {
     image: "http://www.serebii.net/sunmoon/pokemon/668.png"
 };
 
-var flabébé = {
+var flabebe = {
     name: "Flabébé",
     dex: 669,
     type: "Fairy",
