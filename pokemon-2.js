@@ -6,7 +6,7 @@ var i = 0;
 function clicked(){
 	if (i < moves.length){
 		if (zmoves.indexOf(moves[i]) === -1){
-			document.getElementById("myDiv").innerHTML += "var " + moves[i].replace(/ /g,"_") + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + eval(moves[i].replace(/ /g,"_")).name + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"" + eval(moves[i].replace(/ /g,"_")).type + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;cat: \"" + eval(moves[i].replace(/ /g,"_")).cat + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;power: " + eval(moves[i].replace(/ /g,"_")).power + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;pp: " + eval(moves[i].replace(/ /g,"_")).pp  + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;acc: " + eval(moves[i].replace(/ /g,"_")).acc + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;effect: \"" + eval(moves[i].replace(/ /g,"_")).effect + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;zeffect: \"None\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"" + eval(moves[i].replace(/ /g,"_")).wiki + "\"<br />};<br /><br />"
+			document.getElementById("myDiv").innerHTML += "var " + moves[i].replace(/ /g,"_") + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + eval(moves[i].replace(/ /g,"_")).name + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"" + eval(moves[i].replace(/ /g,"_")).type + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;cat: \"" + eval(moves[i].replace(/ /g,"_")).cat + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;power: " + eval(moves[i].replace(/ /g,"_")).power + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;pp: " + eval(moves[i].replace(/ /g,"_")).pp  + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;acc: " + eval(moves[i].replace(/ /g,"_")).acc + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;effect: \"" + eval(moves[i].replace(/ /g,"_")).effect + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"" + eval(moves[i].replace(/ /g,"_")).wiki + "\"<br />};<br /><br />"
 		} else {
 			document.getElementById("myDiv").innerHTML += "var " + moves[i].replace(/ /g,"_") + " = {<br />&nbsp;&nbsp;&nbsp;&nbsp;name: \"" + eval(moves[i].replace(/ /g,"_")).name + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;type: \"" + eval(moves[i].replace(/ /g,"_")).type + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;cat: \"" + eval(moves[i].replace(/ /g,"_")).cat + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;power: " + eval(moves[i].replace(/ /g,"_")).power + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;pp: " + eval(moves[i].replace(/ /g,"_")).pp  + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;acc: " + eval(moves[i].replace(/ /g,"_")).acc + ",<br />&nbsp;&nbsp;&nbsp;&nbsp;effect: \"" + eval(moves[i].replace(/ /g,"_")).effect + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;zeffect: \"" + zeffects[zmoves.indexOf(moves[i])] + "\",<br />&nbsp;&nbsp;&nbsp;&nbsp;wiki: \"" + eval(moves[i].replace(/ /g,"_")).wiki + "\"<br />};<br /><br />"
 		}
@@ -16,7 +16,7 @@ function clicked(){
 	}
 }
 
-console.log("z8");
+console.log("z7");
 function c(str)
 {
 	var s = str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
