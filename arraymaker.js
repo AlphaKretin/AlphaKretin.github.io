@@ -4,12 +4,12 @@ var items = ["ability capsule", "ability urge", "abomasite", "absolite", "absorb
 var abilities = ["adaptability", "aerilate", "aftermath", "air lock", "analytic", "anger point", "anticipation", "arena trap", "aroma veil", "aura break", "bad dreams", "battery", "battle armor", "battle bond", "berserk", "big pecks", "blaze", "bulletproof", "cacophony", "cheek pouch", "chlorophyll", "clear body", "cloud nine", "color change", "comatose", "competitive", "compound eyes", "contrary", "corrosion", "cursed body", "cute charm", "damp", "dancer", "dark aura", "dazzling", "defeatist", "defiant", "delta stream", "desolate land", "disguise", "download", "drizzle", "drought", "dry skin", "early bird", "effect spore", "electric surge", "fairy aura", "filter", "flame body", "flare boost", "flash fire", "flower gift", "flower veil", "fluffy", "forecast", "forewarn", "friend guard", "frisk", "full metal body", "fur coat", "gale wings", "gluttony", "gooey", "grass pelt", "guts", "harvest", "healer", "heatproof", "heavy metal", "honey gather", "huge power", "hustle", "hydration", "hyper cutter", "ice body", "illuminate", "illusion", "immunity", "imposter", "innards out", "infiltrator", "inner focus", "insomnia", "intimidate", "iron barbs", "iron fist", "justified", "keen eye", "klutz", "leaf guard", "levitate", "light metal", "lightning rod", "limber", "liquid ooze", "magic bounce", "magic guard", "magician", "magma armor", "magnet pull", "marvel scale", "mega launcher", "minus", "mold breaker", "moody", "motor drive", "moxie", "multiscale", "multitype", "mummy", "natural cure", "no guard", "normalize", "oblivious", "overcoat", "overgrow", "own tempo", "parental bond", "pickpocket", "pickup", "pixilate", "plus", "poison heal", "poison point", "poison touch", "power construct", "prankster", "pressure", "primordial sea", "protean", "pure power", "queenly majesty", "quick feet", "rain dish", "rattled", "receiver", "reckless", "refrigerate", "regenerator", "rivalry", "rks system", "rock head", "rough skin", "run away", "sand force", "sand rush", "sand stream", "sand veil", "sap sipper", "schooling", "scrappy", "serene grace", "shadow shield", "shadow tag", "shed skin", "sheer force", "shell armor", "shield dust", "shields down", "simple", "skill link", "slow start", "sniper", "snow cloak", "snow warning", "solar power", "solid rock", "soul_heart", "soundproof", "speed boost", "stakeout", "stall", "stamina", "stance change", "static", "steadfast", "stench", "sticky hold", "storm drain", "strong jaw", "sturdy", "suction cups", "super luck", "surge surfer", "swarm", "sweet veil", "swift swim", "symbiosis", "synchronize", "tangled feet", "technician", "telepathy", "teravolt", "thick fat", "tinted lens", "torrent", "tough claws", "toxic boost", "trace", "triage", "truant", "turboblaze", "unaware", "unburden", "unnerve", "victory star", "vital spirit", "volt absorb", "water absorb", "water compaction", "water veil", "weak armor", "white smoke", "wimp out", "wonder guard", "wonder skin", "zen mode", "emergency exit", "merciless", "water bubble", "steelworker", "slush rush", "long reach", "liquid voice", "galvanize", "tangling hair", "power of alchemy", "beast boost", "psychic surge", "misty surge", "grassy surge", "full metal body", "prism armor"];
 
 var moveprops = ["name", "desc", "wiki"];
-console.log("item");
+console.log("abilities");
 
 function clicked(){
-	var out = "var items = [";
+	var out = "var abilities = [";
 	var len = 0;
-	for (var mon of items){
+	for (var mon of abilities){
 		out += "{id: \"" + mon + "\", ";
 		mon = mon.replace(/ /g, "_");
 		for (var prop of moveprops){
@@ -30,4028 +30,1406 @@ function clicked(){
 	document.getElementById("myDiv").innerHTML = out;
 }
 
-var ability_capsule = {
-	name: "Ability Capsule",
-	desc: "A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.",
-	wiki: "http://www.serebii.net/itemdex/abilitycapsule.shtml"
+var adaptability = {
+	name: "Adaptability",
+	desc: "Powers up moves of the same type.",
+	wiki: "http://www.serebii.net/abilitydex/adaptability.shtml"
 };
 
-var ability_urge = {
-	name: "Ability Urge",
-	desc: "When used, it activates the Ability of an ally Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/abilityurge.shtml"
+var aerilate = {
+	name: "Aerilate",
+	desc: "Normal-type moves become Flying-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/aerilate.shtml"
 };
 
-var abomasite = {
-	name: "Abomasite",
-	desc: "Enables Abomasnow to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/abomasite.shtml"
+var aftermath = {
+	name: "Aftermath",
+	desc: "Damages the foe landing the finishing hit.",
+	wiki: "http://www.serebii.net/abilitydex/aftermath.shtml"
 };
 
-var absolite = {
-	name: "Absolite",
-	desc: "Enables Absol to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/absolite.shtml"
+var air_lock = {
+	name: "Air Lock",
+	desc: "Eliminates the effects of weather.",
+	wiki: "http://www.serebii.net/abilitydex/airlock.shtml"
 };
 
-var absorb_bulb = {
-	name: "Absorb Bulb",
-	desc: "A consumable bulb. If the holder is hit by a Water-type move, its Sp. Atk will rise.",
-	wiki: "http://www.serebii.net/itemdex/absorbbulb.shtml"
+var analytic = {
+	name: "Analytic",
+	desc: "Strengthens moves when moving last.",
+	wiki: "http://www.serebii.net/abilitydex/analytic.shtml"
 };
 
-var adamant_orb = {
-	name: "Adamant Orb",
-	desc: "Increases the power of Dragon-​ and Steel-type moves when held by Dialga.",
-	wiki: "http://www.serebii.net/itemdex/adamantorb.shtml"
+var anger_point = {
+	name: "Anger Point",
+	desc: "Raises Attack upon taking a critical hit.",
+	wiki: "http://www.serebii.net/abilitydex/angerpoint.shtml"
 };
 
-var adventure_rules = {
-	name: "Adventure Rules",
-	desc: "This book contains all the points a new Trainer needs to know on a journey. It was handmade by a kind friend.",
-	wiki: "http://www.serebii.net/itemdex/adventurerules.shtml"
+var anticipation = {
+	name: "Anticipation",
+	desc: "Senses the foe’s dangerous moves.",
+	wiki: "http://www.serebii.net/abilitydex/anticipation.shtml"
 };
 
-var aerodactylite = {
-	name: "Aerodactylite",
-	desc: "Enables Aerodactyl to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/aerodactylite.shtml"
+var arena_trap = {
+	name: "Arena Trap",
+	desc: "Prevents the foe from fleeing.",
+	wiki: "http://www.serebii.net/abilitydex/arenatrap.shtml"
 };
 
-var aggronite = {
-	name: "Aggronite",
-	desc: "Enables Aggron to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/aggronite.shtml"
+var aroma_veil = {
+	name: "Aroma Veil",
+	desc: "Protects allies from attacks that limit their move choices.",
+	wiki: "http://www.serebii.net/abilitydex/aromaveil.shtml"
 };
 
-var aguav_berry = {
-	name: "Aguav Berry",
-	desc: "Restores HP if it's low, but may cause confusion.",
-	wiki: "http://www.serebii.net/itemdex/aguavberry.shtml"
+var aura_break = {
+	name: "Aura Break",
+	desc: "The effects of \"Aura\" Abilities are reversed.",
+	wiki: "http://www.serebii.net/abilitydex/aurabreak.shtml"
 };
 
-var air_balloon = {
-	name: "Air Balloon",
-	desc: "When held by a Pokémon, the Pokémon will float into the air. When the holder is attacked, this item will burst.",
-	wiki: "http://www.serebii.net/itemdex/airballoon.shtml"
+var bad_dreams = {
+	name: "Bad Dreams",
+	desc: "Reduces a sleeping foe’s HP.",
+	wiki: "http://www.serebii.net/abilitydex/baddreams.shtml"
 };
 
-var alakazite = {
-	name: "Alakazite",
-	desc: "Enables Alakazam to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/alakazite.shtml"
+var battery = {
+	name: "Battery",
+	desc: "Raises the power of allies' special moves",
+	wiki: "http://www.serebii.net/abilitydex/battery.shtml"
 };
 
-var altarianite = {
-	name: "Altarianite",
-	desc: "One of a variety of mysterious Mega Stones. Have Altaria hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/altarianite.shtml"
+var battle_armor = {
+	name: "Battle Armor",
+	desc: "The Pokémon is protected against critical hits.",
+	wiki: "http://www.serebii.net/abilitydex/battlearmor.shtml"
 };
 
-var ampharosite = {
-	name: "Ampharosite",
-	desc: "Enables Ampharos to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/ampharosite.shtml"
+var battle_bond = {
+	name: "Battle Bond",
+	desc: "Lets a Pokémon change its form after causing an opponent to faint.",
+	wiki: "http://www.serebii.net/abilitydex/battlebond.shtml"
 };
 
-var amulet_coin = {
-	name: "Amulet Coin",
-	desc: "An item to be held by a Pokémon. It doubles a battle’s prize money if the holding Pokémon joins in.",
-	wiki: "http://www.serebii.net/itemdex/amuletcoin.shtml"
+var berserk = {
+	name: "Berserk",
+	desc: "Raises Special Attack when HP is low",
+	wiki: "http://www.serebii.net/abilitydex/berserk.shtml"
 };
 
-var antidote = {
-	name: "Antidote",
-	desc: "A spray-type medicine. It lifts the effect of poison from one Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/antidote.shtml"
+var big_pecks = {
+	name: "Big Pecks",
+	desc: "Protects the Pokémon from Defense-lowering attacks.",
+	wiki: "http://www.serebii.net/abilitydex/bigpecks.shtml"
 };
 
-var apicot_berry = {
-	name: "Apicot Berry",
-	desc: "Raises Special Defense when HP is low.",
-	wiki: "http://www.serebii.net/itemdex/apicotberry.shtml"
+var blaze = {
+	name: "Blaze",
+	desc: "Powers up Fire-type moves in a pinch.",
+	wiki: "http://www.serebii.net/abilitydex/blaze.shtml"
 };
 
-var armor_fossil = {
-	name: "Armor Fossil",
-	desc: "A fossil from a prehistoric Pokémon that lived on the land. It appears to be part of a collar.",
-	wiki: "http://www.serebii.net/itemdex/armorfossil.shtml"
+var bulletproof = {
+	name: "Bulletproof",
+	desc: "Protects the Pokémon from some ball and bomb moves.",
+	wiki: "http://www.serebii.net/abilitydex/bulletproof.shtml"
 };
 
-var aspear_berry = {
-	name: "Aspear Berry",
-	desc: "If held by a Pokémon, it defrosts it.",
-	wiki: "http://www.serebii.net/itemdex/aspearberry.shtml"
+var cacophony = {
+	name: "Cacophony",
+	desc: "Avoids sound-based moves.",
+	wiki: "http://www.serebii.net/abilitydex/cacophony.shtml"
 };
 
-var audinite = {
-	name: "Audinite",
-	desc: "One of a variety of mysterious Mega Stones. Have Audino hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/audinite.shtml"
+var cheek_pouch = {
+	name: "Cheek Pouch",
+	desc: "Restores HP as well when the Pokémon eats a Berry.",
+	wiki: "http://www.serebii.net/abilitydex/cheekpouch.shtml"
 };
 
-var awakening = {
-	name: "Awakening",
-	desc: "A spray-type medicine. It awakens a Pokémon from the clutches of sleep.",
-	wiki: "http://www.serebii.net/itemdex/awakening.shtml"
+var chlorophyll = {
+	name: "Chlorophyll",
+	desc: "Boosts the Pokémon's Speed in sunshine.",
+	wiki: "http://www.serebii.net/abilitydex/chlorophyll.shtml"
 };
 
-var babiri_berry = {
-	name: "Babiri Berry",
-	desc: "Weakens a supereffective Steel-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/babiriberry.shtml"
+var clear_body = {
+	name: "Clear Body",
+	desc: "Prevents the Pokémon's stats from being lowered.",
+	wiki: "http://www.serebii.net/abilitydex/clearbody.shtml"
 };
 
-var balmmushroom = {
-	name: "Balmmushroom",
-	desc: "A rare mushroom which gives off a nice fragrance. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/balmmushroom.shtml"
+var cloud_nine = {
+	name: "Cloud Nine",
+	desc: "Eliminates the effects of weather.",
+	wiki: "http://www.serebii.net/abilitydex/cloudnine.shtml"
 };
 
-var banettite = {
-	name: "Banettite",
-	desc: "Enables Banette to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/banettite.shtml"
+var color_change = {
+	name: "Color Change",
+	desc: "Changes the Pokémon's type to the foe’s move.",
+	wiki: "http://www.serebii.net/abilitydex/colorchange.shtml"
 };
 
-var beedrillite = {
-	name: "Beedrillite",
-	desc: "One of a variety of mysterious Mega Stones. Have Beedrill hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/beedrillite.shtml"
+var comatose = {
+	name: "Comatose",
+	desc: "Protects the Pokémon from status conditions other than sleep.",
+	wiki: "http://www.serebii.net/abilitydex/comatose.shtml"
 };
 
-var belue_berry = {
-	name: "Belue Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/belueberry.shtml"
+var competitive = {
+	name: "Competitive",
+	desc: "Boosts the Sp. Atk stat when a stat is lowered.",
+	wiki: "http://www.serebii.net/abilitydex/competitive.shtml"
 };
 
-var berry_juice = {
-	name: "Berry Juice",
-	desc: "A 100% pure juice made of Berries. It restores the HP of one Pokémon by just 20 points.",
-	wiki: "http://www.serebii.net/itemdex/berryjuice.shtml"
+var compound_eyes = {
+	name: "Compound Eyes",
+	desc: "The Pokémon's accuracy is boosted.",
+	wiki: "http://www.serebii.net/abilitydex/compoundeyes.shtml"
 };
 
-var big_mushroom = {
-	name: "Big Mushroom",
-	desc: "A large and rare mushroom. It is sought after by collectors.",
-	wiki: "http://www.serebii.net/itemdex/bigmushroom.shtml"
+var contrary = {
+	name: "Contrary",
+	desc: "Inverts changes to stat stages.",
+	wiki: "http://www.serebii.net/abilitydex/contrary.shtml"
 };
 
-var big_nugget = {
-	name: "Big Nugget",
-	desc: "A big nugget of pure gold that gives off a lustrous gleam. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/bignugget.shtml"
+var corrosion = {
+	name: "Corrosion",
+	desc: "Allows the user to inflict poison on any Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/corrosion.shtml"
 };
 
-var big_pearl = {
-	name: "Big Pearl",
-	desc: "A quite-large pearl that sparkles in a pretty silver color. It can be sold at a high price to shops.",
-	wiki: "http://www.serebii.net/itemdex/bigpearl.shtml"
+var cursed_body = {
+	name: "Cursed Body",
+	desc: "Has a 30% chance of Disabling any move that hits the Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/cursedbody.shtml"
 };
 
-var big_root = {
-	name: "Big Root",
-	desc: "Recovers more HP from HP-stealing moves.",
-	wiki: "http://www.serebii.net/itemdex/bigroot.shtml"
+var cute_charm = {
+	name: "Cute Charm",
+	desc: "Contact with the Pokémon may cause infatuation.",
+	wiki: "http://www.serebii.net/abilitydex/cutecharm.shtml"
 };
 
-var binding_band = {
-	name: "Binding Band",
-	desc: "A band that increases the power of binding moves when held.",
-	wiki: "http://www.serebii.net/itemdex/bindingband.shtml"
+var damp = {
+	name: "Damp",
+	desc: "Prevents combatants from self destructing.",
+	wiki: "http://www.serebii.net/abilitydex/damp.shtml"
 };
 
-var black_belt = {
-	name: "Black Belt",
-	desc: "Increases the power of Fighting-type moves.",
-	wiki: "http://www.serebii.net/itemdex/blackbelt.shtml"
+var dancer = {
+	name: "Dancer",
+	desc: "Allows the Pokémon to immediately copy dancing moves.",
+	wiki: "http://www.serebii.net/abilitydex/dancer.shtml"
 };
 
-var black_flute = {
-	name: "Black Flute",
-	desc: "A toy flute made from black glass. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/blackflute.shtml"
+var dark_aura = {
+	name: "Dark Aura",
+	desc: "Powers up each Pokémon's Dark-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/darkaura.shtml"
 };
 
-var black_sludge = {
-	name: "Black Sludge",
-	desc: "A held item that gradually restores the HP of Poison-type Pokémon. It inflicts damage on all other types.",
-	wiki: "http://www.serebii.net/itemdex/blacksludge.shtml"
+var dazzling = {
+	name: "Dazzling",
+	desc: "Prevents the opponent from using moves with increased priority.",
+	wiki: "http://www.serebii.net/abilitydex/dazzling.shtml"
 };
 
-var blackglasses = {
-	name: "Blackglasses",
-	desc: "Increases the power of Dark-type moves.",
-	wiki: "http://www.serebii.net/itemdex/blackglasses.shtml"
+var defeatist = {
+	name: "Defeatist",
+	desc: "Halves Attack and Special Attack below 50% HP.",
+	wiki: "http://www.serebii.net/abilitydex/defeatist.shtml"
 };
 
-var blastoisinite = {
-	name: "Blastoisinite",
-	desc: "Enables Blastoise to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/blastoisinite.shtml"
+var defiant = {
+	name: "Defiant",
+	desc: "Raises Attack two stages upon having any stat lowered.",
+	wiki: "http://www.serebii.net/abilitydex/defiant.shtml"
 };
 
-var blazikenite = {
-	name: "Blazikenite",
-	desc: "Enables Blaziken to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/blazikenite.shtml"
+var delta_stream = {
+	name: "Delta Stream",
+	desc: "Eliminates weather effects and eliminates weaknesses of Flying-type Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/deltastream.shtml"
 };
 
-var blk_apricorn = {
-	name: "Blk Apricorn",
-	desc: "A black Apricorn It has an indescribable scent.",
-	wiki: "http://www.serebii.net/itemdex/blkapricorn.shtml"
+var desolate_land = {
+	name: "Desolate Land",
+	desc: "Creates harsh sunlight.",
+	wiki: "http://www.serebii.net/abilitydex/desolateland.shtml"
 };
 
-var blu_apricorn = {
-	name: "Blu Apricorn",
-	desc: "A blue Apricorn. It smells a bit like grass.",
-	wiki: "http://www.serebii.net/itemdex/bluapricorn.shtml"
+var disguise = {
+	name: "Disguise",
+	desc: "Allows the Pokémon to nullify damage from one attack.",
+	wiki: "http://www.serebii.net/abilitydex/disguise.shtml"
 };
 
-var blue_flute = {
-	name: "Blue Flute",
-	desc: "A toy flute made from blue glass. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/blueflute.shtml"
+var download = {
+	name: "Download",
+	desc: "Adjusts power according to the foe’s lowest defensive stat.",
+	wiki: "http://www.serebii.net/abilitydex/download.shtml"
 };
 
-var blue_scarf = {
-	name: "Blue Scarf",
-	desc: "Raises holder's Beauty aspect in a Contest.",
-	wiki: "http://www.serebii.net/itemdex/bluescarf.shtml"
+var drizzle = {
+	name: "Drizzle",
+	desc: "The Pokémon makes it rain if it appears in battle.",
+	wiki: "http://www.serebii.net/abilitydex/drizzle.shtml"
 };
 
-var blue_shard = {
-	name: "Blue Shard",
-	desc: "A small blue shard. It appears to be from some sort of implement made long ago.",
-	wiki: "http://www.serebii.net/itemdex/blueshard.shtml"
+var drought = {
+	name: "Drought",
+	desc: "The Pokémon makes it sunny if it is in battle.",
+	wiki: "http://www.serebii.net/abilitydex/drought.shtml"
 };
 
-var bluk_berry = {
-	name: "Bluk Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/blukberry.shtml"
+var dry_skin = {
+	name: "Dry Skin",
+	desc: "Reduces HP if it is hot. Water restores HP.",
+	wiki: "http://www.serebii.net/abilitydex/dryskin.shtml"
 };
 
-var brightpowder = {
-	name: "Brightpowder",
-	desc: "Lowers the opponent’s accuracy.",
-	wiki: "http://www.serebii.net/itemdex/brightpowder.shtml"
+var early_bird = {
+	name: "Early Bird",
+	desc: "The Pokémon awakens quickly from sleep.",
+	wiki: "http://www.serebii.net/abilitydex/earlybird.shtml"
 };
 
-var bug_gem = {
-	name: "Bug Gem",
-	desc: "Increases the power of a Bug-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/buggem.shtml"
+var effect_spore = {
+	name: "Effect Spore",
+	desc: "Contact may paralyze, poison, or cause sleep.",
+	wiki: "http://www.serebii.net/abilitydex/effectspore.shtml"
 };
 
-var burn_drive = {
-	name: "Burn Drive",
-	desc: "Changes Techno Blast to a Fire-type move when held by Genesect.",
-	wiki: "http://www.serebii.net/itemdex/burndrive.shtml"
+var electric_surge = {
+	name: "Electric Surge",
+	desc: "Immediately creates Electric Terrain upon entering battle.",
+	wiki: "http://www.serebii.net/abilitydex/electricsurge.shtml"
 };
 
-var burn_heal = {
-	name: "Burn Heal",
-	desc: "A spray-type medicine. It heals a single Pokémon that is suffering from a burn.",
-	wiki: "http://www.serebii.net/itemdex/burnheal.shtml"
+var fairy_aura = {
+	name: "Fairy Aura",
+	desc: "Powers up each Pokémon's Fairy-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/fairyaura.shtml"
 };
 
-var calcium = {
-	name: "Calcium",
-	desc: "A nutritious drink for Pokémon. It raises the base Sp. Atk (Special Attack) stat of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/calcium.shtml"
+var filter = {
+	name: "Filter",
+	desc: "Powers down supereffective moves.",
+	wiki: "http://www.serebii.net/abilitydex/filter.shtml"
 };
 
-var cameruptite = {
-	name: "Cameruptite",
-	desc: "One of a variety of mysterious Mega Stones. Have Camerupt hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/cameruptite.shtml"
+var flame_body = {
+	name: "Flame Body",
+	desc: "Contact with the Pokémon may burn the foe.",
+	wiki: "http://www.serebii.net/abilitydex/flamebody.shtml"
 };
 
-var carbos = {
-	name: "Carbos",
-	desc: "A nutritious drink for Pokémon. It raises the base Speed stat of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/carbos.shtml"
+var flare_boost = {
+	name: "Flare Boost",
+	desc: "Increases Special Attack to 1.5× when burned.",
+	wiki: "http://www.serebii.net/abilitydex/flareboost.shtml"
 };
 
-var casteliacone = {
-	name: "Casteliacone",
-	desc: "Castelia City’s specialty, soft-serve ice cream. It heals all the status problems of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/casteliacone.shtml"
+var flash_fire = {
+	name: "Flash Fire",
+	desc: "Powers up Fire-type moves if hit by a fire move.",
+	wiki: "http://www.serebii.net/abilitydex/flashfire.shtml"
 };
 
-var cell_battery = {
-	name: "Cell Battery",
-	desc: "A consumable battery. If the holder is hit by an Electric-type move, its Attack will rise.",
-	wiki: "http://www.serebii.net/itemdex/cellbattery.shtml"
+var flower_gift = {
+	name: "Flower Gift",
+	desc: "Powers up party Pokémon when it is sunny.",
+	wiki: "http://www.serebii.net/abilitydex/flowergift.shtml"
 };
 
-var charcoal = {
-	name: "Charcoal",
-	desc: "Increases the power of Fire-type moves.",
-	wiki: "http://www.serebii.net/itemdex/charcoal.shtml"
+var flower_veil = {
+	name: "Flower Veil",
+	desc: "Prevents lowering of ally Grass-type Pokémon's stats.",
+	wiki: "http://www.serebii.net/abilitydex/flowerveil.shtml"
 };
 
-var charizardite_x = {
-	name: "Charizardite X",
-	desc: "Enables Charizard to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/charizarditex.shtml"
+var fluffy = {
+	name: "Fluffy",
+	desc: "Haves damage from physical moves, but doubles damage from Fire-type ones.",
+	wiki: "http://www.serebii.net/abilitydex/fluffy.shtml"
 };
 
-var charizardite_y = {
-	name: "Charizardite Y",
-	desc: "Enables Charizard to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/charizarditey.shtml"
+var forecast = {
+	name: "Forecast",
+	desc: "Transforms with the weather.",
+	wiki: "http://www.serebii.net/abilitydex/forecast.shtml"
 };
 
-var charti_berry = {
-	name: "Charti Berry",
-	desc: "Weakens a supereffective Rock-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/chartiberry.shtml"
+var forewarn = {
+	name: "Forewarn",
+	desc: "Determines what moves the foe has.",
+	wiki: "http://www.serebii.net/abilitydex/forewarn.shtml"
 };
 
-var cheri_berry = {
-	name: "Cheri Berry",
-	desc: "If held by a Pokémon, it recovers from paralysis.",
-	wiki: "http://www.serebii.net/itemdex/cheriberry.shtml"
+var friend_guard = {
+	name: "Friend Guard",
+	desc: "Decreases damage inflicted against ally Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/friendguard.shtml"
 };
 
-var cherish_ball = {
-	name: "Cherish Ball",
-	desc: "A quite rare Poké Ball that has been specially crafted to commemorate an occasion of some sort.",
-	wiki: "http://www.serebii.net/itemdex/cherishball.shtml"
+var frisk = {
+	name: "Frisk",
+	desc: "The Pokémon can check the foe’s held item.",
+	wiki: "http://www.serebii.net/abilitydex/frisk.shtml"
 };
 
-var chesto_berry = {
-	name: "Chesto Berry",
-	desc: "If held by a Pokémon, it recovers from sleep.",
-	wiki: "http://www.serebii.net/itemdex/chestoberry.shtml"
+var full_metal_body = {
+	name: "Full Metal Body",
+	desc: "Prevents stat reduction caused by other Pokémon's moves or abilities.",
+	wiki: "http://www.serebii.net/abilitydex/fullmetalbody.shtml"
 };
 
-var chilan_berry = {
-	name: "Chilan Berry",
-	desc: "Weakens a Normal-type attack against the Pokémon holding this berry.",
-	wiki: "http://www.serebii.net/itemdex/chilanberry.shtml"
+var fur_coat = {
+	name: "Fur Coat",
+	desc: "Halves damage from physical moves.",
+	wiki: "http://www.serebii.net/abilitydex/furcoat.shtml"
 };
 
-var chill_drive = {
-	name: "Chill Drive",
-	desc: "Changes Techno Blast to an Ice-type move when held by Genesect.",
-	wiki: "http://www.serebii.net/itemdex/chilldrive.shtml"
+var gale_wings = {
+	name: "Gale Wings",
+	desc: "Gives priority to Flying-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/galewings.shtml"
 };
 
-var choice_band = {
-	name: "Choice Band",
-	desc: "Raises Attack, but only one move can be used.",
-	wiki: "http://www.serebii.net/itemdex/choiceband.shtml"
+var gluttony = {
+	name: "Gluttony",
+	desc: "Encourages the early use of a held Berry.",
+	wiki: "http://www.serebii.net/abilitydex/gluttony.shtml"
 };
 
-var choice_scarf = {
-	name: "Choice Scarf",
-	desc: "Raises Speed, but only one move can be used.",
-	wiki: "http://www.serebii.net/itemdex/choicescarf.shtml"
+var gooey = {
+	name: "Gooey",
+	desc: "Contact with the Pokémon lowers the attacker's Speed stat.",
+	wiki: "http://www.serebii.net/abilitydex/gooey.shtml"
 };
 
-var choice_specs = {
-	name: "Choice Specs",
-	desc: "Raises Special Attack, but only one move can be used.",
-	wiki: "http://www.serebii.net/itemdex/choicespecs.shtml"
+var grass_pelt = {
+	name: "Grass Pelt",
+	desc: "Boosts the Defense stat in Grassy Terrain.",
+	wiki: "http://www.serebii.net/abilitydex/grasspelt.shtml"
 };
 
-var chople_berry = {
-	name: "Chople Berry",
-	desc: "Weakens a supereffective Fighting-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/chopleberry.shtml"
+var guts = {
+	name: "Guts",
+	desc: "Boosts Attack if there is a status problem.",
+	wiki: "http://www.serebii.net/abilitydex/guts.shtml"
 };
 
-var claw_fossil = {
-	name: "Claw Fossil",
-	desc: "A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a claw.",
-	wiki: "http://www.serebii.net/itemdex/clawfossil.shtml"
+var harvest = {
+	name: "Harvest",
+	desc: "Sometimes restores a consumed Berry.",
+	wiki: "http://www.serebii.net/abilitydex/harvest.shtml"
 };
 
-var cleanse_tag = {
-	name: "Cleanse Tag",
-	desc: "An item to be held by a Pokémon. It helps keep wild Pokémon away if the holder is the first one in the party.",
-	wiki: "http://www.serebii.net/itemdex/cleansetag.shtml"
+var healer = {
+	name: "Healer",
+	desc: "Has a 30% chance of curing each adjacent ally of any major status ailment after each turn.",
+	wiki: "http://www.serebii.net/abilitydex/healer.shtml"
 };
 
-var clever_wing = {
-	name: "Clever Wing",
-	desc: "Increases Special Defense EVs by 1.",
-	wiki: "http://www.serebii.net/itemdex/cleverwing.shtml"
+var heatproof = {
+	name: "Heatproof",
+	desc: "Weakens the power of Fire-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/heatproof.shtml"
 };
 
-var coba_berry = {
-	name: "Coba Berry",
-	desc: "Weakens a supereffective Flying-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/cobaberry.shtml"
+var heavy_metal = {
+	name: "Heavy Metal",
+	desc: "Doubles the Pokémon's weight.",
+	wiki: "http://www.serebii.net/abilitydex/heavymetal.shtml"
 };
 
-var colbur_berry = {
-	name: "Colbur Berry",
-	desc: "Weakens a supereffective Dark-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/colburberry.shtml"
+var honey_gather = {
+	name: "Honey Gather",
+	desc: "The Pokémon may gather Honey from somewhere.",
+	wiki: "http://www.serebii.net/abilitydex/honeygather.shtml"
 };
 
-var colress_machine = {
-	name: "Colress Machine",
-	desc: "A special device that wrings out the potential of Pokémon. It is an imperfect prototype.",
-	wiki: "http://www.serebii.net/itemdex/colressmachine.shtml"
+var huge_power = {
+	name: "Huge Power",
+	desc: "Raises the Pokémon's Attack stat.",
+	wiki: "http://www.serebii.net/abilitydex/hugepower.shtml"
 };
 
-var comet_shard = {
-	name: "Comet Shard",
-	desc: "A shard which fell to the ground when a comet approached. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/cometshard.shtml"
+var hustle = {
+	name: "Hustle",
+	desc: "Boosts the Attack stat, but lowers accuracy.",
+	wiki: "http://www.serebii.net/abilitydex/hustle.shtml"
 };
 
-var cornn_berry = {
-	name: "Cornn Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/cornnberry.shtml"
+var hydration = {
+	name: "Hydration",
+	desc: "Heals status problems if it is raining.",
+	wiki: "http://www.serebii.net/abilitydex/hydration.shtml"
 };
 
-var cover_fossil = {
-	name: "Cover Fossil",
-	desc: "A fossil of an ancient Pokémon that lived in the sea in ancient times. It appears to be part of its back.",
-	wiki: "http://www.serebii.net/itemdex/coverfossil.shtml"
+var hyper_cutter = {
+	name: "Hyper Cutter",
+	desc: "Prevents the Attack stat from being lowered.",
+	wiki: "http://www.serebii.net/abilitydex/hypercutter.shtml"
 };
 
-var custap_berry = {
-	name: "Custap Berry",
-	desc: "Holder can move first when HP is low.",
-	wiki: "http://www.serebii.net/itemdex/custapberry.shtml"
+var ice_body = {
+	name: "Ice Body",
+	desc: "The Pokémon regains HP in a hailstorm.",
+	wiki: "http://www.serebii.net/abilitydex/icebody.shtml"
 };
 
-var damp_mulch = {
-	name: "Damp Mulch",
-	desc: "A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/dampmulch.shtml"
+var illuminate = {
+	name: "Illuminate",
+	desc: "Raises the likelihood of meeting wild Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/illuminate.shtml"
 };
 
-var damp_rock = {
-	name: "Damp Rock",
-	desc: "A Pokémon held item that extends the duration of the move Rain Dance used by the holder.",
-	wiki: "http://www.serebii.net/itemdex/damprock.shtml"
+var illusion = {
+	name: "Illusion",
+	desc: "Takes the appearance of the last conscious party Pokémon upon being sent out until hit by a damaging move.",
+	wiki: "http://www.serebii.net/abilitydex/illusion.shtml"
 };
 
-var dark_gem = {
-	name: "Dark Gem",
-	desc: "Increases the power of a Dark-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/darkgem.shtml"
+var immunity = {
+	name: "Immunity",
+	desc: "Prevents the Pokémon from getting poisoned.",
+	wiki: "http://www.serebii.net/abilitydex/immunity.shtml"
 };
 
-var dawn_stone = {
-	name: "Dawn Stone",
-	desc: "A peculiar stone that makes certain species of Pokémon evolve. It sparkles like eyes.",
-	wiki: "http://www.serebii.net/itemdex/dawnstone.shtml"
+var imposter = {
+	name: "Imposter",
+	desc: "Transforms upon entering battle.",
+	wiki: "http://www.serebii.net/abilitydex/imposter.shtml"
 };
 
-var deepseascale = {
-	name: "Deepseascale",
-	desc: "Increases Special Defense when held by Clamperl.",
-	wiki: "http://www.serebii.net/itemdex/deepseascale.shtml"
+var innards_out = {
+	name: "Innards Out",
+	desc: "Deals damage to opposing Pokémon upon fainting.",
+	wiki: "http://www.serebii.net/abilitydex/innardsout.shtml"
 };
 
-var deepseatooth = {
-	name: "Deepseatooth",
-	desc: "Increases Special Attack when held by Clamperl.",
-	wiki: "http://www.serebii.net/itemdex/deepseatooth.shtml"
+var infiltrator = {
+	name: "Infiltrator",
+	desc: "Ignores Light Screen, Reflect, and Safeguard.",
+	wiki: "http://www.serebii.net/abilitydex/infiltrator.shtml"
 };
 
-var destiny_knot = {
-	name: "Destiny Knot",
-	desc: "A long, thin, bright-red string to be held by a Pokémon. If the holder becomes infatuated, the foe does too.",
-	wiki: "http://www.serebii.net/itemdex/destinyknot.shtml"
+var inner_focus = {
+	name: "Inner Focus",
+	desc: "The Pokémon is protected from flinching.",
+	wiki: "http://www.serebii.net/abilitydex/innerfocus.shtml"
 };
 
-var diancite = {
-	name: "Diancite",
-	desc: "One of a variety of mysterious Mega Stones. Have Diancie hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/diancite.shtml"
+var insomnia = {
+	name: "Insomnia",
+	desc: "Prevents the Pokémon from falling asleep.",
+	wiki: "http://www.serebii.net/abilitydex/insomnia.shtml"
 };
 
-var dire_hit = {
-	name: "Dire Hit",
-	desc: "Raises critical-hit ratio of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/direhit.shtml"
+var intimidate = {
+	name: "Intimidate",
+	desc: "Lowers the foe’s Attack stat.",
+	wiki: "http://www.serebii.net/abilitydex/intimidate.shtml"
 };
 
-var dire_hit_2 = {
-	name: "Dire Hit 2",
-	desc: "It can be used many times to raise the critical-hit ratio of one Pokémon. It wears off if the Pokémon is withdrawn.",
-	wiki: "http://www.serebii.net/itemdex/direhit2.shtml"
+var iron_barbs = {
+	name: "Iron Barbs",
+	desc: "Damages attacking Pokémon for 1/8 their max HP on contact.",
+	wiki: "http://www.serebii.net/abilitydex/ironbarbs.shtml"
 };
 
-var dire_hit_3 = {
-	name: "Dire Hit 3",
-	desc: "It can be used many times to greatly raise a Pokémon’s critical-hit ratio. It wears off if the Pokémon is withdrawn.",
-	wiki: "http://www.serebii.net/itemdex/direhit3.shtml"
+var iron_fist = {
+	name: "Iron Fist",
+	desc: "Boosts the power of punching moves.",
+	wiki: "http://www.serebii.net/abilitydex/ironfist.shtml"
 };
 
-var dive_ball = {
-	name: "Dive Ball",
-	desc: "A somewhat different Poké Ball that works especially well on Pokémon that live underwater.",
-	wiki: "http://www.serebii.net/itemdex/diveball.shtml"
+var justified = {
+	name: "Justified",
+	desc: "Raises Attack when hit by Dark-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/justified.shtml"
 };
 
-var dna_splicers = {
-	name: "Dna Splicers",
-	desc: "A splicer that fuses Kyurem and a certain Pokémon. They are said to have been one in the beginning.",
-	wiki: "http://www.serebii.net/itemdex/dnasplicers.shtml"
+var keen_eye = {
+	name: "Keen Eye",
+	desc: "Prevents the Pokémon from losing accuracy.",
+	wiki: "http://www.serebii.net/abilitydex/keeneye.shtml"
 };
 
-var dome_fossil = {
-	name: "Dome Fossil",
-	desc: "A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a shell.",
-	wiki: "http://www.serebii.net/itemdex/domefossil.shtml"
+var klutz = {
+	name: "Klutz",
+	desc: "The Pokémon can’t use any held items.",
+	wiki: "http://www.serebii.net/abilitydex/klutz.shtml"
 };
 
-var douse_drive = {
-	name: "Douse Drive",
-	desc: "Changes Techno Blast to a Water-type move when held by Genesect.",
-	wiki: "http://www.serebii.net/itemdex/dousedrive.shtml"
+var leaf_guard = {
+	name: "Leaf Guard",
+	desc: "Prevents status problems in sunny weather.",
+	wiki: "http://www.serebii.net/abilitydex/leafguard.shtml"
 };
 
-var draco_plate = {
-	name: "Draco Plate",
-	desc: "Increases power of Dragon-type moves. Changes Arceus' type to Dragon.",
-	wiki: "http://www.serebii.net/itemdex/dracoplate.shtml"
+var levitate = {
+	name: "Levitate",
+	desc: "Gives full immunity to all Ground-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/levitate.shtml"
 };
 
-var dragon_fang = {
-	name: "Dragon Fang",
-	desc: "Increases the power of Dragon-type moves.",
-	wiki: "http://www.serebii.net/itemdex/dragonfang.shtml"
+var light_metal = {
+	name: "Light Metal",
+	desc: "Halves the Pokémon's weight.",
+	wiki: "http://www.serebii.net/abilitydex/lightmetal.shtml"
 };
 
-var dragon_gem = {
-	name: "Dragon Gem",
-	desc: "Increases the power of a Dragon-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/dragongem.shtml"
+var lightning_rod = {
+	name: "Lightning Rod",
+	desc: "The Pokémon draws in all Electric-type moves to raise Sp. Atk.",
+	wiki: "http://www.serebii.net/abilitydex/lightningrod.shtml"
 };
 
-var dragon_scale = {
-	name: "Dragon Scale",
-	desc: "A thick and tough scale. Dragon-type Pokémon may be holding this item when caught.",
-	wiki: "http://www.serebii.net/itemdex/dragonscale.shtml"
+var limber = {
+	name: "Limber",
+	desc: "The Pokémon is protected from paralysis.",
+	wiki: "http://www.serebii.net/abilitydex/limber.shtml"
 };
 
-var dread_plate = {
-	name: "Dread Plate",
-	desc: "Increases power of Dark-type moves. Changes Arceus' type to Dark.",
-	wiki: "http://www.serebii.net/itemdex/dreadplate.shtml"
+var liquid_ooze = {
+	name: "Liquid Ooze",
+	desc: "Inflicts damage on foes using any draining move.",
+	wiki: "http://www.serebii.net/abilitydex/liquidooze.shtml"
 };
 
-var dream_ball = {
-	name: "Dream Ball",
-	desc: "A special Poké Ball that appears out of nowhere in a bag at the Entree Forest. It can catch any Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/dreamball.shtml"
+var magic_bounce = {
+	name: "Magic Bounce",
+	desc: "Reflects most non-damaging moves back at their user.",
+	wiki: "http://www.serebii.net/abilitydex/magicbounce.shtml"
 };
 
-var dropped_item = {
-	name: "Dropped Item",
-	desc: "The Xtransceiver found at the Nimbasa City amusement park. It seems it belongs to a boy.",
-	wiki: "http://www.serebii.net/itemdex/droppeditem.shtml"
+var magic_guard = {
+	name: "Magic Guard",
+	desc: "The Pokémon only takes damage from attacks.",
+	wiki: "http://www.serebii.net/abilitydex/magicguard.shtml"
 };
 
-var dubious_disc = {
-	name: "Dubious Disc",
-	desc: "A transparent device overflowing with dubious data. Its producer is unknown.",
-	wiki: "http://www.serebii.net/itemdex/dubiousdisc.shtml"
+var magician = {
+	name: "Magician",
+	desc: "The Pokémon steals the held item of a Pokémon it hits with a move.",
+	wiki: "http://www.serebii.net/abilitydex/magician.shtml"
 };
 
-var durin_berry = {
-	name: "Durin Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/durinberry.shtml"
+var magma_armor = {
+	name: "Magma Armor",
+	desc: "Prevents the Pokémon from becoming frozen.",
+	wiki: "http://www.serebii.net/abilitydex/magmaarmor.shtml"
 };
 
-var dusk_ball = {
-	name: "Dusk Ball",
-	desc: "A somewhat different Poké Ball that makes it easier to catch wild Pokémon at night or in dark places like caves.",
-	wiki: "http://www.serebii.net/itemdex/duskball.shtml"
+var magnet_pull = {
+	name: "Magnet Pull",
+	desc: "Prevents Steel-type Pokémon from escaping.",
+	wiki: "http://www.serebii.net/abilitydex/magnetpull.shtml"
 };
 
-var dusk_stone = {
-	name: "Dusk Stone",
-	desc: "A peculiar stone that makes certain species of Pokémon evolve. It is as dark as dark can be.",
-	wiki: "http://www.serebii.net/itemdex/duskstone.shtml"
+var marvel_scale = {
+	name: "Marvel Scale",
+	desc: "Boosts Defense if there is a status problem.",
+	wiki: "http://www.serebii.net/abilitydex/marvelscale.shtml"
 };
 
-var earth_plate = {
-	name: "Earth Plate",
-	desc: "Increases power of Ground-type moves. Changes Arceus' type to Ground.",
-	wiki: "http://www.serebii.net/itemdex/earthplate.shtml"
+var mega_launcher = {
+	name: "Mega Launcher",
+	desc: "Powers up aura and pulse moves.",
+	wiki: "http://www.serebii.net/abilitydex/megalauncher.shtml"
 };
 
-var eject_button = {
-	name: "Eject Button",
-	desc: "If the holder is hit by an attack, it will switch with another Pokémon in your party.",
-	wiki: "http://www.serebii.net/itemdex/ejectbutton.shtml"
+var minus = {
+	name: "Minus",
+	desc: "Boosts Sp. Atk if another Pokémon has Plus.",
+	wiki: "http://www.serebii.net/abilitydex/minus.shtml"
 };
 
-var electirizer = {
-	name: "Electirizer",
-	desc: "A box packed with a tremendous amount of electric energy. It is loved by a certain Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/electirizer.shtml"
+var mold_breaker = {
+	name: "Mold Breaker",
+	desc: "Moves can be used regardless of Abilities.",
+	wiki: "http://www.serebii.net/abilitydex/moldbreaker.shtml"
 };
 
-var electric_gem = {
-	name: "Electric Gem",
-	desc: "Increases the power of an Electric-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/electricgem.shtml"
+var moody = {
+	name: "Moody",
+	desc: "Raises a random stat two stages and lowers another one stage after each turn.",
+	wiki: "http://www.serebii.net/abilitydex/moody.shtml"
 };
 
-var elevator_key = {
-	name: "Elevator Key",
-	desc: "A card key that activates the elevator in Lysandre Labs. It is emblazoned with Team Flare’s logo.",
-	wiki: "http://www.serebii.net/itemdex/elevatorkey.shtml"
+var motor_drive = {
+	name: "Motor Drive",
+	desc: "Raises Speed if hit by an Electric-type move.",
+	wiki: "http://www.serebii.net/abilitydex/motordrive.shtml"
 };
 
-var elixir = {
-	name: "Elixir",
-	desc: "It restores the PP of all the moves learned by the targeted Pokémon by 10 points each.",
-	wiki: "http://www.serebii.net/itemdex/elixir.shtml"
+var moxie = {
+	name: "Moxie",
+	desc: "Raises Attack one stage upon KOing a Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/moxie.shtml"
 };
 
-var energy_root = {
-	name: "Energy Root",
-	desc: "A very bitter root. It restores the HP of one POKéMON by 200 points.",
-	wiki: "http://www.serebii.net/itemdex/energyroot.shtml"
+var multiscale = {
+	name: "Multiscale",
+	desc: "Halves damage taken from full HP.",
+	wiki: "http://www.serebii.net/abilitydex/multiscale.shtml"
 };
 
-var energypowder = {
-	name: "Energypowder",
-	desc: "A very bitter medicine powder. It restores the HP of one POKéMON by 50 points.",
-	wiki: "http://www.serebii.net/itemdex/energypowder.shtml"
+var multitype = {
+	name: "Multitype",
+	desc: "Changes type to match the held Plate.",
+	wiki: "http://www.serebii.net/abilitydex/multitype.shtml"
 };
 
-var enigma_berry = {
-	name: "Enigma Berry",
-	desc: "If held by a Pokémon, it restores its HP if it is hit by any supereffective attack.",
-	wiki: "http://www.serebii.net/itemdex/enigmaberry.shtml"
+var mummy = {
+	name: "Mummy",
+	desc: "Contact with this Pokémon spreads this Ability.",
+	wiki: "http://www.serebii.net/abilitydex/mummy.shtml"
 };
 
-var escape_rope = {
-	name: "Escape Rope",
-	desc: "A long, durable rope. Use it to escape instantly from a cave or a dungeon.",
-	wiki: "http://www.serebii.net/itemdex/escaperope.shtml"
+var natural_cure = {
+	name: "Natural Cure",
+	desc: "All status problems are healed upon switching out.",
+	wiki: "http://www.serebii.net/abilitydex/naturalcure.shtml"
 };
 
-var ether = {
-	name: "Ether",
-	desc: "It restores the PP of a Pokémon’s selected move by a maximum of 10 points.",
-	wiki: "http://www.serebii.net/itemdex/ether.shtml"
+var no_guard = {
+	name: "No Guard",
+	desc: "Ensures the Pokémon and its foe’s attacks land.",
+	wiki: "http://www.serebii.net/abilitydex/noguard.shtml"
 };
 
-var everstone = {
-	name: "Everstone",
-	desc: "An item to be held by a Pokémon. The Pokémon holding this peculiar stone is prevented from evolving.",
-	wiki: "http://www.serebii.net/itemdex/everstone.shtml"
+var normalize = {
+	name: "Normalize",
+	desc: "All the Pokémon's moves become Normal type.",
+	wiki: "http://www.serebii.net/abilitydex/normalize.shtml"
 };
 
-var eviolite = {
-	name: "Eviolite",
-	desc: "A mysterious evolutionary lump. When held, it raises the Defense and Sp. Def of a Pokémon that can still evolve.",
-	wiki: "http://www.serebii.net/itemdex/eviolite.shtml"
+var oblivious = {
+	name: "Oblivious",
+	desc: "Prevents the Pokémon from becoming infatuated or falling for taunts*.",
+	wiki: "http://www.serebii.net/abilitydex/oblivious.shtml"
 };
 
-var exp_share = {
-	name: "Exp Share",
-	desc: "An item to be held by a Pokémon. The holder gets a share of a battle’s Exp. Points without battling.",
-	wiki: "http://www.serebii.net/itemdex/expshare.shtml"
+var overcoat = {
+	name: "Overcoat",
+	desc: "Protects against damage from weather.",
+	wiki: "http://www.serebii.net/abilitydex/overcoat.shtml"
 };
 
-var expert_belt = {
-	name: "Expert Belt",
-	desc: "Increases the power of super-effective moves.",
-	wiki: "http://www.serebii.net/itemdex/expertbelt.shtml"
+var overgrow = {
+	name: "Overgrow",
+	desc: "Powers up Grass-type moves in a pinch.",
+	wiki: "http://www.serebii.net/abilitydex/overgrow.shtml"
 };
 
-var fairy_gem = {
-	name: "Fairy Gem",
-	desc: "Increases the power of a Fairy-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/fairygem.shtml"
+var own_tempo = {
+	name: "Own Tempo",
+	desc: "Prevents the Pokémon from becoming confused.",
+	wiki: "http://www.serebii.net/abilitydex/owntempo.shtml"
 };
 
-var fast_ball = {
-	name: "Fast Ball",
-	desc: "A Poké Ball that makes it easier to catch Pokémon which are quick to run away.",
-	wiki: "http://www.serebii.net/itemdex/fastball.shtml"
+var parental_bond = {
+	name: "Parental Bond",
+	desc: "Parent and child attack together.",
+	wiki: "http://www.serebii.net/abilitydex/parentalbond.shtml"
 };
 
-var fighting_gem = {
-	name: "Fighting Gem",
-	desc: "Increases the power of a Fighting-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/fightinggem.shtml"
+var pickpocket = {
+	name: "Pickpocket",
+	desc: "Steals attacking Pokémon's held item on contact.",
+	wiki: "http://www.serebii.net/abilitydex/pickpocket.shtml"
 };
 
-var figy_berry = {
-	name: "Figy Berry",
-	desc: "Restores HP if it's low, but may cause confusion.",
-	wiki: "http://www.serebii.net/itemdex/figyberry.shtml"
+var pickup = {
+	name: "Pickup",
+	desc: "The Pokémon may pick up items.",
+	wiki: "http://www.serebii.net/abilitydex/pickup.shtml"
 };
 
-var fire_gem = {
-	name: "Fire Gem",
-	desc: "Increases the power of a Fire-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/firegem.shtml"
+var pixilate = {
+	name: "Pixilate",
+	desc: "Normal-type moves become Fairy-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/pixilate.shtml"
 };
 
-var fire_stone = {
-	name: "Fire Stone",
-	desc: "A peculiar stone that makes certain species of POKéMON evolve. It is colored orange.",
-	wiki: "http://www.serebii.net/itemdex/firestone.shtml"
+var plus = {
+	name: "Plus",
+	desc: "Boosts Sp. Atk if another Pokémon has Minus.",
+	wiki: "http://www.serebii.net/abilitydex/plus.shtml"
 };
 
-var fist_plate = {
-	name: "Fist Plate",
-	desc: "Increases power of Fighting-type moves. Changes Arceus' type to Fighting.",
-	wiki: "http://www.serebii.net/itemdex/fistplate.shtml"
+var poison_heal = {
+	name: "Poison Heal",
+	desc: "Restores HP if the Pokémon is poisoned.",
+	wiki: "http://www.serebii.net/abilitydex/poisonheal.shtml"
 };
 
-var flame_orb = {
-	name: "Flame Orb",
-	desc: "An item to be held by a Pokémon. It is a bizarre orb that inflicts a burn on the holder in battle.",
-	wiki: "http://www.serebii.net/itemdex/flameorb.shtml"
+var poison_point = {
+	name: "Poison Point",
+	desc: "Contact with the Pokémon may poison the foe.",
+	wiki: "http://www.serebii.net/abilitydex/poisonpoint.shtml"
 };
 
-var flame_plate = {
-	name: "Flame Plate",
-	desc: "Increases power of Fire-type moves. Changes Arceus' type to Fire.",
-	wiki: "http://www.serebii.net/itemdex/flameplate.shtml"
+var poison_touch = {
+	name: "Poison Touch",
+	desc: "Has a 30% chance of poisoning Pokémon upon contact when attacking.",
+	wiki: "http://www.serebii.net/abilitydex/poisontouch.shtml"
 };
 
-var float_stone = {
-	name: "Float Stone",
-	desc: "A very light stone. It reduces the weight of a Pokémon when held.",
-	wiki: "http://www.serebii.net/itemdex/floatstone.shtml"
+var power_construct = {
+	name: "Power Construct",
+	desc: "Changes the Pokémon's form when its HP falls below half.",
+	wiki: "http://www.serebii.net/abilitydex/powerconstruct.shtml"
 };
 
-var fluffy_tail = {
-	name: "Fluffy Tail",
-	desc: "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/fluffytail.shtml"
+var prankster = {
+	name: "Prankster",
+	desc: "Raises non-damaging moves' priority by one stage.",
+	wiki: "http://www.serebii.net/abilitydex/prankster.shtml"
 };
 
-var flying_gem = {
-	name: "Flying Gem",
-	desc: "Increases the power of a Flying-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/flyinggem.shtml"
+var pressure = {
+	name: "Pressure",
+	desc: "The Pokémon raises the foe’s PP usage.",
+	wiki: "http://www.serebii.net/abilitydex/pressure.shtml"
 };
 
-var focus_band = {
-	name: "Focus Band",
-	desc: "An item to be held by a Pokémon. The holder may endure a potential KO attack, leaving it with just 1 HP.",
-	wiki: "http://www.serebii.net/itemdex/focusband.shtml"
+var primordial_sea = {
+	name: "Primordial Sea",
+	desc: "Causes heavy rain.",
+	wiki: "http://www.serebii.net/abilitydex/primordialsea.shtml"
 };
 
-var focus_sash = {
-	name: "Focus Sash",
-	desc: "An item to be held by a Pokémon. If it has full HP, the holder will endure one potential KO attack, leaving 1 HP.",
-	wiki: "http://www.serebii.net/itemdex/focussash.shtml"
+var protean = {
+	name: "Protean",
+	desc: "Changes the Pokémon's type to the same type of the move it is using.",
+	wiki: "http://www.serebii.net/abilitydex/protean.shtml"
 };
 
-var fresh_water = {
-	name: "Fresh Water",
-	desc: "Water with a high mineral content. It restores the HP of one POKéMON by 50 points.",
-	wiki: "http://www.serebii.net/itemdex/freshwater.shtml"
+var pure_power = {
+	name: "Pure Power",
+	desc: "Boosts the power of physical attacks.",
+	wiki: "http://www.serebii.net/abilitydex/purepower.shtml"
 };
 
-var friend_ball = {
-	name: "Friend Ball",
-	desc: "A Poké Ball that makes caught Pokémon more friendly.",
-	wiki: "http://www.serebii.net/itemdex/friendball.shtml"
+var queenly_majesty = {
+	name: "Queenly Majesty",
+	desc: "Prevents the opponent from using moves with increased priority.",
+	wiki: "http://www.serebii.net/abilitydex/queenlymajesty.shtml"
 };
 
-var full_heal = {
-	name: "Full Heal",
-	desc: "A spray-type medicine. It heals all the status problems of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/fullheal.shtml"
+var quick_feet = {
+	name: "Quick Feet",
+	desc: "Boosts Speed if there is a status problem.",
+	wiki: "http://www.serebii.net/abilitydex/quickfeet.shtml"
 };
 
-var full_incense = {
-	name: "Full Incense",
-	desc: "An item to be held by a Pokémon. It is an exotic-smelling incense that makes the holder bloated and slow moving.",
-	wiki: "http://www.serebii.net/itemdex/fullincense.shtml"
+var rain_dish = {
+	name: "Rain Dish",
+	desc: "The Pokémon gradually recovers HP in rain.",
+	wiki: "http://www.serebii.net/abilitydex/raindish.shtml"
 };
 
-var full_restore = {
-	name: "Full Restore",
-	desc: "A medicine that fully restores the HP and heals any status problems of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/fullrestore.shtml"
+var rattled = {
+	name: "Rattled",
+	desc: "Raises Speed one stage upon being hit by a Dark, Ghost, or Bug move.",
+	wiki: "http://www.serebii.net/abilitydex/rattled.shtml"
 };
 
-var galladite = {
-	name: "Galladite",
-	desc: "One of a variety of mysterious Mega Stones. Have Gallade hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/galladite.shtml"
+var receiver = {
+	name: "Receiver",
+	desc: "Takes the Ability of a fainted ally.",
+	wiki: "http://www.serebii.net/abilitydex/receiver.shtml"
 };
 
-var ganlon_berry = {
-	name: "Ganlon Berry",
-	desc: "Raises Defense when HP is low.",
-	wiki: "http://www.serebii.net/itemdex/ganlonberry.shtml"
+var reckless = {
+	name: "Reckless",
+	desc: "Powers up moves that have recoil damage.",
+	wiki: "http://www.serebii.net/abilitydex/reckless.shtml"
 };
 
-var garchompite = {
-	name: "Garchompite",
-	desc: "Enables Garchomp to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/garchompite.shtml"
+var refrigerate = {
+	name: "Refrigerate",
+	desc: "Normal-type moves become Ice-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/refrigerate.shtml"
 };
 
-var gardevoirite = {
-	name: "Gardevoirite",
-	desc: "Enables Gardevoir to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/gardevoirite.shtml"
+var regenerator = {
+	name: "Regenerator",
+	desc: "Heals for 1/3 max HP upon leaving battle.",
+	wiki: "http://www.serebii.net/abilitydex/regenerator.shtml"
 };
 
-var gengarite = {
-	name: "Gengarite",
-	desc: "Enables Gengar to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/gengarite.shtml"
+var rivalry = {
+	name: "Rivalry",
+	desc: "Raises Attack if the foe is of the same gender.",
+	wiki: "http://www.serebii.net/abilitydex/rivalry.shtml"
 };
 
-var genius_wing = {
-	name: "Genius Wing",
-	desc: "Increases Special Attack EVs by 1.",
-	wiki: "http://www.serebii.net/itemdex/geniuswing.shtml"
+var rks_system = {
+	name: "RKS System",
+	desc: "Changes type to match a specific item.",
+	wiki: "http://www.serebii.net/abilitydex/rkssystem.shtml"
 };
 
-var ghost_gem = {
-	name: "Ghost Gem",
-	desc: "Increases the power of a Ghost-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/ghostgem.shtml"
+var rock_head = {
+	name: "Rock Head",
+	desc: "Protects the Pokémon from recoil damage.",
+	wiki: "http://www.serebii.net/abilitydex/rockhead.shtml"
 };
 
-var glalitite = {
-	name: "Glalitite",
-	desc: "One of a variety of mysterious Mega Stones. Have Glalie hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/glalitite.shtml"
+var rough_skin = {
+	name: "Rough Skin",
+	desc: "Inflicts damage to the foe on contact.",
+	wiki: "http://www.serebii.net/abilitydex/roughskin.shtml"
 };
 
-var gooey_mulch = {
-	name: "Gooey Mulch",
-	desc: "A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/gooeymulch.shtml"
+var run_away = {
+	name: "Run Away",
+	desc: "Enables sure getaway from wild Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/runaway.shtml"
 };
 
-var grass_gem = {
-	name: "Grass Gem",
-	desc: "Increases the power of a Grass-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/grassgem.shtml"
+var sand_force = {
+	name: "Sand Force",
+	desc: "Strengthens Rock, Ground, and Steel moves to 1.3× their power during a sandstorm.",
+	wiki: "http://www.serebii.net/abilitydex/sandforce.shtml"
 };
 
-var great_ball = {
-	name: "Great Ball",
-	desc: "A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball.",
-	wiki: "http://www.serebii.net/itemdex/greatball.shtml"
+var sand_rush = {
+	name: "Sand Rush",
+	desc: "Doubles Speed during a sandstorm.",
+	wiki: "http://www.serebii.net/abilitydex/sandrush.shtml"
 };
 
-var green_scarf = {
-	name: "Green Scarf",
-	desc: "Raises holder's Smart aspect in a Contest.",
-	wiki: "http://www.serebii.net/itemdex/greenscarf.shtml"
+var sand_stream = {
+	name: "Sand Stream",
+	desc: "The Pokémon summons a sandstorm in battle.",
+	wiki: "http://www.serebii.net/abilitydex/sandstream.shtml"
 };
 
-var green_shard = {
-	name: "Green Shard",
-	desc: "A small green shard. It appears to be from some sort of implement made long ago.",
-	wiki: "http://www.serebii.net/itemdex/greenshard.shtml"
+var sand_veil = {
+	name: "Sand Veil",
+	desc: "Boosts the Pokémon's evasion in a sandstorm.",
+	wiki: "http://www.serebii.net/abilitydex/sandveil.shtml"
 };
 
-var grepa_berry = {
-	name: "Grepa Berry",
-	desc: "Using it on a Pokémon makes it more friendly, but it also lowers its base Sp. Def stat.",
-	wiki: "http://www.serebii.net/itemdex/grepaberry.shtml"
+var sap_sipper = {
+	name: "Sap Sipper",
+	desc: "Absorbs Grass moves, raising Attack one stage.",
+	wiki: "http://www.serebii.net/abilitydex/sapsipper.shtml"
 };
 
-var grip_claw = {
-	name: "Grip Claw",
-	desc: "A Pokémon held item that extends the duration of multiturn attacks like Bind and Wrap.",
-	wiki: "http://www.serebii.net/itemdex/gripclaw.shtml"
+var schooling = {
+	name: "Schooling",
+	desc: "Changes the Pokémon's form when certain requirements are met.",
+	wiki: "http://www.serebii.net/abilitydex/schooling.shtml"
 };
 
-var griseous_orb = {
-	name: "Griseous Orb",
-	desc: "Increases the power of Dragon- and Ghost-type moves when held by Giratina, and changes it to Origin Forme.",
-	wiki: "http://www.serebii.net/itemdex/griseousorb.shtml"
+var scrappy = {
+	name: "Scrappy",
+	desc: "Enables moves to hit Ghost-type foes.",
+	wiki: "http://www.serebii.net/abilitydex/scrappy.shtml"
 };
 
-var grn_apricorn = {
-	name: "Grn Apricorn",
-	desc: "A green Apricorn. It has a mysterious, aromatic scent.",
-	wiki: "http://www.serebii.net/itemdex/grnapricorn.shtml"
+var serene_grace = {
+	name: "Serene Grace",
+	desc: "Boosts the likelihood of added effects appearing.",
+	wiki: "http://www.serebii.net/abilitydex/serenegrace.shtml"
 };
 
-var ground_gem = {
-	name: "Ground Gem",
-	desc: "Increases the power of a Ground-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/groundgem.shtml"
+var shadow_shield = {
+	name: "Shadow Shield",
+	desc: "Lowers damage taken from moves while at maximum HP.",
+	wiki: "http://www.serebii.net/abilitydex/shadowshield.shtml"
 };
 
-var growth_mulch = {
-	name: "Growth Mulch",
-	desc: "A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/growthmulch.shtml"
+var shadow_tag = {
+	name: "Shadow Tag",
+	desc: "Prevents the foe from escaping.",
+	wiki: "http://www.serebii.net/abilitydex/shadowtag.shtml"
 };
 
-var grubby_hanky = {
-	name: "Grubby Hanky",
-	desc: "A handkerchief dropped by a regular at Café Warehouse. It smells faintly like a Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/grubbyhanky.shtml"
+var shed_skin = {
+	name: "Shed Skin",
+	desc: "The Pokémon may heal its own status problems.",
+	wiki: "http://www.serebii.net/abilitydex/shedskin.shtml"
 };
 
-var guard_spec = {
-	name: "Guard Spec",
-	desc: "Prevents stat reduction for five turns.",
-	wiki: "http://www.serebii.net/itemdex/guardspec.shtml"
+var sheer_force = {
+	name: "Sheer Force",
+	desc: "Strengthens moves with extra effects to 1.3× their power, but prevents their extra effects.",
+	wiki: "http://www.serebii.net/abilitydex/sheerforce.shtml"
 };
 
-var gyaradosite = {
-	name: "Gyaradosite",
-	desc: "Enables Gyarados to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/gyaradosite.shtml"
+var shell_armor = {
+	name: "Shell Armor",
+	desc: "The Pokémon is protected against critical hits.",
+	wiki: "http://www.serebii.net/abilitydex/shellarmor.shtml"
 };
 
-var haban_berry = {
-	name: "Haban Berry",
-	desc: "Weakens a supereffective Dragon-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/habanberry.shtml"
+var shield_dust = {
+	name: "Shield Dust",
+	desc: "Blocks the added effects of attacks taken.",
+	wiki: "http://www.serebii.net/abilitydex/shielddust.shtml"
 };
 
-var hard_stone = {
-	name: "Hard Stone",
-	desc: "Increases the power of Rock-type moves.",
-	wiki: "http://www.serebii.net/itemdex/hardstone.shtml"
+var shields_down = {
+	name: "Shields Down",
+	desc: "Changes the Pokémon's form when HP is low.",
+	wiki: "http://www.serebii.net/abilitydex/shieldsdown.shtml"
 };
 
-var heal_ball = {
-	name: "Heal Ball",
-	desc: "A remedial Poké Ball that restores the caught Pokémon’s HP and eliminates any status problem.",
-	wiki: "http://www.serebii.net/itemdex/healball.shtml"
+var simple = {
+	name: "Simple",
+	desc: "The Pokémon is prone to wild stat changes.",
+	wiki: "http://www.serebii.net/abilitydex/simple.shtml"
 };
 
-var heal_powder = {
-	name: "Heal Powder",
-	desc: "A very bitter medicine powder. It heals all the status problems of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/healpowder.shtml"
+var skill_link = {
+	name: "Skill Link",
+	desc: "Increases the frequency of multi-strike moves.",
+	wiki: "http://www.serebii.net/abilitydex/skilllink.shtml"
 };
 
-var health_wing = {
-	name: "Health Wing",
-	desc: "Increases HP EVs by 1.",
-	wiki: "http://www.serebii.net/itemdex/healthwing.shtml"
+var slow_start = {
+	name: "Slow Start",
+	desc: "Temporarily halves Attack and Speed.",
+	wiki: "http://www.serebii.net/abilitydex/slowstart.shtml"
 };
 
-var heart_scale = {
-	name: "Heart Scale",
-	desc: "A pretty, heart-shaped scale that is extremely rare. It glows faintly in the colors of the rainbow.",
-	wiki: "http://www.serebii.net/itemdex/heartscale.shtml"
+var sniper = {
+	name: "Sniper",
+	desc: "Powers up moves if they become critical hits.",
+	wiki: "http://www.serebii.net/abilitydex/sniper.shtml"
 };
 
-var heat_rock = {
-	name: "Heat Rock",
-	desc: "A Pokémon held item that extends the duration of the move Sunny Day used by the holder.",
-	wiki: "http://www.serebii.net/itemdex/heatrock.shtml"
+var snow_cloak = {
+	name: "Snow Cloak",
+	desc: "Raises evasion in a hailstorm.",
+	wiki: "http://www.serebii.net/abilitydex/snowcloak.shtml"
 };
 
-var heavy_ball = {
-	name: "Heavy Ball",
-	desc: "A Poké Ball for catching very heavy Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/heavyball.shtml"
+var snow_warning = {
+	name: "Snow Warning",
+	desc: "The Pokémon summons a hailstorm in battle.",
+	wiki: "http://www.serebii.net/abilitydex/snowwarning.shtml"
 };
 
-var helix_fossil = {
-	name: "Helix Fossil",
-	desc: "A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a seashell.",
-	wiki: "http://www.serebii.net/itemdex/helixfossil.shtml"
+var solar_power = {
+	name: "Solar Power",
+	desc: "Boosts Sp. Atk, but lowers HP in sunshine.",
+	wiki: "http://www.serebii.net/abilitydex/solarpower.shtml"
 };
 
-var heracronite = {
-	name: "Heracronite",
-	desc: "Enables Heracross to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/heracronite.shtml"
+var solid_rock = {
+	name: "Solid Rock",
+	desc: "Powers down supereffective moves.",
+	wiki: "http://www.serebii.net/abilitydex/solidrock.shtml"
 };
 
-var hm01 = {
-	name: "HM01",
-	desc: "Teaches the move Cut.",
-	wiki: "http://www.serebii.net/itemdex/hm01.shtml"
+var soul_heart = {
+	name: "Soul_heart",
+	desc: "Raises the Pokémon's Special Attack when any Pokémon faints.",
+	wiki: "http://www.serebii.net/abilitydex/soul_heart.shtml"
 };
 
-var hm02 = {
-	name: "HM02",
-	desc: "Teaches the move Fly.",
-	wiki: "http://www.serebii.net/itemdex/hm02.shtml"
+var soundproof = {
+	name: "Soundproof",
+	desc: "Gives full immunity to all sound-based moves.",
+	wiki: "http://www.serebii.net/abilitydex/soundproof.shtml"
 };
 
-var hm03 = {
-	name: "HM03",
-	desc: "Teaches the move Surf.",
-	wiki: "http://www.serebii.net/itemdex/hm03.shtml"
+var speed_boost = {
+	name: "Speed Boost",
+	desc: "The Pokémon's Speed stat is gradually boosted.",
+	wiki: "http://www.serebii.net/abilitydex/speedboost.shtml"
 };
 
-var hm04 = {
-	name: "HM04",
-	desc: "Teaches the move Strength.",
-	wiki: "http://www.serebii.net/itemdex/hm04.shtml"
+var stakeout = {
+	name: "Stakeout",
+	desc: "Doubles damage inflicted on Pokémon that enter mid-battle.",
+	wiki: "http://www.serebii.net/abilitydex/stakeout.shtml"
 };
 
-var hm05 = {
-	name: "HM05",
-	desc: "Teaches the move Flash/Defog/Whirlpool/Waterfall.",
-	wiki: "http://www.serebii.net/itemdex/hm05.shtml"
+var stall = {
+	name: "Stall",
+	desc: "The Pokémon moves after even slower foes.",
+	wiki: "http://www.serebii.net/abilitydex/stall.shtml"
 };
 
-var hm06 = {
-	name: "HM06",
-	desc: "Teaches the move Whirlpool/Rock Smash/Dive.",
-	wiki: "http://www.serebii.net/itemdex/hm06.shtml"
+var stamina = {
+	name: "Stamina",
+	desc: "Raises defense when hit by an attack.",
+	wiki: "http://www.serebii.net/abilitydex/stamina.shtml"
 };
 
-var hm07 = {
-	name: "HM07",
-	desc: "Teaches the move Waterfall.",
-	wiki: "http://www.serebii.net/itemdex/hm07.shtml"
+var stance_change = {
+	name: "Stance Change",
+	desc: "The Pokémon changes form depending on how it battles.",
+	wiki: "http://www.serebii.net/abilitydex/stancechange.shtml"
 };
 
-var hm08 = {
-	name: "HM08",
-	desc: "Teaches the move Dive/Rock Climb.",
-	wiki: "http://www.serebii.net/itemdex/hm08.shtml"
+var static = {
+	name: "Static",
+	desc: "Contact with the Pokémon may cause paralysis.",
+	wiki: "http://www.serebii.net/abilitydex/static.shtml"
 };
 
-var holo_caster = {
-	name: "Holo Caster",
-	desc: "A device that allows users to receive and view hologram clips at any time. It is also used to chat with others.",
-	wiki: "http://www.serebii.net/itemdex/holocaster.shtml"
+var steadfast = {
+	name: "Steadfast",
+	desc: "Raises Speed each time the Pokémon flinches.",
+	wiki: "http://www.serebii.net/abilitydex/steadfast.shtml"
 };
 
-var hondew_berry = {
-	name: "Hondew Berry",
-	desc: "Using it on a Pokémon makes it more friendly, but it also lowers its base Sp. Atk stat.",
-	wiki: "http://www.serebii.net/itemdex/hondewberry.shtml"
+var stench = {
+	name: "Stench",
+	desc: "The stench may cause the target to flinch.",
+	wiki: "http://www.serebii.net/abilitydex/stench.shtml"
 };
 
-var honey = {
-	name: "Honey",
-	desc: "A sweet honey with a lush aroma that attracts wild Pokémon when it is used in grass, caves, or on special trees.",
-	wiki: "http://www.serebii.net/itemdex/honey.shtml"
+var sticky_hold = {
+	name: "Sticky Hold",
+	desc: "Protects the Pokémon from item theft.",
+	wiki: "http://www.serebii.net/abilitydex/stickyhold.shtml"
 };
 
-var honor_of_kalos = {
-	name: "Honor Of Kalos",
-	desc: "A precious symbol that is awarded only to an individual who has done great things for the Kalos region.",
-	wiki: "http://www.serebii.net/itemdex/honorofkalos.shtml"
+var storm_drain = {
+	name: "Storm Drain",
+	desc: "The Pokémon draws in all Water-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/stormdrain.shtml"
 };
 
-var houndoominite = {
-	name: "Houndoominite",
-	desc: "Enables Houndoom to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/houndoominite.shtml"
+var strong_jaw = {
+	name: "Strong Jaw",
+	desc: "The Pokémon's strong jaw gives it tremendous biting power.",
+	wiki: "http://www.serebii.net/abilitydex/strongjaw.shtml"
 };
 
-var hp_up = {
-	name: "Hp Up",
-	desc: "A nutritious drink for Pokémon. It raises the base HP of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/hpup.shtml"
+var sturdy = {
+	name: "Sturdy",
+	desc: "The Pokémon is protected against 1-hit KO attacks.",
+	wiki: "http://www.serebii.net/abilitydex/sturdy.shtml"
 };
 
-var hyper_potion = {
-	name: "Hyper Potion",
-	desc: "A spray-type medicine for wounds. It restores the HP of one Pokémon by 200 points.",
-	wiki: "http://www.serebii.net/itemdex/hyperpotion.shtml"
+var suction_cups = {
+	name: "Suction Cups",
+	desc: "Negates moves that force switching out.",
+	wiki: "http://www.serebii.net/abilitydex/suctioncups.shtml"
 };
 
-var iapapa_berry = {
-	name: "Iapapa Berry",
-	desc: "Restores HP if it's low, but may cause confusion.",
-	wiki: "http://www.serebii.net/itemdex/iapapaberry.shtml"
+var super_luck = {
+	name: "Super Luck",
+	desc: "Heightens the critical-hit ratios of moves.",
+	wiki: "http://www.serebii.net/abilitydex/superluck.shtml"
 };
 
-var ice_gem = {
-	name: "Ice Gem",
-	desc: "Increases the power of an Ice-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/icegem.shtml"
+var surge_surfer = {
+	name: "Surge Surfer",
+	desc: "Doubles Speed while under the effects of Electric Terrain.",
+	wiki: "http://www.serebii.net/abilitydex/surgesurfer.shtml"
 };
 
-var ice_heal = {
-	name: "Ice Heal",
-	desc: "A spray-type medicine. It defrosts a Pokémon that has been frozen solid.",
-	wiki: "http://www.serebii.net/itemdex/iceheal.shtml"
+var swarm = {
+	name: "Swarm",
+	desc: "Powers up Bug-type moves in a pinch.",
+	wiki: "http://www.serebii.net/abilitydex/swarm.shtml"
 };
 
-var icicle_plate = {
-	name: "Icicle Plate",
-	desc: "Increases power of Ice-type moves. Changes Arceus' type to Ice.",
-	wiki: "http://www.serebii.net/itemdex/icicleplate.shtml"
+var sweet_veil = {
+	name: "Sweet Veil",
+	desc: "Prevents itself and its allies from falling asleep.",
+	wiki: "http://www.serebii.net/abilitydex/sweetveil.shtml"
 };
 
-var icy_rock = {
-	name: "Icy Rock",
-	desc: "A Pokémon held item that extends the duration of the move Hail used by the holder.",
-	wiki: "http://www.serebii.net/itemdex/icyrock.shtml"
+var swift_swim = {
+	name: "Swift Swim",
+	desc: "Boosts the Pokémon's Speed in rain.",
+	wiki: "http://www.serebii.net/abilitydex/swiftswim.shtml"
 };
 
-var insect_plate = {
-	name: "Insect Plate",
-	desc: "Increases power of Bug-type moves. Changes Arceus' type to Bug.",
-	wiki: "http://www.serebii.net/itemdex/insectplate.shtml"
+var symbiosis = {
+	name: "Symbiosis",
+	desc: "The Pokémon can pass an item to an ally.",
+	wiki: "http://www.serebii.net/abilitydex/symbiosis.shtml"
 };
 
-var intriguing_stone = {
-	name: "Intriguing Stone",
-	desc: "A rather curious stone that might appear to be valuable to some. It’s all in the eye of the beholder.",
-	wiki: "http://www.serebii.net/itemdex/intriguingstone.shtml"
+var synchronize = {
+	name: "Synchronize",
+	desc: "Passes on a burn, poison, or paralysis to the foe.",
+	wiki: "http://www.serebii.net/abilitydex/synchronize.shtml"
 };
 
-var iron = {
-	name: "Iron",
-	desc: "A nutritious drink for Pokémon. It raises the base Defense stat of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/iron.shtml"
+var tangled_feet = {
+	name: "Tangled Feet",
+	desc: "Raises evasion if the Pokémon is confused.",
+	wiki: "http://www.serebii.net/abilitydex/tangledfeet.shtml"
 };
 
-var iron_ball = {
-	name: "Iron Ball",
-	desc: "A Pokémon held item that cuts Speed. It makes Flying-type and levitating holders susceptible to Ground moves.",
-	wiki: "http://www.serebii.net/itemdex/ironball.shtml"
+var technician = {
+	name: "Technician",
+	desc: "Powers up the Pokémon's weaker moves.",
+	wiki: "http://www.serebii.net/abilitydex/technician.shtml"
 };
 
-var iron_plate = {
-	name: "Iron Plate",
-	desc: "Increases power of Steel-type moves. Changes Arceus' type to Steel.",
-	wiki: "http://www.serebii.net/itemdex/ironplate.shtml"
+var telepathy = {
+	name: "Telepathy",
+	desc: "Protects against damaging moves from friendly Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/telepathy.shtml"
 };
 
-var item_drop = {
-	name: "Item Drop",
-	desc: "When used, it causes an ally Pokémon to drop a held item.",
-	wiki: "http://www.serebii.net/itemdex/itemdrop.shtml"
+var teravolt = {
+	name: "Teravolt",
+	desc: "Moves can be used regardless of Abilities.",
+	wiki: "http://www.serebii.net/abilitydex/teravolt.shtml"
 };
 
-var item_urge = {
-	name: "Item Urge",
-	desc: "When used, it causes an ally Pokémon to use its held item.",
-	wiki: "http://www.serebii.net/itemdex/itemurge.shtml"
+var thick_fat = {
+	name: "Thick Fat",
+	desc: "Raises resistance to Fire- and Ice-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/thickfat.shtml"
 };
 
-var jaboca_berry = {
-	name: "Jaboca Berry",
-	desc: "If held by a Pokémon and a physical attack lands, the attacker also takes damage.",
-	wiki: "http://www.serebii.net/itemdex/jabocaberry.shtml"
+var tinted_lens = {
+	name: "Tinted Lens",
+	desc: "Powers up “not very effective” moves.",
+	wiki: "http://www.serebii.net/abilitydex/tintedlens.shtml"
 };
 
-var kangaskhanite = {
-	name: "Kangaskhanite",
-	desc: "Enables Kangaskhan to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/kangaskhanite.shtml"
+var torrent = {
+	name: "Torrent",
+	desc: "Powers up Water-type moves in a pinch.",
+	wiki: "http://www.serebii.net/abilitydex/torrent.shtml"
 };
 
-var kasib_berry = {
-	name: "Kasib Berry",
-	desc: "Weakens a supereffective Ghost-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/kasibberry.shtml"
+var tough_claws = {
+	name: "Tough Claws",
+	desc: "Powers up moves that make direct contact.",
+	wiki: "http://www.serebii.net/abilitydex/toughclaws.shtml"
 };
 
-var kebia_berry = {
-	name: "Kebia Berry",
-	desc: "Weakens a supereffective Poison-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/kebiaberry.shtml"
+var toxic_boost = {
+	name: "Toxic Boost",
+	desc: "Increases Attack to 1.5× when poisoned.",
+	wiki: "http://www.serebii.net/abilitydex/toxicboost.shtml"
 };
 
-var kelpsy_berry = {
-	name: "Kelpsy Berry",
-	desc: "Using it on a Pokémon makes it more friendly, but it also lowers its base Attack stat.",
-	wiki: "http://www.serebii.net/itemdex/kelpsyberry.shtml"
+var trace = {
+	name: "Trace",
+	desc: "The Pokémon copies a foe's Ability.",
+	wiki: "http://www.serebii.net/abilitydex/trace.shtml"
 };
 
-var kings_rock = {
-	name: "Kings Rock",
-	desc: "An item to be held by a Pokémon. When the holder inflicts damage, the target may flinch.",
-	wiki: "http://www.serebii.net/itemdex/kingsrock.shtml"
+var triage = {
+	name: "Triage",
+	desc: "Boosts HP-restoring moves used to the highest priority.",
+	wiki: "http://www.serebii.net/abilitydex/triage.shtml"
 };
 
-var lagging_tail = {
-	name: "Lagging Tail",
-	desc: "An item to be held by a Pokémon. It is tremendously heavy and makes the holder move slower than usual.",
-	wiki: "http://www.serebii.net/itemdex/laggingtail.shtml"
+var truant = {
+	name: "Truant",
+	desc: "The Pokémon can't attack on consecutive turns.",
+	wiki: "http://www.serebii.net/abilitydex/truant.shtml"
 };
 
-var lansat_berry = {
-	name: "Lansat Berry",
-	desc: "Increases critical-hit ratio when HP is low.",
-	wiki: "http://www.serebii.net/itemdex/lansatberry.shtml"
+var turboblaze = {
+	name: "Turboblaze",
+	desc: "Moves can be used regardless of Abilities.",
+	wiki: "http://www.serebii.net/abilitydex/turboblaze.shtml"
 };
 
-var latiasite = {
-	name: "Latiasite",
-	desc: "One of a variety of mysterious Mega Stones. Have Latias hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/latiasite.shtml"
+var unaware = {
+	name: "Unaware",
+	desc: "Ignores any change in stats by the foe.",
+	wiki: "http://www.serebii.net/abilitydex/unaware.shtml"
 };
 
-var latiosite = {
-	name: "Latiosite",
-	desc: "One of a variety of mysterious Mega Stones. Have Latios hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/latiosite.shtml"
+var unburden = {
+	name: "Unburden",
+	desc: "Raises Speed if a held item is used.",
+	wiki: "http://www.serebii.net/abilitydex/unburden.shtml"
 };
 
-var lava_cookie = {
-	name: "Lava Cookie",
-	desc: "LAVARIDGE TOWN’s local specialty. It heals all the status problems of one POKéMON.",
-	wiki: "http://www.serebii.net/itemdex/lavacookie.shtml"
+var unnerve = {
+	name: "Unnerve",
+	desc: "Prevents opposing Pokémon from eating held Berries.",
+	wiki: "http://www.serebii.net/abilitydex/unnerve.shtml"
 };
 
-var lax_incense = {
-	name: "Lax Incense",
-	desc: "An item to be held by a Pokémon. The tricky aroma of this incense may make attacks miss the holder.",
-	wiki: "http://www.serebii.net/itemdex/laxincense.shtml"
+var victory_star = {
+	name: "Victory Star",
+	desc: "Raises moves' accuracy to 1.1× for friendly Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/victorystar.shtml"
 };
 
-var leaf_stone = {
-	name: "Leaf Stone",
-	desc: "A peculiar stone that makes certain species of POKéMON evolve. It has a leaf pattern.",
-	wiki: "http://www.serebii.net/itemdex/leafstone.shtml"
+var vital_spirit = {
+	name: "Vital Spirit",
+	desc: "Prevents the Pokémon from falling asleep.",
+	wiki: "http://www.serebii.net/abilitydex/vitalspirit.shtml"
 };
 
-var leftovers = {
-	name: "Leftovers",
-	desc: "An item to be held by a Pokémon. The holder’s HP is gradually restored during battle.",
-	wiki: "http://www.serebii.net/itemdex/leftovers.shtml"
+var volt_absorb = {
+	name: "Volt Absorb",
+	desc: "Restores HP if hit by an Electric-type move.",
+	wiki: "http://www.serebii.net/abilitydex/voltabsorb.shtml"
 };
 
-var lemonade = {
-	name: "Lemonade",
-	desc: "A very sweet drink. It restores the HP of one POKéMON by 80 points.",
-	wiki: "http://www.serebii.net/itemdex/lemonade.shtml"
+var water_absorb = {
+	name: "Water Absorb",
+	desc: "Restores HP if hit by a Water-type move.",
+	wiki: "http://www.serebii.net/abilitydex/waterabsorb.shtml"
 };
 
-var lens_case = {
-	name: "Lens Case",
-	desc: "A rather chic-looking case for carrying contact lenses.",
-	wiki: "http://www.serebii.net/itemdex/lenscase.shtml"
+var water_compaction = {
+	name: "Water Compaction",
+	desc: "Raises Defense by two stages if hit by a Water-type move.",
+	wiki: "http://www.serebii.net/abilitydex/watercompaction.shtml"
 };
 
-var leppa_berry = {
-	name: "Leppa Berry",
-	desc: "If held by a Pokémon, it restores a move’s PP by 10.",
-	wiki: "http://www.serebii.net/itemdex/leppaberry.shtml"
+var water_veil = {
+	name: "Water Veil",
+	desc: "Prevents the Pokémon from getting a burn.",
+	wiki: "http://www.serebii.net/abilitydex/waterveil.shtml"
 };
 
-var level_ball = {
-	name: "Level Ball",
-	desc: "A Poké Ball for catching Pokémon that are a lower level than your own.",
-	wiki: "http://www.serebii.net/itemdex/levelball.shtml"
+var weak_armor = {
+	name: "Weak Armor",
+	desc: "Raises Speed and lowers Defense by one stage each upon being hit by any move.",
+	wiki: "http://www.serebii.net/abilitydex/weakarmor.shtml"
 };
 
-var liechi_berry = {
-	name: "Liechi Berry",
-	desc: "Raises Attack when HP is low.",
-	wiki: "http://www.serebii.net/itemdex/liechiberry.shtml"
+var white_smoke = {
+	name: "White Smoke",
+	desc: "Prevents the Pokémon's stats from being lowered.",
+	wiki: "http://www.serebii.net/abilitydex/whitesmoke.shtml"
 };
 
-var life_orb = {
-	name: "Life Orb",
-	desc: "Increases the power of moves, but loses HP each turn.",
-	wiki: "http://www.serebii.net/itemdex/lifeorb.shtml"
+var wimp_out = {
+	name: "Wimp Out",
+	desc: "Causes the Pokémon to flee or switch out when HP is low.",
+	wiki: "http://www.serebii.net/abilitydex/wimpout.shtml"
 };
 
-var light_ball = {
-	name: "Light Ball",
-	desc: "An item to be held by PIKACHU. It is a puzzling orb that raises the Attack and Sp. Atk stat.",
-	wiki: "http://www.serebii.net/itemdex/lightball.shtml"
+var wonder_guard = {
+	name: "Wonder Guard",
+	desc: "Only supereffective moves will hit.",
+	wiki: "http://www.serebii.net/abilitydex/wonderguard.shtml"
 };
 
-var light_clay = {
-	name: "Light Clay",
-	desc: "A Pokémon held item that extends the duration of barrier moves like Light Screen and Reflect used by the holder.",
-	wiki: "http://www.serebii.net/itemdex/lightclay.shtml"
+var wonder_skin = {
+	name: "Wonder Skin",
+	desc: "Has a 50% chance of protecting against non-damaging moves that inflict major status ailments.",
+	wiki: "http://www.serebii.net/abilitydex/wonderskin.shtml"
 };
 
-var looker_ticket = {
-	name: "Looker Ticket",
-	desc: "A ticket that was handmade by Looker. It’s decorated with a liberal amount of glittery paint.",
-	wiki: "http://www.serebii.net/itemdex/lookerticket.shtml"
+var zen_mode = {
+	name: "Zen Mode",
+	desc: "Changes the Pokémon's shape when HP is halved.",
+	wiki: "http://www.serebii.net/abilitydex/zenmode.shtml"
 };
 
-var lopunnite = {
-	name: "Lopunnite",
-	desc: "One of a variety of mysterious Mega Stones. Have Lopunny hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/lopunnite.shtml"
+var emergency_exit = {
+	name: "Emergency Exit",
+	desc: "The Pokémon, sensing danger, switches out when its HP becomes half or less.",
+	wiki: "http://www.serebii.net/abilitydex/emergencyexit.shtml"
 };
 
-var love_ball = {
-	name: "Love Ball",
-	desc: "Poké Ball for catching Pokémon that are the opposite gender of your Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/loveball.shtml"
+var merciless = {
+	name: "Merciless",
+	desc: "The Pokémon’s attacks become critical hits if the target is poisoned.",
+	wiki: "http://www.serebii.net/abilitydex/merciless.shtml"
 };
 
-var lucarionite = {
-	name: "Lucarionite",
-	desc: "Enables Lucario to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/lucarionite.shtml"
+var water_bubble = {
+	name: "Water Bubble",
+	desc: "Lowers the power of Fire-type moves done to the Pokémon and prevents the Pokémon from getting a burn. Also secretly doubles the power of Water-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/waterbubble.shtml"
 };
 
-var luck_incense = {
-	name: "Luck Incense",
-	desc: "An item to be held by a Pokémon. It doubles a battle’s prize money if the holding Pokémon joins in.",
-	wiki: "http://www.serebii.net/itemdex/luckincense.shtml"
+var steelworker = {
+	name: "Steelworker",
+	desc: "Powers up Steel-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/steelworker.shtml"
 };
 
-var lucky_egg = {
-	name: "Lucky Egg",
-	desc: "An item to be held by a Pokémon. It is an egg filled with happiness that earns extra Exp. Points in battle.",
-	wiki: "http://www.serebii.net/itemdex/luckyegg.shtml"
+var slush_rush = {
+	name: "Slush Rush",
+	desc: "Boosts the Pokémon’s Speed stat in a hailstorm.",
+	wiki: "http://www.serebii.net/abilitydex/slushrush.shtml"
 };
 
-var lucky_punch = {
-	name: "Lucky Punch",
-	desc: "Increases critical-hit ratio when held by Chansey.",
-	wiki: "http://www.serebii.net/itemdex/luckypunch.shtml"
+var long_reach = {
+	name: "Long Reach",
+	desc: "The Pokémon uses its moves without making contact with the target.",
+	wiki: "http://www.serebii.net/abilitydex/longreach.shtml"
 };
 
-var lum_berry = {
-	name: "Lum Berry",
-	desc: "If held by a Pokémon, it recovers from any status problem.",
-	wiki: "http://www.serebii.net/itemdex/lumberry.shtml"
+var liquid_voice = {
+	name: "Liquid Voice",
+	desc: "All sound-based moves become Water-type moves.",
+	wiki: "http://www.serebii.net/abilitydex/liquidvoice.shtml"
 };
 
-var lure_ball = {
-	name: "Lure Ball",
-	desc: "A Poké Ball for catching Pokémon hooked by a Rod when fishing.",
-	wiki: "http://www.serebii.net/itemdex/lureball.shtml"
+var galvanize = {
+	name: "Galvanize",
+	desc: "Normal-type moves become Electric-type moves. The power of those moves is boosted a little.",
+	wiki: "http://www.serebii.net/abilitydex/galvanize.shtml"
 };
 
-var lustrous_orb = {
-	name: "Lustrous Orb",
-	desc: "Increases the power of Dragon-​ and Water-type moves when held by Palkia.",
-	wiki: "http://www.serebii.net/itemdex/lustrousorb.shtml"
+var tangling_hair = {
+	name: "Tangling Hair",
+	desc: "Contact with the Pokémon lowers the attacker’s Speed stat.",
+	wiki: "http://www.serebii.net/abilitydex/tanglinghair.shtml"
 };
 
-var luxury_ball = {
-	name: "Luxury Ball",
-	desc: "A comfortable Poké Ball that makes a caught wild Pokémon quickly grow friendly.",
-	wiki: "http://www.serebii.net/itemdex/luxuryball.shtml"
+var power_of_alchemy = {
+	name: "Power Of Alchemy",
+	desc: "The Pokémon copies the Ability of a defeated ally.",
+	wiki: "http://www.serebii.net/abilitydex/powerofalchemy.shtml"
 };
 
-var macho_brace = {
-	name: "Macho Brace",
-	desc: "An item to be held by a Pokémon. It is a stiff and heavy brace that promotes strong growth but lowers Speed.",
-	wiki: "http://www.serebii.net/itemdex/machobrace.shtml"
+var beast_boost = {
+	name: "Beast Boost",
+	desc: "The Pokémon boosts its most proficient stat each time it knocks out a Pokémon.",
+	wiki: "http://www.serebii.net/abilitydex/beastboost.shtml"
 };
 
-var magmarizer = {
-	name: "Magmarizer",
-	desc: "A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/magmarizer.shtml"
+var psychic_surge = {
+	name: "Psychic Surge",
+	desc: "Turns the ground into Psychic Terrain when the Pokémon enters a battle.",
+	wiki: "http://www.serebii.net/abilitydex/psychicsurge.shtml"
 };
 
-var magnet = {
-	name: "Magnet",
-	desc: "Increases the power of Electric-type moves.",
-	wiki: "http://www.serebii.net/itemdex/magnet.shtml"
+var misty_surge = {
+	name: "Misty Surge",
+	desc: "Turns the ground into Misty Terrain when the Pokémon enters a battle.",
+	wiki: "http://www.serebii.net/abilitydex/mistysurge.shtml"
 };
 
-var mago_berry = {
-	name: "Mago Berry",
-	desc: "Restores HP if it's low, but may cause confusion.",
-	wiki: "http://www.serebii.net/itemdex/magoberry.shtml"
+var grassy_surge = {
+	name: "Grassy Surge",
+	desc: "Turns the ground into Grassy Terrain when the Pokémon enters a battle.",
+	wiki: "http://www.serebii.net/abilitydex/grassysurge.shtml"
 };
 
-var magost_berry = {
-	name: "Magost Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/magostberry.shtml"
+var full_metal_body = {
+	name: "Full Metal Body",
+	desc: "Prevents other Pokémon’s moves or Abilities from lowering the Pokémon’s stats.",
+	wiki: "http://www.serebii.net/abilitydex/fullmetalbody.shtml"
 };
 
-var manectite = {
-	name: "Manectite",
-	desc: "Enables Manectric to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/manectite.shtml"
-};
-
-var master_ball = {
-	name: "Master Ball",
-	desc: "The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.",
-	wiki: "http://www.serebii.net/itemdex/masterball.shtml"
-};
-
-var mawilite = {
-	name: "Mawilite",
-	desc: "Enables Mawile to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/mawilite.shtml"
-};
-
-var max_elixir = {
-	name: "Max Elixir",
-	desc: "It fully restores the PP of all the moves learned by the targeted Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/maxelixir.shtml"
-};
-
-var max_ether = {
-	name: "Max Ether",
-	desc: "It fully restores the PP of a single selected move that has been learned by the target Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/maxether.shtml"
-};
-
-var max_potion = {
-	name: "Max Potion",
-	desc: "A spray-type medicine for wounds. It completely restores the HP of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/maxpotion.shtml"
-};
-
-var max_repel = {
-	name: "Max Repel",
-	desc: "An item that prevents weak wild Pokémon from appearing for 250 steps after its use.",
-	wiki: "http://www.serebii.net/itemdex/maxrepel.shtml"
-};
-
-var max_revive = {
-	name: "Max Revive",
-	desc: "A medicine that revives a fainted Pokémon. It fully restores the Pokémon’s HP.",
-	wiki: "http://www.serebii.net/itemdex/maxrevive.shtml"
-};
-
-var meadow_plate = {
-	name: "Meadow Plate",
-	desc: "Increases power of Grass-type moves. Changes Arceus' type to Grass.",
-	wiki: "http://www.serebii.net/itemdex/meadowplate.shtml"
-};
-
-var medal_box = {
-	name: "Medal Box",
-	desc: "A box-shaped machine that stores Medals and Medal information.",
-	wiki: "http://www.serebii.net/itemdex/medalbox.shtml"
-};
-
-var medichamite = {
-	name: "Medichamite",
-	desc: "Enables Medicham to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/medichamite.shtml"
-};
-
-var mental_herb = {
-	name: "Mental Herb",
-	desc: "An item to be held by a Pokémon. It snaps the holder out of infatuation. It can be used only once.",
-	wiki: "http://www.serebii.net/itemdex/mentalherb.shtml"
-};
-
-var metagrossite = {
-	name: "Metagrossite",
-	desc: "One of a variety of mysterious Mega Stones. Have Metagross hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/metagrossite.shtml"
-};
-
-var metal_coat = {
-	name: "Metal Coat",
-	desc: "Increases the power of Steel-type moves.",
-	wiki: "http://www.serebii.net/itemdex/metalcoat.shtml"
-};
-
-var metal_powder = {
-	name: "Metal Powder",
-	desc: "Increases Defense when held by Ditto.",
-	wiki: "http://www.serebii.net/itemdex/metalpowder.shtml"
-};
-
-var metronome = {
-	name: "Metronome",
-	desc: "Increases the power of moves used consecutively.",
-	wiki: "http://www.serebii.net/itemdex/metronome.shtml"
-};
-
-var mewtwonite_x = {
-	name: "Mewtwonite X",
-	desc: "Enables Mewtwo to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/mewtwonitex.shtml"
-};
-
-var mewtwonite_y = {
-	name: "Mewtwonite Y",
-	desc: "Enables Mewtwo to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/mewtwonitey.shtml"
-};
-
-var micle_berry = {
-	name: "Micle Berry",
-	desc: "Increases a move's accuracy when HP is low.",
-	wiki: "http://www.serebii.net/itemdex/micleberry.shtml"
-};
-
-var mind_plate = {
-	name: "Mind Plate",
-	desc: "Increases power of Psychic-type moves. Changes Arceus' type to Psychic.",
-	wiki: "http://www.serebii.net/itemdex/mindplate.shtml"
-};
-
-var miracle_seed = {
-	name: "Miracle Seed",
-	desc: "Increases the power of Grass-type moves.",
-	wiki: "http://www.serebii.net/itemdex/miracleseed.shtml"
-};
-
-var moomoo_milk = {
-	name: "Moomoo Milk",
-	desc: "Milk with a very high nutrition content. It restores the HP of one Pokémon by 100 points.",
-	wiki: "http://www.serebii.net/itemdex/moomoomilk.shtml"
-};
-
-var moon_ball = {
-	name: "Moon Ball",
-	desc: "A Poké Ball for catching Pokémon that evolve using the Moon Stone.",
-	wiki: "http://www.serebii.net/itemdex/moonball.shtml"
-};
-
-var moon_stone = {
-	name: "Moon Stone",
-	desc: "A peculiar stone that makes certain species of POKéMON evolve. It is as black as the night sky.",
-	wiki: "http://www.serebii.net/itemdex/moonstone.shtml"
-};
-
-var muscle_band = {
-	name: "Muscle Band",
-	desc: "Increases the power of Physical-category moves.",
-	wiki: "http://www.serebii.net/itemdex/muscleband.shtml"
-};
-
-var muscle_wing = {
-	name: "Muscle Wing",
-	desc: "Increases Attack EVs by 1.",
-	wiki: "http://www.serebii.net/itemdex/musclewing.shtml"
-};
-
-var mystic_water = {
-	name: "Mystic Water",
-	desc: "Increases the power of Water-type moves.",
-	wiki: "http://www.serebii.net/itemdex/mysticwater.shtml"
-};
-
-var nanab_berry = {
-	name: "Nanab Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/nanabberry.shtml"
-};
-
-var nest_ball = {
-	name: "Nest Ball",
-	desc: "A somewhat different Poké Ball that works especially well on weaker Pokémon in the wild.",
-	wiki: "http://www.serebii.net/itemdex/nestball.shtml"
-};
-
-var net_ball = {
-	name: "Net Ball",
-	desc: "A somewhat different Poké Ball that works especially well on Water- and Bug-type Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/netball.shtml"
-};
-
-var nevermeltice = {
-	name: "Nevermeltice",
-	desc: "Increases the power of Ice-type moves.",
-	wiki: "http://www.serebii.net/itemdex/nevermeltice.shtml"
-};
-
-var nomel_berry = {
-	name: "Nomel Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/nomelberry.shtml"
-};
-
-var normal_gem = {
-	name: "Normal Gem",
-	desc: "Increases the power of a Normal-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/normalgem.shtml"
-};
-
-var nugget = {
-	name: "Nugget",
-	desc: "A nugget of pure gold that gives off a lustrous gleam. It can be sold at a high price to shops.",
-	wiki: "http://www.serebii.net/itemdex/nugget.shtml"
-};
-
-var occa_berry = {
-	name: "Occa Berry",
-	desc: "Weakens a supereffective Fire-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/occaberry.shtml"
-};
-
-var odd_incense = {
-	name: "Odd Incense",
-	desc: "Increases the power of Psychic-type moves.",
-	wiki: "http://www.serebii.net/itemdex/oddincense.shtml"
-};
-
-var odd_keystone = {
-	name: "Odd Keystone",
-	desc: "A vital item that is needed to keep a stone tower from collapsing. Voices can be heard from it occasionally.",
-	wiki: "http://www.serebii.net/itemdex/oddkeystone.shtml"
-};
-
-var old_amber = {
-	name: "Old Amber",
-	desc: "A piece of amber that contains the genetic material of an ancient Pokémon. It is clear with a reddish tint.",
-	wiki: "http://www.serebii.net/itemdex/oldamber.shtml"
-};
-
-var old_gateau = {
-	name: "Old Gateau",
-	desc: "Old Chateau’s hidden specialty. It heals all the status problems of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/oldgateau.shtml"
-};
-
-var oran_berry = {
-	name: "Oran Berry",
-	desc: "If held by a Pokémon, it heals the user by just 10 HP.",
-	wiki: "http://www.serebii.net/itemdex/oranberry.shtml"
-};
-
-var oval_charm = {
-	name: "Oval Charm",
-	desc: "An oval charm said to increase the chance of Pokémon Eggs being found at the Day Care.",
-	wiki: "http://www.serebii.net/itemdex/ovalcharm.shtml"
-};
-
-var oval_stone = {
-	name: "Oval Stone",
-	desc: "A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg.",
-	wiki: "http://www.serebii.net/itemdex/ovalstone.shtml"
-};
-
-var pamtre_berry = {
-	name: "Pamtre Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/pamtreberry.shtml"
-};
-
-var park_ball = {
-	name: "Park Ball",
-	desc: "A special Poké Ball for the Pal Park.",
-	wiki: "http://www.serebii.net/itemdex/parkball.shtml"
-};
-
-var parlyz_heal = {
-	name: "Parlyz Heal",
-	desc: "A spray-type medicine. It eliminates paralysis from a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/parlyzheal.shtml"
-};
-
-var pass_orb = {
-	name: "Pass Orb",
-	desc: "A mysterious orb containing the power of the Unova region, to be used when generating Pass Power.",
-	wiki: "http://www.serebii.net/itemdex/passorb.shtml"
-};
-
-var passho_berry = {
-	name: "Passho Berry",
-	desc: "Weakens a supereffective Water-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/passhoberry.shtml"
-};
-
-var payapa_berry = {
-	name: "Payapa Berry",
-	desc: "Weakens a supereffective Psychic-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/payapaberry.shtml"
-};
-
-var pearl = {
-	name: "Pearl",
-	desc: "A somewhat-small pearl that sparkles in a pretty silver color. It can be sold cheaply to shops.",
-	wiki: "http://www.serebii.net/itemdex/pearl.shtml"
-};
-
-var pearl_string = {
-	name: "Pearl String",
-	desc: "Very large pearls that sparkle in a pretty silver color. A maniac will buy them for a high price.",
-	wiki: "http://www.serebii.net/itemdex/pearlstring.shtml"
-};
-
-var pecha_berry = {
-	name: "Pecha Berry",
-	desc: "If held by a Pokémon, it recovers from poison.",
-	wiki: "http://www.serebii.net/itemdex/pechaberry.shtml"
-};
-
-var permit = {
-	name: "Permit",
-	desc: "A permit that is needed to enter the Nature Preserve. Not many know about it.",
-	wiki: "http://www.serebii.net/itemdex/permit.shtml"
-};
-
-var persim_berry = {
-	name: "Persim Berry",
-	desc: "If held by a Pokémon, it recovers from confusion.",
-	wiki: "http://www.serebii.net/itemdex/persimberry.shtml"
-};
-
-var petaya_berry = {
-	name: "Petaya Berry",
-	desc: "Raises Special Attack when HP is low.",
-	wiki: "http://www.serebii.net/itemdex/petayaberry.shtml"
-};
-
-var pidgeotite = {
-	name: "Pidgeotite",
-	desc: "One of a variety of mysterious Mega Stones. Have Pidgeot hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/pidgeotite.shtml"
-};
-
-var pinap_berry = {
-	name: "Pinap Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/pinapberry.shtml"
-};
-
-var pink_scarf = {
-	name: "Pink Scarf",
-	desc: "Raises holder's Cute aspect in a Contest.",
-	wiki: "http://www.serebii.net/itemdex/pinkscarf.shtml"
-};
-
-var pinsirite = {
-	name: "Pinsirite",
-	desc: "Enables Pinsir to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/pinsirite.shtml"
-};
-
-var pixie_plate = {
-	name: "Pixie Plate",
-	desc: "Increases power of Fairy-type moves. Changes Arceus' type to Fairy.",
-	wiki: "http://www.serebii.net/itemdex/pixieplate.shtml"
-};
-
-var plasma_card = {
-	name: "Plasma Card",
-	desc: "A card key needed to enter the password inside the Plasma Frigate.",
-	wiki: "http://www.serebii.net/itemdex/plasmacard.shtml"
-};
-
-var plume_fossil = {
-	name: "Plume Fossil",
-	desc: "A fossil of an ancient Pokémon that flew in the sky in ancient times. It appears to be part of its wing.",
-	wiki: "http://www.serebii.net/itemdex/plumefossil.shtml"
-};
-
-var pnk_apricorn = {
-	name: "Pnk Apricorn",
-	desc: "A pink Apricorn. It has a nice, sweet scent.",
-	wiki: "http://www.serebii.net/itemdex/pnkapricorn.shtml"
-};
-
-var poison_barb = {
-	name: "Poison Barb",
-	desc: "Increases the power of Poison-type moves.",
-	wiki: "http://www.serebii.net/itemdex/poisonbarb.shtml"
-};
-
-var poison_gem = {
-	name: "Poison Gem",
-	desc: "Increases the power of a Poison-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/poisongem.shtml"
-};
-
-var poké_ball = {
-	name: "Poké Ball",
-	desc: "A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system.",
-	wiki: "http://www.serebii.net/itemdex/pokéball.shtml"
-};
-
-var poké_doll = {
-	name: "Poké Doll",
-	desc: "A doll that attracts Pokémon. Use it to flee from any battle with a wild Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/pokédoll.shtml"
-};
-
-var poké_toy = {
-	name: "Poké Toy",
-	desc: "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/pokétoy.shtml"
-};
-
-var pomeg_berry = {
-	name: "Pomeg Berry",
-	desc: "Using it on a Pokémon makes it more friendly, but it also lowers its base HP.",
-	wiki: "http://www.serebii.net/itemdex/pomegberry.shtml"
-};
-
-var potion = {
-	name: "Potion",
-	desc: "A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.",
-	wiki: "http://www.serebii.net/itemdex/potion.shtml"
-};
-
-var power_anklet = {
-	name: "Power Anklet",
-	desc: "A Pokémon held item that promotes Speed gain on leveling, but reduces the Speed stat.",
-	wiki: "http://www.serebii.net/itemdex/poweranklet.shtml"
-};
-
-var power_band = {
-	name: "Power Band",
-	desc: "A Pokémon held item that promotes Sp. Def gain on leveling, but reduces the Speed stat.",
-	wiki: "http://www.serebii.net/itemdex/powerband.shtml"
-};
-
-var power_belt = {
-	name: "Power Belt",
-	desc: "A Pokémon held item that promotes Defense gain on leveling, but reduces the Speed stat.",
-	wiki: "http://www.serebii.net/itemdex/powerbelt.shtml"
-};
-
-var power_bracer = {
-	name: "Power Bracer",
-	desc: "A Pokémon held item that promotes Attack gain on leveling, but reduces the Speed stat.",
-	wiki: "http://www.serebii.net/itemdex/powerbracer.shtml"
-};
-
-var power_herb = {
-	name: "Power Herb",
-	desc: "A single-use item to be held by a Pokémon. It allows the immediate use of a move that charges on the first turn.",
-	wiki: "http://www.serebii.net/itemdex/powerherb.shtml"
-};
-
-var power_lens = {
-	name: "Power Lens",
-	desc: "A Pokémon held item that promotes Sp. Atk gain on leveling, but reduces the Speed stat.",
-	wiki: "http://www.serebii.net/itemdex/powerlens.shtml"
-};
-
-var power_plant_pass = {
-	name: "Power Plant Pass",
-	desc: "This pass serves as an ID card for gaining access to the power plant that lies along Route 13.",
-	wiki: "http://www.serebii.net/itemdex/powerplantpass.shtml"
-};
-
-var power_weight = {
-	name: "Power Weight",
-	desc: "A Pokémon held item that promotes HP gain on leveling, but reduces the Speed stat.",
-	wiki: "http://www.serebii.net/itemdex/powerweight.shtml"
-};
-
-var pp_max = {
-	name: "Pp Max",
-	desc: "It maximally raises the top PP of a selected move that has been learned by the target Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/ppmax.shtml"
-};
-
-var pp_up = {
-	name: "Pp Up",
-	desc: "It slightly raises the maximum PP of a selected move that has been learned by the target Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/ppup.shtml"
-};
-
-var premier_ball = {
-	name: "Premier Ball",
-	desc: "A somewhat rare Poké Ball that has been specially made to commemorate an event of some sort.",
-	wiki: "http://www.serebii.net/itemdex/premierball.shtml"
-};
-
-var pretty_wing = {
-	name: "Pretty Wing",
-	desc: "Though this feather is beautiful, it’s just a regular feather and has no effect on Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/prettywing.shtml"
-};
-
-var prism_scale = {
-	name: "Prism Scale",
-	desc: "A mysterious scale that evolves certain Pokémon. It shines in rainbow colors.",
-	wiki: "http://www.serebii.net/itemdex/prismscale.shtml"
-};
-
-var profs_letter = {
-	name: "Profs Letter",
-	desc: "A letter that Professor Sycamore wrote to your mother. A faint but pleasant perfume seems to cling to the paper.",
-	wiki: "http://www.serebii.net/itemdex/profsletter.shtml"
-};
-
-var protector = {
-	name: "Protector",
-	desc: "A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/protector.shtml"
-};
-
-var protein = {
-	name: "Protein",
-	desc: "A nutritious drink for Pokémon. It raises the base Attack stat of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/protein.shtml"
-};
-
-var psychic_gem = {
-	name: "Psychic Gem",
-	desc: "Increases the power of a Psychic-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/psychicgem.shtml"
-};
-
-var pure_incense = {
-	name: "Pure Incense",
-	desc: "An item to be held by a Pokémon. It helps keep wild Pokémon away if the holder is the first one in the party.",
-	wiki: "http://www.serebii.net/itemdex/pureincense.shtml"
-};
-
-var qualot_berry = {
-	name: "Qualot Berry",
-	desc: "Using it on a Pokémon makes it more friendly, but it also lowers its base Defense stat.",
-	wiki: "http://www.serebii.net/itemdex/qualotberry.shtml"
-};
-
-var quick_ball = {
-	name: "Quick Ball",
-	desc: "A somewhat different Poké Ball that provides a better catch rate if it is used at the start of a wild encounter.",
-	wiki: "http://www.serebii.net/itemdex/quickball.shtml"
-};
-
-var quick_claw = {
-	name: "Quick Claw",
-	desc: "An item to be held by a Pokémon. A light, sharp claw that lets the bearer move first occasionally.",
-	wiki: "http://www.serebii.net/itemdex/quickclaw.shtml"
-};
-
-var quick_powder = {
-	name: "Quick Powder",
-	desc: "Increases Speed when held by Ditto.",
-	wiki: "http://www.serebii.net/itemdex/quickpowder.shtml"
-};
-
-var rabuta_berry = {
-	name: "Rabuta Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/rabutaberry.shtml"
-};
-
-var rare_bone = {
-	name: "Rare Bone",
-	desc: "A bone that is extremely valuable for Pokémon archeology. It can be sold for a high price to shops.",
-	wiki: "http://www.serebii.net/itemdex/rarebone.shtml"
-};
-
-var rare_candy = {
-	name: "Rare Candy",
-	desc: "A candy that is packed with energy. It raises the level of a single Pokémon by one.",
-	wiki: "http://www.serebii.net/itemdex/rarecandy.shtml"
-};
-
-var rawst_berry = {
-	name: "Rawst Berry",
-	desc: "If held by a Pokémon, it recovers from a burn.",
-	wiki: "http://www.serebii.net/itemdex/rawstberry.shtml"
-};
-
-var razor_claw = {
-	name: "Razor Claw",
-	desc: "Increases critical-hit ratio.",
-	wiki: "http://www.serebii.net/itemdex/razorclaw.shtml"
-};
-
-var razor_fang = {
-	name: "Razor Fang",
-	desc: "An item to be held by a Pokémon. It may make foes and allies flinch when the holder inflicts damage.",
-	wiki: "http://www.serebii.net/itemdex/razorfang.shtml"
-};
-
-var razz_berry = {
-	name: "Razz Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/razzberry.shtml"
-};
-
-var reaper_cloth = {
-	name: "Reaper Cloth",
-	desc: "A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/reapercloth.shtml"
-};
-
-var red_apricorn = {
-	name: "Red Apricorn",
-	desc: "A red Apricorn. It assails your nostrils.",
-	wiki: "http://www.serebii.net/itemdex/redapricorn.shtml"
-};
-
-var red_card = {
-	name: "Red Card",
-	desc: "A card with a mysterious power. When the holder is struck by a foe, the attacker is removed from battle.",
-	wiki: "http://www.serebii.net/itemdex/redcard.shtml"
-};
-
-var red_flute = {
-	name: "Red Flute",
-	desc: "A toy flute made from red glass. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/redflute.shtml"
-};
-
-var red_scarf = {
-	name: "Red Scarf",
-	desc: "Raises holder's Cool aspect in a Contest.",
-	wiki: "http://www.serebii.net/itemdex/redscarf.shtml"
-};
-
-var red_shard = {
-	name: "Red Shard",
-	desc: "A small red shard. It appears to be from some sort of implement made long ago.",
-	wiki: "http://www.serebii.net/itemdex/redshard.shtml"
-};
-
-var relic_band = {
-	name: "Relic Band",
-	desc: "A bracelet made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/relicband.shtml"
-};
-
-var relic_copper = {
-	name: "Relic Copper",
-	desc: "A copper coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/reliccopper.shtml"
-};
-
-var relic_crown = {
-	name: "Relic Crown",
-	desc: "A crown made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/reliccrown.shtml"
-};
-
-var relic_gold = {
-	name: "Relic Gold",
-	desc: "A gold coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/relicgold.shtml"
-};
-
-var relic_silver = {
-	name: "Relic Silver",
-	desc: "A silver coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/relicsilver.shtml"
-};
-
-var relic_statue = {
-	name: "Relic Statue",
-	desc: "A stone figure made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/relicstatue.shtml"
-};
-
-var relic_vase = {
-	name: "Relic Vase",
-	desc: "A vase made in a civilization about 3,000 years ago. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/relicvase.shtml"
-};
-
-var repeat_ball = {
-	name: "Repeat Ball",
-	desc: "A somewhat different Poké Ball that works especially well on Pokémon species that were previously caught.",
-	wiki: "http://www.serebii.net/itemdex/repeatball.shtml"
-};
-
-var repel = {
-	name: "Repel",
-	desc: "An item that prevents weak wild Pokémon from appearing for 100 steps after its use.",
-	wiki: "http://www.serebii.net/itemdex/repel.shtml"
-};
-
-var reset_urge = {
-	name: "Reset Urge",
-	desc: "When used, it restores any stat changes of an ally Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/reseturge.shtml"
-};
-
-var resist_wing = {
-	name: "Resist Wing",
-	desc: "Increases Defense EVs by 1.",
-	wiki: "http://www.serebii.net/itemdex/resistwing.shtml"
-};
-
-var reveal_glass = {
-	name: "Reveal Glass",
-	desc: "A looking glass that reveals the truth. It’s a mysterious glass that returns a Pokémon to its original shape.",
-	wiki: "http://www.serebii.net/itemdex/revealglass.shtml"
-};
-
-var revival_herb = {
-	name: "Revival Herb",
-	desc: "A very bitter medicinal herb. It revives a fainted Pokémon, fully restoring its HP.",
-	wiki: "http://www.serebii.net/itemdex/revivalherb.shtml"
-};
-
-var revive = {
-	name: "Revive",
-	desc: "A medicine that revives a fainted Pokémon. It restores half the Pokémon’s maximum HP.",
-	wiki: "http://www.serebii.net/itemdex/revive.shtml"
-};
-
-var rindo_berry = {
-	name: "Rindo Berry",
-	desc: "Weakens a supereffective Grass-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/rindoberry.shtml"
-};
-
-var ring_target = {
-	name: "Ring Target",
-	desc: "Moves that would otherwise have no effect will land on the Pokémon that holds it.",
-	wiki: "http://www.serebii.net/itemdex/ringtarget.shtml"
-};
-
-var rock_gem = {
-	name: "Rock Gem",
-	desc: "Increases the power of a Rock-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/rockgem.shtml"
-};
-
-var rock_incense = {
-	name: "Rock Incense",
-	desc: "Increases the power of Rock-type moves.",
-	wiki: "http://www.serebii.net/itemdex/rockincense.shtml"
-};
-
-var rocky_helmet = {
-	name: "Rocky Helmet",
-	desc: "If the holder of this item takes damage, the attacker will also be damaged upon contact.",
-	wiki: "http://www.serebii.net/itemdex/rockyhelmet.shtml"
-};
-
-var roller_skates = {
-	name: "Roller Skates",
-	desc: "Attaches roller skates to the bottom of your shoes, allowing you to glide quickly around and perform tricks.",
-	wiki: "http://www.serebii.net/itemdex/rollerskates.shtml"
-};
-
-var root_fossil = {
-	name: "Root Fossil",
-	desc: "A fossil of an ancient Pokémon that lived in the sea. It appears to be part of a plant root.",
-	wiki: "http://www.serebii.net/itemdex/rootfossil.shtml"
-};
-
-var rose_incense = {
-	name: "Rose Incense",
-	desc: "Increases the power of Grass-type moves.",
-	wiki: "http://www.serebii.net/itemdex/roseincense.shtml"
-};
-
-var rowap_berry = {
-	name: "Rowap Berry",
-	desc: "If held by a Pokémon and a special attack lands, the attacker also takes damage.",
-	wiki: "http://www.serebii.net/itemdex/rowapberry.shtml"
-};
-
-var sablenite = {
-	name: "Sablenite",
-	desc: "One of a variety of mysterious Mega Stones. Have Sableye hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/sablenite.shtml"
-};
-
-var sacred_ash = {
-	name: "Sacred Ash",
-	desc: "It revives all fainted Pokémon. In doing so, it also fully restores their HP.",
-	wiki: "http://www.serebii.net/itemdex/sacredash.shtml"
-};
-
-var safari_ball = {
-	name: "Safari Ball",
-	desc: "A special Poké Ball that is used only in the Great Marsh. It is decorated in a camouflage pattern.",
-	wiki: "http://www.serebii.net/itemdex/safariball.shtml"
-};
-
-var salac_berry = {
-	name: "Salac Berry",
-	desc: "Raises Speed when HP is low.",
-	wiki: "http://www.serebii.net/itemdex/salacberry.shtml"
-};
-
-var salamencite = {
-	name: "Salamencite",
-	desc: "One of a variety of mysterious Mega Stones. Have Salamence hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/salamencite.shtml"
-};
-
-var sceptilite = {
-	name: "Sceptilite",
-	desc: "One of a variety of mysterious Mega Stones. Have Sceptile hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/sceptilite.shtml"
-};
-
-var scizorite = {
-	name: "Scizorite",
-	desc: "Enables Scizor to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/scizorite.shtml"
-};
-
-var scope_lens = {
-	name: "Scope Lens",
-	desc: "Increases critical-hit ratio.",
-	wiki: "http://www.serebii.net/itemdex/scopelens.shtml"
-};
-
-var sea_incense = {
-	name: "Sea Incense",
-	desc: "Increases the power of Water-type moves.",
-	wiki: "http://www.serebii.net/itemdex/seaincense.shtml"
-};
-
-var sharp_beak = {
-	name: "Sharp Beak",
-	desc: "Increases the power of Flying-type moves.",
-	wiki: "http://www.serebii.net/itemdex/sharpbeak.shtml"
-};
-
-var sharpedonite = {
-	name: "Sharpedonite",
-	desc: "One of a variety of mysterious Mega Stones. Have Sharpedo hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/sharpedonite.shtml"
-};
-
-var shed_shell = {
-	name: "Shed Shell",
-	desc: "A tough, discarded carapace to be held by a Pokémon. It enables the holder to switch with a waiting Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/shedshell.shtml"
-};
-
-var shell_bell = {
-	name: "Shell Bell",
-	desc: "An item to be held by a Pokémon. The holder’s HP is restored a little every time it inflicts damage.",
-	wiki: "http://www.serebii.net/itemdex/shellbell.shtml"
-};
-
-var shiny_charm = {
-	name: "Shiny Charm",
-	desc: "A shiny charm said to increase the chance of finding a Shiny Pokémon in the wild.",
-	wiki: "http://www.serebii.net/itemdex/shinycharm.shtml"
-};
-
-var shiny_stone = {
-	name: "Shiny Stone",
-	desc: "A peculiar stone that makes certain species of Pokémon evolve. It shines with a dazzling light.",
-	wiki: "http://www.serebii.net/itemdex/shinystone.shtml"
-};
-
-var shoal_salt = {
-	name: "Shoal Salt",
-	desc: "Pure salt that can be discovered deep inside the Shoal Cave. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/shoalsalt.shtml"
-};
-
-var shoal_shell = {
-	name: "Shoal Shell",
-	desc: "A pretty seashell that can be found deep inside the Shoal Cave. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/shoalshell.shtml"
-};
-
-var shock_drive = {
-	name: "Shock Drive",
-	desc: "Changes Techno Blast to an Electric-type move when held by Genesect.",
-	wiki: "http://www.serebii.net/itemdex/shockdrive.shtml"
-};
-
-var shuca_berry = {
-	name: "Shuca Berry",
-	desc: "Weakens a supereffective Ground-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/shucaberry.shtml"
-};
-
-var silk_scarf = {
-	name: "Silk Scarf",
-	desc: "Increases the power of Normal-type moves.",
-	wiki: "http://www.serebii.net/itemdex/silkscarf.shtml"
-};
-
-var silverpowder = {
-	name: "Silverpowder",
-	desc: "Increases the power of Bug-type moves.",
-	wiki: "http://www.serebii.net/itemdex/silverpowder.shtml"
-};
-
-var sitrus_berry = {
-	name: "Sitrus Berry",
-	desc: "If held by a Pokémon, it heals the user’s HP a little.",
-	wiki: "http://www.serebii.net/itemdex/sitrusberry.shtml"
-};
-
-var skull_fossil = {
-	name: "Skull Fossil",
-	desc: "A fossil from a prehistoric Pokémon that lived on the land. It appears to be part of a head.",
-	wiki: "http://www.serebii.net/itemdex/skullfossil.shtml"
-};
-
-var sky_plate = {
-	name: "Sky Plate",
-	desc: "Increases power of Flying-type moves. Changes Arceus' type to Flying.",
-	wiki: "http://www.serebii.net/itemdex/skyplate.shtml"
-};
-
-var slowbronite = {
-	name: "Slowbronite",
-	desc: "One of a variety of mysterious Mega Stones. Have Slowbro hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/slowbronite.shtml"
-};
-
-var smoke_ball = {
-	name: "Smoke Ball",
-	desc: "An item to be held by a Pokémon. It enables the holder to flee from any wild Pokémon without fail.",
-	wiki: "http://www.serebii.net/itemdex/smokeball.shtml"
-};
-
-var smooth_rock = {
-	name: "Smooth Rock",
-	desc: "A Pokémon held item that extends the duration of the move Sandstorm used by the holder.",
-	wiki: "http://www.serebii.net/itemdex/smoothrock.shtml"
-};
-
-var soda_pop = {
-	name: "Soda Pop",
-	desc: "A fizzy soda drink. It restores the HP of one POKéMON by 60 points.",
-	wiki: "http://www.serebii.net/itemdex/sodapop.shtml"
-};
-
-var soft_sand = {
-	name: "Soft Sand",
-	desc: "Increases the power of Ground-type moves.",
-	wiki: "http://www.serebii.net/itemdex/softsand.shtml"
-};
-
-var soothe_bell = {
-	name: "Soothe Bell",
-	desc: "An item to be held by a Pokémon. It is a bell with a comforting chime that calms the holder and makes it friendly.",
-	wiki: "http://www.serebii.net/itemdex/soothebell.shtml"
-};
-
-var soul_dew = {
-	name: "Soul Dew",
-	desc: "Increases both Special Attack and Special Defense when held by Latios or Latias.",
-	wiki: "http://www.serebii.net/itemdex/souldew.shtml"
-};
-
-var spell_tag = {
-	name: "Spell Tag",
-	desc: "Increases the power of Ghost-type moves.",
-	wiki: "http://www.serebii.net/itemdex/spelltag.shtml"
-};
-
-var spelon_berry = {
-	name: "Spelon Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/spelonberry.shtml"
-};
-
-var splash_plate = {
-	name: "Splash Plate",
-	desc: "Increases power of Water-type moves. Changes Arceus' type to Water.",
-	wiki: "http://www.serebii.net/itemdex/splashplate.shtml"
-};
-
-var spooky_plate = {
-	name: "Spooky Plate",
-	desc: "Increases power of Ghost-type moves. Changes Arceus' type to Ghost.",
-	wiki: "http://www.serebii.net/itemdex/spookyplate.shtml"
-};
-
-var sport_ball = {
-	name: "Sport Ball",
-	desc: "A special Poké Ball for the Bug-Catching Contest.",
-	wiki: "http://www.serebii.net/itemdex/sportball.shtml"
-};
-
-var sprinklotad = {
-	name: "Sprinklotad",
-	desc: "A watering can shaped like a Lotad. It helps promote the healthy growth of any Berries planted in good, soft soil.",
-	wiki: "http://www.serebii.net/itemdex/sprinklotad.shtml"
-};
-
-var stable_mulch = {
-	name: "Stable Mulch",
-	desc: "A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/stablemulch.shtml"
-};
-
-var star_piece = {
-	name: "Star Piece",
-	desc: "A shard of a pretty gem that sparkles in a red color. It can be sold at a high price to shops.",
-	wiki: "http://www.serebii.net/itemdex/starpiece.shtml"
-};
-
-var stardust = {
-	name: "Stardust",
-	desc: "Lovely, red-colored sand with a loose, silky feel. It can be sold at a high price to shops.",
-	wiki: "http://www.serebii.net/itemdex/stardust.shtml"
-};
-
-var starf_berry = {
-	name: "Starf Berry",
-	desc: "Sharply raises a random stat when HP is low.",
-	wiki: "http://www.serebii.net/itemdex/starfberry.shtml"
-};
-
-var steel_gem = {
-	name: "Steel Gem",
-	desc: "Increases the power of a Steel-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/steelgem.shtml"
-};
-
-var steelixite = {
-	name: "Steelixite",
-	desc: "One of a variety of mysterious Mega Stones. Have Steelix hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/steelixite.shtml"
-};
-
-var stick = {
-	name: "Stick",
-	desc: "Increases critical-hit ratio when held by Farfetch'd.",
-	wiki: "http://www.serebii.net/itemdex/stick.shtml"
-};
-
-var sticky_barb = {
-	name: "Sticky Barb",
-	desc: "A held item that damages the holder on every turn. It may latch on to foes and allies that touch the holder.",
-	wiki: "http://www.serebii.net/itemdex/stickybarb.shtml"
-};
-
-var stone_plate = {
-	name: "Stone Plate",
-	desc: "Increases power of Rock-type moves. Changes Arceus' type to Rock.",
-	wiki: "http://www.serebii.net/itemdex/stoneplate.shtml"
-};
-
-var sun_stone = {
-	name: "Sun Stone",
-	desc: "A peculiar stone that makes certain species of POKéMON evolve. It is as red as the sun.",
-	wiki: "http://www.serebii.net/itemdex/sunstone.shtml"
-};
-
-var super_potion = {
-	name: "Super Potion",
-	desc: "A spray-type medicine for wounds. It restores the HP of one Pokémon by 50 points.",
-	wiki: "http://www.serebii.net/itemdex/superpotion.shtml"
-};
-
-var super_repel = {
-	name: "Super Repel",
-	desc: "An item that prevents weak wild Pokémon from appearing for 200 steps after its use.",
-	wiki: "http://www.serebii.net/itemdex/superrepel.shtml"
-};
-
-var swampertite = {
-	name: "Swampertite",
-	desc: "One of a variety of mysterious Mega Stones. Have Swampert hold it, and this stone will enable it to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/swampertite.shtml"
-};
-
-var sweet_heart = {
-	name: "Sweet Heart",
-	desc: "Very sweet chocolate. It restores the HP of one Pokémon by only 20 points.",
-	wiki: "http://www.serebii.net/itemdex/sweetheart.shtml"
-};
-
-var swift_wing = {
-	name: "Swift Wing",
-	desc: "Increases Speed EVs by 1.",
-	wiki: "http://www.serebii.net/itemdex/swiftwing.shtml"
-};
-
-var tamato_berry = {
-	name: "Tamato Berry",
-	desc: "Using it on a Pokémon makes it more friendly, but it also lowers its base Speed stat.",
-	wiki: "http://www.serebii.net/itemdex/tamatoberry.shtml"
-};
-
-var tanga_berry = {
-	name: "Tanga Berry",
-	desc: "Weakens a supereffective Bug-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/tangaberry.shtml"
-};
-
-var thick_club = {
-	name: "Thick Club",
-	desc: "Increases Attack when held by Cubone or Marowak.",
-	wiki: "http://www.serebii.net/itemdex/thickclub.shtml"
-};
-
-var thunderstone = {
-	name: "Thunderstone",
-	desc: "A peculiar stone that makes certain species of POKéMON evolve. It has a thunderbolt pattern.",
-	wiki: "http://www.serebii.net/itemdex/thunderstone.shtml"
-};
-
-var timer_ball = {
-	name: "Timer Ball",
-	desc: "A somewhat different BALL that becomes progressively better the more turns there are in a battle.",
-	wiki: "http://www.serebii.net/itemdex/timerball.shtml"
-};
-
-var tinymushroom = {
-	name: "Tinymushroom",
-	desc: "A small and rare mushroom. It is sought after by collectors.",
-	wiki: "http://www.serebii.net/itemdex/tinymushroom.shtml"
-};
-
-var tm01 = {
-	name: "TM01",
-	desc: "Teaches the move Mega Punch/DynamicPunch/Focus Punch/Hone Claws.",
-	wiki: "http://www.serebii.net/itemdex/tm01.shtml"
-};
-
-var tm02 = {
-	name: "TM02",
-	desc: "Teaches the move Razor Wind/Headbutt/Dragon Claw.",
-	wiki: "http://www.serebii.net/itemdex/tm02.shtml"
-};
-
-var tm03 = {
-	name: "TM03",
-	desc: "Teaches the move Swords Dance/Curse/Water Pulse/Psyshock.",
-	wiki: "http://www.serebii.net/itemdex/tm03.shtml"
-};
-
-var tm04 = {
-	name: "TM04",
-	desc: "Teaches the move Whirlwind/Rollout/Calm Mind.",
-	wiki: "http://www.serebii.net/itemdex/tm04.shtml"
-};
-
-var tm05 = {
-	name: "TM05",
-	desc: "Teaches the move Mega Kick/Roar.",
-	wiki: "http://www.serebii.net/itemdex/tm05.shtml"
-};
-
-var tm06 = {
-	name: "TM06",
-	desc: "Teaches the move Toxic.",
-	wiki: "http://www.serebii.net/itemdex/tm06.shtml"
-};
-
-var tm07 = {
-	name: "TM07",
-	desc: "Teaches the move Horn Drill/Zap Cannon/Hail.",
-	wiki: "http://www.serebii.net/itemdex/tm07.shtml"
-};
-
-var tm08 = {
-	name: "TM08",
-	desc: "Teaches the move Body Slam/Rock Smash/Bulk Up.",
-	wiki: "http://www.serebii.net/itemdex/tm08.shtml"
-};
-
-var tm09 = {
-	name: "TM09",
-	desc: "Teaches the move Take Down/Psych Up/Bullet Seed/Venoshock.",
-	wiki: "http://www.serebii.net/itemdex/tm09.shtml"
-};
-
-var tm10 = {
-	name: "TM10",
-	desc: "Teaches the move Double-Edge/Hidden Power.",
-	wiki: "http://www.serebii.net/itemdex/tm10.shtml"
-};
-
-var tm100 = {
-	name: "TM100",
-	desc: "Teaches the move Confide.",
-	wiki: "http://www.serebii.net/itemdex/tm100.shtml"
-};
-
-var tm11 = {
-	name: "TM11",
-	desc: "Teaches the move BubbleBeam/Sunny Day.",
-	wiki: "http://www.serebii.net/itemdex/tm11.shtml"
-};
-
-var tm12 = {
-	name: "TM12",
-	desc: "Teaches the move Water Gun/Sweet Scent/Taunt.",
-	wiki: "http://www.serebii.net/itemdex/tm12.shtml"
-};
-
-var tm13 = {
-	name: "TM13",
-	desc: "Teaches the move Snore/Ice Beam.",
-	wiki: "http://www.serebii.net/itemdex/tm13.shtml"
-};
-
-var tm14 = {
-	name: "TM14",
-	desc: "Teaches the move Blizzard.",
-	wiki: "http://www.serebii.net/itemdex/tm14.shtml"
-};
-
-var tm15 = {
-	name: "TM15",
-	desc: "Teaches the move Hyper Beam.",
-	wiki: "http://www.serebii.net/itemdex/tm15.shtml"
-};
-
-var tm16 = {
-	name: "TM16",
-	desc: "Teaches the move Pay Day/Icy Wind/Light Screen.",
-	wiki: "http://www.serebii.net/itemdex/tm16.shtml"
-};
-
-var tm17 = {
-	name: "TM17",
-	desc: "Teaches the move Submission/Protect.",
-	wiki: "http://www.serebii.net/itemdex/tm17.shtml"
-};
-
-var tm18 = {
-	name: "TM18",
-	desc: "Teaches the move Counter/Rain Dance.",
-	wiki: "http://www.serebii.net/itemdex/tm18.shtml"
-};
-
-var tm19 = {
-	name: "TM19",
-	desc: "Teaches the move Seismic Toss/Giga Drain/Telekinesis/Roost.",
-	wiki: "http://www.serebii.net/itemdex/tm19.shtml"
-};
-
-var tm20 = {
-	name: "TM20",
-	desc: "Teaches the move Rage/Endure/Safeguard.",
-	wiki: "http://www.serebii.net/itemdex/tm20.shtml"
-};
-
-var tm21 = {
-	name: "TM21",
-	desc: "Teaches the move Mega Drain/Frustration.",
-	wiki: "http://www.serebii.net/itemdex/tm21.shtml"
-};
-
-var tm22 = {
-	name: "TM22",
-	desc: "Teaches the move SolarBeam.",
-	wiki: "http://www.serebii.net/itemdex/tm22.shtml"
-};
-
-var tm23 = {
-	name: "TM23",
-	desc: "Teaches the move Dragon Rage/Iron Tail/Smack Down.",
-	wiki: "http://www.serebii.net/itemdex/tm23.shtml"
-};
-
-var tm24 = {
-	name: "TM24",
-	desc: "Teaches the move Thunderbolt/DragonBreath.",
-	wiki: "http://www.serebii.net/itemdex/tm24.shtml"
-};
-
-var tm25 = {
-	name: "TM25",
-	desc: "Teaches the move Thunder.",
-	wiki: "http://www.serebii.net/itemdex/tm25.shtml"
-};
-
-var tm26 = {
-	name: "TM26",
-	desc: "Teaches the move Earthquake.",
-	wiki: "http://www.serebii.net/itemdex/tm26.shtml"
-};
-
-var tm27 = {
-	name: "TM27",
-	desc: "Teaches the move Fissure/Return.",
-	wiki: "http://www.serebii.net/itemdex/tm27.shtml"
-};
-
-var tm28 = {
-	name: "TM28",
-	desc: "Teaches the move Dig.",
-	wiki: "http://www.serebii.net/itemdex/tm28.shtml"
-};
-
-var tm29 = {
-	name: "TM29",
-	desc: "Teaches the move Psychic.",
-	wiki: "http://www.serebii.net/itemdex/tm29.shtml"
-};
-
-var tm30 = {
-	name: "TM30",
-	desc: "Teaches the move Teleport/Shadow Ball.",
-	wiki: "http://www.serebii.net/itemdex/tm30.shtml"
-};
-
-var tm31 = {
-	name: "TM31",
-	desc: "Teaches the move Mimic/Mud-Slap/Brick Break.",
-	wiki: "http://www.serebii.net/itemdex/tm31.shtml"
-};
-
-var tm32 = {
-	name: "TM32",
-	desc: "Teaches the move Double Team.",
-	wiki: "http://www.serebii.net/itemdex/tm32.shtml"
-};
-
-var tm33 = {
-	name: "TM33",
-	desc: "Teaches the move Ice Punch/Reflect.",
-	wiki: "http://www.serebii.net/itemdex/tm33.shtml"
-};
-
-var tm34 = {
-	name: "TM34",
-	desc: "Teaches the move Bide/Swagger/Shock Wave/Sludge Wave.",
-	wiki: "http://www.serebii.net/itemdex/tm34.shtml"
-};
-
-var tm35 = {
-	name: "TM35",
-	desc: "Teaches the move Metronome/Sleep Talk/Flamethrower.",
-	wiki: "http://www.serebii.net/itemdex/tm35.shtml"
-};
-
-var tm36 = {
-	name: "TM36",
-	desc: "Teaches the move Selfdestruct/Sludge Bomb.",
-	wiki: "http://www.serebii.net/itemdex/tm36.shtml"
-};
-
-var tm37 = {
-	name: "TM37",
-	desc: "Teaches the move Egg Bomb/Sandstorm.",
-	wiki: "http://www.serebii.net/itemdex/tm37.shtml"
-};
-
-var tm38 = {
-	name: "TM38",
-	desc: "Teaches the move Fire Blast.",
-	wiki: "http://www.serebii.net/itemdex/tm38.shtml"
-};
-
-var tm39 = {
-	name: "TM39",
-	desc: "Teaches the move Swift/Rock Tomb.",
-	wiki: "http://www.serebii.net/itemdex/tm39.shtml"
-};
-
-var tm40 = {
-	name: "TM40",
-	desc: "Teaches the move Skull Bash/Defense Curl/Aerial Ace.",
-	wiki: "http://www.serebii.net/itemdex/tm40.shtml"
-};
-
-var tm41 = {
-	name: "TM41",
-	desc: "Teaches the move Softboiled/ThunderPunch/Torment.",
-	wiki: "http://www.serebii.net/itemdex/tm41.shtml"
-};
-
-var tm42 = {
-	name: "TM42",
-	desc: "Teaches the move Dream Eater/Facade.",
-	wiki: "http://www.serebii.net/itemdex/tm42.shtml"
-};
-
-var tm43 = {
-	name: "TM43",
-	desc: "Teaches the move Sky Attack/Detect/Secret Power/Flame Charge.",
-	wiki: "http://www.serebii.net/itemdex/tm43.shtml"
-};
-
-var tm44 = {
-	name: "TM44",
-	desc: "Teaches the move Rest.",
-	wiki: "http://www.serebii.net/itemdex/tm44.shtml"
-};
-
-var tm45 = {
-	name: "TM45",
-	desc: "Teaches the move Thunder Wave/Attract.",
-	wiki: "http://www.serebii.net/itemdex/tm45.shtml"
-};
-
-var tm46 = {
-	name: "TM46",
-	desc: "Teaches the move Psywave/Thief.",
-	wiki: "http://www.serebii.net/itemdex/tm46.shtml"
-};
-
-var tm47 = {
-	name: "TM47",
-	desc: "Teaches the move Explosion/Steel Wing/Low Sweep.",
-	wiki: "http://www.serebii.net/itemdex/tm47.shtml"
-};
-
-var tm48 = {
-	name: "TM48",
-	desc: "Teaches the move Rock Slide/Fire Punch/Skill Swap/Round.",
-	wiki: "http://www.serebii.net/itemdex/tm48.shtml"
-};
-
-var tm49 = {
-	name: "TM49",
-	desc: "Teaches the move Tri Attack/Fury Cutter/Snatch/Echoed Voice.",
-	wiki: "http://www.serebii.net/itemdex/tm49.shtml"
-};
-
-var tm50 = {
-	name: "TM50",
-	desc: "Teaches the move Substitute/Nightmare/Overheat.",
-	wiki: "http://www.serebii.net/itemdex/tm50.shtml"
-};
-
-var tm51 = {
-	name: "TM51",
-	desc: "Teaches the move Roost/Ally Switch/Steel Wing.",
-	wiki: "http://www.serebii.net/itemdex/tm51.shtml"
-};
-
-var tm52 = {
-	name: "TM52",
-	desc: "Teaches the move Focus Blast.",
-	wiki: "http://www.serebii.net/itemdex/tm52.shtml"
-};
-
-var tm53 = {
-	name: "TM53",
-	desc: "Teaches the move Energy Ball.",
-	wiki: "http://www.serebii.net/itemdex/tm53.shtml"
-};
-
-var tm54 = {
-	name: "TM54",
-	desc: "Teaches the move False Swipe.",
-	wiki: "http://www.serebii.net/itemdex/tm54.shtml"
-};
-
-var tm55 = {
-	name: "TM55",
-	desc: "Teaches the move Brine/Scald.",
-	wiki: "http://www.serebii.net/itemdex/tm55.shtml"
-};
-
-var tm56 = {
-	name: "TM56",
-	desc: "Teaches the move Fling.",
-	wiki: "http://www.serebii.net/itemdex/tm56.shtml"
-};
-
-var tm57 = {
-	name: "TM57",
-	desc: "Teaches the move Charge Beam.",
-	wiki: "http://www.serebii.net/itemdex/tm57.shtml"
-};
-
-var tm58 = {
-	name: "TM58",
-	desc: "Teaches the move Endure/Sky Drop.",
-	wiki: "http://www.serebii.net/itemdex/tm58.shtml"
-};
-
-var tm59 = {
-	name: "TM59",
-	desc: "Teaches the move Dragon Pulse/Incinerate.",
-	wiki: "http://www.serebii.net/itemdex/tm59.shtml"
-};
-
-var tm60 = {
-	name: "TM60",
-	desc: "Teaches the move Drain Punch/Quash.",
-	wiki: "http://www.serebii.net/itemdex/tm60.shtml"
-};
-
-var tm61 = {
-	name: "TM61",
-	desc: "Teaches the move Will-O-Wisp.",
-	wiki: "http://www.serebii.net/itemdex/tm61.shtml"
-};
-
-var tm62 = {
-	name: "TM62",
-	desc: "Teaches the move Silver Wind/Acrobatics.",
-	wiki: "http://www.serebii.net/itemdex/tm62.shtml"
-};
-
-var tm63 = {
-	name: "TM63",
-	desc: "Teaches the move Embargo.",
-	wiki: "http://www.serebii.net/itemdex/tm63.shtml"
-};
-
-var tm64 = {
-	name: "TM64",
-	desc: "Teaches the move Explosion.",
-	wiki: "http://www.serebii.net/itemdex/tm64.shtml"
-};
-
-var tm65 = {
-	name: "TM65",
-	desc: "Teaches the move Shadow Claw.",
-	wiki: "http://www.serebii.net/itemdex/tm65.shtml"
-};
-
-var tm66 = {
-	name: "TM66",
-	desc: "Teaches the move Payback.",
-	wiki: "http://www.serebii.net/itemdex/tm66.shtml"
-};
-
-var tm67 = {
-	name: "TM67",
-	desc: "Teaches the move Recycle/Retaliate.",
-	wiki: "http://www.serebii.net/itemdex/tm67.shtml"
-};
-
-var tm68 = {
-	name: "TM68",
-	desc: "Teaches the move Giga Impact.",
-	wiki: "http://www.serebii.net/itemdex/tm68.shtml"
-};
-
-var tm69 = {
-	name: "TM69",
-	desc: "Teaches the move Rock Polish.",
-	wiki: "http://www.serebii.net/itemdex/tm69.shtml"
-};
-
-var tm70 = {
-	name: "TM70",
-	desc: "Teaches the move Flash.",
-	wiki: "http://www.serebii.net/itemdex/tm70.shtml"
-};
-
-var tm71 = {
-	name: "TM71",
-	desc: "Teaches the move Stone Edge.",
-	wiki: "http://www.serebii.net/itemdex/tm71.shtml"
-};
-
-var tm72 = {
-	name: "TM72",
-	desc: "Teaches the move Avalanche/Volt Switch.",
-	wiki: "http://www.serebii.net/itemdex/tm72.shtml"
-};
-
-var tm73 = {
-	name: "TM73",
-	desc: "Teaches the move Thunder Wave.",
-	wiki: "http://www.serebii.net/itemdex/tm73.shtml"
-};
-
-var tm74 = {
-	name: "TM74",
-	desc: "Teaches the move Gyro Ball.",
-	wiki: "http://www.serebii.net/itemdex/tm74.shtml"
-};
-
-var tm75 = {
-	name: "TM75",
-	desc: "Teaches the move Swords Dance.",
-	wiki: "http://www.serebii.net/itemdex/tm75.shtml"
-};
-
-var tm76 = {
-	name: "TM76",
-	desc: "Teaches the move Stealth Rock/Struggle Bug.",
-	wiki: "http://www.serebii.net/itemdex/tm76.shtml"
-};
-
-var tm77 = {
-	name: "TM77",
-	desc: "Teaches the move Psych Up.",
-	wiki: "http://www.serebii.net/itemdex/tm77.shtml"
-};
-
-var tm78 = {
-	name: "TM78",
-	desc: "Teaches the move Captivate/Bulldoze.",
-	wiki: "http://www.serebii.net/itemdex/tm78.shtml"
-};
-
-var tm79 = {
-	name: "TM79",
-	desc: "Teaches the move Dark Pulse/Frost Breath.",
-	wiki: "http://www.serebii.net/itemdex/tm79.shtml"
-};
-
-var tm80 = {
-	name: "TM80",
-	desc: "Teaches the move Rock Slide.",
-	wiki: "http://www.serebii.net/itemdex/tm80.shtml"
-};
-
-var tm81 = {
-	name: "TM81",
-	desc: "Teaches the move X-Scissor.",
-	wiki: "http://www.serebii.net/itemdex/tm81.shtml"
-};
-
-var tm82 = {
-	name: "TM82",
-	desc: "Teaches the move Sleep Talk/Dragon Tail.",
-	wiki: "http://www.serebii.net/itemdex/tm82.shtml"
-};
-
-var tm83 = {
-	name: "TM83",
-	desc: "Teaches the move Natural Gift/Work Up/Infestation.",
-	wiki: "http://www.serebii.net/itemdex/tm83.shtml"
-};
-
-var tm84 = {
-	name: "TM84",
-	desc: "Teaches the move Poison Jab.",
-	wiki: "http://www.serebii.net/itemdex/tm84.shtml"
-};
-
-var tm85 = {
-	name: "TM85",
-	desc: "Teaches the move Dream Eater.",
-	wiki: "http://www.serebii.net/itemdex/tm85.shtml"
-};
-
-var tm86 = {
-	name: "TM86",
-	desc: "Teaches the move Grass Knot.",
-	wiki: "http://www.serebii.net/itemdex/tm86.shtml"
-};
-
-var tm87 = {
-	name: "TM87",
-	desc: "Teaches the move Swagger.",
-	wiki: "http://www.serebii.net/itemdex/tm87.shtml"
-};
-
-var tm88 = {
-	name: "TM88",
-	desc: "Teaches the move Pluck/Sleep Talk.",
-	wiki: "http://www.serebii.net/itemdex/tm88.shtml"
-};
-
-var tm89 = {
-	name: "TM89",
-	desc: "Teaches the move U-turn.",
-	wiki: "http://www.serebii.net/itemdex/tm89.shtml"
-};
-
-var tm90 = {
-	name: "TM90",
-	desc: "Teaches the move Substitute.",
-	wiki: "http://www.serebii.net/itemdex/tm90.shtml"
-};
-
-var tm91 = {
-	name: "TM91",
-	desc: "Teaches the move Flash Cannon.",
-	wiki: "http://www.serebii.net/itemdex/tm91.shtml"
-};
-
-var tm92 = {
-	name: "TM92",
-	desc: "Teaches the move Trick Room.",
-	wiki: "http://www.serebii.net/itemdex/tm92.shtml"
-};
-
-var tm93 = {
-	name: "TM93",
-	desc: "Teaches the move Wild Charge.",
-	wiki: "http://www.serebii.net/itemdex/tm93.shtml"
-};
-
-var tm94 = {
-	name: "TM94",
-	desc: "Teaches the move Rock Smash.",
-	wiki: "http://www.serebii.net/itemdex/tm94.shtml"
-};
-
-var tm95 = {
-	name: "TM95",
-	desc: "Teaches the move Snarl.",
-	wiki: "http://www.serebii.net/itemdex/tm95.shtml"
-};
-
-var tm96 = {
-	name: "TM96",
-	desc: "Teaches the move Nature Power.",
-	wiki: "http://www.serebii.net/itemdex/tm96.shtml"
-};
-
-var tm97 = {
-	name: "TM97",
-	desc: "Teaches the move Dark Pulse.",
-	wiki: "http://www.serebii.net/itemdex/tm97.shtml"
-};
-
-var tm98 = {
-	name: "TM98",
-	desc: "Teaches the move Power-Up Punch.",
-	wiki: "http://www.serebii.net/itemdex/tm98.shtml"
-};
-
-var tm99 = {
-	name: "TM99",
-	desc: "Teaches the move Dazzling Gleam.",
-	wiki: "http://www.serebii.net/itemdex/tm99.shtml"
-};
-
-var tmv_pass = {
-	name: "TMv Pass",
-	desc: "A commuter pass that allows the holder to ride the TMV between Lumiose City and Kiloude City at any time.",
-	wiki: "http://www.serebii.net/itemdex/tmvpass.shtml"
-};
-
-var toxic_orb = {
-	name: "Toxic Orb",
-	desc: "An item to be held by a Pokémon. It is a bizarre orb that badly poisons the holder in battle.",
-	wiki: "http://www.serebii.net/itemdex/toxicorb.shtml"
-};
-
-var toxic_plate = {
-	name: "Toxic Plate",
-	desc: "Increases power of Poison-type moves. Changes Arceus' type to Poison.",
-	wiki: "http://www.serebii.net/itemdex/toxicplate.shtml"
-};
-
-var twistedspoon = {
-	name: "Twistedspoon",
-	desc: "Increases the power of Psychic-type moves.",
-	wiki: "http://www.serebii.net/itemdex/twistedspoon.shtml"
-};
-
-var tyranitarite = {
-	name: "Tyranitarite",
-	desc: "Enables Tyranitar to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/tyranitarite.shtml"
-};
-
-var ultra_ball = {
-	name: "Ultra Ball",
-	desc: "An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball.",
-	wiki: "http://www.serebii.net/itemdex/ultraball.shtml"
-};
-
-var up_grade = {
-	name: "Up-Grade",
-	desc: "A transparent device filled with all sorts of data. It was produced by Silph Co.",
-	wiki: "http://www.serebii.net/itemdex/up-grade.shtml"
-};
-
-var venusaurite = {
-	name: "Venusaurite",
-	desc: "Enables Venusaur to Mega Evolve during battle.",
-	wiki: "http://www.serebii.net/itemdex/venusaurite.shtml"
-};
-
-var wacan_berry = {
-	name: "Wacan Berry",
-	desc: "Weakens a supereffective Electric-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/wacanberry.shtml"
-};
-
-var water_gem = {
-	name: "Water Gem",
-	desc: "Increases the power of a Water-type move only once.",
-	wiki: "http://www.serebii.net/itemdex/watergem.shtml"
-};
-
-var water_stone = {
-	name: "Water Stone",
-	desc: "A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue.",
-	wiki: "http://www.serebii.net/itemdex/waterstone.shtml"
-};
-
-var watmel_berry = {
-	name: "Watmel Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/watmelberry.shtml"
-};
-
-var wave_incense = {
-	name: "Wave Incense",
-	desc: "Increases the power of Water-type moves.",
-	wiki: "http://www.serebii.net/itemdex/waveincense.shtml"
-};
-
-var wepear_berry = {
-	name: "Wepear Berry",
-	desc: "A Berry which is very rare in the Unova region. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/wepearberry.shtml"
-};
-
-var white_flute = {
-	name: "White Flute",
-	desc: "A toy flute made from white glass. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/whiteflute.shtml"
-};
-
-var white_herb = {
-	name: "White Herb",
-	desc: "An item to be held by a POKéMON. It restores any lowered stat in battle. It can be used only once.",
-	wiki: "http://www.serebii.net/itemdex/whiteherb.shtml"
-};
-
-var wht_apricorn = {
-	name: "Wht Apricorn",
-	desc: "A white Apricorn. It doesn’t smell like anything.",
-	wiki: "http://www.serebii.net/itemdex/whtapricorn.shtml"
-};
-
-var wide_lens = {
-	name: "Wide Lens",
-	desc: "Increases the accuracy of moves.",
-	wiki: "http://www.serebii.net/itemdex/widelens.shtml"
-};
-
-var wiki_berry = {
-	name: "Wiki Berry",
-	desc: "Restores HP if it's low, but may cause confusion.",
-	wiki: "http://www.serebii.net/itemdex/wikiberry.shtml"
-};
-
-var wise_glasses = {
-	name: "Wise Glasses",
-	desc: "Increases the power of Special-category moves.",
-	wiki: "http://www.serebii.net/itemdex/wiseglasses.shtml"
-};
-
-var x_accuracy = {
-	name: "X Accuracy",
-	desc: "Raises Accuracy of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xaccuracy.shtml"
-};
-
-var x_accuracy_2 = {
-	name: "X Accuracy 2",
-	desc: "Sharply raises Accuracy of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xaccuracy2.shtml"
-};
-
-var x_accuracy_3 = {
-	name: "X Accuracy 3",
-	desc: "Drastically raises Accuracy of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xaccuracy3.shtml"
-};
-
-var x_accuracy_6 = {
-	name: "X Accuracy 6",
-	desc: "Immensely raises Accuracy of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xaccuracy6.shtml"
-};
-
-var x_attack = {
-	name: "X Attack",
-	desc: "Raises Attack of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xattack.shtml"
-};
-
-var x_attack_2 = {
-	name: "X Attack 2",
-	desc: "Sharply raises Attack of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xattack2.shtml"
-};
-
-var x_attack_3 = {
-	name: "X Attack 3",
-	desc: "Drastically raises Attack of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xattack3.shtml"
-};
-
-var x_attack_6 = {
-	name: "X Attack 6",
-	desc: "Immensely raises Attack of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xattack6.shtml"
-};
-
-var x_defend = {
-	name: "X Defend",
-	desc: "Raises Defense of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xdefend.shtml"
-};
-
-var x_defend_2 = {
-	name: "X Defend 2",
-	desc: "Sharply raises Defense of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xdefend2.shtml"
-};
-
-var x_defend_3 = {
-	name: "X Defend 3",
-	desc: "Drastically raises Defense of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xdefend3.shtml"
-};
-
-var x_defend_6 = {
-	name: "X Defend 6",
-	desc: "Immensely raises Defense of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xdefend6.shtml"
-};
-
-var x_sp_def = {
-	name: "X Sp Def",
-	desc: "Raises Special Defense of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspdef.shtml"
-};
-
-var x_sp_def_2 = {
-	name: "X Sp Def 2",
-	desc: "Sharply raises Special Defense of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspdef2.shtml"
-};
-
-var x_sp_def_3 = {
-	name: "X Sp Def 3",
-	desc: "Drastically raises Special Defense of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspdef3.shtml"
-};
-
-var x_sp_def_6 = {
-	name: "X Sp Def 6",
-	desc: "Immensely raises Special Defense of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspdef6.shtml"
-};
-
-var x_special = {
-	name: "X Special",
-	desc: "Raises Special Attack of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspecial.shtml"
-};
-
-var x_special_2 = {
-	name: "X Special 2",
-	desc: "Sharply raises Special Attack of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspecial2.shtml"
-};
-
-var x_special_3 = {
-	name: "X Special 3",
-	desc: "Drastically raises Special Attack of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspecial3.shtml"
-};
-
-var x_special_6 = {
-	name: "X Special 6",
-	desc: "Immensely raises Special Attack of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspecial6.shtml"
-};
-
-var x_speed = {
-	name: "X Speed",
-	desc: "Raises Speed of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspeed.shtml"
-};
-
-var x_speed_2 = {
-	name: "X Speed 2",
-	desc: "Sharply raises Speed of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspeed2.shtml"
-};
-
-var x_speed_3 = {
-	name: "X Speed 3",
-	desc: "Drastically raises Speed of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspeed3.shtml"
-};
-
-var x_speed_6 = {
-	name: "X Speed 6",
-	desc: "Immensely raises Speed of a Pokémon in battle.",
-	wiki: "http://www.serebii.net/itemdex/xspeed6.shtml"
-};
-
-var yache_berry = {
-	name: "Yache Berry",
-	desc: "Weakens a supereffective Ice-type attack against the holding Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/yacheberry.shtml"
-};
-
-var yellow_flute = {
-	name: "Yellow Flute",
-	desc: "A toy flute made from yellow glass. A maniac will buy it for a high price.",
-	wiki: "http://www.serebii.net/itemdex/yellowflute.shtml"
-};
-
-var yellow_scarf = {
-	name: "Yellow Scarf",
-	desc: "Raises holder's Tough aspect in a Contest.",
-	wiki: "http://www.serebii.net/itemdex/yellowscarf.shtml"
-};
-
-var yellow_shard = {
-	name: "Yellow Shard",
-	desc: "A small yellow shard. It appears to be from some sort of implement made long ago.",
-	wiki: "http://www.serebii.net/itemdex/yellowshard.shtml"
-};
-
-var ylw_apricorn = {
-	name: "Ylw Apricorn",
-	desc: "A yellow Apricorn. It has an invigorating scent.",
-	wiki: "http://www.serebii.net/itemdex/ylwapricorn.shtml"
-};
-
-var zap_plate = {
-	name: "Zap Plate",
-	desc: "Increases power of Electric-type moves. Changes Arceus' type to Electric.",
-	wiki: "http://www.serebii.net/itemdex/zapplate.shtml"
-};
-
-var zinc = {
-	name: "Zinc",
-	desc: "A nutritious drink for Pokémon. It raises the base Sp. Def (Special Defense) stat of a single Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/zinc.shtml"
-};
-
-var zoom_lens = {
-	name: "Zoom Lens",
-	desc: "Raises a move's accuracy if the holder moves after its target.",
-	wiki: "http://www.serebii.net/itemdex/zoomlens.shtml"
-};
-
-var normalium_z = {
-	name: "Normalium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Normal-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/normaliumz.shtml"
-};
-
-var firium_z = {
-	name: "Firium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Fire-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/firiumz.shtml"
-};
-
-var waterium_z = {
-	name: "Waterium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Water-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/wateriumz.shtml"
-};
-
-var electrium_z = {
-	name: "Electrium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Electric-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/electriumz.shtml"
-};
-
-var grassium_z = {
-	name: "Grassium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Grass-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/grassiumz.shtml"
-};
-
-var icium_z = {
-	name: "Icium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Ice-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/iciumz.shtml"
-};
-
-var fightinium_z = {
-	name: "Fightinium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Fighting-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/fightiniumz.shtml"
-};
-
-var poisonium_z = {
-	name: "Poisonium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Poison-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/poisoniumz.shtml"
-};
-
-var groundium_z = {
-	name: "Groundium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Ground-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/groundiumz.shtml"
-};
-
-var flyinium_z = {
-	name: "Flyinium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Flying-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/flyiniumz.shtml"
-};
-
-var psychium_z = {
-	name: "Psychium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Psychic-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/psychiumz.shtml"
-};
-
-var buginium_z = {
-	name: "Buginium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Bug-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/buginiumz.shtml"
-};
-
-var rockium_z = {
-	name: "Rockium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Rock-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/rockiumz.shtml"
-};
-
-var ghostium_z = {
-	name: "Ghostium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Ghost-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/ghostiumz.shtml"
-};
-
-var dragonium_z = {
-	name: "Dragonium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Dragon-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/dragoniumz.shtml"
-};
-
-var darkinium_z = {
-	name: "Darkinium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Dark-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/darkiniumz.shtml"
-};
-
-var steelium_z = {
-	name: "Steelium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Steel-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/steeliumz.shtml"
-};
-
-var fairium_z = {
-	name: "Fairium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Fairy-type moves to Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/fairiumz.shtml"
-};
-
-var pikanium_z = {
-	name: "Pikanium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Pikachu’s Volt Tackle to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/pikaniumz.shtml"
-};
-
-var bottle_cap = {
-	name: "Bottle Cap",
-	desc: "A beautiful bottle cap that gives off a silver gleam. Some people are happy to receive one.",
-	wiki: "http://www.serebii.net/itemdex/bottlecap.shtml"
-};
-
-var gold_bottle_cap = {
-	name: "Gold Bottle Cap",
-	desc: "A beautiful bottle cap that gives off a golden gleam. Some people are happy to receive one.",
-	wiki: "http://www.serebii.net/itemdex/goldbottlecap.shtml"
-};
-
-var z_ring = {
-	name: "Z-ring",
-	desc: "A mysterious ring that enables Pokémon to use Z-Power. It requires both the willpower and the physical power of the Trainer wearing it.",
-	wiki: "http://www.serebii.net/itemdex/z-ring.shtml"
-};
-
-var decidium_z = {
-	name: "Decidium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Decidueye’s Spirit Shackle to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/decidiumz.shtml"
-};
-
-var incinium_z = {
-	name: "Incinium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Incineroar’s Darkest Lariat to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/inciniumz.shtml"
-};
-
-var primarium_z = {
-	name: "Primarium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Primarina’s Sparkling Aria to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/primariumz.shtml"
-};
-
-var tapunium_z = {
-	name: "Tapunium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades the tapu’s Nature’s Madness to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/tapuniumz.shtml"
-};
-
-var marshadium_z = {
-	name: "Marshadium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Marshadow’s Spectral Thief to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/marshadiumz.shtml"
-};
-
-var aloraichium_z = {
-	name: "Aloraichium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Alolan Raichu’s Thunderbolt to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/aloraichiumz.shtml"
-};
-
-var snorlium_z = {
-	name: "Snorlium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Snorlax’s Giga Impact to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/snorliumz.shtml"
-};
-
-var eevium_z = {
-	name: "Eevium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Eevee’s Last Resort to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/eeviumz.shtml"
-};
-
-var mewnium_z = {
-	name: "Mewnium Z",
-	desc: "This is a crystallized form of Z-Power. It upgrades Mew’s Psychic to a Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/mewniumz.shtml"
-};
-
-var normalium_z = {
-	name: "Normalium Z",
-	desc: "It converts Z-Power into crystals that upgrade Normal-type moves to Normal-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/normaliumz.shtml"
-};
-
-var firium_z = {
-	name: "Firium Z",
-	desc: "It converts Z-Power into crystals that upgrade Fire-type moves to Fire-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/firiumz.shtml"
-};
-
-var waterium_z = {
-	name: "Waterium Z",
-	desc: "It converts Z-Power into crystals that upgrade Water-type moves to Water-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/wateriumz.shtml"
-};
-
-var electrium_z = {
-	name: "Electrium Z",
-	desc: "It converts Z-Power into crystals that upgrade Electric-type moves to Electric-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/electriumz.shtml"
-};
-
-var grassium_z = {
-	name: "Grassium Z",
-	desc: "It converts Z-Power into crystals that upgrade Grass-type moves to Grass-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/grassiumz.shtml"
-};
-
-var icium_z = {
-	name: "Icium Z",
-	desc: "It converts Z-Power into crystals that upgrade Ice-type moves to Ice-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/iciumz.shtml"
-};
-
-var fightinium_z = {
-	name: "Fightinium Z",
-	desc: "It converts Z-Power into crystals that upgrade Fighting-type moves to Fighting-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/fightiniumz.shtml"
-};
-
-var poisonium_z = {
-	name: "Poisonium Z",
-	desc: "It converts Z-Power into crystals that upgrade Poison-type moves to Poison-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/poisoniumz.shtml"
-};
-
-var groundium_z = {
-	name: "Groundium Z",
-	desc: "It converts Z-Power into crystals that upgrade Ground-type moves to Ground-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/groundiumz.shtml"
-};
-
-var flyinium_z = {
-	name: "Flyinium Z",
-	desc: "It converts Z-Power into crystals that upgrade Flying-type moves to Flying-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/flyiniumz.shtml"
-};
-
-var psychium_z = {
-	name: "Psychium Z",
-	desc: "It converts Z-Power into crystals that upgrade Psychic-type moves to Psychic-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/psychiumz.shtml"
-};
-
-var buginium_z = {
-	name: "Buginium Z",
-	desc: "It converts Z-Power into crystals that upgrade Bug-type moves to Bug-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/buginiumz.shtml"
-};
-
-var rockium_z = {
-	name: "Rockium Z",
-	desc: "It converts Z-Power into crystals that upgrade Rock-type moves to Rock-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/rockiumz.shtml"
-};
-
-var ghostium_z = {
-	name: "Ghostium Z",
-	desc: "It converts Z-Power into crystals that upgrade Ghost-type moves to Ghost-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/ghostiumz.shtml"
-};
-
-var dragonium_z = {
-	name: "Dragonium Z",
-	desc: "It converts Z-Power into crystals that upgrade Dragon-type moves to Dragon-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/dragoniumz.shtml"
-};
-
-var darkinium_z = {
-	name: "Darkinium Z",
-	desc: "It converts Z-Power into crystals that upgrade Dark-type moves to Dark-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/darkiniumz.shtml"
-};
-
-var steelium_z = {
-	name: "Steelium Z",
-	desc: "It converts Z-Power into crystals that upgrade Steel-type moves to Steel-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/steeliumz.shtml"
-};
-
-var fairium_z = {
-	name: "Fairium Z",
-	desc: "It converts Z-Power into crystals that upgrade Fairy-type moves to Fairy-type Z-Moves.",
-	wiki: "http://www.serebii.net/itemdex/fairiumz.shtml"
-};
-
-var pikanium_z = {
-	name: "Pikanium Z",
-	desc: "It converts Z-Power into crystals that upgrade Pikachu’s Volt Tackle to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/pikaniumz.shtml"
-};
-
-var decidium_z = {
-	name: "Decidium Z",
-	desc: "It converts Z-Power into crystals that upgrade Decidueye’s Spirit Shackle to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/decidiumz.shtml"
-};
-
-var incinium_z = {
-	name: "Incinium Z",
-	desc: "It converts Z-Power into crystals that upgrade Incineroar’s Darkest Lariat to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/inciniumz.shtml"
-};
-
-var primarium_z = {
-	name: "Primarium Z",
-	desc: "It converts Z-Power into crystals that upgrade Primarina’s Sparkling Aria to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/primariumz.shtml"
-};
-
-var tapunium_z = {
-	name: "Tapunium Z",
-	desc: "It converts Z-Power into crystals that upgrade the tapu’s Nature’s Madness to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/tapuniumz.shtml"
-};
-
-var marshadium_z = {
-	name: "Marshadium Z",
-	desc: "It converts Z-Power into crystals that upgrade Marshadow’s Spectral Thief to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/marshadiumz.shtml"
-};
-
-var aloraichium_z = {
-	name: "Aloraichium Z",
-	desc: "It converts Z-Power into crystals that upgrade Alolan Raichu’s Thunderbolt to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/aloraichiumz.shtml"
-};
-
-var snorlium_z = {
-	name: "Snorlium Z",
-	desc: "It converts Z-Power into crystals that upgrade Snorlax’s Giga Impact to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/snorliumz.shtml"
-};
-
-var eevium_z = {
-	name: "Eevium Z",
-	desc: "It converts Z-Power into crystals that upgrade Eevee’s Last Resort to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/eeviumz.shtml"
-};
-
-var mewnium_z = {
-	name: "Mewnium Z",
-	desc: "It converts Z-Power into crystals that upgrade Mew’s Psychic to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/mewniumz.shtml"
-};
-
-var pikashunium_z = {
-	name: "Pikashunium Z",
-	desc: "It converts Z-Power into crystals that upgrade a Thunderbolt by Pikachu in a cap to an exclusive Z-Move.",
-	wiki: "http://www.serebii.net/itemdex/pikashuniumz.shtml"
-};
-
-var forage_bag = {
-	name: "Forage Bag",
-	desc: "A bag to carry ingredients gathered during Mallow’s trial in the jungle.",
-	wiki: "http://www.serebii.net/itemdex/foragebag.shtml"
-};
-
-var fishing_rod = {
-	name: "Fishing Rod",
-	desc: "A Fishing Rod made by Captain Lana. Cast a line over piles of underwater rocks to fish for wild aquatic Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/fishingrod.shtml"
-};
-
-var professors_mask = {
-	name: "Professor’s Mask",
-	desc: "The mask that belongs to The Masked Royal. This pro wrestler apparently sews his mask on a machine himself.",
-	wiki: "http://www.serebii.net/itemdex/professor’smask.shtml"
-};
-
-var festival_ticket = {
-	name: "Festival Ticket",
-	desc: "A ticket that allows you to host a mission in Festival Plaza.",
-	wiki: "http://www.serebii.net/itemdex/festivalticket.shtml"
-};
-
-var sparkling_stone = {
-	name: "Sparkling Stone",
-	desc: "A stone entrusted by a Pokémon that has been venerated as a guardian deity in the Alola region. There is said to be some secret in how it sparkles.",
-	wiki: "http://www.serebii.net/itemdex/sparklingstone.shtml"
-};
-
-var adrenaline_orb = {
-	name: "Adrenaline Orb",
-	desc: "Using it makes wild Pokémon more likely to call for help. If held by a Pokémon, it boosts Speed when intimidated. It can be used only once.",
-	wiki: "http://www.serebii.net/itemdex/adrenalineorb.shtml"
-};
-
-var zygarde_cube = {
-	name: "Zygarde Cube",
-	desc: "An item to store Zygarde Cores and Cells. You can also use it to teach Zygarde moves.",
-	wiki: "http://www.serebii.net/itemdex/zygardecube.shtml"
-};
-
-var ice_stone = {
-	name: "Ice Stone",
-	desc: "A peculiar stone that can make certain species of Pokémon evolve. It has an unmistakable snowflake pattern.",
-	wiki: "http://www.serebii.net/itemdex/icestone.shtml"
-};
-
-var ride_pager = {
-	name: "Ride Pager",
-	desc: "By entering certain numbers on this pager, you can summon Ride Pokémon in an instant.",
-	wiki: "http://www.serebii.net/itemdex/ridepager.shtml"
-};
-
-var beast_ball = {
-	name: "Beast Ball",
-	desc: "A special Poké Ball designed to catch Ultra Beasts. It has a low success rate for catching others.",
-	wiki: "http://www.serebii.net/itemdex/beastball.shtml"
-};
-
-var big_malasada = {
-	name: "Big Malasada",
-	desc: "The Alola region’s local specialty—fried bread. It can be used once to heal all the status conditions of a Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/bigmalasada.shtml"
-};
-
-var red_nectar = {
-	name: "Red Nectar",
-	desc: "A flower nectar obtained at Ula’ula Meadow. It changes the form of certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/rednectar.shtml"
-};
-
-var yellow_nectar = {
-	name: "Yellow Nectar",
-	desc: "A flower nectar obtained at Melemele Meadow. It changes the form of certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/yellownectar.shtml"
-};
-
-var pink_nectar = {
-	name: "Pink Nectar",
-	desc: "The flower nectar obtained at the flowering shrubs on Royal Avenue. It changes the form of certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/pinknectar.shtml"
-};
-
-var purple_nectar = {
-	name: "Purple Nectar",
-	desc: "A flower nectar obtained at Poni Meadow. It changes the form of certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/purplenectar.shtml"
-};
-
-var sun_flute = {
-	name: "Sun Flute",
-	desc: "It is said that the tones it produces were offered up as an expression of gratitude to the Legendary Pokémon of the sun.",
-	wiki: "http://www.serebii.net/itemdex/sunflute.shtml"
-};
-
-var moon_flute = {
-	name: "Moon Flute",
-	desc: "It is said that the tones it produces were offered up as an expression of gratitude to the Legendary Pokémon of the moon.",
-	wiki: "http://www.serebii.net/itemdex/moonflute.shtml"
-};
-
-var enigmatic_card = {
-	name: "Enigmatic Card",
-	desc: "A mysterious card. Written on it is a request for you to go to a guest room in an Akala motel on Route 8.",
-	wiki: "http://www.serebii.net/itemdex/enigmaticcard.shtml"
-};
-
-var terrain_extender = {
-	name: "Terrain Extender",
-	desc: "An item to be held by a Pokémon. It extends the duration of the terrain caused by the holder’s move or Ability.",
-	wiki: "http://www.serebii.net/itemdex/terrainextender.shtml"
-};
-
-var protective_pads = {
-	name: "Protective Pads",
-	desc: "An item to be held by a Pokémon. These pads protect the holder from effects caused by making direct contact with the target.",
-	wiki: "http://www.serebii.net/itemdex/protectivepads.shtml"
-};
-
-var electric_seed = {
-	name: "Electric Seed",
-	desc: "An item to be held by a Pokémon. It boosts Defense on Electric Terrain. It can only be used once.",
-	wiki: "http://www.serebii.net/itemdex/electricseed.shtml"
-};
-
-var psychic_seed = {
-	name: "Psychic Seed",
-	desc: "An item to be held by a Pokémon. It boosts Sp. Def on Psychic Terrain. It can only be used once.",
-	wiki: "http://www.serebii.net/itemdex/psychicseed.shtml"
-};
-
-var misty_seed = {
-	name: "Misty Seed",
-	desc: "An item to be held by a Pokémon. It boosts Sp. Def on Misty Terrain. It can only be used once.",
-	wiki: "http://www.serebii.net/itemdex/mistyseed.shtml"
-};
-
-var grassy_seed = {
-	name: "Grassy Seed",
-	desc: "An item to be held by a Pokémon. It boosts Defense on Grassy Terrain. It can only be used once.",
-	wiki: "http://www.serebii.net/itemdex/grassyseed.shtml"
-};
-
-var fighting_memory = {
-	name: "Fighting Memory",
-	desc: "A memory disc that contains Fighting-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/fightingmemory.shtml"
-};
-
-var flying_memory = {
-	name: "Flying Memory",
-	desc: "A memory disc that contains Flying-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/flyingmemory.shtml"
-};
-
-var poison_memory = {
-	name: "Poison Memory",
-	desc: "A memory disc that contains Poison-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/poisonmemory.shtml"
-};
-
-var ground_memory = {
-	name: "Ground Memory",
-	desc: "A memory disc that contains Ground-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/groundmemory.shtml"
-};
-
-var rock_memory = {
-	name: "Rock Memory",
-	desc: "A memory disc that contains Rock-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/rockmemory.shtml"
-};
-
-var bug_memory = {
-	name: "Bug Memory",
-	desc: "A memory disc that contains Bug-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/bugmemory.shtml"
-};
-
-var ghost_memory = {
-	name: "Ghost Memory",
-	desc: "A memory disc that contains Ghost-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/ghostmemory.shtml"
-};
-
-var steel_memory = {
-	name: "Steel Memory",
-	desc: "A memory disc that contains Steel-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/steelmemory.shtml"
-};
-
-var fire_memory = {
-	name: "Fire Memory",
-	desc: "A memory disc that contains Fire-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/firememory.shtml"
-};
-
-var water_memory = {
-	name: "Water Memory",
-	desc: "A memory disc that contains Water-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/watermemory.shtml"
-};
-
-var grass_memory = {
-	name: "Grass Memory",
-	desc: "A memory disc that contains Grass-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/grassmemory.shtml"
-};
-
-var electric_memory = {
-	name: "Electric Memory",
-	desc: "A memory disc that contains Electric-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/electricmemory.shtml"
-};
-
-var psychic_memory = {
-	name: "Psychic Memory",
-	desc: "A memory disc that contains Psychic-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/psychicmemory.shtml"
-};
-
-var ice_memory = {
-	name: "Ice Memory",
-	desc: "A memory disc that contains Ice-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/icememory.shtml"
-};
-
-var dragon_memory = {
-	name: "Dragon Memory",
-	desc: "A memory disc that contains Dragon-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/dragonmemory.shtml"
-};
-
-var dark_memory = {
-	name: "Dark Memory",
-	desc: "A memory disc that contains Dark-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/darkmemory.shtml"
-};
-
-var fairy_memory = {
-	name: "Fairy Memory",
-	desc: "A memory disc that contains Fairy-type data. It changes the type of the holder if held by a certain species of Pokémon.",
-	wiki: "http://www.serebii.net/itemdex/fairymemory.shtml"
+var prism_armor = {
+	name: "Prism Armor",
+	desc: "Reduces the power of supereffective attacks taken.",
+	wiki: "http://www.serebii.net/abilitydex/prismarmor.shtml"
 };
