@@ -1,3 +1,5 @@
+console.log("trail");
+
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
     var isMoving = false;
     var currentCell = {
@@ -63,6 +65,20 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
             tempImage = "blank";
         }
         document.getElementById(destination.row + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/ball.png\" />";
+        switch (direction) {
+            case 0:
+                document.getElementById(destination.row.incrementLetter() + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                break;
+            case 1:
+                document.getElementById(destination.row + (destination.column++).toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                break;
+            case 2:
+                document.getElementById(destination.row.decrementLetter() + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                break;
+            case 3:
+                document.getElementById(destination.row + (destination.column--).toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                break;
+        }
         switch (tempImage) {
             case "slash":
                 switch (direction) {
