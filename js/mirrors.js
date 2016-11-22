@@ -1,4 +1,4 @@
-console.log("trail6");
+console.log("trail7");
 
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
     var isMoving = false;
@@ -15,6 +15,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
         column: 3
     };
     var tempImage = "butts";
+    var oldImage = "hole";
     var timesLooped = 0;
     console.log("butts");
     isMoving = true;
@@ -67,18 +68,18 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
         document.getElementById(destination.row + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/ball.png\" />";
         switch (direction) {
             case 0:
-                document.getElementById(incrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                document.getElementById(incrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
                 break;
             case 1:
                 console.log(destination.row + ", " + (destination.column - 1).toString())
-                document.getElementById(destination.row + (destination.column - 1).toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                document.getElementById(destination.row + (destination.column - 1).toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
                 break;
             case 2:
-                document.getElementById(decrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                document.getElementById(decrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
                 break;
             case 3:
                 console.log(destination.row + ", " + (destination.column + 1).toString())
-                document.getElementById(destination.row + (destination.column + 1).toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                document.getElementById(destination.row + (destination.column + 1).toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
                 break;
         }
         switch (tempImage) {
@@ -122,6 +123,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
             default:
                 break;
         }
+        oldImage = tempImage;
         previousCell = currentCell;
         currentCell = destination;
     }
