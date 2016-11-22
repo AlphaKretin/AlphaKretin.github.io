@@ -1,4 +1,4 @@
-console.log("trail2");
+console.log("trail3");
 
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
     var isMoving = false;
@@ -70,13 +70,13 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
                 document.getElementById(incrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
                 break;
             case 1:
-                document.getElementById(destination.row + (destination.column++).toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                document.getElementById(destination.row + (destination.column + 1).toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
                 break;
             case 2:
                 document.getElementById(decrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
                 break;
             case 3:
-                document.getElementById(destination.row + (destination.column--).toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
+                document.getElementById(destination.row + (destination.column - 1).toString()).innerHTML = "<img src=\"../images/mirrors/blank.png\" />";
                 break;
         }
         switch (tempImage) {
