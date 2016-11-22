@@ -1,12 +1,8 @@
-console.log("trail7");
+console.log("trail8");
 
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
     var isMoving = false;
     var currentCell = {
-        row: "B",
-        column: 2
-    };
-    var previousCell = {
         row: "B",
         column: 2
     };
@@ -26,6 +22,8 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
             colourAssign();
             if (isMoving === true) {
                 colourLoop();
+            } else {
+                document.getElementById(destination.row + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/hole.png\" />";
             }
         }, 150);
     }
@@ -66,22 +64,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
             tempImage = "blank";
         }
         document.getElementById(destination.row + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/ball.png\" />";
-        switch (direction) {
-            case 0:
-                document.getElementById(incrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
-                break;
-            case 1:
-                console.log(destination.row + ", " + (destination.column - 1).toString())
-                document.getElementById(destination.row + (destination.column - 1).toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
-                break;
-            case 2:
-                document.getElementById(decrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
-                break;
-            case 3:
-                console.log(destination.row + ", " + (destination.column + 1).toString())
-                document.getElementById(destination.row + (destination.column + 1).toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
-                break;
-        }
+        document.getElementById(currentCell.row + currentCell.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
         switch (tempImage) {
             case "slash":
                 switch (direction) {
@@ -124,7 +107,6 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
                 break;
         }
         oldImage = tempImage;
-        previousCell = currentCell;
         currentCell = destination;
     }
 }
