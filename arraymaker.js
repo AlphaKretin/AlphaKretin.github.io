@@ -1,19 +1,18 @@
 var moveprops = ["name", "desc", "wiki"];
-console.log("tms");
+console.log("tms2");
 
 function clicked(){
 	var out = "var moves = [";
 	var len = 0;
 	var t = "tm: \""
 	for (var mon of moves){
-		out += "{id: \"" + mon + "\", ";
-		mon = mon.replace(/ /g, "_");
+		out += "{id: \"" + mon.id + "\", ";
 		for (var prop of moveprops){
-			if (eval(mon)[prop] !== undefined){
-				if (isNaN(parseInt(eval(mon)[prop]))){
-					out += prop + ": \"" + eval(mon)[prop] + "\", ";
+			if (mon[prop] !== undefined){
+				if (isNaN(parseInt(mon[prop]))){
+					out += prop + ": \"" + mon[prop] + "\", ";
 				} else {
-					out += prop + ": " + eval(mon)[prop] + ", ";
+					out += prop + ": " + mon[prop] + ", ";
 				}				
 			}
 		}
