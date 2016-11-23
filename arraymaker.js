@@ -1,25 +1,30 @@
-var mons = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "caterpie", "metapod", "butterfree", "weedle", "kakuna", "beedrill", "pidgey", "pidgeotto", "pidgeot", "rattata", "raticate", "alolan rattata", "alolan raticate", "spearow", "fearow", "ekans", "arbok", "pikachu", "raichu", "alolan raichu", "sandshrew", "sandslash", "alolan sandshrew", "alolan sandslash", "nidoranf", "nidorina", "nidoqueen", "nidoranm", "nidorino", "nidoking", "clefairy", "clefable", "vulpix", "ninetales", "alolan vulpix", "alolan ninetales", "jigglypuff", "wigglytuff", "zubat", "golbat", "oddish", "gloom", "vileplume", "paras", "parasect", "venonat", "venomoth", "diglett", "dugtrio", "alolan diglett", "alolan dugtrio", "meowth", "persian", "alolan meowth", "alolan persian", "psyduck", "golduck", "mankey", "primeape", "growlithe", "arcanine", "poliwag", "poliwhirl", "poliwrath", "abra", "kadabra", "alakazam", "machop", "machoke", "machamp", "bellsprout", "weepinbell", "victreebel", "tentacool", "tentacruel", "geodude", "graveler", "golem", "alolan geodude", "alolan graveler", "alolan golem", "ponyta", "rapidash", "slowpoke", "slowbro", "magnemite", "magneton", "farfetchd", "doduo", "dodrio", "seel", "dewgong", "grimer", "muk", "alolan grimer", "alolan muk", "shellder", "cloyster", "gastly", "haunter", "gengar", "onix", "drowzee", "hypno", "krabby", "kingler", "voltorb", "electrode", "exeggcute", "exeggutor", "alolan exeggutor", "cubone", "marowak", "alolan marowak", "hitmonlee", "hitmonchan", "lickitung", "koffing", "weezing", "rhyhorn", "rhydon", "chansey", "tangela", "kangaskhan", "horsea", "seadra", "goldeen", "seaking", "staryu", "starmie", "mr mime", "scyther", "jynx", "electabuzz", "magmar", "pinsir", "tauros", "magikarp", "gyarados", "lapras", "ditto", "eevee", "vaporeon", "jolteon", "flareon", "porygon", "omanyte", "omastar", "kabuto", "kabutops", "aerodactyl", "snorlax", "articuno", "zapdos", "moltres", "dratini", "dragonair", "dragonite", "mewtwo", "mew", "chikorita", "bayleef", "meganium", "cyndaquil", "quilava", "typhlosion", "totodile", "croconaw", "feraligatr", "sentret", "furret", "hoothoot", "noctowl", "ledyba", "ledian", "spinarak", "ariados", "crobat", "chinchou", "lanturn", "pichu", "cleffa", "igglybuff", "togepi", "togetic", "natu", "xatu", "mareep", "flaaffy", "ampharos", "bellossom", "marill", "azumarill", "sudowoodo", "politoed", "hoppip", "skiploom", "jumpluff", "aipom", "sunkern", "sunflora", "yanma", "wooper", "quagsire", "espeon", "umbreon", "murkrow", "slowking", "misdreavus", "unown", "wobbuffet", "girafarig", "pineco", "forretress", "dunsparce", "gligar", "steelix", "snubbull", "granbull", "qwilfish", "scizor", "shuckle", "heracross", "sneasel", "teddiursa", "ursaring", "slugma", "magcargo", "swinub", "piloswine", "corsola", "remoraid", "octillery", "delibird", "mantine", "skarmory", "houndour", "houndoom", "kingdra", "phanpy", "donphan", "porygon2", "stantler", "smeargle", "tyrogue", "hitmontop", "smoochum", "elekid", "magby", "miltank", "blissey", "raikou", "entei", "suicune", "larvitar", "pupitar", "tyranitar", "lugia", "ho_oh", "celebi", "treecko", "grovyle", "sceptile", "torchic", "combusken", "blaziken", "mudkip", "marshtomp", "swampert", "poochyena", "mightyena", "zigzagoon", "linoone", "wurmple", "silcoon", "beautifly", "cascoon", "dustox", "lotad", "lombre", "ludicolo", "seedot", "nuzleaf", "shiftry", "taillow", "swellow", "wingull", "pelipper", "ralts", "kirlia", "gardevoir", "surskit", "masquerain", "shroomish", "breloom", "slakoth", "vigoroth", "slaking", "nincada", "ninjask", "shedinja", "whismur", "loudred", "exploud", "makuhita", "hariyama", "azurill", "nosepass", "skitty", "delcatty", "sableye", "mawile", "aron", "lairon", "aggron", "meditite", "medicham", "electrike", "manectric", "plusle", "minun", "volbeat", "illumise", "roselia", "gulpin", "swalot", "carvanha", "sharpedo", "wailmer", "wailord", "numel", "camerupt", "torkoal", "spoink", "grumpig", "spinda", "trapinch", "vibrava", "flygon", "cacnea", "cacturne", "swablu", "altaria", "zangoose", "seviper", "lunatone", "solrock", "barboach", "whiscash", "corphish", "crawdaunt", "baltoy", "claydol", "lileep", "cradily", "anorith", "armaldo", "feebas", "milotic", "castform", "castform sunny", "castform rainy", "castform snowy", "kecleon", "shuppet", "banette", "duskull", "dusclops", "tropius", "chimecho", "absol", "wynaut", "snorunt", "glalie", "spheal", "sealeo", "walrein", "clamperl", "huntail", "gorebyss", "relicanth", "luvdisc", "bagon", "shelgon", "salamence", "beldum", "metang", "metagross", "regirock", "regice", "registeel", "latias", "latios", "kyogre", "groudon", "rayquaza", "jirachi", "deoxys", "turtwig", "grotle", "torterra", "chimchar", "monferno", "infernape", "piplup", "prinplup", "empoleon", "starly", "staravia", "staraptor", "bidoof", "bibarel", "kricketot", "kricketune", "shinx", "luxio", "luxray", "budew", "roserade", "cranidos", "rampardos", "shieldon", "bastiodon", "burmy", "wormadam", "wormadam sandy", "wormadam trash", "mothim", "combee", "vespiquen", "pachirisu", "buizel", "floatzel", "cherubi", "cherrim", "shellos", "gastrodon", "ambipom", "drifloon", "drifblim", "buneary", "lopunny", "mismagius", "honchkrow", "glameow", "purugly", "chingling", "stunky", "skuntank", "bronzor", "bronzong", "bonsly", "mime jr", "happiny", "chatot", "spiritomb", "gible", "gabite", "garchomp", "munchlax", "riolu", "lucario", "hippopotas", "hippowdon", "skorupi", "drapion", "croagunk", "toxicroak", "carnivine", "finneon", "lumineon", "mantyke", "snover", "abomasnow", "weavile", "magnezone", "lickilicky", "rhyperior", "tangrowth", "electivire", "magmortar", "togekiss", "yanmega", "leafeon", "glaceon", "gliscor", "mamoswine", "porygon_z", "gallade", "probopass", "dusknoir", "froslass", "rotom", "rotom heat", "rotom wash", "rotom mow", "rotom fan", "rotom frost", "uxie", "mesprit", "azelf", "dialga", "palkia", "heatran", "regigigas", "giratina", "giratina origin", "cresselia", "phione", "manaphy", "darkrai", "shaymin", "shaymin sky", "arceus", "victini", "snivy", "servine", "serperior", "tepig", "pignite", "emboar", "oshawott", "dewott", "samurott", "patrat", "watchog", "lillipup", "herdier", "stoutland", "purrloin", "liepard", "pansage", "simisage", "pansear", "simisear", "panpour", "simipour", "munna", "musharna", "pidove", "tranquill", "unfezant", "blitzle", "zebstrika", "roggenrola", "boldore", "gigalith", "woobat", "swoobat", "drilbur", "excadrill", "audino", "timburr", "gurdurr", "conkeldurr", "tympole", "palpitoad", "seismitoad", "throh", "sawk", "sewaddle", "swadloon", "leavanny", "venipede", "whirlipede", "scolipede", "cottonee", "whimsicott", "petilil", "lilligant", "basculin", "basculin blue", "sandile", "krokorok", "krookodile", "darumaka", "darmanitan", "darmanitan zen", "maractus", "dwebble", "crustle", "scraggy", "scrafty", "sigilyph", "yamask", "cofagrigus", "tirtouga", "carracosta", "archen", "archeops", "trubbish", "garbodor", "zorua", "zoroark", "minccino", "cinccino", "gothita", "gothorita", "gothitelle", "solosis", "duosion", "reuniclus", "ducklett", "swanna", "vanillite", "vanillish", "vanilluxe", "deerling", "sawsbuck", "emolga", "karrablast", "escavalier", "foongus", "amoonguss", "frillish", "jellicent", "alomomola", "joltik", "galvantula", "ferroseed", "ferrothorn", "klink", "klang", "klinklang", "tynamo", "eelektrik", "eelektross", "elgyem", "beheeyem", "litwick", "lampent", "chandelure", "axew", "fraxure", "haxorus", "cubchoo", "beartic", "cryogonal", "shelmet", "accelgor", "stunfisk", "mienfoo", "mienshao", "druddigon", "golett", "golurk", "pawniard", "bisharp", "bouffalant", "rufflet", "braviary", "vullaby", "mandibuzz", "heatmor", "durant", "deino", "zweilous", "hydreigon", "larvesta", "volcarona", "cobalion", "terrakion", "virizion", "tornadus", "tornadus therian", "thundurus", "thundurus therian", "reshiram", "zekrom", "landorus", "landorus therian", "kyurem", "white kyurem", "black kyurem", "keldeo", "meloetta", "meloetta pirouette", "genesect", "chespin", "quilladin", "chesnaught", "fennekin", "braixen", "delphox", "froakie", "frogadier", "greninja", "bunnelby", "diggersby", "fletchling", "fletchinder", "talonflame", "scatterbug", "spewpa", "vivillon", "litleo", "pyroar", "flabebe", "floette", "florges", "skiddo", "gogoat", "pancham", "pangoro", "furfrou", "espurr", "meowstic", "honedge", "doublade", "aegislash", "spritzee", "aromatisse", "swirlix", "slurpuff", "inkay", "malamar", "binacle", "barbaracle", "skrelp", "dragalge", "clauncher", "clawitzer", "helioptile", "heliolisk", "tyrunt", "tyrantrum", "amaura", "aurorus", "sylveon", "hawlucha", "dedenne", "carbink", "goomy", "sliggoo", "goodra", "klefki", "phantump", "trevenant", "pumpkaboo", "gourgeist", "bergmite", "avalugg", "noibat", "noivern", "xerneas", "yveltal", "zygarde", "diancie", "hoopa", "hoopa unbound", "volcanion", "mega venusaur", "mega charizard x", "mega charizard y", "mega blastoise", "mega alakazam", "mega gengar", "mega kangaskhan", "mega pinsir", "mega gyarados", "mega aerodactyl", "mega mewtwo x", "mega mewtwo y", "mega ampharos", "mega scizor", "mega heracross", "mega houndoom", "mega tyranitar", "mega blaziken", "mega gardevoir", "mega mawile", "mega aggron", "mega medicham", "mega manectric", "mega banette", "mega absol", "mega garchomp", "mega lucario", "mega abomasnow", "mega beedrill", "mega pidgeot", "mega slowbro", "mega steelix", "mega sceptile", "mega swampert", "mega sableye", "mega sharpedo", "mega camerupt", "mega altaria", "mega glalie", "mega salamence", "mega metagross", "mega latias", "mega latios", "mega rayquaza", "mega lopunny", "mega gallade", "mega audino", "mega diancie", "rowlet", "dartrix", "decidueye", "litten", "torracat", "incineroar", "popplio", "brionne", "primarina", "pikipek", "trumbeak", "toucannon", "yungoos", "gumshoos", "grubbin", "charjabug", "vikavolt", "crabrawler", "crabominable", "oricorio", "cutiefly", "ribombee", "rockruff", "lycanroc", "lycanroc midnight", "wishiwashi", "mareanie", "toxapex", "mudbray", "mudsdale", "dewpider", "araquanid", "fomantis", "lurantis", "morelull", "shiinotic", "salandit", "salazzle", "stufful", "bewear", "bounsweet", "steenee", "tsareena", "comfey", "oranguru", "passimian", "wimpod", "golisopod", "sandygast", "palossand", "pyukumuku", "type null", "silvally", "minior", "komala", "turtonator", "togedemaru", "mimikyu", "bruxish", "drampa", "dhelmise", "jangmo_o", "hakamo_o", "kommo_o", "tapu koko", "tapu lele", "tapu bulu", "tapu fini", "cosmog", "cosmoem", "solgaleo", "lunala", "nihilego", "buzzwole", "pheromosa", "xurkitree", "celesteela", "kartana", "guzzlord", "necrozma", "magearna", "marshadow"];
-var moves = ["pound", "karate chop", "double slap", "comet punch", "mega punch", "pay day", "fire punch", "ice punch", "thunder punch", "scratch", "vice grip", "guillotine", "razor wind", "swords dance", "cut", "gust", "wing attack", "whirlwind", "fly", "bind", "slam", "vine whip", "stomp", "double kick", "mega kick", "jump kick", "rolling kick", "sand attack", "headbutt", "horn attack", "fury attack", "horn drill", "tackle", "body slam", "wrap", "take down", "thrash", "double_edge", "tail whip", "poison sting", "twineedle", "pin missile", "leer", "bite", "growl", "roar", "sing", "supersonic", "sonic boom", "disable", "acid", "ember", "flamethrower", "mist", "water gun", "hydro pump", "surf", "ice beam", "blizzard", "psybeam", "bubble beam", "aurora beam", "hyper beam", "peck", "drill peck", "submission", "low kick", "counter", "seismic toss", "strength", "absorb", "mega drain", "leech seed", "growth", "razor leaf", "solar beam", "poison powder", "stun spore", "sleep powder", "petal dance", "string shot", "dragon rage", "fire spin", "thunder shock", "thunderbolt", "thunder wave", "thunder", "rock throw", "earthquake", "fissure", "dig", "toxic", "confusion", "psychic", "hypnosis", "meditate", "agility", "quick attack", "rage", "teleport", "night shade", "mimic", "screech", "double team", "recover", "harden", "minimize", "smokescreen", "confuse ray", "withdraw", "defense curl", "barrier", "light screen", "haze", "reflect", "focus energy", "bide", "metronome", "mirror move", "self_destruct", "egg bomb", "lick", "smog", "sludge", "bone club", "fire blast", "waterfall", "clamp", "swift", "skull bash", "spike cannon", "constrict", "amnesia", "kinesis", "soft_boiled", "high jump kick", "glare", "dream eater", "poison gas", "barrage", "leech life", "lovely kiss", "sky attack", "transform", "bubble", "dizzy punch", "spore", "flash", "psywave", "splash", "acid armor", "crabhammer", "explosion", "fury swipes", "bonemerang", "rest", "rock slide", "hyper fang", "sharpen", "conversion", "tri attack", "super fang", "slash", "substitute", "struggle", "sketch", "triple kick", "thief", "spider web", "mind reader", "nightmare", "flame wheel", "snore", "curse", "flail", "conversion 2", "aeroblast", "cotton spore", "reversal", "spite", "powder snow", "protect", "mach punch", "scary face", "feint attack", "sweet kiss", "belly drum", "sludge bomb", "mud_slap", "octazooka", "spikes", "zap cannon", "foresight", "destiny bond", "perish song", "icy wind", "detect", "bone rush", "lock_on", "outrage", "sandstorm", "giga drain", "endure", "charm", "rollout", "false swipe", "swagger", "milk drink", "spark", "fury cutter", "steel wing", "mean look", "attract", "sleep talk", "heal bell", "_return", "present", "frustration", "safeguard", "pain split", "sacred fire", "magnitude", "dynamic punch", "megahorn", "dragon breath", "baton pass", "encore", "pursuit", "rapid spin", "sweet scent", "iron tail", "metal claw", "vital throw", "morning sun", "synthesis", "moonlight", "hidden power", "cross chop", "twister", "rain dance", "sunny day", "crunch", "mirror coat", "psych up", "extreme speed", "ancient power", "shadow ball", "future sight", "rock smash", "whirlpool", "beat up", "fake out", "uproar", "stockpile", "spit up", "swallow", "heat wave", "hail", "torment", "flatter", "will_o_wisp", "memento", "facade", "focus punch", "smelling salts", "follow me", "nature power", "charge", "taunt", "helping hand", "trick", "role play", "wish", "assist", "ingrain", "superpower", "magic coat", "recycle", "revenge", "brick break", "yawn", "knock off", "endeavor", "eruption", "skill swap", "imprison", "refresh", "grudge", "snatch", "secret power", "dive", "arm thrust", "camouflage", "tail glow", "luster purge", "mist ball", "feather dance", "teeter dance", "blaze kick", "mud sport", "ice ball", "needle arm", "slack off", "hyper voice", "poison fang", "crush claw", "blast burn", "hydro cannon", "meteor mash", "astonish", "weather ball", "aromatherapy", "fake tears", "air cutter", "overheat", "odor sleuth", "rock tomb", "silver wind", "metal sound", "grass whistle", "tickle", "cosmic power", "water spout", "signal beam", "shadow punch", "extrasensory", "sky uppercut", "sand tomb", "sheer cold", "muddy water", "bullet seed", "aerial ace", "icicle spear", "iron defense", "block", "howl", "dragon claw", "frenzy plant", "bulk up", "bounce", "mud shot", "poison tail", "covet", "volt tackle", "magical leaf", "water sport", "calm mind", "leaf blade", "dragon dance", "rock blast", "shock wave", "water pulse", "doom desire", "psycho boost", "roost", "gravity", "miracle eye", "wake_up slap", "hammer arm", "gyro ball", "healing wish", "brine", "natural gift", "feint", "pluck", "tailwind", "acupressure", "metal burst", "u_turn", "close combat", "payback", "assurance", "embargo", "fling", "psycho shift", "trump card", "heal block", "wring out", "power trick", "gastro acid", "lucky chant", "me first", "copycat", "power swap", "guard swap", "punishment", "last resort", "worry seed", "sucker punch", "toxic spikes", "heart swap", "aqua ring", "magnet rise", "flare blitz", "force palm", "aura sphere", "rock polish", "poison jab", "dark pulse", "night slash", "aqua tail", "seed bomb", "air slash", "x_scissor", "bug buzz", "dragon pulse", "dragon rush", "power gem", "drain punch", "vacuum wave", "focus blast", "energy ball", "brave bird", "earth power", "switcheroo", "giga impact", "nasty plot", "bullet punch", "avalanche", "ice shard", "shadow claw", "thunder fang", "ice fang", "fire fang", "shadow sneak", "mud bomb", "psycho cut", "zen headbutt", "mirror shot", "flash cannon", "rock climb", "defog", "trick room", "draco meteor", "discharge", "lava plume", "leaf storm", "power whip", "rock wrecker", "cross poison", "gunk shot", "iron head", "magnet bomb", "stone edge", "captivate", "stealth rock", "grass knot", "chatter", "judgment", "bug bite", "charge beam", "wood hammer", "aqua jet", "attack order", "defend order", "heal order", "head smash", "double hit", "roar of time", "spacial rend", "lunar dance", "crush grip", "magma storm", "dark void", "seed flare", "ominous wind", "shadow force", "hone claws", "wide guard", "guard split", "power split", "wonder room", "psyshock", "venoshock", "autotomize", "rage powder", "telekinesis", "magic room", "smack down", "storm throw", "flame burst", "sludge wave", "quiver dance", "heavy slam", "synchronoise", "electro ball", "soak", "flame charge", "coil", "low sweep", "acid spray", "foul play", "simple beam", "entrainment", "after you", "round", "echoed voice", "chip away", "clear smog", "stored power", "quick guard", "ally switch", "scald", "shell smash", "heal pulse", "hex", "sky drop", "shift gear", "circle throw", "incinerate", "quash", "acrobatics", "reflect type", "retaliate", "final gambit", "bestow", "inferno", "water pledge", "fire pledge", "grass pledge", "volt switch", "struggle bug", "bulldoze", "frost breath", "dragon tail", "work up", "electroweb", "wild charge", "drill run", "dual chop", "heart stamp", "horn leech", "sacred sword", "razor shell", "heat crash", "leaf tornado", "steamroller", "cotton guard", "night daze", "psystrike", "tail slap", "hurricane", "head charge", "gear grind", "searing shot", "techno blast", "relic song", "secret sword", "glaciate", "bolt strike", "blue flare", "fiery dance", "freeze shock", "ice burn", "snarl", "icicle crash", "v_create", "fusion flare", "fusion bolt", "flying press", "mat block", "belch", "rototiller", "sticky web", "fell stinger", "phantom force", "trick_or_treat", "noble roar", "ion deluge", "parabolic charge", "forests curse", "petal blizzard", "freeze_dry", "disarming voice", "parting shot", "topsy_turvy", "draining kiss", "crafty shield", "flower shield", "grassy terrain", "misty terrain", "electrify", "play rough", "fairy wind", "moonblast", "boomburst", "fairy lock", "kings shield", "play nice", "confide", "diamond storm", "steam eruption", "hyperspace hole", "water shuriken", "mystical fire", "spiky shield", "aromatic mist", "eerie impulse", "venom drench", "powder", "geomancy", "magnetic flux", "happy hour", "electric terrain", "dazzling gleam", "celebrate", "hold hands", "baby_doll eyes", "nuzzle", "hold back", "infestation", "power_up punch", "oblivion wing", "thousand arrows", "thousand waves", "lands wrath", "light of ruin", "origin pulse", "precipice blades", "dragon ascent", "hyperspace fury", "ten million volt thunderbolt", "accelerock", "acid downpour", "all_out pummeling", "anchor shot", "aurora veil", "baneful bunker", "beak blast", "black hole eclipse", "bloom doom", "breakneck blitz", "brutal swing", "burn up", "catastropika", "clanging scales", "continental crush", "core enforcer", "corkscrew crash", "darkest lariat", "devastating drake", "dragon hammer", "extreme evoboost", "fire lash", "first impression", "fleur cannon", "floral healing", "gear up", "genesis supernova", "gigavolt havoc", "guardian of alola", "high horsepower", "hydro vortex", "ice hammer", "inferno overdrive", "instruct", "laser focus", "leafage", "liquidation", "lunge", "malicious moonsault", "moongeist beam", "multi_attack", "natures madness", "never_ending nightmare", "oceanic operetta", "pollen puff", "power trip", "prismatic laser", "psychic fangs", "psychic terrain", "pulverizing pancake", "purify", "revelation dance", "savage spin_out", "shadow bone", "shattered psyche", "shell trap", "shore up", "sinister arrow raid", "smart strike", "solar blade", "soul_stealing 7_star strike", "sparkling aria", "spectral thief", "speed swap", "spirit shackle", "spotlight", "stoked sparksurfer", "stomping tantrum", "strength sap", "subzero slammer", "sunsteel strike", "supersonic skystrike", "tearful look", "tectonic rage", "throat chop", "toxic thread", "trop kick", "twinkle tackle", "zing zap"];
-var items = ["ability capsule", "ability urge", "abomasite", "absolite", "absorb bulb", "adamant orb", "adventure rules", "aerodactylite", "aggronite", "aguav berry", "air balloon", "alakazite", "altarianite", "ampharosite", "amulet coin", "antidote", "apicot berry", "armor fossil", "aspear berry", "audinite", "awakening", "babiri berry", "balmmushroom", "banettite", "beedrillite", "belue berry", "berry juice", "big mushroom", "big nugget", "big pearl", "big root", "binding band", "black belt", "black flute", "black sludge", "blackglasses", "blastoisinite", "blazikenite", "blk apricorn", "blu apricorn", "blue flute", "blue scarf", "blue shard", "bluk berry", "brightpowder", "bug gem", "burn drive", "burn heal", "calcium", "cameruptite", "carbos", "casteliacone", "cell battery", "charcoal", "charizardite x", "charizardite y", "charti berry", "cheri berry", "cherish ball", "chesto berry", "chilan berry", "chill drive", "choice band", "choice scarf", "choice specs", "chople berry", "claw fossil", "cleanse tag", "clever wing", "coba berry", "colbur berry", "colress machine", "comet shard", "cornn berry", "cover fossil", "custap berry", "damp mulch", "damp rock", "dark gem", "dawn stone", "deepseascale", "deepseatooth", "destiny knot", "diancite", "dire hit", "dire hit 2", "dire hit 3", "dive ball", "dna splicers", "dome fossil", "douse drive", "draco plate", "dragon fang", "dragon gem", "dragon scale", "dread plate", "dream ball", "dropped item", "dubious disc", "durin berry", "dusk ball", "dusk stone", "earth plate", "eject button", "electirizer", "electric gem", "elevator key", "elixir", "energy root", "energypowder", "enigma berry", "escape rope", "ether", "everstone", "eviolite", "exp share", "expert belt", "fairy gem", "fast ball", "fighting gem", "figy berry", "fire gem", "fire stone", "fist plate", "flame orb", "flame plate", "float stone", "fluffy tail", "flying gem", "focus band", "focus sash", "fresh water", "friend ball", "full heal", "full incense", "full restore", "galladite", "ganlon berry", "garchompite", "gardevoirite", "gengarite", "genius wing", "ghost gem", "glalitite", "gooey mulch", "grass gem", "great ball", "green scarf", "green shard", "grepa berry", "grip claw", "griseous orb", "grn apricorn", "ground gem", "growth mulch", "grubby hanky", "guard spec", "gyaradosite", "haban berry", "hard stone", "heal ball", "heal powder", "health wing", "heart scale", "heat rock", "heavy ball", "helix fossil", "heracronite", "hm01", "hm02", "hm03", "hm04", "hm05", "hm06", "hm07", "hm08", "holo caster", "hondew berry", "honey", "honor of kalos", "houndoominite", "hp up", "hyper potion", "iapapa berry", "ice gem", "ice heal", "icicle plate", "icy rock", "insect plate", "intriguing stone", "iron", "iron ball", "iron plate", "item drop", "item urge", "jaboca berry", "kangaskhanite", "kasib berry", "kebia berry", "kelpsy berry", "kings rock", "lagging tail", "lansat berry", "latiasite", "latiosite", "lava cookie", "lax incense", "leaf stone", "leftovers", "lemonade", "lens case", "leppa berry", "level ball", "liechi berry", "life orb", "light ball", "light clay", "looker ticket", "lopunnite", "love ball", "lucarionite", "luck incense", "lucky egg", "lucky punch", "lum berry", "lure ball", "lustrous orb", "luxury ball", "macho brace", "magmarizer", "magnet", "mago berry", "magost berry", "manectite", "master ball", "mawilite", "max elixir", "max ether", "max potion", "max repel", "max revive", "meadow plate", "medal box", "medichamite", "mental herb", "metagrossite", "metal coat", "metal powder", "metronome", "mewtwonite x", "mewtwonite y", "micle berry", "mind plate", "miracle seed", "moomoo milk", "moon ball", "moon stone", "muscle band", "muscle wing", "mystic water", "nanab berry", "nest ball", "net ball", "nevermeltice", "nomel berry", "normal gem", "nugget", "occa berry", "odd incense", "odd keystone", "old amber", "old gateau", "oran berry", "oval charm", "oval stone", "pamtre berry", "park ball", "parlyz heal", "pass orb", "passho berry", "payapa berry", "pearl", "pearl string", "pecha berry", "permit", "persim berry", "petaya berry", "pidgeotite", "pinap berry", "pink scarf", "pinsirite", "pixie plate", "plasma card", "plume fossil", "pnk apricorn", "poison barb", "poison gem", "poké ball", "poké doll", "poké toy", "pomeg berry", "potion", "power anklet", "power band", "power belt", "power bracer", "power herb", "power lens", "power plant pass", "power weight", "pp max", "pp up", "premier ball", "pretty wing", "prism scale", "profs letter", "protector", "protein", "psychic gem", "pure incense", "qualot berry", "quick ball", "quick claw", "quick powder", "rabuta berry", "rare bone", "rare candy", "rawst berry", "razor claw", "razor fang", "razz berry", "reaper cloth", "red apricorn", "red card", "red flute", "red scarf", "red shard", "relic band", "relic copper", "relic crown", "relic gold", "relic silver", "relic statue", "relic vase", "repeat ball", "repel", "reset urge", "resist wing", "reveal glass", "revival herb", "revive", "rindo berry", "ring target", "rock gem", "rock incense", "rocky helmet", "roller skates", "root fossil", "rose incense", "rowap berry", "sablenite", "sacred ash", "safari ball", "salac berry", "salamencite", "sceptilite", "scizorite", "scope lens", "sea incense", "sharp beak", "sharpedonite", "shed shell", "shell bell", "shiny charm", "shiny stone", "shoal salt", "shoal shell", "shock drive", "shuca berry", "silk scarf", "silverpowder", "sitrus berry", "skull fossil", "sky plate", "slowbronite", "smoke ball", "smooth rock", "soda pop", "soft sand", "soothe bell", "soul dew", "spell tag", "spelon berry", "splash plate", "spooky plate", "sport ball", "sprinklotad", "stable mulch", "star piece", "stardust", "starf berry", "steel gem", "steelixite", "stick", "sticky barb", "stone plate", "sun stone", "super potion", "super repel", "swampertite", "sweet heart", "swift wing", "tamato berry", "tanga berry", "thick club", "thunderstone", "timer ball", "tinymushroom", "tm01", "tm02", "tm03", "tm04", "tm05", "tm06", "tm07", "tm08", "tm09", "tm10", "tm100", "tm11", "tm12", "tm13", "tm14", "tm15", "tm16", "tm17", "tm18", "tm19", "tm20", "tm21", "tm22", "tm23", "tm24", "tm25", "tm26", "tm27", "tm28", "tm29", "tm30", "tm31", "tm32", "tm33", "tm34", "tm35", "tm36", "tm37", "tm38", "tm39", "tm40", "tm41", "tm42", "tm43", "tm44", "tm45", "tm46", "tm47", "tm48", "tm49", "tm50", "tm51", "tm52", "tm53", "tm54", "tm55", "tm56", "tm57", "tm58", "tm59", "tm60", "tm61", "tm62", "tm63", "tm64", "tm65", "tm66", "tm67", "tm68", "tm69", "tm70", "tm71", "tm72", "tm73", "tm74", "tm75", "tm76", "tm77", "tm78", "tm79", "tm80", "tm81", "tm82", "tm83", "tm84", "tm85", "tm86", "tm87", "tm88", "tm89", "tm90", "tm91", "tm92", "tm93", "tm94", "tm95", "tm96", "tm97", "tm98", "tm99", "tmv pass", "toxic orb", "toxic plate", "twistedspoon", "tyranitarite", "ultra ball", "up_grade", "venusaurite", "wacan berry", "water gem", "water stone", "watmel berry", "wave incense", "wepear berry", "white flute", "white herb", "wht apricorn", "wide lens", "wiki berry", "wise glasses", "x accuracy", "x accuracy 2", "x accuracy 3", "x accuracy 6", "x attack", "x attack 2", "x attack 3", "x attack 6", "x defend", "x defend 2", "x defend 3", "x defend 6", "x sp def", "x sp def 2", "x sp def 3", "x sp def 6", "x special", "x special 2", "x special 3", "x special 6", "x speed", "x speed 2", "x speed 3", "x speed 6", "yache berry", "yellow flute", "yellow scarf", "yellow shard", "ylw apricorn", "zap plate", "zinc", "zoom lens", "normalium z", "firium z", "waterium z", "electrium z", "grassium z", "icium z", "fightinium z", "poisonium z", "groundium z", "flyinium z", "psychium z", "buginium z", "rockium z", "ghostium z", "dragonium z", "darkinium z", "steelium z", "fairium z", "pikanium z", "bottle cap", "gold bottle cap", "z_ring", "decidium z", "incinium z", "primarium z", "tapunium z", "marshadium z", "aloraichium z", "snorlium z", "eevium z", "mewnium z", "normalium z", "firium z", "waterium z", "electrium z", "grassium z", "icium z", "fightinium z", "poisonium z", "groundium z", "flyinium z", "psychium z", "buginium z", "rockium z", "ghostium z", "dragonium z", "darkinium z", "steelium z", "fairium z", "pikanium z", "decidium z", "incinium z", "primarium z", "tapunium z", "marshadium z", "aloraichium z", "snorlium z", "eevium z", "mewnium z", "pikashunium z", "forage bag", "fishing rod", "professors mask", "festival ticket", "sparkling stone", "adrenaline orb", "zygarde cube", "ice stone", "ride pager", "beast ball", "big malasada", "red nectar", "yellow nectar", "pink nectar", "purple nectar", "sun flute", "moon flute", "enigmatic card", "terrain extender", "protective pads", "electric seed", "psychic seed", "misty seed", "grassy seed", "fighting memory", "flying memory", "poison memory", "ground memory", "rock memory", "bug memory", "ghost memory", "steel memory", "fire memory", "water memory", "grass memory", "electric memory", "psychic memory", "ice memory", "dragon memory", "dark memory", "fairy memory"];
-var abilities = ["adaptability", "aerilate", "aftermath", "air lock", "analytic", "anger point", "anticipation", "arena trap", "aroma veil", "aura break", "bad dreams", "battery", "battle armor", "battle bond", "berserk", "big pecks", "blaze", "bulletproof", "cacophony", "cheek pouch", "chlorophyll", "clear body", "cloud nine", "color change", "comatose", "competitive", "compound eyes", "contrary", "corrosion", "cursed body", "cute charm", "damp", "dancer", "dark aura", "dazzling", "defeatist", "defiant", "delta stream", "desolate land", "disguise", "download", "drizzle", "drought", "dry skin", "early bird", "effect spore", "electric surge", "fairy aura", "filter", "flame body", "flare boost", "flash fire", "flower gift", "flower veil", "fluffy", "forecast", "forewarn", "friend guard", "frisk", "full metal body", "fur coat", "gale wings", "gluttony", "gooey", "grass pelt", "guts", "harvest", "healer", "heatproof", "heavy metal", "honey gather", "huge power", "hustle", "hydration", "hyper cutter", "ice body", "illuminate", "illusion", "immunity", "imposter", "innards out", "infiltrator", "inner focus", "insomnia", "intimidate", "iron barbs", "iron fist", "justified", "keen eye", "klutz", "leaf guard", "levitate", "light metal", "lightning rod", "limber", "liquid ooze", "magic bounce", "magic guard", "magician", "magma armor", "magnet pull", "marvel scale", "mega launcher", "minus", "mold breaker", "moody", "motor drive", "moxie", "multiscale", "multitype", "mummy", "natural cure", "no guard", "normalize", "oblivious", "overcoat", "overgrow", "own tempo", "parental bond", "pickpocket", "pickup", "pixilate", "plus", "poison heal", "poison point", "poison touch", "power construct", "prankster", "pressure", "primordial sea", "protean", "pure power", "queenly majesty", "quick feet", "rain dish", "rattled", "receiver", "reckless", "refrigerate", "regenerator", "rivalry", "rks system", "rock head", "rough skin", "run away", "sand force", "sand rush", "sand stream", "sand veil", "sap sipper", "schooling", "scrappy", "serene grace", "shadow shield", "shadow tag", "shed skin", "sheer force", "shell armor", "shield dust", "shields down", "simple", "skill link", "slow start", "sniper", "snow cloak", "snow warning", "solar power", "solid rock", "soul_heart", "soundproof", "speed boost", "stakeout", "stall", "stamina", "stance change", "static", "steadfast", "stench", "sticky hold", "storm drain", "strong jaw", "sturdy", "suction cups", "super luck", "surge surfer", "swarm", "sweet veil", "swift swim", "symbiosis", "synchronize", "tangled feet", "technician", "telepathy", "teravolt", "thick fat", "tinted lens", "torrent", "tough claws", "toxic boost", "trace", "triage", "truant", "turboblaze", "unaware", "unburden", "unnerve", "victory star", "vital spirit", "volt absorb", "water absorb", "water compaction", "water veil", "weak armor", "white smoke", "wimp out", "wonder guard", "wonder skin", "zen mode", "emergency exit", "merciless", "water bubble", "steelworker", "slush rush", "long reach", "liquid voice", "galvanize", "tangling hair", "power of alchemy", "beast boost", "psychic surge", "misty surge", "grassy surge", "full metal body", "prism armor"];
-
 var moveprops = ["name", "desc", "wiki"];
-console.log("abilities");
+console.log("tms");
 
 function clicked(){
-	var out = "var abilities = [";
+	var out = "var moves = [";
 	var len = 0;
-	for (var mon of abilities){
+	var t = "tm: \""
+	for (var mon of moves){
 		out += "{id: \"" + mon + "\", ";
 		mon = mon.replace(/ /g, "_");
 		for (var prop of moveprops){
 			if (eval(mon)[prop] !== undefined){
-				//if (isNaN(parseInt(eval(mon)[prop]))){
+				if (isNaN(parseInt(eval(mon)[prop]))){
 					out += prop + ": \"" + eval(mon)[prop] + "\", ";
-				//} else {
-				//	out += prop + ": " + eval(mon)[prop] + ", ";
-				//}				
+				} else {
+					out += prop + ": " + eval(mon)[prop] + ", ";
+				}				
 			}
+		}
+		for (var tm of tms){
+			if (tm.desc.indexOf(mon.name) !== -1){
+				t += tm.name + ", ";
+			}
+		}
+		if (t != "tm: \""){
+			t = t.slice(0, t.length - 2) + "\"";
+			out += t + ", ";
 		}
 		len = out.length - 2;
 		out = out.slice(0, len) + "}, ";
@@ -30,1406 +35,813 @@ function clicked(){
 	document.getElementById("myDiv").innerHTML = out;
 }
 
-var adaptability = {
-	name: "Adaptability",
-	desc: "Powers up moves of the same type.",
-	wiki: "http://www.serebii.net/abilitydex/adaptability.shtml"
-};
-
-var aerilate = {
-	name: "Aerilate",
-	desc: "Normal-type moves become Flying-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/aerilate.shtml"
-};
-
-var aftermath = {
-	name: "Aftermath",
-	desc: "Damages the foe landing the finishing hit.",
-	wiki: "http://www.serebii.net/abilitydex/aftermath.shtml"
-};
-
-var air_lock = {
-	name: "Air Lock",
-	desc: "Eliminates the effects of weather.",
-	wiki: "http://www.serebii.net/abilitydex/airlock.shtml"
-};
-
-var analytic = {
-	name: "Analytic",
-	desc: "Strengthens moves when moving last.",
-	wiki: "http://www.serebii.net/abilitydex/analytic.shtml"
-};
-
-var anger_point = {
-	name: "Anger Point",
-	desc: "Raises Attack upon taking a critical hit.",
-	wiki: "http://www.serebii.net/abilitydex/angerpoint.shtml"
-};
-
-var anticipation = {
-	name: "Anticipation",
-	desc: "Senses the foe’s dangerous moves.",
-	wiki: "http://www.serebii.net/abilitydex/anticipation.shtml"
-};
-
-var arena_trap = {
-	name: "Arena Trap",
-	desc: "Prevents the foe from fleeing.",
-	wiki: "http://www.serebii.net/abilitydex/arenatrap.shtml"
-};
-
-var aroma_veil = {
-	name: "Aroma Veil",
-	desc: "Protects allies from attacks that limit their move choices.",
-	wiki: "http://www.serebii.net/abilitydex/aromaveil.shtml"
-};
-
-var aura_break = {
-	name: "Aura Break",
-	desc: "The effects of \"Aura\" Abilities are reversed.",
-	wiki: "http://www.serebii.net/abilitydex/aurabreak.shtml"
-};
-
-var bad_dreams = {
-	name: "Bad Dreams",
-	desc: "Reduces a sleeping foe’s HP.",
-	wiki: "http://www.serebii.net/abilitydex/baddreams.shtml"
-};
-
-var battery = {
-	name: "Battery",
-	desc: "Raises the power of allies' special moves",
-	wiki: "http://www.serebii.net/abilitydex/battery.shtml"
-};
-
-var battle_armor = {
-	name: "Battle Armor",
-	desc: "The Pokémon is protected against critical hits.",
-	wiki: "http://www.serebii.net/abilitydex/battlearmor.shtml"
-};
-
-var battle_bond = {
-	name: "Battle Bond",
-	desc: "Lets a Pokémon change its form after causing an opponent to faint.",
-	wiki: "http://www.serebii.net/abilitydex/battlebond.shtml"
-};
-
-var berserk = {
-	name: "Berserk",
-	desc: "Raises Special Attack when HP is low",
-	wiki: "http://www.serebii.net/abilitydex/berserk.shtml"
-};
-
-var big_pecks = {
-	name: "Big Pecks",
-	desc: "Protects the Pokémon from Defense-lowering attacks.",
-	wiki: "http://www.serebii.net/abilitydex/bigpecks.shtml"
-};
-
-var blaze = {
-	name: "Blaze",
-	desc: "Powers up Fire-type moves in a pinch.",
-	wiki: "http://www.serebii.net/abilitydex/blaze.shtml"
-};
-
-var bulletproof = {
-	name: "Bulletproof",
-	desc: "Protects the Pokémon from some ball and bomb moves.",
-	wiki: "http://www.serebii.net/abilitydex/bulletproof.shtml"
-};
-
-var cacophony = {
-	name: "Cacophony",
-	desc: "Avoids sound-based moves.",
-	wiki: "http://www.serebii.net/abilitydex/cacophony.shtml"
-};
-
-var cheek_pouch = {
-	name: "Cheek Pouch",
-	desc: "Restores HP as well when the Pokémon eats a Berry.",
-	wiki: "http://www.serebii.net/abilitydex/cheekpouch.shtml"
-};
-
-var chlorophyll = {
-	name: "Chlorophyll",
-	desc: "Boosts the Pokémon's Speed in sunshine.",
-	wiki: "http://www.serebii.net/abilitydex/chlorophyll.shtml"
-};
-
-var clear_body = {
-	name: "Clear Body",
-	desc: "Prevents the Pokémon's stats from being lowered.",
-	wiki: "http://www.serebii.net/abilitydex/clearbody.shtml"
-};
-
-var cloud_nine = {
-	name: "Cloud Nine",
-	desc: "Eliminates the effects of weather.",
-	wiki: "http://www.serebii.net/abilitydex/cloudnine.shtml"
-};
-
-var color_change = {
-	name: "Color Change",
-	desc: "Changes the Pokémon's type to the foe’s move.",
-	wiki: "http://www.serebii.net/abilitydex/colorchange.shtml"
-};
-
-var comatose = {
-	name: "Comatose",
-	desc: "Protects the Pokémon from status conditions other than sleep.",
-	wiki: "http://www.serebii.net/abilitydex/comatose.shtml"
-};
-
-var competitive = {
-	name: "Competitive",
-	desc: "Boosts the Sp. Atk stat when a stat is lowered.",
-	wiki: "http://www.serebii.net/abilitydex/competitive.shtml"
-};
-
-var compound_eyes = {
-	name: "Compound Eyes",
-	desc: "The Pokémon's accuracy is boosted.",
-	wiki: "http://www.serebii.net/abilitydex/compoundeyes.shtml"
-};
-
-var contrary = {
-	name: "Contrary",
-	desc: "Inverts changes to stat stages.",
-	wiki: "http://www.serebii.net/abilitydex/contrary.shtml"
-};
-
-var corrosion = {
-	name: "Corrosion",
-	desc: "Allows the user to inflict poison on any Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/corrosion.shtml"
-};
-
-var cursed_body = {
-	name: "Cursed Body",
-	desc: "Has a 30% chance of Disabling any move that hits the Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/cursedbody.shtml"
-};
-
-var cute_charm = {
-	name: "Cute Charm",
-	desc: "Contact with the Pokémon may cause infatuation.",
-	wiki: "http://www.serebii.net/abilitydex/cutecharm.shtml"
-};
-
-var damp = {
-	name: "Damp",
-	desc: "Prevents combatants from self destructing.",
-	wiki: "http://www.serebii.net/abilitydex/damp.shtml"
-};
-
-var dancer = {
-	name: "Dancer",
-	desc: "Allows the Pokémon to immediately copy dancing moves.",
-	wiki: "http://www.serebii.net/abilitydex/dancer.shtml"
-};
-
-var dark_aura = {
-	name: "Dark Aura",
-	desc: "Powers up each Pokémon's Dark-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/darkaura.shtml"
-};
-
-var dazzling = {
-	name: "Dazzling",
-	desc: "Prevents the opponent from using moves with increased priority.",
-	wiki: "http://www.serebii.net/abilitydex/dazzling.shtml"
-};
-
-var defeatist = {
-	name: "Defeatist",
-	desc: "Halves Attack and Special Attack below 50% HP.",
-	wiki: "http://www.serebii.net/abilitydex/defeatist.shtml"
-};
-
-var defiant = {
-	name: "Defiant",
-	desc: "Raises Attack two stages upon having any stat lowered.",
-	wiki: "http://www.serebii.net/abilitydex/defiant.shtml"
-};
-
-var delta_stream = {
-	name: "Delta Stream",
-	desc: "Eliminates weather effects and eliminates weaknesses of Flying-type Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/deltastream.shtml"
-};
-
-var desolate_land = {
-	name: "Desolate Land",
-	desc: "Creates harsh sunlight.",
-	wiki: "http://www.serebii.net/abilitydex/desolateland.shtml"
-};
-
-var disguise = {
-	name: "Disguise",
-	desc: "Allows the Pokémon to nullify damage from one attack.",
-	wiki: "http://www.serebii.net/abilitydex/disguise.shtml"
-};
-
-var download = {
-	name: "Download",
-	desc: "Adjusts power according to the foe’s lowest defensive stat.",
-	wiki: "http://www.serebii.net/abilitydex/download.shtml"
-};
-
-var drizzle = {
-	name: "Drizzle",
-	desc: "The Pokémon makes it rain if it appears in battle.",
-	wiki: "http://www.serebii.net/abilitydex/drizzle.shtml"
-};
-
-var drought = {
-	name: "Drought",
-	desc: "The Pokémon makes it sunny if it is in battle.",
-	wiki: "http://www.serebii.net/abilitydex/drought.shtml"
-};
-
-var dry_skin = {
-	name: "Dry Skin",
-	desc: "Reduces HP if it is hot. Water restores HP.",
-	wiki: "http://www.serebii.net/abilitydex/dryskin.shtml"
-};
-
-var early_bird = {
-	name: "Early Bird",
-	desc: "The Pokémon awakens quickly from sleep.",
-	wiki: "http://www.serebii.net/abilitydex/earlybird.shtml"
-};
-
-var effect_spore = {
-	name: "Effect Spore",
-	desc: "Contact may paralyze, poison, or cause sleep.",
-	wiki: "http://www.serebii.net/abilitydex/effectspore.shtml"
-};
-
-var electric_surge = {
-	name: "Electric Surge",
-	desc: "Immediately creates Electric Terrain upon entering battle.",
-	wiki: "http://www.serebii.net/abilitydex/electricsurge.shtml"
-};
-
-var fairy_aura = {
-	name: "Fairy Aura",
-	desc: "Powers up each Pokémon's Fairy-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/fairyaura.shtml"
-};
-
-var filter = {
-	name: "Filter",
-	desc: "Powers down supereffective moves.",
-	wiki: "http://www.serebii.net/abilitydex/filter.shtml"
-};
-
-var flame_body = {
-	name: "Flame Body",
-	desc: "Contact with the Pokémon may burn the foe.",
-	wiki: "http://www.serebii.net/abilitydex/flamebody.shtml"
-};
-
-var flare_boost = {
-	name: "Flare Boost",
-	desc: "Increases Special Attack to 1.5× when burned.",
-	wiki: "http://www.serebii.net/abilitydex/flareboost.shtml"
-};
-
-var flash_fire = {
-	name: "Flash Fire",
-	desc: "Powers up Fire-type moves if hit by a fire move.",
-	wiki: "http://www.serebii.net/abilitydex/flashfire.shtml"
-};
-
-var flower_gift = {
-	name: "Flower Gift",
-	desc: "Powers up party Pokémon when it is sunny.",
-	wiki: "http://www.serebii.net/abilitydex/flowergift.shtml"
-};
-
-var flower_veil = {
-	name: "Flower Veil",
-	desc: "Prevents lowering of ally Grass-type Pokémon's stats.",
-	wiki: "http://www.serebii.net/abilitydex/flowerveil.shtml"
-};
-
-var fluffy = {
-	name: "Fluffy",
-	desc: "Haves damage from physical moves, but doubles damage from Fire-type ones.",
-	wiki: "http://www.serebii.net/abilitydex/fluffy.shtml"
-};
-
-var forecast = {
-	name: "Forecast",
-	desc: "Transforms with the weather.",
-	wiki: "http://www.serebii.net/abilitydex/forecast.shtml"
-};
-
-var forewarn = {
-	name: "Forewarn",
-	desc: "Determines what moves the foe has.",
-	wiki: "http://www.serebii.net/abilitydex/forewarn.shtml"
-};
-
-var friend_guard = {
-	name: "Friend Guard",
-	desc: "Decreases damage inflicted against ally Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/friendguard.shtml"
-};
-
-var frisk = {
-	name: "Frisk",
-	desc: "The Pokémon can check the foe’s held item.",
-	wiki: "http://www.serebii.net/abilitydex/frisk.shtml"
-};
-
-var full_metal_body = {
-	name: "Full Metal Body",
-	desc: "Prevents stat reduction caused by other Pokémon's moves or abilities.",
-	wiki: "http://www.serebii.net/abilitydex/fullmetalbody.shtml"
-};
-
-var fur_coat = {
-	name: "Fur Coat",
-	desc: "Halves damage from physical moves.",
-	wiki: "http://www.serebii.net/abilitydex/furcoat.shtml"
-};
-
-var gale_wings = {
-	name: "Gale Wings",
-	desc: "Gives priority to Flying-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/galewings.shtml"
-};
-
-var gluttony = {
-	name: "Gluttony",
-	desc: "Encourages the early use of a held Berry.",
-	wiki: "http://www.serebii.net/abilitydex/gluttony.shtml"
-};
-
-var gooey = {
-	name: "Gooey",
-	desc: "Contact with the Pokémon lowers the attacker's Speed stat.",
-	wiki: "http://www.serebii.net/abilitydex/gooey.shtml"
-};
-
-var grass_pelt = {
-	name: "Grass Pelt",
-	desc: "Boosts the Defense stat in Grassy Terrain.",
-	wiki: "http://www.serebii.net/abilitydex/grasspelt.shtml"
-};
-
-var guts = {
-	name: "Guts",
-	desc: "Boosts Attack if there is a status problem.",
-	wiki: "http://www.serebii.net/abilitydex/guts.shtml"
-};
-
-var harvest = {
-	name: "Harvest",
-	desc: "Sometimes restores a consumed Berry.",
-	wiki: "http://www.serebii.net/abilitydex/harvest.shtml"
-};
-
-var healer = {
-	name: "Healer",
-	desc: "Has a 30% chance of curing each adjacent ally of any major status ailment after each turn.",
-	wiki: "http://www.serebii.net/abilitydex/healer.shtml"
-};
-
-var heatproof = {
-	name: "Heatproof",
-	desc: "Weakens the power of Fire-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/heatproof.shtml"
-};
-
-var heavy_metal = {
-	name: "Heavy Metal",
-	desc: "Doubles the Pokémon's weight.",
-	wiki: "http://www.serebii.net/abilitydex/heavymetal.shtml"
-};
-
-var honey_gather = {
-	name: "Honey Gather",
-	desc: "The Pokémon may gather Honey from somewhere.",
-	wiki: "http://www.serebii.net/abilitydex/honeygather.shtml"
-};
-
-var huge_power = {
-	name: "Huge Power",
-	desc: "Raises the Pokémon's Attack stat.",
-	wiki: "http://www.serebii.net/abilitydex/hugepower.shtml"
-};
-
-var hustle = {
-	name: "Hustle",
-	desc: "Boosts the Attack stat, but lowers accuracy.",
-	wiki: "http://www.serebii.net/abilitydex/hustle.shtml"
-};
-
-var hydration = {
-	name: "Hydration",
-	desc: "Heals status problems if it is raining.",
-	wiki: "http://www.serebii.net/abilitydex/hydration.shtml"
-};
-
-var hyper_cutter = {
-	name: "Hyper Cutter",
-	desc: "Prevents the Attack stat from being lowered.",
-	wiki: "http://www.serebii.net/abilitydex/hypercutter.shtml"
-};
-
-var ice_body = {
-	name: "Ice Body",
-	desc: "The Pokémon regains HP in a hailstorm.",
-	wiki: "http://www.serebii.net/abilitydex/icebody.shtml"
-};
-
-var illuminate = {
-	name: "Illuminate",
-	desc: "Raises the likelihood of meeting wild Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/illuminate.shtml"
-};
-
-var illusion = {
-	name: "Illusion",
-	desc: "Takes the appearance of the last conscious party Pokémon upon being sent out until hit by a damaging move.",
-	wiki: "http://www.serebii.net/abilitydex/illusion.shtml"
-};
-
-var immunity = {
-	name: "Immunity",
-	desc: "Prevents the Pokémon from getting poisoned.",
-	wiki: "http://www.serebii.net/abilitydex/immunity.shtml"
-};
-
-var imposter = {
-	name: "Imposter",
-	desc: "Transforms upon entering battle.",
-	wiki: "http://www.serebii.net/abilitydex/imposter.shtml"
-};
-
-var innards_out = {
-	name: "Innards Out",
-	desc: "Deals damage to opposing Pokémon upon fainting.",
-	wiki: "http://www.serebii.net/abilitydex/innardsout.shtml"
-};
-
-var infiltrator = {
-	name: "Infiltrator",
-	desc: "Ignores Light Screen, Reflect, and Safeguard.",
-	wiki: "http://www.serebii.net/abilitydex/infiltrator.shtml"
-};
-
-var inner_focus = {
-	name: "Inner Focus",
-	desc: "The Pokémon is protected from flinching.",
-	wiki: "http://www.serebii.net/abilitydex/innerfocus.shtml"
-};
-
-var insomnia = {
-	name: "Insomnia",
-	desc: "Prevents the Pokémon from falling asleep.",
-	wiki: "http://www.serebii.net/abilitydex/insomnia.shtml"
-};
-
-var intimidate = {
-	name: "Intimidate",
-	desc: "Lowers the foe’s Attack stat.",
-	wiki: "http://www.serebii.net/abilitydex/intimidate.shtml"
-};
-
-var iron_barbs = {
-	name: "Iron Barbs",
-	desc: "Damages attacking Pokémon for 1/8 their max HP on contact.",
-	wiki: "http://www.serebii.net/abilitydex/ironbarbs.shtml"
-};
-
-var iron_fist = {
-	name: "Iron Fist",
-	desc: "Boosts the power of punching moves.",
-	wiki: "http://www.serebii.net/abilitydex/ironfist.shtml"
-};
-
-var justified = {
-	name: "Justified",
-	desc: "Raises Attack when hit by Dark-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/justified.shtml"
-};
-
-var keen_eye = {
-	name: "Keen Eye",
-	desc: "Prevents the Pokémon from losing accuracy.",
-	wiki: "http://www.serebii.net/abilitydex/keeneye.shtml"
-};
-
-var klutz = {
-	name: "Klutz",
-	desc: "The Pokémon can’t use any held items.",
-	wiki: "http://www.serebii.net/abilitydex/klutz.shtml"
-};
-
-var leaf_guard = {
-	name: "Leaf Guard",
-	desc: "Prevents status problems in sunny weather.",
-	wiki: "http://www.serebii.net/abilitydex/leafguard.shtml"
-};
-
-var levitate = {
-	name: "Levitate",
-	desc: "Gives full immunity to all Ground-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/levitate.shtml"
-};
-
-var light_metal = {
-	name: "Light Metal",
-	desc: "Halves the Pokémon's weight.",
-	wiki: "http://www.serebii.net/abilitydex/lightmetal.shtml"
-};
-
-var lightning_rod = {
-	name: "Lightning Rod",
-	desc: "The Pokémon draws in all Electric-type moves to raise Sp. Atk.",
-	wiki: "http://www.serebii.net/abilitydex/lightningrod.shtml"
-};
-
-var limber = {
-	name: "Limber",
-	desc: "The Pokémon is protected from paralysis.",
-	wiki: "http://www.serebii.net/abilitydex/limber.shtml"
-};
-
-var liquid_ooze = {
-	name: "Liquid Ooze",
-	desc: "Inflicts damage on foes using any draining move.",
-	wiki: "http://www.serebii.net/abilitydex/liquidooze.shtml"
-};
-
-var magic_bounce = {
-	name: "Magic Bounce",
-	desc: "Reflects most non-damaging moves back at their user.",
-	wiki: "http://www.serebii.net/abilitydex/magicbounce.shtml"
-};
-
-var magic_guard = {
-	name: "Magic Guard",
-	desc: "The Pokémon only takes damage from attacks.",
-	wiki: "http://www.serebii.net/abilitydex/magicguard.shtml"
-};
-
-var magician = {
-	name: "Magician",
-	desc: "The Pokémon steals the held item of a Pokémon it hits with a move.",
-	wiki: "http://www.serebii.net/abilitydex/magician.shtml"
-};
-
-var magma_armor = {
-	name: "Magma Armor",
-	desc: "Prevents the Pokémon from becoming frozen.",
-	wiki: "http://www.serebii.net/abilitydex/magmaarmor.shtml"
-};
-
-var magnet_pull = {
-	name: "Magnet Pull",
-	desc: "Prevents Steel-type Pokémon from escaping.",
-	wiki: "http://www.serebii.net/abilitydex/magnetpull.shtml"
-};
-
-var marvel_scale = {
-	name: "Marvel Scale",
-	desc: "Boosts Defense if there is a status problem.",
-	wiki: "http://www.serebii.net/abilitydex/marvelscale.shtml"
-};
-
-var mega_launcher = {
-	name: "Mega Launcher",
-	desc: "Powers up aura and pulse moves.",
-	wiki: "http://www.serebii.net/abilitydex/megalauncher.shtml"
-};
-
-var minus = {
-	name: "Minus",
-	desc: "Boosts Sp. Atk if another Pokémon has Plus.",
-	wiki: "http://www.serebii.net/abilitydex/minus.shtml"
-};
-
-var mold_breaker = {
-	name: "Mold Breaker",
-	desc: "Moves can be used regardless of Abilities.",
-	wiki: "http://www.serebii.net/abilitydex/moldbreaker.shtml"
-};
-
-var moody = {
-	name: "Moody",
-	desc: "Raises a random stat two stages and lowers another one stage after each turn.",
-	wiki: "http://www.serebii.net/abilitydex/moody.shtml"
-};
-
-var motor_drive = {
-	name: "Motor Drive",
-	desc: "Raises Speed if hit by an Electric-type move.",
-	wiki: "http://www.serebii.net/abilitydex/motordrive.shtml"
-};
-
-var moxie = {
-	name: "Moxie",
-	desc: "Raises Attack one stage upon KOing a Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/moxie.shtml"
-};
-
-var multiscale = {
-	name: "Multiscale",
-	desc: "Halves damage taken from full HP.",
-	wiki: "http://www.serebii.net/abilitydex/multiscale.shtml"
-};
-
-var multitype = {
-	name: "Multitype",
-	desc: "Changes type to match the held Plate.",
-	wiki: "http://www.serebii.net/abilitydex/multitype.shtml"
-};
-
-var mummy = {
-	name: "Mummy",
-	desc: "Contact with this Pokémon spreads this Ability.",
-	wiki: "http://www.serebii.net/abilitydex/mummy.shtml"
-};
-
-var natural_cure = {
-	name: "Natural Cure",
-	desc: "All status problems are healed upon switching out.",
-	wiki: "http://www.serebii.net/abilitydex/naturalcure.shtml"
-};
-
-var no_guard = {
-	name: "No Guard",
-	desc: "Ensures the Pokémon and its foe’s attacks land.",
-	wiki: "http://www.serebii.net/abilitydex/noguard.shtml"
-};
-
-var normalize = {
-	name: "Normalize",
-	desc: "All the Pokémon's moves become Normal type.",
-	wiki: "http://www.serebii.net/abilitydex/normalize.shtml"
-};
-
-var oblivious = {
-	name: "Oblivious",
-	desc: "Prevents the Pokémon from becoming infatuated or falling for taunts*.",
-	wiki: "http://www.serebii.net/abilitydex/oblivious.shtml"
-};
-
-var overcoat = {
-	name: "Overcoat",
-	desc: "Protects against damage from weather.",
-	wiki: "http://www.serebii.net/abilitydex/overcoat.shtml"
-};
-
-var overgrow = {
-	name: "Overgrow",
-	desc: "Powers up Grass-type moves in a pinch.",
-	wiki: "http://www.serebii.net/abilitydex/overgrow.shtml"
-};
-
-var own_tempo = {
-	name: "Own Tempo",
-	desc: "Prevents the Pokémon from becoming confused.",
-	wiki: "http://www.serebii.net/abilitydex/owntempo.shtml"
-};
-
-var parental_bond = {
-	name: "Parental Bond",
-	desc: "Parent and child attack together.",
-	wiki: "http://www.serebii.net/abilitydex/parentalbond.shtml"
-};
-
-var pickpocket = {
-	name: "Pickpocket",
-	desc: "Steals attacking Pokémon's held item on contact.",
-	wiki: "http://www.serebii.net/abilitydex/pickpocket.shtml"
-};
-
-var pickup = {
-	name: "Pickup",
-	desc: "The Pokémon may pick up items.",
-	wiki: "http://www.serebii.net/abilitydex/pickup.shtml"
-};
-
-var pixilate = {
-	name: "Pixilate",
-	desc: "Normal-type moves become Fairy-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/pixilate.shtml"
-};
-
-var plus = {
-	name: "Plus",
-	desc: "Boosts Sp. Atk if another Pokémon has Minus.",
-	wiki: "http://www.serebii.net/abilitydex/plus.shtml"
-};
-
-var poison_heal = {
-	name: "Poison Heal",
-	desc: "Restores HP if the Pokémon is poisoned.",
-	wiki: "http://www.serebii.net/abilitydex/poisonheal.shtml"
-};
-
-var poison_point = {
-	name: "Poison Point",
-	desc: "Contact with the Pokémon may poison the foe.",
-	wiki: "http://www.serebii.net/abilitydex/poisonpoint.shtml"
-};
-
-var poison_touch = {
-	name: "Poison Touch",
-	desc: "Has a 30% chance of poisoning Pokémon upon contact when attacking.",
-	wiki: "http://www.serebii.net/abilitydex/poisontouch.shtml"
-};
-
-var power_construct = {
-	name: "Power Construct",
-	desc: "Changes the Pokémon's form when its HP falls below half.",
-	wiki: "http://www.serebii.net/abilitydex/powerconstruct.shtml"
-};
-
-var prankster = {
-	name: "Prankster",
-	desc: "Raises non-damaging moves' priority by one stage.",
-	wiki: "http://www.serebii.net/abilitydex/prankster.shtml"
-};
-
-var pressure = {
-	name: "Pressure",
-	desc: "The Pokémon raises the foe’s PP usage.",
-	wiki: "http://www.serebii.net/abilitydex/pressure.shtml"
-};
-
-var primordial_sea = {
-	name: "Primordial Sea",
-	desc: "Causes heavy rain.",
-	wiki: "http://www.serebii.net/abilitydex/primordialsea.shtml"
-};
-
-var protean = {
-	name: "Protean",
-	desc: "Changes the Pokémon's type to the same type of the move it is using.",
-	wiki: "http://www.serebii.net/abilitydex/protean.shtml"
-};
-
-var pure_power = {
-	name: "Pure Power",
-	desc: "Boosts the power of physical attacks.",
-	wiki: "http://www.serebii.net/abilitydex/purepower.shtml"
-};
-
-var queenly_majesty = {
-	name: "Queenly Majesty",
-	desc: "Prevents the opponent from using moves with increased priority.",
-	wiki: "http://www.serebii.net/abilitydex/queenlymajesty.shtml"
-};
-
-var quick_feet = {
-	name: "Quick Feet",
-	desc: "Boosts Speed if there is a status problem.",
-	wiki: "http://www.serebii.net/abilitydex/quickfeet.shtml"
-};
-
-var rain_dish = {
-	name: "Rain Dish",
-	desc: "The Pokémon gradually recovers HP in rain.",
-	wiki: "http://www.serebii.net/abilitydex/raindish.shtml"
-};
-
-var rattled = {
-	name: "Rattled",
-	desc: "Raises Speed one stage upon being hit by a Dark, Ghost, or Bug move.",
-	wiki: "http://www.serebii.net/abilitydex/rattled.shtml"
-};
-
-var receiver = {
-	name: "Receiver",
-	desc: "Takes the Ability of a fainted ally.",
-	wiki: "http://www.serebii.net/abilitydex/receiver.shtml"
-};
-
-var reckless = {
-	name: "Reckless",
-	desc: "Powers up moves that have recoil damage.",
-	wiki: "http://www.serebii.net/abilitydex/reckless.shtml"
-};
-
-var refrigerate = {
-	name: "Refrigerate",
-	desc: "Normal-type moves become Ice-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/refrigerate.shtml"
-};
-
-var regenerator = {
-	name: "Regenerator",
-	desc: "Heals for 1/3 max HP upon leaving battle.",
-	wiki: "http://www.serebii.net/abilitydex/regenerator.shtml"
-};
-
-var rivalry = {
-	name: "Rivalry",
-	desc: "Raises Attack if the foe is of the same gender.",
-	wiki: "http://www.serebii.net/abilitydex/rivalry.shtml"
-};
-
-var rks_system = {
-	name: "RKS System",
-	desc: "Changes type to match a specific item.",
-	wiki: "http://www.serebii.net/abilitydex/rkssystem.shtml"
-};
-
-var rock_head = {
-	name: "Rock Head",
-	desc: "Protects the Pokémon from recoil damage.",
-	wiki: "http://www.serebii.net/abilitydex/rockhead.shtml"
-};
-
-var rough_skin = {
-	name: "Rough Skin",
-	desc: "Inflicts damage to the foe on contact.",
-	wiki: "http://www.serebii.net/abilitydex/roughskin.shtml"
-};
-
-var run_away = {
-	name: "Run Away",
-	desc: "Enables sure getaway from wild Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/runaway.shtml"
-};
-
-var sand_force = {
-	name: "Sand Force",
-	desc: "Strengthens Rock, Ground, and Steel moves to 1.3× their power during a sandstorm.",
-	wiki: "http://www.serebii.net/abilitydex/sandforce.shtml"
-};
-
-var sand_rush = {
-	name: "Sand Rush",
-	desc: "Doubles Speed during a sandstorm.",
-	wiki: "http://www.serebii.net/abilitydex/sandrush.shtml"
-};
-
-var sand_stream = {
-	name: "Sand Stream",
-	desc: "The Pokémon summons a sandstorm in battle.",
-	wiki: "http://www.serebii.net/abilitydex/sandstream.shtml"
-};
-
-var sand_veil = {
-	name: "Sand Veil",
-	desc: "Boosts the Pokémon's evasion in a sandstorm.",
-	wiki: "http://www.serebii.net/abilitydex/sandveil.shtml"
-};
-
-var sap_sipper = {
-	name: "Sap Sipper",
-	desc: "Absorbs Grass moves, raising Attack one stage.",
-	wiki: "http://www.serebii.net/abilitydex/sapsipper.shtml"
-};
-
-var schooling = {
-	name: "Schooling",
-	desc: "Changes the Pokémon's form when certain requirements are met.",
-	wiki: "http://www.serebii.net/abilitydex/schooling.shtml"
-};
-
-var scrappy = {
-	name: "Scrappy",
-	desc: "Enables moves to hit Ghost-type foes.",
-	wiki: "http://www.serebii.net/abilitydex/scrappy.shtml"
-};
-
-var serene_grace = {
-	name: "Serene Grace",
-	desc: "Boosts the likelihood of added effects appearing.",
-	wiki: "http://www.serebii.net/abilitydex/serenegrace.shtml"
-};
-
-var shadow_shield = {
-	name: "Shadow Shield",
-	desc: "Lowers damage taken from moves while at maximum HP.",
-	wiki: "http://www.serebii.net/abilitydex/shadowshield.shtml"
-};
-
-var shadow_tag = {
-	name: "Shadow Tag",
-	desc: "Prevents the foe from escaping.",
-	wiki: "http://www.serebii.net/abilitydex/shadowtag.shtml"
-};
-
-var shed_skin = {
-	name: "Shed Skin",
-	desc: "The Pokémon may heal its own status problems.",
-	wiki: "http://www.serebii.net/abilitydex/shedskin.shtml"
-};
-
-var sheer_force = {
-	name: "Sheer Force",
-	desc: "Strengthens moves with extra effects to 1.3× their power, but prevents their extra effects.",
-	wiki: "http://www.serebii.net/abilitydex/sheerforce.shtml"
-};
-
-var shell_armor = {
-	name: "Shell Armor",
-	desc: "The Pokémon is protected against critical hits.",
-	wiki: "http://www.serebii.net/abilitydex/shellarmor.shtml"
-};
-
-var shield_dust = {
-	name: "Shield Dust",
-	desc: "Blocks the added effects of attacks taken.",
-	wiki: "http://www.serebii.net/abilitydex/shielddust.shtml"
-};
-
-var shields_down = {
-	name: "Shields Down",
-	desc: "Changes the Pokémon's form when HP is low.",
-	wiki: "http://www.serebii.net/abilitydex/shieldsdown.shtml"
-};
-
-var simple = {
-	name: "Simple",
-	desc: "The Pokémon is prone to wild stat changes.",
-	wiki: "http://www.serebii.net/abilitydex/simple.shtml"
-};
-
-var skill_link = {
-	name: "Skill Link",
-	desc: "Increases the frequency of multi-strike moves.",
-	wiki: "http://www.serebii.net/abilitydex/skilllink.shtml"
-};
-
-var slow_start = {
-	name: "Slow Start",
-	desc: "Temporarily halves Attack and Speed.",
-	wiki: "http://www.serebii.net/abilitydex/slowstart.shtml"
-};
-
-var sniper = {
-	name: "Sniper",
-	desc: "Powers up moves if they become critical hits.",
-	wiki: "http://www.serebii.net/abilitydex/sniper.shtml"
-};
-
-var snow_cloak = {
-	name: "Snow Cloak",
-	desc: "Raises evasion in a hailstorm.",
-	wiki: "http://www.serebii.net/abilitydex/snowcloak.shtml"
-};
-
-var snow_warning = {
-	name: "Snow Warning",
-	desc: "The Pokémon summons a hailstorm in battle.",
-	wiki: "http://www.serebii.net/abilitydex/snowwarning.shtml"
-};
-
-var solar_power = {
-	name: "Solar Power",
-	desc: "Boosts Sp. Atk, but lowers HP in sunshine.",
-	wiki: "http://www.serebii.net/abilitydex/solarpower.shtml"
-};
-
-var solid_rock = {
-	name: "Solid Rock",
-	desc: "Powers down supereffective moves.",
-	wiki: "http://www.serebii.net/abilitydex/solidrock.shtml"
-};
-
-var soul_heart = {
-	name: "Soul_heart",
-	desc: "Raises the Pokémon's Special Attack when any Pokémon faints.",
-	wiki: "http://www.serebii.net/abilitydex/soul_heart.shtml"
-};
-
-var soundproof = {
-	name: "Soundproof",
-	desc: "Gives full immunity to all sound-based moves.",
-	wiki: "http://www.serebii.net/abilitydex/soundproof.shtml"
-};
-
-var speed_boost = {
-	name: "Speed Boost",
-	desc: "The Pokémon's Speed stat is gradually boosted.",
-	wiki: "http://www.serebii.net/abilitydex/speedboost.shtml"
-};
-
-var stakeout = {
-	name: "Stakeout",
-	desc: "Doubles damage inflicted on Pokémon that enter mid-battle.",
-	wiki: "http://www.serebii.net/abilitydex/stakeout.shtml"
-};
-
-var stall = {
-	name: "Stall",
-	desc: "The Pokémon moves after even slower foes.",
-	wiki: "http://www.serebii.net/abilitydex/stall.shtml"
-};
-
-var stamina = {
-	name: "Stamina",
-	desc: "Raises defense when hit by an attack.",
-	wiki: "http://www.serebii.net/abilitydex/stamina.shtml"
-};
-
-var stance_change = {
-	name: "Stance Change",
-	desc: "The Pokémon changes form depending on how it battles.",
-	wiki: "http://www.serebii.net/abilitydex/stancechange.shtml"
-};
-
-var static = {
-	name: "Static",
-	desc: "Contact with the Pokémon may cause paralysis.",
-	wiki: "http://www.serebii.net/abilitydex/static.shtml"
-};
-
-var steadfast = {
-	name: "Steadfast",
-	desc: "Raises Speed each time the Pokémon flinches.",
-	wiki: "http://www.serebii.net/abilitydex/steadfast.shtml"
-};
-
-var stench = {
-	name: "Stench",
-	desc: "The stench may cause the target to flinch.",
-	wiki: "http://www.serebii.net/abilitydex/stench.shtml"
-};
-
-var sticky_hold = {
-	name: "Sticky Hold",
-	desc: "Protects the Pokémon from item theft.",
-	wiki: "http://www.serebii.net/abilitydex/stickyhold.shtml"
-};
-
-var storm_drain = {
-	name: "Storm Drain",
-	desc: "The Pokémon draws in all Water-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/stormdrain.shtml"
-};
-
-var strong_jaw = {
-	name: "Strong Jaw",
-	desc: "The Pokémon's strong jaw gives it tremendous biting power.",
-	wiki: "http://www.serebii.net/abilitydex/strongjaw.shtml"
-};
-
-var sturdy = {
-	name: "Sturdy",
-	desc: "The Pokémon is protected against 1-hit KO attacks.",
-	wiki: "http://www.serebii.net/abilitydex/sturdy.shtml"
-};
-
-var suction_cups = {
-	name: "Suction Cups",
-	desc: "Negates moves that force switching out.",
-	wiki: "http://www.serebii.net/abilitydex/suctioncups.shtml"
-};
-
-var super_luck = {
-	name: "Super Luck",
-	desc: "Heightens the critical-hit ratios of moves.",
-	wiki: "http://www.serebii.net/abilitydex/superluck.shtml"
-};
-
-var surge_surfer = {
-	name: "Surge Surfer",
-	desc: "Doubles Speed while under the effects of Electric Terrain.",
-	wiki: "http://www.serebii.net/abilitydex/surgesurfer.shtml"
-};
-
-var swarm = {
-	name: "Swarm",
-	desc: "Powers up Bug-type moves in a pinch.",
-	wiki: "http://www.serebii.net/abilitydex/swarm.shtml"
-};
-
-var sweet_veil = {
-	name: "Sweet Veil",
-	desc: "Prevents itself and its allies from falling asleep.",
-	wiki: "http://www.serebii.net/abilitydex/sweetveil.shtml"
-};
-
-var swift_swim = {
-	name: "Swift Swim",
-	desc: "Boosts the Pokémon's Speed in rain.",
-	wiki: "http://www.serebii.net/abilitydex/swiftswim.shtml"
-};
-
-var symbiosis = {
-	name: "Symbiosis",
-	desc: "The Pokémon can pass an item to an ally.",
-	wiki: "http://www.serebii.net/abilitydex/symbiosis.shtml"
-};
-
-var synchronize = {
-	name: "Synchronize",
-	desc: "Passes on a burn, poison, or paralysis to the foe.",
-	wiki: "http://www.serebii.net/abilitydex/synchronize.shtml"
-};
-
-var tangled_feet = {
-	name: "Tangled Feet",
-	desc: "Raises evasion if the Pokémon is confused.",
-	wiki: "http://www.serebii.net/abilitydex/tangledfeet.shtml"
-};
-
-var technician = {
-	name: "Technician",
-	desc: "Powers up the Pokémon's weaker moves.",
-	wiki: "http://www.serebii.net/abilitydex/technician.shtml"
-};
-
-var telepathy = {
-	name: "Telepathy",
-	desc: "Protects against damaging moves from friendly Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/telepathy.shtml"
-};
-
-var teravolt = {
-	name: "Teravolt",
-	desc: "Moves can be used regardless of Abilities.",
-	wiki: "http://www.serebii.net/abilitydex/teravolt.shtml"
-};
-
-var thick_fat = {
-	name: "Thick Fat",
-	desc: "Raises resistance to Fire- and Ice-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/thickfat.shtml"
-};
-
-var tinted_lens = {
-	name: "Tinted Lens",
-	desc: "Powers up “not very effective” moves.",
-	wiki: "http://www.serebii.net/abilitydex/tintedlens.shtml"
-};
-
-var torrent = {
-	name: "Torrent",
-	desc: "Powers up Water-type moves in a pinch.",
-	wiki: "http://www.serebii.net/abilitydex/torrent.shtml"
-};
-
-var tough_claws = {
-	name: "Tough Claws",
-	desc: "Powers up moves that make direct contact.",
-	wiki: "http://www.serebii.net/abilitydex/toughclaws.shtml"
-};
-
-var toxic_boost = {
-	name: "Toxic Boost",
-	desc: "Increases Attack to 1.5× when poisoned.",
-	wiki: "http://www.serebii.net/abilitydex/toxicboost.shtml"
-};
-
-var trace = {
-	name: "Trace",
-	desc: "The Pokémon copies a foe's Ability.",
-	wiki: "http://www.serebii.net/abilitydex/trace.shtml"
-};
-
-var triage = {
-	name: "Triage",
-	desc: "Boosts HP-restoring moves used to the highest priority.",
-	wiki: "http://www.serebii.net/abilitydex/triage.shtml"
-};
-
-var truant = {
-	name: "Truant",
-	desc: "The Pokémon can't attack on consecutive turns.",
-	wiki: "http://www.serebii.net/abilitydex/truant.shtml"
-};
-
-var turboblaze = {
-	name: "Turboblaze",
-	desc: "Moves can be used regardless of Abilities.",
-	wiki: "http://www.serebii.net/abilitydex/turboblaze.shtml"
-};
-
-var unaware = {
-	name: "Unaware",
-	desc: "Ignores any change in stats by the foe.",
-	wiki: "http://www.serebii.net/abilitydex/unaware.shtml"
-};
-
-var unburden = {
-	name: "Unburden",
-	desc: "Raises Speed if a held item is used.",
-	wiki: "http://www.serebii.net/abilitydex/unburden.shtml"
-};
-
-var unnerve = {
-	name: "Unnerve",
-	desc: "Prevents opposing Pokémon from eating held Berries.",
-	wiki: "http://www.serebii.net/abilitydex/unnerve.shtml"
-};
-
-var victory_star = {
-	name: "Victory Star",
-	desc: "Raises moves' accuracy to 1.1× for friendly Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/victorystar.shtml"
-};
-
-var vital_spirit = {
-	name: "Vital Spirit",
-	desc: "Prevents the Pokémon from falling asleep.",
-	wiki: "http://www.serebii.net/abilitydex/vitalspirit.shtml"
-};
-
-var volt_absorb = {
-	name: "Volt Absorb",
-	desc: "Restores HP if hit by an Electric-type move.",
-	wiki: "http://www.serebii.net/abilitydex/voltabsorb.shtml"
-};
-
-var water_absorb = {
-	name: "Water Absorb",
-	desc: "Restores HP if hit by a Water-type move.",
-	wiki: "http://www.serebii.net/abilitydex/waterabsorb.shtml"
-};
-
-var water_compaction = {
-	name: "Water Compaction",
-	desc: "Raises Defense by two stages if hit by a Water-type move.",
-	wiki: "http://www.serebii.net/abilitydex/watercompaction.shtml"
-};
-
-var water_veil = {
-	name: "Water Veil",
-	desc: "Prevents the Pokémon from getting a burn.",
-	wiki: "http://www.serebii.net/abilitydex/waterveil.shtml"
-};
-
-var weak_armor = {
-	name: "Weak Armor",
-	desc: "Raises Speed and lowers Defense by one stage each upon being hit by any move.",
-	wiki: "http://www.serebii.net/abilitydex/weakarmor.shtml"
-};
-
-var white_smoke = {
-	name: "White Smoke",
-	desc: "Prevents the Pokémon's stats from being lowered.",
-	wiki: "http://www.serebii.net/abilitydex/whitesmoke.shtml"
-};
-
-var wimp_out = {
-	name: "Wimp Out",
-	desc: "Causes the Pokémon to flee or switch out when HP is low.",
-	wiki: "http://www.serebii.net/abilitydex/wimpout.shtml"
-};
-
-var wonder_guard = {
-	name: "Wonder Guard",
-	desc: "Only supereffective moves will hit.",
-	wiki: "http://www.serebii.net/abilitydex/wonderguard.shtml"
-};
-
-var wonder_skin = {
-	name: "Wonder Skin",
-	desc: "Has a 50% chance of protecting against non-damaging moves that inflict major status ailments.",
-	wiki: "http://www.serebii.net/abilitydex/wonderskin.shtml"
-};
-
-var zen_mode = {
-	name: "Zen Mode",
-	desc: "Changes the Pokémon's shape when HP is halved.",
-	wiki: "http://www.serebii.net/abilitydex/zenmode.shtml"
-};
-
-var emergency_exit = {
-	name: "Emergency Exit",
-	desc: "The Pokémon, sensing danger, switches out when its HP becomes half or less.",
-	wiki: "http://www.serebii.net/abilitydex/emergencyexit.shtml"
-};
-
-var merciless = {
-	name: "Merciless",
-	desc: "The Pokémon’s attacks become critical hits if the target is poisoned.",
-	wiki: "http://www.serebii.net/abilitydex/merciless.shtml"
-};
-
-var water_bubble = {
-	name: "Water Bubble",
-	desc: "Lowers the power of Fire-type moves done to the Pokémon and prevents the Pokémon from getting a burn. Also secretly doubles the power of Water-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/waterbubble.shtml"
-};
-
-var steelworker = {
-	name: "Steelworker",
-	desc: "Powers up Steel-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/steelworker.shtml"
-};
-
-var slush_rush = {
-	name: "Slush Rush",
-	desc: "Boosts the Pokémon’s Speed stat in a hailstorm.",
-	wiki: "http://www.serebii.net/abilitydex/slushrush.shtml"
-};
-
-var long_reach = {
-	name: "Long Reach",
-	desc: "The Pokémon uses its moves without making contact with the target.",
-	wiki: "http://www.serebii.net/abilitydex/longreach.shtml"
-};
-
-var liquid_voice = {
-	name: "Liquid Voice",
-	desc: "All sound-based moves become Water-type moves.",
-	wiki: "http://www.serebii.net/abilitydex/liquidvoice.shtml"
-};
-
-var galvanize = {
-	name: "Galvanize",
-	desc: "Normal-type moves become Electric-type moves. The power of those moves is boosted a little.",
-	wiki: "http://www.serebii.net/abilitydex/galvanize.shtml"
-};
-
-var tangling_hair = {
-	name: "Tangling Hair",
-	desc: "Contact with the Pokémon lowers the attacker’s Speed stat.",
-	wiki: "http://www.serebii.net/abilitydex/tanglinghair.shtml"
-};
-
-var power_of_alchemy = {
-	name: "Power Of Alchemy",
-	desc: "The Pokémon copies the Ability of a defeated ally.",
-	wiki: "http://www.serebii.net/abilitydex/powerofalchemy.shtml"
-};
-
-var beast_boost = {
-	name: "Beast Boost",
-	desc: "The Pokémon boosts its most proficient stat each time it knocks out a Pokémon.",
-	wiki: "http://www.serebii.net/abilitydex/beastboost.shtml"
-};
-
-var psychic_surge = {
-	name: "Psychic Surge",
-	desc: "Turns the ground into Psychic Terrain when the Pokémon enters a battle.",
-	wiki: "http://www.serebii.net/abilitydex/psychicsurge.shtml"
-};
-
-var misty_surge = {
-	name: "Misty Surge",
-	desc: "Turns the ground into Misty Terrain when the Pokémon enters a battle.",
-	wiki: "http://www.serebii.net/abilitydex/mistysurge.shtml"
-};
-
-var grassy_surge = {
-	name: "Grassy Surge",
-	desc: "Turns the ground into Grassy Terrain when the Pokémon enters a battle.",
-	wiki: "http://www.serebii.net/abilitydex/grassysurge.shtml"
-};
-
-var full_metal_body = {
-	name: "Full Metal Body",
-	desc: "Prevents other Pokémon’s moves or Abilities from lowering the Pokémon’s stats.",
-	wiki: "http://www.serebii.net/abilitydex/fullmetalbody.shtml"
-};
-
-var prism_armor = {
-	name: "Prism Armor",
-	desc: "Reduces the power of supereffective attacks taken.",
-	wiki: "http://www.serebii.net/abilitydex/prismarmor.shtml"
-};
+var moves = [{id: "pound", name: "Pound", type: "Normal", cat: "Physical", power: 40, pp: 35, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/pound.shtml"},
+ {id: "karate chop", name: "Karate Chop", type: "Fighting", cat: "Physical", power: 50, pp: 25, acc: 100, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/karatechop.shtml"},
+ {id: "double slap", name: "Double Slap", type: "Normal", cat: "Physical", power: 15, pp: 10, acc: 85, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/doubleslap.shtml"},
+ {id: "comet punch", name: "Comet Punch", type: "Normal", cat: "Physical", power: 18, pp: 15, acc: 85, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/cometpunch.shtml"},
+ {id: "mega punch", name: "Mega Punch", type: "Normal", cat: "Physical", power: 80, pp: 20, acc: 85, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/megapunch.shtml"},
+ {id: "pay day", name: "Pay Day", type: "Normal", cat: "Physical", power: 40, pp: 20, acc: 100, effect: "A small amount of money is gained after the battle resolves.", wiki: "http://www.serebii.net/attackdex-sm/payday.shtml"},
+ {id: "fire punch", name: "Fire Punch", type: "Fire", cat: "Physical", power: 75, pp: 15, acc: 100, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/firepunch.shtml"},
+ {id: "ice punch", name: "Ice Punch", type: "Ice", cat: "Physical", power: 75, pp: 15, acc: 100, effect: "May freeze opponent.", wiki: "http://www.serebii.net/attackdex-sm/icepunch.shtml"},
+ {id: "thunder punch", name: "Thunder Punch", type: "Electric", cat: "Physical", power: 75, pp: 15, acc: 100, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/thunderpunch.shtml"},
+ {id: "scratch", name: "Scratch", type: "Normal", cat: "Physical", power: 40, pp: 35, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/scratch.shtml"},
+ {id: "vice grip", name: "Vice Grip", type: "Normal", cat: "Physical", power: 55, pp: 30, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/vicegrip.shtml"},
+ {id: "guillotine", name: "Guillotine", type: "Normal", cat: "Physical", pp: 5, effect: "One-Hit-KO, if it hits.", wiki: "http://www.serebii.net/attackdex-sm/guillotine.shtml"},
+ {id: "razor wind", name: "Razor Wind", type: "Normal", cat: "Special", power: 80, pp: 10, acc: 100, effect: "Charges on first turn, attacks on second. High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/razorwind.shtml"},
+ {id: "swords dance", name: "Swords Dance", type: "Normal", cat: "Status", pp: 20, effect: "Sharply raises user's Attack.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/swordsdance.shtml"},
+ {id: "cut", name: "Cut", type: "Normal", cat: "Physical", power: 50, pp: 30, acc: 95, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/cut.shtml"},
+ {id: "gust", name: "Gust", type: "Flying", cat: "Special", power: 40, pp: 35, acc: 100, effect: "Hits Pokémon using Fly/Bounce with double power.", wiki: "http://www.serebii.net/attackdex-sm/gust.shtml"},
+ {id: "wing attack", name: "Wing Attack", type: "Flying", cat: "Physical", power: 60, pp: 35, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/wingattack.shtml"},
+ {id: "whirlwind", name: "Whirlwind", type: "Normal", cat: "Status", pp: 20, effect: "In battles, the opponent switches. In the wild, the Pokémon runs.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/whirlwind.shtml"},
+ {id: "fly", name: "Fly", type: "Flying", cat: "Physical", power: 90, pp: 15, acc: 95, effect: "Flies up on first turn, attacks on second turn.", wiki: "http://www.serebii.net/attackdex-sm/fly.shtml"},
+ {id: "bind", name: "Bind", type: "Normal", cat: "Physical", power: 15, pp: 20, acc: 85, effect: "Traps opponent, damaging them for 4-5 turns.", wiki: "http://www.serebii.net/attackdex-sm/bind.shtml"},
+ {id: "slam", name: "Slam", type: "Normal", cat: "Physical", power: 80, pp: 20, acc: 75, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/slam.shtml"},
+ {id: "vine whip", name: "Vine Whip", type: "Grass", cat: "Physical", power: 45, pp: 25, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/vinewhip.shtml"},
+ {id: "stomp", name: "Stomp", type: "Normal", cat: "Physical", power: 65, pp: 20, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/stomp.shtml"},
+ {id: "double kick", name: "Double Kick", type: "Fighting", cat: "Physical", power: 30, pp: 30, acc: 100, effect: "Hits twice in one turn.", wiki: "http://www.serebii.net/attackdex-sm/doublekick.shtml"},
+ {id: "mega kick", name: "Mega Kick", type: "Normal", cat: "Physical", power: 120, pp: 5, acc: 75, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/megakick.shtml"},
+ {id: "jump kick", name: "Jump Kick", type: "Fighting", cat: "Physical", power: 100, pp: 10, acc: 95, effect: "If it misses, the user loses half their HP.", wiki: "http://www.serebii.net/attackdex-sm/jumpkick.shtml"},
+ {id: "rolling kick", name: "Rolling Kick", type: "Fighting", cat: "Physical", power: 60, pp: 15, acc: 85, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/rollingkick.shtml"},
+ {id: "sand attack", name: "Sand Attack", type: "Ground", cat: "Status", pp: 15, acc: 100, effect: "Lowers opponent's Accuracy.", zeffect: "Evasiveness ↑", wiki: "http://www.serebii.net/attackdex-sm/sandattack.shtml"},
+ {id: "headbutt", name: "Headbutt", type: "Normal", cat: "Physical", power: 70, pp: 15, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/headbutt.shtml"},
+ {id: "horn attack", name: "Horn Attack", type: "Normal", cat: "Physical", power: 65, pp: 25, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/hornattack.shtml"},
+ {id: "fury attack", name: "Fury Attack", type: "Normal", cat: "Physical", power: 15, pp: 20, acc: 85, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/furyattack.shtml"},
+ {id: "horn drill", name: "Horn Drill", type: "Normal", cat: "Physical", pp: 5, effect: "One-Hit-KO, if it hits.", wiki: "http://www.serebii.net/attackdex-sm/horndrill.shtml"},
+ {id: "tackle", name: "Tackle", type: "Normal", cat: "Physical", power: 50, pp: 35, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/tackle.shtml"},
+ {id: "body slam", name: "Body Slam", type: "Normal", cat: "Physical", power: 85, pp: 15, acc: 100, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/bodyslam.shtml"},
+ {id: "wrap", name: "Wrap", type: "Normal", cat: "Physical", power: 15, pp: 20, acc: 90, effect: "Traps opponent, damaging them for 4-5 turns.", wiki: "http://www.serebii.net/attackdex-sm/wrap.shtml"},
+ {id: "take down", name: "Take Down", type: "Normal", cat: "Physical", power: 90, pp: 20, acc: 85, effect: "User receives recoil damage.", wiki: "http://www.serebii.net/attackdex-sm/takedown.shtml"},
+ {id: "thrash", name: "Thrash", type: "Normal", cat: "Physical", power: 120, pp: 10, acc: 100, effect: "User attacks for 2-3 turns but then becomes confused.", wiki: "http://www.serebii.net/attackdex-sm/thrash.shtml"},
+ {id: "double-edge", name: "Double-edge", type: "Normal", cat: "Physical", power: 120, pp: 15, acc: 100, effect: "User receives recoil damage.", wiki: "http://www.serebii.net/attackdex-sm/double-edge.shtml"},
+ {id: "tail whip", name: "Tail Whip", type: "Normal", cat: "Status", pp: 30, acc: 100, effect: "Lowers opponent's Defense.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/tailwhip.shtml"},
+ {id: "poison sting", name: "Poison Sting", type: "Poison", cat: "Physical", power: 15, pp: 35, acc: 100, effect: "May poison the opponent.", wiki: "http://www.serebii.net/attackdex-sm/poisonsting.shtml"},
+ {id: "twineedle", name: "Twineedle", type: "Bug", cat: "Physical", power: 25, pp: 20, acc: 100, effect: "Hits twice in one turn. May poison opponent.", wiki: "http://www.serebii.net/attackdex-sm/twineedle.shtml"},
+ {id: "pin missile", name: "Pin Missile", type: "Bug", cat: "Physical", power: 25, pp: 20, acc: 95, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/pinmissile.shtml"},
+ {id: "leer", name: "Leer", type: "Normal", cat: "Status", pp: 30, acc: 100, effect: "Lowers opponent's Defense.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/leer.shtml"},
+ {id: "bite", name: "Bite", type: "Dark", cat: "Physical", power: 60, pp: 25, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/bite.shtml"},
+ {id: "growl", name: "Growl", type: "Normal", cat: "Status", pp: 40, acc: 100, effect: "Lowers opponent's Attack.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/growl.shtml"},
+ {id: "roar", name: "Roar", type: "Normal", cat: "Status", pp: 20, effect: "In battles, the opponent switches. In the wild, the Pokémon runs.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/roar.shtml"},
+ {id: "sing", name: "Sing", type: "Normal", cat: "Status", pp: 15, acc: 55, effect: "Puts opponent to sleep.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/sing.shtml"},
+ {id: "supersonic", name: "Supersonic", type: "Normal", cat: "Status", pp: 20, acc: 55, effect: "Confuses opponent.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/supersonic.shtml"},
+ {id: "sonic boom", name: "Sonic Boom", type: "Normal", cat: "Special", pp: 20, acc: 90, effect: "Always inflicts 20 HP.", wiki: "http://www.serebii.net/attackdex-sm/sonicboom.shtml"},
+ {id: "disable", name: "Disable", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "Opponent can't use its last attack for a few turns.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/disable.shtml"},
+ {id: "acid", name: "Acid", type: "Poison", cat: "Special", power: 40, pp: 30, acc: 100, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/acid.shtml"},
+ {id: "ember", name: "Ember", type: "Fire", cat: "Special", power: 40, pp: 25, acc: 100, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/ember.shtml"},
+ {id: "flamethrower", name: "Flamethrower", type: "Fire", cat: "Special", power: 90, pp: 15, acc: 100, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/flamethrower.shtml"},
+ {id: "mist", name: "Mist", type: "Ice", cat: "Status", pp: 30, effect: "User's stats cannot be changed for a period of time.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/mist.shtml"},
+ {id: "water gun", name: "Water Gun", type: "Water", cat: "Special", power: 40, pp: 25, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/watergun.shtml"},
+ {id: "hydro pump", name: "Hydro Pump", type: "Water", cat: "Special", power: 110, pp: 5, acc: 80, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/hydropump.shtml"},
+ {id: "surf", name: "Surf", type: "Water", cat: "Special", power: 90, pp: 15, acc: 100, effect: "Hits all adjacent Pokémon.", wiki: "http://www.serebii.net/attackdex-sm/surf.shtml"},
+ {id: "ice beam", name: "Ice Beam", type: "Ice", cat: "Special", power: 90, pp: 10, acc: 100, effect: "May freeze opponent.", wiki: "http://www.serebii.net/attackdex-sm/icebeam.shtml"},
+ {id: "blizzard", name: "Blizzard", type: "Ice", cat: "Special", power: 110, pp: 5, acc: 70, effect: "May freeze opponent.", wiki: "http://www.serebii.net/attackdex-sm/blizzard.shtml"},
+ {id: "psybeam", name: "Psybeam", type: "Psychic", cat: "Special", power: 65, pp: 20, acc: 100, effect: "May confuse opponent.", wiki: "http://www.serebii.net/attackdex-sm/psybeam.shtml"},
+ {id: "bubble beam", name: "Bubble Beam", type: "Water", cat: "Special", power: 65, pp: 20, acc: 100, effect: "May lower opponent's Speed.", wiki: "http://www.serebii.net/attackdex-sm/bubblebeam.shtml"},
+ {id: "aurora beam", name: "Aurora Beam", type: "Ice", cat: "Special", power: 65, pp: 20, acc: 100, effect: "May lower opponent's Attack.", wiki: "http://www.serebii.net/attackdex-sm/aurorabeam.shtml"},
+ {id: "hyper beam", name: "Hyper Beam", type: "Normal", cat: "Special", power: 150, pp: 5, acc: 90, effect: "User must recharge next turn.", wiki: "http://www.serebii.net/attackdex-sm/hyperbeam.shtml"},
+ {id: "peck", name: "Peck", type: "Flying", cat: "Physical", power: 35, pp: 35, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/peck.shtml"},
+ {id: "drill peck", name: "Drill Peck", type: "Flying", cat: "Physical", power: 80, pp: 20, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/drillpeck.shtml"},
+ {id: "submission", name: "Submission", type: "Fighting", cat: "Physical", power: 80, pp: 25, acc: 80, effect: "User receives recoil damage.", wiki: "http://www.serebii.net/attackdex-sm/submission.shtml"},
+ {id: "low kick", name: "Low Kick", type: "Fighting", cat: "Physical", pp: 20, acc: 100, effect: "The heavier the opponent, the stronger the attack.", wiki: "http://www.serebii.net/attackdex-sm/lowkick.shtml"},
+ {id: "counter", name: "Counter", type: "Fighting", cat: "Physical", pp: 20, acc: 100, effect: "When hit by a Physical Attack, user strikes back with 2x power.", wiki: "http://www.serebii.net/attackdex-sm/counter.shtml"},
+ {id: "seismic toss", name: "Seismic Toss", type: "Fighting", cat: "Physical", pp: 20, acc: 100, effect: "Inflicts damage equal to user's level.", wiki: "http://www.serebii.net/attackdex-sm/seismictoss.shtml"},
+ {id: "strength", name: "Strength", type: "Normal", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/strength.shtml"},
+ {id: "absorb", name: "Absorb", type: "Grass", cat: "Special", power: 20, pp: 25, acc: 100, effect: "User recovers half the HP inflicted on opponent.", wiki: "http://www.serebii.net/attackdex-sm/absorb.shtml"},
+ {id: "mega drain", name: "Mega Drain", type: "Grass", cat: "Special", power: 40, pp: 15, acc: 100, effect: "User recovers half the HP inflicted on opponent.", wiki: "http://www.serebii.net/attackdex-sm/megadrain.shtml"},
+ {id: "leech seed", name: "Leech Seed", type: "Grass", cat: "Status", pp: 10, acc: 90, effect: "User steals HP from opponent each turn.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/leechseed.shtml"},
+ {id: "growth", name: "Growth", type: "Normal", cat: "Status", pp: 20, effect: "Raises user's Attack and Special Attack.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/growth.shtml"},
+ {id: "razor leaf", name: "Razor Leaf", type: "Grass", cat: "Physical", power: 55, pp: 25, acc: 95, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/razorleaf.shtml"},
+ {id: "solar beam", name: "Solar Beam", type: "Grass", cat: "Special", power: 120, pp: 10, acc: 100, effect: "Charges on first turn, attacks on second.", wiki: "http://www.serebii.net/attackdex-sm/solarbeam.shtml"},
+ {id: "poison powder", name: "Poison Powder", type: "Poison", cat: "Status", pp: 35, acc: 75, effect: "Poisons opponent.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/poisonpowder.shtml"},
+ {id: "stun spore", name: "Stun Spore", type: "Grass", cat: "Status", pp: 30, acc: 75, effect: "Paralyzes opponent.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/stunspore.shtml"},
+ {id: "sleep powder", name: "Sleep Powder", type: "Grass", cat: "Status", pp: 15, acc: 75, effect: "Puts opponent to sleep.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/sleeppowder.shtml"},
+ {id: "petal dance", name: "Petal Dance", type: "Grass", cat: "Special", power: 120, pp: 10, acc: 100, effect: "User attacks for 2-3 turns but then becomes confused.", wiki: "http://www.serebii.net/attackdex-sm/petaldance.shtml"},
+ {id: "string shot", name: "String Shot", type: "Bug", cat: "Status", pp: 40, acc: 95, effect: "Sharply lowers opponent's Speed.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/stringshot.shtml"},
+ {id: "dragon rage", name: "Dragon Rage", type: "Dragon", cat: "Special", pp: 10, acc: 100, effect: "Always inflicts 40 HP.", wiki: "http://www.serebii.net/attackdex-sm/dragonrage.shtml"},
+ {id: "fire spin", name: "Fire Spin", type: "Fire", cat: "Special", power: 35, pp: 15, acc: 85, effect: "Traps opponent, damaging them for 4-5 turns.", wiki: "http://www.serebii.net/attackdex-sm/firespin.shtml"},
+ {id: "thunder shock", name: "Thunder Shock", type: "Electric", cat: "Special", power: 40, pp: 30, acc: 100, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/thundershock.shtml"},
+ {id: "thunderbolt", name: "Thunderbolt", type: "Electric", cat: "Special", power: 90, pp: 15, acc: 100, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/thunderbolt.shtml"},
+ {id: "thunder wave", name: "Thunder Wave", type: "Electric", cat: "Status", pp: 20, acc: 100, effect: "Paralyzes opponent.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/thunderwave.shtml"},
+ {id: "thunder", name: "Thunder", type: "Electric", cat: "Special", power: 110, pp: 10, acc: 70, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/thunder.shtml"},
+ {id: "rock throw", name: "Rock Throw", type: "Rock", cat: "Physical", power: 50, pp: 15, acc: 90, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/rockthrow.shtml"},
+ {id: "earthquake", name: "Earthquake", type: "Ground", cat: "Physical", power: 100, pp: 10, acc: 100, effect: "Power is doubled if opponent is underground from using Dig.", wiki: "http://www.serebii.net/attackdex-sm/earthquake.shtml"},
+ {id: "fissure", name: "Fissure", type: "Ground", cat: "Physical", pp: 5, effect: "One-Hit-KO, if it hits.", wiki: "http://www.serebii.net/attackdex-sm/fissure.shtml"},
+ {id: "dig", name: "Dig", type: "Ground", cat: "Physical", power: 80, pp: 10, acc: 100, effect: "Digs underground on first turn, attacks on second. Can also escape from caves.", wiki: "http://www.serebii.net/attackdex-sm/dig.shtml"},
+ {id: "toxic", name: "Toxic", type: "Poison", cat: "Status", pp: 10, acc: 90, effect: "Badly poisons opponent.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/toxic.shtml"},
+ {id: "confusion", name: "Confusion", type: "Psychic", cat: "Special", power: 50, pp: 25, acc: 100, effect: "May confuse opponent.", wiki: "http://www.serebii.net/attackdex-sm/confusion.shtml"},
+ {id: "psychic", name: "Psychic", type: "Psychic", cat: "Special", power: 90, pp: 10, acc: 100, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/psychic.shtml"},
+ {id: "hypnosis", name: "Hypnosis", type: "Psychic", cat: "Status", pp: 20, acc: 60, effect: "Puts opponent to sleep.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/hypnosis.shtml"},
+ {id: "meditate", name: "Meditate", type: "Psychic", cat: "Status", pp: 40, effect: "Raises user's Attack.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/meditate.shtml"},
+ {id: "agility", name: "Agility", type: "Psychic", cat: "Status", pp: 30, effect: "Sharply raises user's Speed.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/agility.shtml"},
+ {id: "quick attack", name: "Quick Attack", type: "Normal", cat: "Physical", power: 40, pp: 30, acc: 100, effect: "User attacks first.", wiki: "http://www.serebii.net/attackdex-sm/quickattack.shtml"},
+ {id: "rage", name: "Rage", type: "Normal", cat: "Physical", power: 20, pp: 20, acc: 100, effect: "Raises user's Attack when hit.", wiki: "http://www.serebii.net/attackdex-sm/rage.shtml"},
+ {id: "teleport", name: "Teleport", type: "Psychic", cat: "Status", pp: 20, effect: "Allows user to flee wild battles; also warps player to last PokéCenter.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/teleport.shtml"},
+ {id: "night shade", name: "Night Shade", type: "Ghost", cat: "Special", pp: 15, acc: 100, effect: "Inflicts damage equal to user's level.", wiki: "http://www.serebii.net/attackdex-sm/nightshade.shtml"},
+ {id: "mimic", name: "Mimic", type: "Normal", cat: "Status", pp: 10, acc: 100, effect: "Copies the opponent's last move.", zeffect: "Accuracy ↑", wiki: "http://www.serebii.net/attackdex-sm/mimic.shtml"},
+ {id: "screech", name: "Screech", type: "Normal", cat: "Status", pp: 40, acc: 85, effect: "Sharply lowers opponent's Defense.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/screech.shtml"},
+ {id: "double team", name: "Double Team", type: "Normal", cat: "Status", pp: 15, effect: "Raises user's Evasiveness.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/doubleteam.shtml"},
+ {id: "recover", name: "Recover", type: "Normal", cat: "Status", pp: 10, effect: "User recovers half its max HP.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/recover.shtml"},
+ {id: "harden", name: "Harden", type: "Normal", cat: "Status", pp: 30, effect: "Raises user's Defense.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/harden.shtml"},
+ {id: "minimize", name: "Minimize", type: "Normal", cat: "Status", pp: 10, effect: "Sharply raises user's Evasiveness.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/minimize.shtml"},
+ {id: "smokescreen", name: "Smokescreen", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "Lowers opponent's Accuracy.", zeffect: "Evasiveness ↑", wiki: "http://www.serebii.net/attackdex-sm/smokescreen.shtml"},
+ {id: "confuse ray", name: "Confuse Ray", type: "Ghost", cat: "Status", pp: 10, acc: 100, effect: "Confuses opponent.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/confuseray.shtml"},
+ {id: "withdraw", name: "Withdraw", type: "Water", cat: "Status", pp: 40, effect: "Raises user's Defense.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/withdraw.shtml"},
+ {id: "defense curl", name: "Defense Curl", type: "Normal", cat: "Status", pp: 40, effect: "Raises user's Defense.", zeffect: "Accuracy ↑", wiki: "http://www.serebii.net/attackdex-sm/defensecurl.shtml"},
+ {id: "barrier", name: "Barrier", type: "Psychic", cat: "Status", pp: 20, effect: "Sharply raises user's Defense.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/barrier.shtml"},
+ {id: "light screen", name: "Light Screen", type: "Psychic", cat: "Status", pp: 30, effect: "Halves damage from Special attacks for 5 turns.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/lightscreen.shtml"},
+ {id: "haze", name: "Haze", type: "Ice", cat: "Status", pp: 30, effect: "Resets all stat changes.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/haze.shtml"},
+ {id: "reflect", name: "Reflect", type: "Psychic", cat: "Status", pp: 20, effect: "Halves damage from Physical attacks for 5 turns.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/reflect.shtml"},
+ {id: "focus energy", name: "Focus Energy", type: "Normal", cat: "Status", pp: 30, effect: "Increases critical hit ratio.", zeffect: "Accuracy ↑", wiki: "http://www.serebii.net/attackdex-sm/focusenergy.shtml"},
+ {id: "bide", name: "Bide", type: "Normal", cat: "Physical", pp: 10, acc: 100, effect: "User takes damage for two turns then strikes back double.", wiki: "http://www.serebii.net/attackdex-sm/bide.shtml"},
+ {id: "metronome", name: "Metronome", type: "Normal", cat: "Status", pp: 10, effect: "User performs any move in the game at random.", wiki: "http://www.serebii.net/attackdex-sm/metronome.shtml"},
+ {id: "mirror move", name: "Mirror Move", type: "Flying", cat: "Status", pp: 20, effect: "User performs the opponent's last move.", zeffect: "Attack ↑↑", wiki: "http://www.serebii.net/attackdex-sm/mirrormove.shtml"},
+ {id: "self-destruct", name: "Self-destruct", type: "Normal", cat: "Physical", power: 200, pp: 5, acc: 100, effect: "User faints.", wiki: "http://www.serebii.net/attackdex-sm/self-destruct.shtml"},
+ {id: "egg bomb", name: "Egg Bomb", type: "Normal", cat: "Physical", power: 100, pp: 10, acc: 75, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/eggbomb.shtml"},
+ {id: "lick", name: "Lick", type: "Ghost", cat: "Physical", power: 30, pp: 30, acc: 100, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/lick.shtml"},
+ {id: "smog", name: "Smog", type: "Poison", cat: "Special", power: 30, pp: 20, acc: 70, effect: "May poison opponent.", wiki: "http://www.serebii.net/attackdex-sm/smog.shtml"},
+ {id: "sludge", name: "Sludge", type: "Poison", cat: "Special", power: 65, pp: 20, acc: 100, effect: "May poison opponent.", wiki: "http://www.serebii.net/attackdex-sm/sludge.shtml"},
+ {id: "bone club", name: "Bone Club", type: "Ground", cat: "Physical", power: 65, pp: 20, acc: 85, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/boneclub.shtml"},
+ {id: "fire blast", name: "Fire Blast", type: "Fire", cat: "Special", power: 110, pp: 5, acc: 85, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/fireblast.shtml"},
+ {id: "waterfall", name: "Waterfall", type: "Water", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/waterfall.shtml"},
+ {id: "clamp", name: "Clamp", type: "Water", cat: "Physical", power: 35, pp: 15, acc: 85, effect: "Traps opponent, damaging them for 4-5 turns.", wiki: "http://www.serebii.net/attackdex-sm/clamp.shtml"},
+ {id: "swift", name: "Swift", type: "Normal", cat: "Special", power: 60, pp: 20, effect: "Ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/swift.shtml"},
+ {id: "skull bash", name: "Skull Bash", type: "Normal", cat: "Physical", power: 130, pp: 10, acc: 100, effect: "Raises Defense on first turn, attacks on second.", wiki: "http://www.serebii.net/attackdex-sm/skullbash.shtml"},
+ {id: "spike cannon", name: "Spike Cannon", type: "Normal", cat: "Physical", power: 20, pp: 15, acc: 100, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/spikecannon.shtml"},
+ {id: "constrict", name: "Constrict", type: "Normal", cat: "Physical", power: 10, pp: 35, acc: 100, effect: "May lower opponent's Speed by one stage.", wiki: "http://www.serebii.net/attackdex-sm/constrict.shtml"},
+ {id: "amnesia", name: "Amnesia", type: "Psychic", cat: "Status", pp: 20, effect: "Sharply raises user's Special Defense.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/amnesia.shtml"},
+ {id: "kinesis", name: "Kinesis", type: "Psychic", cat: "Status", pp: 15, acc: 80, effect: "Lowers opponent's Accuracy.", zeffect: "Evasiveness ↑", wiki: "http://www.serebii.net/attackdex-sm/kinesis.shtml"},
+ {id: "soft-boiled", name: "Soft-boiled", type: "Normal", cat: "Status", pp: 10, effect: "User recovers half its max HP.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/soft-boiled.shtml"},
+ {id: "high jump kick", name: "High Jump Kick", type: "Fighting", cat: "Physical", power: 130, pp: 10, acc: 90, effect: "If it misses, the user loses half their HP.", wiki: "http://www.serebii.net/attackdex-sm/highjumpkick.shtml"},
+ {id: "glare", name: "Glare", type: "Normal", cat: "Status", pp: 30, acc: 100, effect: "Paralyzes opponent.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/glare.shtml"},
+ {id: "dream eater", name: "Dream Eater", type: "Psychic", cat: "Special", power: 100, pp: 15, acc: 100, effect: "User recovers half the HP inflicted on a sleeping opponent.", wiki: "http://www.serebii.net/attackdex-sm/dreameater.shtml"},
+ {id: "poison gas", name: "Poison Gas", type: "Poison", cat: "Status", pp: 40, acc: 90, effect: "Poisons opponent.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/poisongas.shtml"},
+ {id: "barrage", name: "Barrage", type: "Normal", cat: "Physical", power: 15, pp: 20, acc: 85, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/barrage.shtml"},
+ {id: "leech life", name: "Leech Life", type: "Bug", cat: "Physical", power: 80, pp: 10, acc: 100, effect: "User recovers half the HP inflicted on opponent.", wiki: "http://www.serebii.net/attackdex-sm/leechlife.shtml"},
+ {id: "lovely kiss", name: "Lovely Kiss", type: "Normal", cat: "Status", pp: 10, acc: 75, effect: "Puts opponent to sleep.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/lovelykiss.shtml"},
+ {id: "sky attack", name: "Sky Attack", type: "Flying", cat: "Physical", power: 140, pp: 5, acc: 90, effect: "Charges on first turn, attacks on second. May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/skyattack.shtml"},
+ {id: "transform", name: "Transform", type: "Normal", cat: "Status", pp: 10, effect: "User takes on the form and attacks of the opponent.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/transform.shtml"},
+ {id: "bubble", name: "Bubble", type: "Water", cat: "Special", power: 40, pp: 30, acc: 100, effect: "May lower opponent's Speed.", wiki: "http://www.serebii.net/attackdex-sm/bubble.shtml"},
+ {id: "dizzy punch", name: "Dizzy Punch", type: "Normal", cat: "Physical", power: 70, pp: 10, acc: 100, effect: "May confuse opponent.", wiki: "http://www.serebii.net/attackdex-sm/dizzypunch.shtml"},
+ {id: "spore", name: "Spore", type: "Grass", cat: "Status", pp: 15, acc: 100, effect: "Puts opponent to sleep.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/spore.shtml"},
+ {id: "flash", name: "Flash", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "Lowers opponent's Accuracy.", zeffect: "Evasiveness ↑", wiki: "http://www.serebii.net/attackdex-sm/flash.shtml"},
+ {id: "psywave", name: "Psywave", type: "Psychic", cat: "Special", pp: 15, acc: 100, effect: "Inflicts damage 50-150% of user's level.", wiki: "http://www.serebii.net/attackdex-sm/psywave.shtml"},
+ {id: "splash", name: "Splash", type: "Normal", cat: "Status", pp: 40, effect: "Doesn't do ANYTHING.", zeffect: "Attack ↑↑↑", wiki: "http://www.serebii.net/attackdex-sm/splash.shtml"},
+ {id: "acid armor", name: "Acid Armor", type: "Poison", cat: "Status", pp: 20, effect: "Sharply raises user's Defense.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/acidarmor.shtml"},
+ {id: "crabhammer", name: "Crabhammer", type: "Water", cat: "Physical", power: 100, pp: 10, acc: 90, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/crabhammer.shtml"},
+ {id: "explosion", name: "Explosion", type: "Normal", cat: "Physical", power: 250, pp: 5, acc: 100, effect: "User faints.", wiki: "http://www.serebii.net/attackdex-sm/explosion.shtml"},
+ {id: "fury swipes", name: "Fury Swipes", type: "Normal", cat: "Physical", power: 18, pp: 15, acc: 80, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/furyswipes.shtml"},
+ {id: "bonemerang", name: "Bonemerang", type: "Ground", cat: "Physical", power: 50, pp: 10, acc: 90, effect: "Hits twice in one turn.", wiki: "http://www.serebii.net/attackdex-sm/bonemerang.shtml"},
+ {id: "rest", name: "Rest", type: "Psychic", cat: "Status", pp: 10, effect: "User sleeps for 2 turns, but user is fully healed.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/rest.shtml"},
+ {id: "rock slide", name: "Rock Slide", type: "Rock", cat: "Physical", power: 75, pp: 10, acc: 90, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/rockslide.shtml"},
+ {id: "hyper fang", name: "Hyper Fang", type: "Normal", cat: "Physical", power: 80, pp: 15, acc: 90, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/hyperfang.shtml"},
+ {id: "sharpen", name: "Sharpen", type: "Normal", cat: "Status", pp: 30, effect: "Raises user's Attack.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/sharpen.shtml"},
+ {id: "conversion", name: "Conversion", type: "Normal", cat: "Status", pp: 30, effect: "Changes user's type to that of its first move.", zeffect: "All stats ↑", wiki: "http://www.serebii.net/attackdex-sm/conversion.shtml"},
+ {id: "tri attack", name: "Tri Attack", type: "Normal", cat: "Special", power: 80, pp: 10, acc: 100, effect: "May paralyze, burn or freeze opponent.", wiki: "http://www.serebii.net/attackdex-sm/triattack.shtml"},
+ {id: "super fang", name: "Super Fang", type: "Normal", cat: "Physical", pp: 10, acc: 90, effect: "Always takes off half of the opponent's HP.", wiki: "http://www.serebii.net/attackdex-sm/superfang.shtml"},
+ {id: "slash", name: "Slash", type: "Normal", cat: "Physical", power: 70, pp: 20, acc: 100, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/slash.shtml"},
+ {id: "substitute", name: "Substitute", type: "Normal", cat: "Status", pp: 10, effect: "Uses HP to creates a decoy that takes hits.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/substitute.shtml"},
+ {id: "struggle", name: "Struggle", type: "Normal", cat: "Physical", power: 50, pp: 1, effect: "Only usable when all PP are gone. Hurts the user.", wiki: "http://www.serebii.net/attackdex-sm/struggle.shtml"},
+ {id: "sketch", name: "Sketch", type: "Normal", cat: "Status", pp: 1, effect: "Permanently copies the opponent's last move.", zeffect: "All stats ↑", wiki: "http://www.serebii.net/attackdex-sm/sketch.shtml"},
+ {id: "triple kick", name: "Triple Kick", type: "Fighting", cat: "Physical", power: 10, pp: 10, acc: 90, effect: "Hits thrice in one turn at increasing power.", wiki: "http://www.serebii.net/attackdex-sm/triplekick.shtml"},
+ {id: "thief", name: "Thief", type: "Dark", cat: "Physical", power: 60, pp: 25, acc: 100, effect: "Also steals opponent's held item.", wiki: "http://www.serebii.net/attackdex-sm/thief.shtml"},
+ {id: "spider web", name: "Spider Web", type: "Bug", cat: "Status", pp: 10, acc: 100, effect: "Opponent cannot escape/switch.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/spiderweb.shtml"},
+ {id: "mind reader", name: "Mind Reader", type: "Normal", cat: "Status", pp: 5, acc: 100, effect: "User's next attack is guaranteed to hit.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/mindreader.shtml"},
+ {id: "nightmare", name: "Nightmare", type: "Ghost", cat: "Status", pp: 15, acc: 100, effect: "The sleeping opponent loses 25% of its max HP each turn.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/nightmare.shtml"},
+ {id: "flame wheel", name: "Flame Wheel", type: "Fire", cat: "Physical", power: 60, pp: 25, acc: 100, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/flamewheel.shtml"},
+ {id: "snore", name: "Snore", type: "Normal", cat: "Special", power: 50, pp: 15, acc: 100, effect: "Can only be used if asleep. May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/snore.shtml"},
+ {id: "curse", name: "Curse", type: "Ghost", cat: "Status", pp: 10, effect: "Ghosts lose 50% of max HP and curse the opponent; Non-Ghosts raise Attack, Defense and lower Speed.", zeffect: "Restores user's HP 100% if user is Ghost-type, Attack ↑ otherwise", wiki: "http://www.serebii.net/attackdex-sm/curse.shtml"},
+ {id: "flail", name: "Flail", type: "Normal", cat: "Physical", pp: 15, acc: 100, effect: "The lower the user's HP, the higher the power.", wiki: "http://www.serebii.net/attackdex-sm/flail.shtml"},
+ {id: "conversion 2", name: "Conversion 2", type: "Normal", cat: "Status", pp: 30, acc: 100, effect: "User changes type to become resistant to opponent's last move.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/conversion2.shtml"},
+ {id: "aeroblast", name: "Aeroblast", type: "Flying", cat: "Special", power: 100, pp: 5, acc: 95, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/aeroblast.shtml"},
+ {id: "cotton spore", name: "Cotton Spore", type: "Grass", cat: "Status", pp: 40, acc: 100, effect: "Sharply lowers opponent's Speed.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/cottonspore.shtml"},
+ {id: "reversal", name: "Reversal", type: "Fighting", cat: "Physical", pp: 15, acc: 100, effect: "The lower the user's HP, the higher the power.", wiki: "http://www.serebii.net/attackdex-sm/reversal.shtml"},
+ {id: "spite", name: "Spite", type: "Ghost", cat: "Status", pp: 10, acc: 100, effect: "The opponent's last move loses 2-5 PP.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/spite.shtml"},
+ {id: "powder snow", name: "Powder Snow", type: "Ice", cat: "Special", power: 40, pp: 25, acc: 100, effect: "May freeze opponent.", wiki: "http://www.serebii.net/attackdex-sm/powdersnow.shtml"},
+ {id: "protect", name: "Protect", type: "Normal", cat: "Status", pp: 10, effect: "User is not affected by opponent's move.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/protect.shtml"},
+ {id: "mach punch", name: "Mach Punch", type: "Fighting", cat: "Physical", power: 40, pp: 30, acc: 100, effect: "User attacks first.", wiki: "http://www.serebii.net/attackdex-sm/machpunch.shtml"},
+ {id: "scary face", name: "Scary Face", type: "Normal", cat: "Status", pp: 10, acc: 100, effect: "Sharply lowers opponent's Speed.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/scaryface.shtml"},
+ {id: "feint attack", name: "Feint Attack", type: "Dark", cat: "Physical", power: 60, pp: 20, effect: "Ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/feintattack.shtml"},
+ {id: "sweet kiss", name: "Sweet Kiss", type: "Fairy", cat: "Status", pp: 10, acc: 75, effect: "Confuses opponent.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/sweetkiss.shtml"},
+ {id: "belly drum", name: "Belly Drum", type: "Normal", cat: "Status", pp: 10, effect: "User loses 50% of its max HP, but Attack raises to maximum.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/bellydrum.shtml"},
+ {id: "sludge bomb", name: "Sludge Bomb", type: "Poison", cat: "Special", power: 90, pp: 10, acc: 100, effect: "May poison opponent.", wiki: "http://www.serebii.net/attackdex-sm/sludgebomb.shtml"},
+ {id: "mud-slap", name: "Mud-slap", type: "Ground", cat: "Special", power: 20, pp: 10, acc: 100, effect: "Lowers opponent's Accuracy.", wiki: "http://www.serebii.net/attackdex-sm/mud-slap.shtml"},
+ {id: "octazooka", name: "Octazooka", type: "Water", cat: "Special", power: 65, pp: 10, acc: 85, effect: "May lower opponent's Accuracy.", wiki: "http://www.serebii.net/attackdex-sm/octazooka.shtml"},
+ {id: "spikes", name: "Spikes", type: "Ground", cat: "Status", pp: 20, effect: "Hurts opponents when they switch into battle.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/spikes.shtml"},
+ {id: "zap cannon", name: "Zap Cannon", type: "Electric", cat: "Special", power: 120, pp: 5, acc: 50, effect: "Paralyzes opponent.", wiki: "http://www.serebii.net/attackdex-sm/zapcannon.shtml"},
+ {id: "foresight", name: "Foresight", type: "Normal", cat: "Status", pp: 40, acc: 100, effect: "Resets opponent's Evasiveness, Normal-type and Fighting-type attacks can now hit Ghosts, and Ghost-type attacks hit Normal.", zeffect: "Boosts critical-hit ratio", wiki: "http://www.serebii.net/attackdex-sm/foresight.shtml"},
+ {id: "destiny bond", name: "Destiny Bond", type: "Ghost", cat: "Status", pp: 5, effect: "If the user faints, the opponent also faints.", zeffect: "Becomes center of attention", wiki: "http://www.serebii.net/attackdex-sm/destinybond.shtml"},
+ {id: "perish song", name: "Perish Song", type: "Normal", cat: "Status", pp: 5, effect: "Any Pokémon in play when this attack is used faints in 3 turns.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/perishsong.shtml"},
+ {id: "icy wind", name: "Icy Wind", type: "Ice", cat: "Special", power: 55, pp: 15, acc: 95, effect: "Lowers opponent's Speed.", wiki: "http://www.serebii.net/attackdex-sm/icywind.shtml"},
+ {id: "detect", name: "Detect", type: "Fighting", cat: "Status", pp: 5, effect: "Opponent's attack doesn't affect you, but may fail if used often.", zeffect: "Evasiveness ↑", wiki: "http://www.serebii.net/attackdex-sm/detect.shtml"},
+ {id: "bone rush", name: "Bone Rush", type: "Ground", cat: "Physical", power: 25, pp: 10, acc: 90, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/bonerush.shtml"},
+ {id: "lock-on", name: "Lock-on", type: "Normal", cat: "Status", pp: 5, acc: 100, effect: "User's next attack is guaranteed to hit.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/lock-on.shtml"},
+ {id: "outrage", name: "Outrage", type: "Dragon", cat: "Physical", power: 120, pp: 10, acc: 100, effect: "User attacks for 2-3 turns but then becomes confused.", wiki: "http://www.serebii.net/attackdex-sm/outrage.shtml"},
+ {id: "sandstorm", name: "Sandstorm", type: "Rock", cat: "Status", pp: 10, effect: "Creates a sandstorm for 5 turns.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/sandstorm.shtml"},
+ {id: "giga drain", name: "Giga Drain", type: "Grass", cat: "Special", power: 75, pp: 10, acc: 100, effect: "User recovers half the HP inflicted on opponent.", wiki: "http://www.serebii.net/attackdex-sm/gigadrain.shtml"},
+ {id: "endure", name: "Endure", type: "Normal", cat: "Status", pp: 10, effect: "Always left with at least 1 HP, but may fail if used consecutively.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/endure.shtml"},
+ {id: "charm", name: "Charm", type: "Fairy", cat: "Status", pp: 20, acc: 100, effect: "Sharply lowers opponent's Attack.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/charm.shtml"},
+ {id: "rollout", name: "Rollout", type: "Rock", cat: "Physical", power: 30, pp: 20, acc: 90, effect: "Doubles in power each turn for 5 turns.", wiki: "http://www.serebii.net/attackdex-sm/rollout.shtml"},
+ {id: "false swipe", name: "False Swipe", type: "Normal", cat: "Physical", power: 40, pp: 40, acc: 100, effect: "Always leaves opponent with at least 1 HP.", wiki: "http://www.serebii.net/attackdex-sm/falseswipe.shtml"},
+ {id: "swagger", name: "Swagger", type: "Normal", cat: "Status", pp: 15, acc: 90, effect: "Opponent becomes confused, but its Attack is raised two stages.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/swagger.shtml"},
+ {id: "milk drink", name: "Milk Drink", type: "Normal", cat: "Status", pp: 10, effect: "User recovers half its max HP.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/milkdrink.shtml"},
+ {id: "spark", name: "Spark", type: "Electric", cat: "Physical", power: 65, pp: 20, acc: 100, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/spark.shtml"},
+ {id: "fury cutter", name: "Fury Cutter", type: "Bug", cat: "Physical", power: 40, pp: 20, acc: 95, effect: "Power increases each turn.", wiki: "http://www.serebii.net/attackdex-sm/furycutter.shtml"},
+ {id: "steel wing", name: "Steel Wing", type: "Steel", cat: "Physical", power: 70, pp: 25, acc: 90, effect: "May raise user's Defense.", wiki: "http://www.serebii.net/attackdex-sm/steelwing.shtml"},
+ {id: "mean look", name: "Mean Look", type: "Normal", cat: "Status", pp: 5, acc: 100, effect: "Opponent cannot flee or switch.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/meanlook.shtml"},
+ {id: "attract", name: "Attract", type: "Normal", cat: "Status", pp: 15, acc: 100, effect: "If opponent is the opposite gender, it's less likely to attack.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/attract.shtml"},
+ {id: "sleep talk", name: "Sleep Talk", type: "Normal", cat: "Status", pp: 10, effect: "User performs one of its own moves while sleeping.", zeffect: "Boosts critical-hit ratio", wiki: "http://www.serebii.net/attackdex-sm/sleeptalk.shtml"},
+ {id: "heal bell", name: "Heal Bell", type: "Normal", cat: "Status", pp: 5, effect: "Heals the user's party's status conditions.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/healbell.shtml"},
+ {id: "return", name: "Return", type: "Normal", cat: "Physical", pp: 20, acc: 100, effect: "Power increases with user's Happiness.", wiki: "http://www.serebii.net/attackdex-sm/return.shtml"},
+ {id: "present", name: "Present", type: "Normal", cat: "Physical", pp: 15, acc: 90, effect: "Either deals damage or heals.", wiki: "http://www.serebii.net/attackdex-sm/present.shtml"},
+ {id: "frustration", name: "Frustration", type: "Normal", cat: "Physical", pp: 20, acc: 100, effect: "Power decreases with higher Happiness.", wiki: "http://www.serebii.net/attackdex-sm/frustration.shtml"},
+ {id: "safeguard", name: "Safeguard", type: "Normal", cat: "Status", pp: 25, effect: "The user's party is protected from status conditions.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/safeguard.shtml"},
+ {id: "pain split", name: "Pain Split", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "The user's and opponent's HP becomes the average of both.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/painsplit.shtml"},
+ {id: "sacred fire", name: "Sacred Fire", type: "Fire", cat: "Physical", power: 100, pp: 5, acc: 95, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/sacredfire.shtml"},
+ {id: "magnitude", name: "Magnitude", type: "Ground", cat: "Physical", pp: 30, acc: 100, effect: "Hits with random power.", wiki: "http://www.serebii.net/attackdex-sm/magnitude.shtml"},
+ {id: "dynamic punch", name: "Dynamic Punch", type: "Fighting", cat: "Physical", power: 100, pp: 5, acc: 50, effect: "Confuses opponent.", wiki: "http://www.serebii.net/attackdex-sm/dynamicpunch.shtml"},
+ {id: "megahorn", name: "Megahorn", type: "Bug", cat: "Physical", power: 120, pp: 10, acc: 85, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/megahorn.shtml"},
+ {id: "dragon breath", name: "Dragon Breath", type: "Dragon", cat: "Special", power: 60, pp: 20, acc: 100, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/dragonbreath.shtml"},
+ {id: "baton pass", name: "Baton Pass", type: "Normal", cat: "Status", pp: 40, effect: "User switches out and gives stat changes to the incoming Pokémon.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/batonpass.shtml"},
+ {id: "encore", name: "Encore", type: "Normal", cat: "Status", pp: 5, acc: 100, effect: "Forces opponent to keep using its last move for 3 turns.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/encore.shtml"},
+ {id: "pursuit", name: "Pursuit", type: "Dark", cat: "Physical", power: 40, pp: 20, acc: 100, effect: "Double power if the opponent is switching out.", wiki: "http://www.serebii.net/attackdex-sm/pursuit.shtml"},
+ {id: "rapid spin", name: "Rapid Spin", type: "Normal", cat: "Physical", power: 20, pp: 40, acc: 100, effect: "Removes effects of trap moves.", wiki: "http://www.serebii.net/attackdex-sm/rapidspin.shtml"},
+ {id: "sweet scent", name: "Sweet Scent", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "Lowers opponent's Evasiveness.", zeffect: "Accuracy ↑", wiki: "http://www.serebii.net/attackdex-sm/sweetscent.shtml"},
+ {id: "iron tail", name: "Iron Tail", type: "Steel", cat: "Physical", power: 100, pp: 15, acc: 75, effect: "May lower opponent's Defense.", wiki: "http://www.serebii.net/attackdex-sm/irontail.shtml"},
+ {id: "metal claw", name: "Metal Claw", type: "Steel", cat: "Physical", power: 50, pp: 35, acc: 95, effect: "May raise user's Attack.", wiki: "http://www.serebii.net/attackdex-sm/metalclaw.shtml"},
+ {id: "vital throw", name: "Vital Throw", type: "Fighting", cat: "Physical", power: 70, pp: 10, effect: "User attacks last, but ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/vitalthrow.shtml"},
+ {id: "morning sun", name: "Morning Sun", type: "Normal", cat: "Status", pp: 5, effect: "User recovers HP. Amount varies with the weather.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/morningsun.shtml"},
+ {id: "synthesis", name: "Synthesis", type: "Grass", cat: "Status", pp: 5, effect: "User recovers HP. Amount varies with the weather.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/synthesis.shtml"},
+ {id: "moonlight", name: "Moonlight", type: "Fairy", cat: "Status", pp: 5, effect: "User recovers HP. Amount varies with the weather.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/moonlight.shtml"},
+ {id: "hidden power", name: "Hidden Power", type: "Normal", cat: "Special", power: 60, pp: 15, acc: 100, effect: "Type and power depends on user's IVs.", wiki: "http://www.serebii.net/attackdex-sm/hiddenpower.shtml"},
+ {id: "cross chop", name: "Cross Chop", type: "Fighting", cat: "Physical", power: 100, pp: 5, acc: 80, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/crosschop.shtml"},
+ {id: "twister", name: "Twister", type: "Dragon", cat: "Special", power: 40, pp: 20, acc: 100, effect: "May cause flinching. Hits Pokémon using Fly/Bounce with double power.", wiki: "http://www.serebii.net/attackdex-sm/twister.shtml"},
+ {id: "rain dance", name: "Rain Dance", type: "Water", cat: "Status", pp: 5, effect: "Makes it rain for 5 turns.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/raindance.shtml"},
+ {id: "sunny day", name: "Sunny Day", type: "Fire", cat: "Status", pp: 5, effect: "Makes it sunny for 5 turns.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/sunnyday.shtml"},
+ {id: "crunch", name: "Crunch", type: "Dark", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "May lower opponent's Defense.", wiki: "http://www.serebii.net/attackdex-sm/crunch.shtml"},
+ {id: "mirror coat", name: "Mirror Coat", type: "Psychic", cat: "Special", pp: 20, acc: 100, effect: "When hit by a Special Attack, user strikes back with 2x power.", wiki: "http://www.serebii.net/attackdex-sm/mirrorcoat.shtml"},
+ {id: "psych up", name: "Psych Up", type: "Normal", cat: "Status", pp: 10, effect: "Copies the opponent's stat changes.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/psychup.shtml"},
+ {id: "extreme speed", name: "Extreme Speed", type: "Normal", cat: "Physical", power: 80, pp: 5, acc: 100, effect: "User attacks first.", wiki: "http://www.serebii.net/attackdex-sm/extremespeed.shtml"},
+ {id: "ancient power", name: "Ancient Power", type: "Rock", cat: "Special", power: 60, pp: 5, acc: 100, effect: "May raise all user's stats at once.", wiki: "http://www.serebii.net/attackdex-sm/ancientpower.shtml"},
+ {id: "shadow ball", name: "Shadow Ball", type: "Ghost", cat: "Special", power: 80, pp: 15, acc: 100, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/shadowball.shtml"},
+ {id: "future sight", name: "Future Sight", type: "Psychic", cat: "Special", power: 120, pp: 10, acc: 100, effect: "Damage occurs 2 turns later.", wiki: "http://www.serebii.net/attackdex-sm/futuresight.shtml"},
+ {id: "rock smash", name: "Rock Smash", type: "Fighting", cat: "Physical", power: 40, pp: 15, acc: 100, effect: "May lower opponent's Defense.", wiki: "http://www.serebii.net/attackdex-sm/rocksmash.shtml"},
+ {id: "whirlpool", name: "Whirlpool", type: "Water", cat: "Special", power: 35, pp: 15, acc: 85, effect: "Traps opponent, damaging them for 4-5 turns.", wiki: "http://www.serebii.net/attackdex-sm/whirlpool.shtml"},
+ {id: "beat up", name: "Beat Up", type: "Dark", cat: "Physical", pp: 10, acc: 100, effect: "Each Pokémon in your party attacks.", wiki: "http://www.serebii.net/attackdex-sm/beatup.shtml"},
+ {id: "fake out", name: "Fake Out", type: "Normal", cat: "Physical", power: 40, pp: 10, acc: 100, effect: "User attacks first, foe flinches. Only usable on first turn.", wiki: "http://www.serebii.net/attackdex-sm/fakeout.shtml"},
+ {id: "uproar", name: "Uproar", type: "Normal", cat: "Special", power: 90, pp: 10, acc: 100, effect: "User attacks for 3 turns and prevents sleep.", wiki: "http://www.serebii.net/attackdex-sm/uproar.shtml"},
+ {id: "stockpile", name: "Stockpile", type: "Normal", cat: "Status", pp: 20, effect: "Stores energy for use with Spit Up and Swallow.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/stockpile.shtml"},
+ {id: "spit up", name: "Spit Up", type: "Normal", cat: "Special", pp: 10, acc: 100, effect: "Power depends on how many times the user performed Stockpile.", wiki: "http://www.serebii.net/attackdex-sm/spitup.shtml"},
+ {id: "swallow", name: "Swallow", type: "Normal", cat: "Status", pp: 10, effect: "The more times the user has performed Stockpile, the more HP is recovered.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/swallow.shtml"},
+ {id: "heat wave", name: "Heat Wave", type: "Fire", cat: "Special", power: 95, pp: 10, acc: 90, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/heatwave.shtml"},
+ {id: "hail", name: "Hail", type: "Ice", cat: "Status", pp: 10, effect: "Non-Ice types are damaged for 5 turns.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/hail.shtml"},
+ {id: "torment", name: "Torment", type: "Dark", cat: "Status", pp: 15, acc: 100, effect: "Opponent cannot use the same move in a row.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/torment.shtml"},
+ {id: "flatter", name: "Flatter", type: "Dark", cat: "Status", pp: 15, acc: 100, effect: "Confuses opponent, but raises its Special Attack by two stages.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/flatter.shtml"},
+ {id: "will-o-wisp", name: "Will-o-wisp", type: "Fire", cat: "Status", pp: 15, acc: 85, effect: "Burns opponent.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/will-o-wisp.shtml"},
+ {id: "memento", name: "Memento", type: "Dark", cat: "Status", pp: 10, acc: 100, effect: "User faints, sharply lowers opponent's Attack and Special Attack.", zeffect: "Restores replacement’s HP 100%", wiki: "http://www.serebii.net/attackdex-sm/memento.shtml"},
+ {id: "facade", name: "Facade", type: "Normal", cat: "Physical", power: 70, pp: 20, acc: 100, effect: "Power doubles if user is burned, poisoned, or paralyzed.", wiki: "http://www.serebii.net/attackdex-sm/facade.shtml"},
+ {id: "focus punch", name: "Focus Punch", type: "Fighting", cat: "Physical", power: 150, pp: 20, acc: 100, effect: "If the user is hit before attacking, it flinches instead.", wiki: "http://www.serebii.net/attackdex-sm/focuspunch.shtml"},
+ {id: "smelling salts", name: "Smelling Salts", type: "Normal", cat: "Physical", power: 70, pp: 10, acc: 100, effect: "Power doubles if opponent is paralyzed, but cures it.", wiki: "http://www.serebii.net/attackdex-sm/smellingsalts.shtml"},
+ {id: "follow me", name: "Follow Me", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "In Double Battle, the user takes all the attacks.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/followme.shtml"},
+ {id: "nature power", name: "Nature Power", type: "Normal", cat: "Status", pp: 20, effect: "Uses a certain move based on the current terrain.", wiki: "http://www.serebii.net/attackdex-sm/naturepower.shtml"},
+ {id: "charge", name: "Charge", type: "Electric", cat: "Status", pp: 20, effect: "Raises user's Special Defense and next Electric move's power increases.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/charge.shtml"},
+ {id: "taunt", name: "Taunt", type: "Dark", cat: "Status", pp: 20, acc: 100, effect: "Opponent can only use moves that attack.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/taunt.shtml"},
+ {id: "helping hand", name: "Helping Hand", type: "Normal", cat: "Status", pp: 20, effect: "In Double Battles, boosts the power of the partner's move.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/helpinghand.shtml"},
+ {id: "trick", name: "Trick", type: "Psychic", cat: "Status", pp: 10, acc: 100, effect: "Swaps held items with the opponent.", zeffect: "Speed ↑↑", wiki: "http://www.serebii.net/attackdex-sm/trick.shtml"},
+ {id: "role play", name: "Role Play", type: "Psychic", cat: "Status", pp: 10, effect: "User copies the opponent's Ability.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/roleplay.shtml"},
+ {id: "wish", name: "Wish", type: "Normal", cat: "Status", pp: 10, effect: "The user recovers HP in the following turn.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/wish.shtml"},
+ {id: "assist", name: "Assist", type: "Normal", cat: "Status", pp: 20, effect: "In a Double Battle, user randomly attacks with a partner's move.", wiki: "http://www.serebii.net/attackdex-sm/assist.shtml"},
+ {id: "ingrain", name: "Ingrain", type: "Grass", cat: "Status", pp: 20, effect: "User restores HP each turn. User cannot escape/switch.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/ingrain.shtml"},
+ {id: "superpower", name: "Superpower", type: "Fighting", cat: "Physical", power: 120, pp: 5, acc: 100, effect: "Lowers user's Attack and Defense.", wiki: "http://www.serebii.net/attackdex-sm/superpower.shtml"},
+ {id: "magic coat", name: "Magic Coat", type: "Psychic", cat: "Status", pp: 15, effect: "Reflects moves that cause status conditions back to the attacker.", zeffect: "Special Defense ↑↑", wiki: "http://www.serebii.net/attackdex-sm/magiccoat.shtml"},
+ {id: "recycle", name: "Recycle", type: "Normal", cat: "Status", pp: 10, acc: 100, effect: "User's used hold item is restored.", zeffect: "Speed ↑↑", wiki: "http://www.serebii.net/attackdex-sm/recycle.shtml"},
+ {id: "revenge", name: "Revenge", type: "Fighting", cat: "Physical", power: 60, pp: 10, acc: 100, effect: "Power increases if user was hit first.", wiki: "http://www.serebii.net/attackdex-sm/revenge.shtml"},
+ {id: "brick break", name: "Brick Break", type: "Fighting", cat: "Physical", power: 75, pp: 15, acc: 100, effect: "Breaks through Reflect and Light Screen barriers.", wiki: "http://www.serebii.net/attackdex-sm/brickbreak.shtml"},
+ {id: "yawn", name: "Yawn", type: "Normal", cat: "Status", pp: 10, acc: 100, effect: "Puts opponent to sleep in the next turn.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/yawn.shtml"},
+ {id: "knock off", name: "Knock Off", type: "Dark", cat: "Physical", power: 65, pp: 20, acc: 100, effect: "Removes opponent's held item for the rest of the battle.", wiki: "http://www.serebii.net/attackdex-sm/knockoff.shtml"},
+ {id: "endeavor", name: "Endeavor", type: "Normal", cat: "Physical", pp: 5, acc: 100, effect: "Reduces opponent's HP to same as user's.", wiki: "http://www.serebii.net/attackdex-sm/endeavor.shtml"},
+ {id: "eruption", name: "Eruption", type: "Fire", cat: "Special", power: 150, pp: 5, acc: 100, effect: "Stronger when the user's HP is higher.", wiki: "http://www.serebii.net/attackdex-sm/eruption.shtml"},
+ {id: "skill swap", name: "Skill Swap", type: "Psychic", cat: "Status", pp: 10, acc: 100, effect: "The user swaps Abilities with the opponent.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/skillswap.shtml"},
+ {id: "imprison", name: "Imprison", type: "Psychic", cat: "Status", pp: 10, acc: 100, effect: "Opponent is unable to use moves that the user also knows.", zeffect: "Special Defense ↑↑", wiki: "http://www.serebii.net/attackdex-sm/imprison.shtml"},
+ {id: "refresh", name: "Refresh", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "Cures paralysis, poison, and burns.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/refresh.shtml"},
+ {id: "grudge", name: "Grudge", type: "Ghost", cat: "Status", pp: 5, acc: 100, effect: "If the users faints after using this move, the PP for the opponent's last move is depleted.", zeffect: "Becomes center of attention", wiki: "http://www.serebii.net/attackdex-sm/grudge.shtml"},
+ {id: "snatch", name: "Snatch", type: "Dark", cat: "Status", pp: 10, acc: 100, effect: "Steals the effects of the opponent's next move.", zeffect: "Speed ↑↑", wiki: "http://www.serebii.net/attackdex-sm/snatch.shtml"},
+ {id: "secret power", name: "Secret Power", type: "Normal", cat: "Physical", power: 70, pp: 20, acc: 100, effect: "Effects of the attack vary with the location.", wiki: "http://www.serebii.net/attackdex-sm/secretpower.shtml"},
+ {id: "dive", name: "Dive", type: "Water", cat: "Physical", power: 80, pp: 10, acc: 100, effect: "Dives underwater on first turn, attacks on second turn.", wiki: "http://www.serebii.net/attackdex-sm/dive.shtml"},
+ {id: "arm thrust", name: "Arm Thrust", type: "Fighting", cat: "Physical", power: 15, pp: 20, acc: 100, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/armthrust.shtml"},
+ {id: "camouflage", name: "Camouflage", type: "Normal", cat: "Status", pp: 20, effect: "Changes user's type according to the location.", zeffect: "Evasiveness ↑", wiki: "http://www.serebii.net/attackdex-sm/camouflage.shtml"},
+ {id: "tail glow", name: "Tail Glow", type: "Bug", cat: "Status", pp: 20, effect: "Drastically raises user's Special Attack.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/tailglow.shtml"},
+ {id: "luster purge", name: "Luster Purge", type: "Psychic", cat: "Special", power: 70, pp: 5, acc: 100, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/lusterpurge.shtml"},
+ {id: "mist ball", name: "Mist Ball", type: "Psychic", cat: "Special", power: 70, pp: 5, acc: 100, effect: "May lower opponent's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/mistball.shtml"},
+ {id: "feather dance", name: "Feather Dance", type: "Flying", cat: "Status", pp: 15, acc: 100, effect: "Sharply lowers opponent's Attack.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/featherdance.shtml"},
+ {id: "teeter dance", name: "Teeter Dance", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "Confuses all Pokémon.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/teeterdance.shtml"},
+ {id: "blaze kick", name: "Blaze Kick", type: "Fire", cat: "Physical", power: 85, pp: 10, acc: 90, effect: "High critical hit ratio. May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/blazekick.shtml"},
+ {id: "mud sport", name: "Mud Sport", type: "Ground", cat: "Status", pp: 15, effect: "Weakens the power of Electric-type moves.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/mudsport.shtml"},
+ {id: "ice ball", name: "Ice Ball", type: "Ice", cat: "Physical", power: 30, pp: 20, acc: 90, effect: "Doubles in power each turn for 5 turns.", wiki: "http://www.serebii.net/attackdex-sm/iceball.shtml"},
+ {id: "needle arm", name: "Needle Arm", type: "Grass", cat: "Physical", power: 60, pp: 15, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/needlearm.shtml"},
+ {id: "slack off", name: "Slack Off", type: "Normal", cat: "Status", pp: 10, effect: "User recovers half its max HP.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/slackoff.shtml"},
+ {id: "hyper voice", name: "Hyper Voice", type: "Normal", cat: "Special", power: 90, pp: 10, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/hypervoice.shtml"},
+ {id: "poison fang", name: "Poison Fang", type: "Poison", cat: "Physical", power: 50, pp: 15, acc: 100, effect: "May badly poison opponent.", wiki: "http://www.serebii.net/attackdex-sm/poisonfang.shtml"},
+ {id: "crush claw", name: "Crush Claw", type: "Normal", cat: "Physical", power: 75, pp: 10, acc: 95, effect: "May lower opponent's Defense.", wiki: "http://www.serebii.net/attackdex-sm/crushclaw.shtml"},
+ {id: "blast burn", name: "Blast Burn", type: "Fire", cat: "Special", power: 150, pp: 5, acc: 90, effect: "User must recharge next turn.", wiki: "http://www.serebii.net/attackdex-sm/blastburn.shtml"},
+ {id: "hydro cannon", name: "Hydro Cannon", type: "Water", cat: "Special", power: 150, pp: 5, acc: 90, effect: "User must recharge next turn.", wiki: "http://www.serebii.net/attackdex-sm/hydrocannon.shtml"},
+ {id: "meteor mash", name: "Meteor Mash", type: "Steel", cat: "Physical", power: 90, pp: 10, acc: 90, effect: "May raise user's Attack.", wiki: "http://www.serebii.net/attackdex-sm/meteormash.shtml"},
+ {id: "astonish", name: "Astonish", type: "Ghost", cat: "Physical", power: 30, pp: 15, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/astonish.shtml"},
+ {id: "weather ball", name: "Weather Ball", type: "Normal", cat: "Special", power: 50, pp: 10, acc: 100, effect: "Move's power and type changes with the weather.", wiki: "http://www.serebii.net/attackdex-sm/weatherball.shtml"},
+ {id: "aromatherapy", name: "Aromatherapy", type: "Grass", cat: "Status", pp: 5, effect: "Cures all status problems in your party.", zeffect: "Restores user's HP 100%", wiki: "http://www.serebii.net/attackdex-sm/aromatherapy.shtml"},
+ {id: "fake tears", name: "Fake Tears", type: "Dark", cat: "Status", pp: 20, acc: 100, effect: "Sharply lowers opponent's Special Defense.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/faketears.shtml"},
+ {id: "air cutter", name: "Air Cutter", type: "Flying", cat: "Special", power: 60, pp: 25, acc: 95, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/aircutter.shtml"},
+ {id: "overheat", name: "Overheat", type: "Fire", cat: "Special", power: 130, pp: 5, acc: 90, effect: "Sharply lowers user's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/overheat.shtml"},
+ {id: "odor sleuth", name: "Odor Sleuth", type: "Normal", cat: "Status", pp: 40, acc: 100, effect: "Resets opponent's Evasiveness, Normal-type and Fighting-type attacks can now hit Ghosts, and Ghost-type attacks hit Normal.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/odorsleuth.shtml"},
+ {id: "rock tomb", name: "Rock Tomb", type: "Rock", cat: "Physical", power: 60, pp: 15, acc: 95, effect: "Lowers opponent's Speed.", wiki: "http://www.serebii.net/attackdex-sm/rocktomb.shtml"},
+ {id: "silver wind", name: "Silver Wind", type: "Bug", cat: "Special", power: 60, pp: 5, acc: 100, effect: "May raise all stats of user at once.", wiki: "http://www.serebii.net/attackdex-sm/silverwind.shtml"},
+ {id: "metal sound", name: "Metal Sound", type: "Steel", cat: "Status", pp: 40, acc: 85, effect: "Sharply lowers opponent's Special Defense.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/metalsound.shtml"},
+ {id: "grass whistle", name: "Grass Whistle", type: "Grass", cat: "Status", pp: 15, acc: 55, effect: "Puts opponent to sleep.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/grasswhistle.shtml"},
+ {id: "tickle", name: "Tickle", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "Lowers opponent's Attack and Defense.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/tickle.shtml"},
+ {id: "cosmic power", name: "Cosmic Power", type: "Psychic", cat: "Status", pp: 20, effect: "Raises user's Defense and Special Defense.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/cosmicpower.shtml"},
+ {id: "water spout", name: "Water Spout", type: "Water", cat: "Special", power: 150, pp: 5, acc: 100, effect: "The higher the user's HP, the higher the damage caused.", wiki: "http://www.serebii.net/attackdex-sm/waterspout.shtml"},
+ {id: "signal beam", name: "Signal Beam", type: "Bug", cat: "Special", power: 75, pp: 15, acc: 100, effect: "May confuse opponent.", wiki: "http://www.serebii.net/attackdex-sm/signalbeam.shtml"},
+ {id: "shadow punch", name: "Shadow Punch", type: "Ghost", cat: "Physical", power: 60, pp: 20, effect: "Ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/shadowpunch.shtml"},
+ {id: "extrasensory", name: "Extrasensory", type: "Psychic", cat: "Special", power: 80, pp: 20, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/extrasensory.shtml"},
+ {id: "sky uppercut", name: "Sky Uppercut", type: "Fighting", cat: "Physical", power: 85, pp: 15, acc: 90, effect: "Hits the opponent, even during Fly.", wiki: "http://www.serebii.net/attackdex-sm/skyuppercut.shtml"},
+ {id: "sand tomb", name: "Sand Tomb", type: "Ground", cat: "Physical", power: 35, pp: 15, acc: 85, effect: "Traps opponent, damaging them for 4-5 turns.", wiki: "http://www.serebii.net/attackdex-sm/sandtomb.shtml"},
+ {id: "sheer cold", name: "Sheer Cold", type: "Ice", cat: "Special", pp: 5, effect: "One-Hit-KO, if it hits.", wiki: "http://www.serebii.net/attackdex-sm/sheercold.shtml"},
+ {id: "muddy water", name: "Muddy Water", type: "Water", cat: "Special", power: 90, pp: 10, acc: 85, effect: "May lower opponent's Accuracy.", wiki: "http://www.serebii.net/attackdex-sm/muddywater.shtml"},
+ {id: "bullet seed", name: "Bullet Seed", type: "Grass", cat: "Physical", power: 25, pp: 30, acc: 100, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/bulletseed.shtml"},
+ {id: "aerial ace", name: "Aerial Ace", type: "Flying", cat: "Physical", power: 60, pp: 20, effect: "Ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/aerialace.shtml"},
+ {id: "icicle spear", name: "Icicle Spear", type: "Ice", cat: "Physical", power: 25, pp: 30, acc: 100, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/iciclespear.shtml"},
+ {id: "iron defense", name: "Iron Defense", type: "Steel", cat: "Status", pp: 15, effect: "Sharply raises user's Defense.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/irondefense.shtml"},
+ {id: "block", name: "Block", type: "Normal", cat: "Status", pp: 5, effect: "Opponent cannot flee or switch.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/block.shtml"},
+ {id: "howl", name: "Howl", type: "Normal", cat: "Status", pp: 40, effect: "Raises user's Attack.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/howl.shtml"},
+ {id: "dragon claw", name: "Dragon Claw", type: "Dragon", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/dragonclaw.shtml"},
+ {id: "frenzy plant", name: "Frenzy Plant", type: "Grass", cat: "Special", power: 150, pp: 5, acc: 90, effect: "User must recharge next turn.", wiki: "http://www.serebii.net/attackdex-sm/frenzyplant.shtml"},
+ {id: "bulk up", name: "Bulk Up", type: "Fighting", cat: "Status", pp: 20, effect: "Raises user's Attack and Defense.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/bulkup.shtml"},
+ {id: "bounce", name: "Bounce", type: "Flying", cat: "Physical", power: 85, pp: 5, acc: 85, effect: "Springs up on first turn, attacks on second. May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/bounce.shtml"},
+ {id: "mud shot", name: "Mud Shot", type: "Ground", cat: "Special", power: 55, pp: 15, acc: 95, effect: "Lowers opponent's Speed.", wiki: "http://www.serebii.net/attackdex-sm/mudshot.shtml"},
+ {id: "poison tail", name: "Poison Tail", type: "Poison", cat: "Physical", power: 50, pp: 25, acc: 100, effect: "High critical hit ratio. May poison opponent.", wiki: "http://www.serebii.net/attackdex-sm/poisontail.shtml"},
+ {id: "covet", name: "Covet", type: "Normal", cat: "Physical", power: 60, pp: 25, acc: 100, effect: "Opponent's item is stolen by the user.", wiki: "http://www.serebii.net/attackdex-sm/covet.shtml"},
+ {id: "volt tackle", name: "Volt Tackle", type: "Electric", cat: "Physical", power: 120, pp: 15, acc: 100, effect: "User receives recoil damage. May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/volttackle.shtml"},
+ {id: "magical leaf", name: "Magical Leaf", type: "Grass", cat: "Special", power: 60, pp: 20, effect: "Ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/magicalleaf.shtml"},
+ {id: "water sport", name: "Water Sport", type: "Water", cat: "Status", pp: 15, acc: 100, effect: "Weakens the power of Fire-type moves.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/watersport.shtml"},
+ {id: "calm mind", name: "Calm Mind", type: "Psychic", cat: "Status", pp: 20, effect: "Raises user's Special Attack and Special Defense.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/calmmind.shtml"},
+ {id: "leaf blade", name: "Leaf Blade", type: "Grass", cat: "Physical", power: 90, pp: 15, acc: 100, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/leafblade.shtml"},
+ {id: "dragon dance", name: "Dragon Dance", type: "Dragon", cat: "Status", pp: 20, effect: "Raises user's Attack and Speed.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/dragondance.shtml"},
+ {id: "rock blast", name: "Rock Blast", type: "Rock", cat: "Physical", power: 25, pp: 10, acc: 90, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/rockblast.shtml"},
+ {id: "shock wave", name: "Shock Wave", type: "Electric", cat: "Special", power: 60, pp: 20, effect: "Ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/shockwave.shtml"},
+ {id: "water pulse", name: "Water Pulse", type: "Water", cat: "Special", power: 60, pp: 20, acc: 100, effect: "May confuse opponent.", wiki: "http://www.serebii.net/attackdex-sm/waterpulse.shtml"},
+ {id: "doom desire", name: "Doom Desire", type: "Steel", cat: "Special", power: 140, pp: 5, acc: 100, effect: "Damage occurs 2 turns later.", wiki: "http://www.serebii.net/attackdex-sm/doomdesire.shtml"},
+ {id: "psycho boost", name: "Psycho Boost", type: "Psychic", cat: "Special", power: 140, pp: 5, acc: 90, effect: "Sharply lowers user's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/psychoboost.shtml"},
+ {id: "roost", name: "Roost", type: "Flying", cat: "Status", pp: 10, effect: "User recovers half of its max HP and loses the Flying type temporarily.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/roost.shtml"},
+ {id: "gravity", name: "Gravity", type: "Psychic", cat: "Status", pp: 5, effect: "Prevents moves like Fly and Bounce and the Ability Levitate for 5 turns.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/gravity.shtml"},
+ {id: "miracle eye", name: "Miracle Eye", type: "Psychic", cat: "Status", pp: 40, effect: "Resets opponent's Evasiveness, removes Dark's Psychic immunity.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/miracleeye.shtml"},
+ {id: "wake-up slap", name: "Wake-up Slap", type: "Fighting", cat: "Physical", power: 70, pp: 10, acc: 100, effect: "Power doubles if opponent is asleep, but wakes it up.", wiki: "http://www.serebii.net/attackdex-sm/wake-upslap.shtml"},
+ {id: "hammer arm", name: "Hammer Arm", type: "Fighting", cat: "Physical", power: 100, pp: 10, acc: 90, effect: "Lowers user's Speed.", wiki: "http://www.serebii.net/attackdex-sm/hammerarm.shtml"},
+ {id: "gyro ball", name: "Gyro Ball", type: "Steel", cat: "Physical", pp: 5, acc: 100, effect: "The slower the user, the stronger the attack.", wiki: "http://www.serebii.net/attackdex-sm/gyroball.shtml"},
+ {id: "healing wish", name: "Healing Wish", type: "Psychic", cat: "Status", pp: 10, effect: "The user faints and the next Pokémon released is fully healed.", wiki: "http://www.serebii.net/attackdex-sm/healingwish.shtml"},
+ {id: "brine", name: "Brine", type: "Water", cat: "Special", power: 65, pp: 10, acc: 100, effect: "Power doubles if opponent's HP is less than 50%.", wiki: "http://www.serebii.net/attackdex-sm/brine.shtml"},
+ {id: "natural gift", name: "Natural Gift", type: "Normal", cat: "Physical", pp: 15, acc: 100, effect: "Power and type depend on the user's held berry.", wiki: "http://www.serebii.net/attackdex-sm/naturalgift.shtml"},
+ {id: "feint", name: "Feint", type: "Normal", cat: "Physical", power: 30, pp: 10, acc: 100, effect: "Only hits if opponent uses Protect or Detect in the same turn.", wiki: "http://www.serebii.net/attackdex-sm/feint.shtml"},
+ {id: "pluck", name: "Pluck", type: "Flying", cat: "Physical", power: 60, pp: 20, acc: 100, effect: "If the opponent is holding a berry, its effect is stolen by user.", wiki: "http://www.serebii.net/attackdex-sm/pluck.shtml"},
+ {id: "tailwind", name: "Tailwind", type: "Flying", cat: "Status", pp: 15, effect: "Doubles Speed for 4 turns.", zeffect: "Boosts critical-hit ratio", wiki: "http://www.serebii.net/attackdex-sm/tailwind.shtml"},
+ {id: "acupressure", name: "Acupressure", type: "Normal", cat: "Status", pp: 30, effect: "Sharply raises a random stat.", zeffect: "Boosts critical-hit ratio", wiki: "http://www.serebii.net/attackdex-sm/acupressure.shtml"},
+ {id: "metal burst", name: "Metal Burst", type: "Steel", cat: "Physical", pp: 10, acc: 100, effect: "Deals damage equal to 1.5x opponent's attack.", wiki: "http://www.serebii.net/attackdex-sm/metalburst.shtml"},
+ {id: "u-turn", name: "U-turn", type: "Bug", cat: "Physical", power: 70, pp: 20, acc: 100, effect: "User switches out immediately after attacking.", wiki: "http://www.serebii.net/attackdex-sm/u-turn.shtml"},
+ {id: "close combat", name: "Close Combat", type: "Fighting", cat: "Physical", power: 120, pp: 5, acc: 100, effect: "Lowers user's Defense and Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/closecombat.shtml"},
+ {id: "payback", name: "Payback", type: "Dark", cat: "Physical", power: 50, pp: 10, acc: 100, effect: "Power doubles if the user was attacked first.", wiki: "http://www.serebii.net/attackdex-sm/payback.shtml"},
+ {id: "assurance", name: "Assurance", type: "Dark", cat: "Physical", power: 60, pp: 10, acc: 100, effect: "Power doubles if opponent already took damage in the same turn.", wiki: "http://www.serebii.net/attackdex-sm/assurance.shtml"},
+ {id: "embargo", name: "Embargo", type: "Dark", cat: "Status", pp: 15, acc: 100, effect: "Opponent cannot use items.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/embargo.shtml"},
+ {id: "fling", name: "Fling", type: "Dark", cat: "Physical", pp: 10, acc: 100, effect: "Power depends on held item.", wiki: "http://www.serebii.net/attackdex-sm/fling.shtml"},
+ {id: "psycho shift", name: "Psycho Shift", type: "Psychic", cat: "Status", pp: 10, acc: 100, effect: "Gives the opponent the user's status condition, if it hits.", zeffect: "Special Attack ↑↑", wiki: "http://www.serebii.net/attackdex-sm/psychoshift.shtml"},
+ {id: "trump card", name: "Trump Card", type: "Normal", cat: "Special", pp: 5, effect: "The lower the PP, the higher the power.", wiki: "http://www.serebii.net/attackdex-sm/trumpcard.shtml"},
+ {id: "heal block", name: "Heal Block", type: "Psychic", cat: "Status", pp: 15, acc: 100, effect: "Prevents the opponent from restoring HP for 5 turns.", zeffect: "Special Attack ↑↑", wiki: "http://www.serebii.net/attackdex-sm/healblock.shtml"},
+ {id: "wring out", name: "Wring Out", type: "Normal", cat: "Special", pp: 5, acc: 100, effect: "The higher the opponent's HP, the higher the damage.", wiki: "http://www.serebii.net/attackdex-sm/wringout.shtml"},
+ {id: "power trick", name: "Power Trick", type: "Psychic", cat: "Status", pp: 10, effect: "User's own Attack and Defense switch.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/powertrick.shtml"},
+ {id: "gastro acid", name: "Gastro Acid", type: "Poison", cat: "Status", pp: 10, acc: 100, effect: "Cancels out the effect of the opponent's Ability.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/gastroacid.shtml"},
+ {id: "lucky chant", name: "Lucky Chant", type: "Normal", cat: "Status", pp: 30, effect: "Opponent cannot land critical hits for 5 turns.", zeffect: "Evasiveness ↑", wiki: "http://www.serebii.net/attackdex-sm/luckychant.shtml"},
+ {id: "me first", name: "Me First", type: "Normal", cat: "Status", pp: 20, effect: "User copies the opponent's attack with 1.5× power.", zeffect: "Speed ↑↑", wiki: "http://www.serebii.net/attackdex-sm/mefirst.shtml"},
+ {id: "copycat", name: "Copycat", type: "Normal", cat: "Status", pp: 20, effect: "Copies opponent's last move.", zeffect: "Accuracy ↑", wiki: "http://www.serebii.net/attackdex-sm/copycat.shtml"},
+ {id: "power swap", name: "Power Swap", type: "Psychic", cat: "Status", pp: 10, effect: "User and opponent swap Attack and Special Attack.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/powerswap.shtml"},
+ {id: "guard swap", name: "Guard Swap", type: "Psychic", cat: "Status", pp: 10, effect: "User and opponent swap Defense and Special Defense.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/guardswap.shtml"},
+ {id: "punishment", name: "Punishment", type: "Dark", cat: "Physical", pp: 5, acc: 100, effect: "Power increases when opponent's stats have been raised.", wiki: "http://www.serebii.net/attackdex-sm/punishment.shtml"},
+ {id: "last resort", name: "Last Resort", type: "Normal", cat: "Physical", power: 140, pp: 5, acc: 100, effect: "Can only be used after all other moves are used.", wiki: "http://www.serebii.net/attackdex-sm/lastresort.shtml"},
+ {id: "worry seed", name: "Worry Seed", type: "Grass", cat: "Status", pp: 10, acc: 100, effect: "Changes the opponent's Ability to Insomnia.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/worryseed.shtml"},
+ {id: "sucker punch", name: "Sucker Punch", type: "Dark", cat: "Physical", power: 80, pp: 5, acc: 100, effect: "User attacks first, but only works if opponent is readying an attack.", wiki: "http://www.serebii.net/attackdex-sm/suckerpunch.shtml"},
+ {id: "toxic spikes", name: "Toxic Spikes", type: "Poison", cat: "Status", pp: 20, effect: "Poisons opponents when they switch into battle.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/toxicspikes.shtml"},
+ {id: "heart swap", name: "Heart Swap", type: "Psychic", cat: "Status", pp: 10, effect: "Stat changes are swapped with the opponent.", zeffect: "Boosts critical-hit ratio", wiki: "http://www.serebii.net/attackdex-sm/heartswap.shtml"},
+ {id: "aqua ring", name: "Aqua Ring", type: "Water", cat: "Status", pp: 20, effect: "Restores a little HP each turn.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/aquaring.shtml"},
+ {id: "magnet rise", name: "Magnet Rise", type: "Electric", cat: "Status", pp: 10, effect: "User becomes immune to Ground-type moves for 5 turns.", zeffect: "Evasiveness ↑", wiki: "http://www.serebii.net/attackdex-sm/magnetrise.shtml"},
+ {id: "flare blitz", name: "Flare Blitz", type: "Fire", cat: "Physical", power: 120, pp: 15, acc: 100, effect: "User receives recoil damage. May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/flareblitz.shtml"},
+ {id: "force palm", name: "Force Palm", type: "Fighting", cat: "Physical", power: 60, pp: 10, acc: 100, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/forcepalm.shtml"},
+ {id: "aura sphere", name: "Aura Sphere", type: "Fighting", cat: "Special", power: 80, pp: 20, effect: "Ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/aurasphere.shtml"},
+ {id: "rock polish", name: "Rock Polish", type: "Rock", cat: "Status", pp: 20, effect: "Sharply raises user's Speed.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/rockpolish.shtml"},
+ {id: "poison jab", name: "Poison Jab", type: "Poison", cat: "Physical", power: 80, pp: 20, acc: 100, effect: "May poison the opponent.", wiki: "http://www.serebii.net/attackdex-sm/poisonjab.shtml"},
+ {id: "dark pulse", name: "Dark Pulse", type: "Dark", cat: "Special", power: 80, pp: 15, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/darkpulse.shtml"},
+ {id: "night slash", name: "Night Slash", type: "Dark", cat: "Physical", power: 70, pp: 15, acc: 100, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/nightslash.shtml"},
+ {id: "aqua tail", name: "Aqua Tail", type: "Water", cat: "Physical", power: 90, pp: 10, acc: 90, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/aquatail.shtml"},
+ {id: "seed bomb", name: "Seed Bomb", type: "Grass", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/seedbomb.shtml"},
+ {id: "air slash", name: "Air Slash", type: "Flying", cat: "Special", power: 75, pp: 15, acc: 95, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/airslash.shtml"},
+ {id: "x-scissor", name: "X-Scissor", type: "Bug", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/x-scissor.shtml"},
+ {id: "bug buzz", name: "Bug Buzz", type: "Bug", cat: "Special", power: 90, pp: 10, acc: 100, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/bugbuzz.shtml"},
+ {id: "dragon pulse", name: "Dragon Pulse", type: "Dragon", cat: "Special", power: 85, pp: 10, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/dragonpulse.shtml"},
+ {id: "dragon rush", name: "Dragon Rush", type: "Dragon", cat: "Physical", power: 100, pp: 10, acc: 75, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/dragonrush.shtml"},
+ {id: "power gem", name: "Power Gem", type: "Rock", cat: "Special", power: 80, pp: 20, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/powergem.shtml"},
+ {id: "drain punch", name: "Drain Punch", type: "Fighting", cat: "Physical", power: 75, pp: 10, acc: 100, effect: "User recovers half the HP inflicted on opponent.", wiki: "http://www.serebii.net/attackdex-sm/drainpunch.shtml"},
+ {id: "vacuum wave", name: "Vacuum Wave", type: "Fighting", cat: "Special", power: 40, pp: 30, acc: 100, effect: "User attacks first.", wiki: "http://www.serebii.net/attackdex-sm/vacuumwave.shtml"},
+ {id: "focus blast", name: "Focus Blast", type: "Fighting", cat: "Special", power: 120, pp: 5, acc: 70, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/focusblast.shtml"},
+ {id: "energy ball", name: "Energy Ball", type: "Grass", cat: "Special", power: 90, pp: 10, acc: 100, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/energyball.shtml"},
+ {id: "brave bird", name: "Brave Bird", type: "Flying", cat: "Physical", power: 120, pp: 15, acc: 100, effect: "User receives recoil damage.", wiki: "http://www.serebii.net/attackdex-sm/bravebird.shtml"},
+ {id: "earth power", name: "Earth Power", type: "Ground", cat: "Special", power: 90, pp: 10, acc: 100, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/earthpower.shtml"},
+ {id: "switcheroo", name: "Switcheroo", type: "Dark", cat: "Status", pp: 10, acc: 100, effect: "Swaps held items with the opponent.", zeffect: "Speed ↑↑", wiki: "http://www.serebii.net/attackdex-sm/switcheroo.shtml"},
+ {id: "giga impact", name: "Giga Impact", type: "Normal", cat: "Physical", power: 150, pp: 5, acc: 90, effect: "User must recharge next turn.", wiki: "http://www.serebii.net/attackdex-sm/gigaimpact.shtml"},
+ {id: "nasty plot", name: "Nasty Plot", type: "Dark", cat: "Status", pp: 20, effect: "Sharply raises user's Special Attack.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/nastyplot.shtml"},
+ {id: "bullet punch", name: "Bullet Punch", type: "Steel", cat: "Physical", power: 40, pp: 30, acc: 100, effect: "User attacks first.", wiki: "http://www.serebii.net/attackdex-sm/bulletpunch.shtml"},
+ {id: "avalanche", name: "Avalanche", type: "Ice", cat: "Physical", power: 60, pp: 10, acc: 100, effect: "Power doubles if user took damage first.", wiki: "http://www.serebii.net/attackdex-sm/avalanche.shtml"},
+ {id: "ice shard", name: "Ice Shard", type: "Ice", cat: "Physical", power: 40, pp: 30, acc: 100, effect: "User attacks first.", wiki: "http://www.serebii.net/attackdex-sm/iceshard.shtml"},
+ {id: "shadow claw", name: "Shadow Claw", type: "Ghost", cat: "Physical", power: 70, pp: 15, acc: 100, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/shadowclaw.shtml"},
+ {id: "thunder fang", name: "Thunder Fang", type: "Electric", cat: "Physical", power: 65, pp: 15, acc: 95, effect: "May cause flinching and/or paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/thunderfang.shtml"},
+ {id: "ice fang", name: "Ice Fang", type: "Ice", cat: "Physical", power: 65, pp: 15, acc: 95, effect: "May cause flinching and/or freeze opponent.", wiki: "http://www.serebii.net/attackdex-sm/icefang.shtml"},
+ {id: "fire fang", name: "Fire Fang", type: "Fire", cat: "Physical", power: 65, pp: 15, acc: 95, effect: "May cause flinching and/or burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/firefang.shtml"},
+ {id: "shadow sneak", name: "Shadow Sneak", type: "Ghost", cat: "Physical", power: 40, pp: 30, acc: 100, effect: "User attacks first.", wiki: "http://www.serebii.net/attackdex-sm/shadowsneak.shtml"},
+ {id: "mud bomb", name: "Mud Bomb", type: "Ground", cat: "Special", power: 65, pp: 10, acc: 85, effect: "May lower opponent's Accuracy.", wiki: "http://www.serebii.net/attackdex-sm/mudbomb.shtml"},
+ {id: "psycho cut", name: "Psycho Cut", type: "Psychic", cat: "Physical", power: 70, pp: 20, acc: 100, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/psychocut.shtml"},
+ {id: "zen headbutt", name: "Zen Headbutt", type: "Psychic", cat: "Physical", power: 80, pp: 15, acc: 90, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/zenheadbutt.shtml"},
+ {id: "mirror shot", name: "Mirror Shot", type: "Steel", cat: "Special", power: 65, pp: 10, acc: 85, effect: "May lower opponent's Accuracy.", wiki: "http://www.serebii.net/attackdex-sm/mirrorshot.shtml"},
+ {id: "flash cannon", name: "Flash Cannon", type: "Steel", cat: "Special", power: 80, pp: 10, acc: 100, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/flashcannon.shtml"},
+ {id: "rock climb", name: "Rock Climb", type: "Normal", cat: "Physical", power: 90, pp: 20, acc: 85, effect: "May confuse opponent.", wiki: "http://www.serebii.net/attackdex-sm/rockclimb.shtml"},
+ {id: "defog", name: "Defog", type: "Flying", cat: "Status", pp: 15, effect: "Lowers opponent's Evasiveness and clears fog.", zeffect: "Accuracy ↑", wiki: "http://www.serebii.net/attackdex-sm/defog.shtml"},
+ {id: "trick room", name: "Trick Room", type: "Psychic", cat: "Status", pp: 5, effect: "Slower Pokémon move first in the turn for 5 turns.", zeffect: "Accuracy ↑", wiki: "http://www.serebii.net/attackdex-sm/trickroom.shtml"},
+ {id: "draco meteor", name: "Draco Meteor", type: "Dragon", cat: "Special", power: 130, pp: 5, acc: 90, effect: "Sharply lowers user's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/dracometeor.shtml"},
+ {id: "discharge", name: "Discharge", type: "Electric", cat: "Special", power: 80, pp: 15, acc: 100, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/discharge.shtml"},
+ {id: "lava plume", name: "Lava Plume", type: "Fire", cat: "Special", power: 80, pp: 15, acc: 100, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/lavaplume.shtml"},
+ {id: "leaf storm", name: "Leaf Storm", type: "Grass", cat: "Special", power: 130, pp: 5, acc: 90, effect: "Sharply lowers user's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/leafstorm.shtml"},
+ {id: "power whip", name: "Power Whip", type: "Grass", cat: "Physical", power: 120, pp: 10, acc: 85, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/powerwhip.shtml"},
+ {id: "rock wrecker", name: "Rock Wrecker", type: "Rock", cat: "Physical", power: 150, pp: 5, acc: 90, effect: "User must recharge next turn.", wiki: "http://www.serebii.net/attackdex-sm/rockwrecker.shtml"},
+ {id: "cross poison", name: "Cross Poison", type: "Poison", cat: "Physical", power: 70, pp: 20, acc: 100, effect: "High critical hit ratio. May poison opponent.", wiki: "http://www.serebii.net/attackdex-sm/crosspoison.shtml"},
+ {id: "gunk shot", name: "Gunk Shot", type: "Poison", cat: "Physical", power: 120, pp: 5, acc: 80, effect: "May poison opponent.", wiki: "http://www.serebii.net/attackdex-sm/gunkshot.shtml"},
+ {id: "iron head", name: "Iron Head", type: "Steel", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/ironhead.shtml"},
+ {id: "magnet bomb", name: "Magnet Bomb", type: "Steel", cat: "Physical", power: 60, pp: 20, effect: "Ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/magnetbomb.shtml"},
+ {id: "stone edge", name: "Stone Edge", type: "Rock", cat: "Physical", power: 100, pp: 5, acc: 80, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/stoneedge.shtml"},
+ {id: "captivate", name: "Captivate", type: "Normal", cat: "Status", pp: 20, acc: 100, effect: "Sharply lowers opponent's Special Attack if opposite gender.", zeffect: "Special Defense ↑↑", wiki: "http://www.serebii.net/attackdex-sm/captivate.shtml"},
+ {id: "stealth rock", name: "Stealth Rock", type: "Rock", cat: "Status", pp: 20, effect: "Damages opponent switching into battle.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/stealthrock.shtml"},
+ {id: "grass knot", name: "Grass Knot", type: "Grass", cat: "Special", pp: 20, acc: 100, effect: "The heavier the opponent, the stronger the attack.", wiki: "http://www.serebii.net/attackdex-sm/grassknot.shtml"},
+ {id: "chatter", name: "Chatter", type: "Flying", cat: "Special", power: 65, pp: 20, acc: 100, effect: "Confuses opponent.", wiki: "http://www.serebii.net/attackdex-sm/chatter.shtml"},
+ {id: "judgment", name: "Judgment", type: "Normal", cat: "Special", power: 100, pp: 10, acc: 100, effect: "Type depends on the Arceus Plate being held.", wiki: "http://www.serebii.net/attackdex-sm/judgment.shtml"},
+ {id: "bug bite", name: "Bug Bite", type: "Bug", cat: "Physical", power: 60, pp: 20, acc: 100, effect: "Receives the effect from the opponent's held berry.", wiki: "http://www.serebii.net/attackdex-sm/bugbite.shtml"},
+ {id: "charge beam", name: "Charge Beam", type: "Electric", cat: "Special", power: 50, pp: 10, acc: 90, effect: "May raise user's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/chargebeam.shtml"},
+ {id: "wood hammer", name: "Wood Hammer", type: "Grass", cat: "Physical", power: 120, pp: 15, acc: 100, effect: "User receives recoil damage.", wiki: "http://www.serebii.net/attackdex-sm/woodhammer.shtml"},
+ {id: "aqua jet", name: "Aqua Jet", type: "Water", cat: "Physical", power: 40, pp: 20, acc: 100, effect: "User attacks first.", wiki: "http://www.serebii.net/attackdex-sm/aquajet.shtml"},
+ {id: "attack order", name: "Attack Order", type: "Bug", cat: "Physical", power: 90, pp: 15, acc: 100, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/attackorder.shtml"},
+ {id: "defend order", name: "Defend Order", type: "Bug", cat: "Status", pp: 10, effect: "Raises user's Defense and Special Defense.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/defendorder.shtml"},
+ {id: "heal order", name: "Heal Order", type: "Bug", cat: "Status", pp: 10, effect: "User recovers half its max HP.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/healorder.shtml"},
+ {id: "head smash", name: "Head Smash", type: "Rock", cat: "Physical", power: 150, pp: 5, acc: 80, effect: "User receives recoil damage.", wiki: "http://www.serebii.net/attackdex-sm/headsmash.shtml"},
+ {id: "double hit", name: "Double Hit", type: "Normal", cat: "Physical", power: 35, pp: 10, acc: 90, effect: "Hits twice in one turn.", wiki: "http://www.serebii.net/attackdex-sm/doublehit.shtml"},
+ {id: "roar of time", name: "Roar Of Time", type: "Dragon", cat: "Special", power: 150, pp: 5, acc: 90, effect: "User must recharge next turn.", wiki: "http://www.serebii.net/attackdex-sm/roaroftime.shtml"},
+ {id: "spacial rend", name: "Spacial Rend", type: "Dragon", cat: "Special", power: 100, pp: 5, acc: 95, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/spacialrend.shtml"},
+ {id: "lunar dance", name: "Lunar Dance", type: "Psychic", cat: "Status", pp: 10, effect: "The user faints but the next Pokémon released is fully healed.", wiki: "http://www.serebii.net/attackdex-sm/lunardance.shtml"},
+ {id: "crush grip", name: "Crush Grip", type: "Normal", cat: "Physical", pp: 5, acc: 100, effect: "More powerful when opponent has higher HP.", wiki: "http://www.serebii.net/attackdex-sm/crushgrip.shtml"},
+ {id: "magma storm", name: "Magma Storm", type: "Fire", cat: "Special", power: 100, pp: 5, acc: 75, effect: "Traps opponent, damaging them for 4-5 turns.", wiki: "http://www.serebii.net/attackdex-sm/magmastorm.shtml"},
+ {id: "dark void", name: "Dark Void", type: "Dark", cat: "Status", pp: 10, acc: 80, effect: "Puts all adjacent opponents to sleep.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/darkvoid.shtml"},
+ {id: "seed flare", name: "Seed Flare", type: "Grass", cat: "Special", power: 120, pp: 5, acc: 85, effect: "May lower opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/seedflare.shtml"},
+ {id: "ominous wind", name: "Ominous Wind", type: "Ghost", cat: "Special", power: 60, pp: 5, acc: 100, effect: "May raise all user's stats at once.", wiki: "http://www.serebii.net/attackdex-sm/ominouswind.shtml"},
+ {id: "shadow force", name: "Shadow Force", type: "Ghost", cat: "Physical", power: 120, pp: 5, acc: 100, effect: "Disappears on first turn, attacks on second. Can strike through Protect/Detect.", wiki: "http://www.serebii.net/attackdex-sm/shadowforce.shtml"},
+ {id: "hone claws", name: "Hone Claws", type: "Dark", cat: "Status", pp: 15, effect: "Raises user's Attack and Accuracy.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/honeclaws.shtml"},
+ {id: "wide guard", name: "Wide Guard", type: "Rock", cat: "Status", pp: 10, effect: "Protects the user's team from multi-target attacks.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/wideguard.shtml"},
+ {id: "guard split", name: "Guard Split", type: "Psychic", cat: "Status", pp: 10, effect: "Averages Defense and Special Defense with the target.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/guardsplit.shtml"},
+ {id: "power split", name: "Power Split", type: "Psychic", cat: "Status", pp: 10, effect: "Averages Attack and Special Attack with the target.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/powersplit.shtml"},
+ {id: "wonder room", name: "Wonder Room", type: "Psychic", cat: "Status", pp: 10, effect: "Swaps every Pokémon's Defense and Special Defense for 5 turns.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/wonderroom.shtml"},
+ {id: "psyshock", name: "Psyshock", type: "Psychic", cat: "Special", power: 80, pp: 10, acc: 100, effect: "Inflicts damage based on the target's Defense, not Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/psyshock.shtml"},
+ {id: "venoshock", name: "Venoshock", type: "Poison", cat: "Special", power: 65, pp: 10, acc: 100, effect: "Inflicts double damage if the target is poisoned.", wiki: "http://www.serebii.net/attackdex-sm/venoshock.shtml"},
+ {id: "autotomize", name: "Autotomize", type: "Steel", cat: "Status", pp: 15, effect: "Halves weight and sharply raises Speed.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/autotomize.shtml"},
+ {id: "rage powder", name: "Rage Powder", type: "Bug", cat: "Status", pp: 20, effect: "Forces attacks to hit user, not team-mates.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/ragepowder.shtml"},
+ {id: "telekinesis", name: "Telekinesis", type: "Psychic", cat: "Status", pp: 15, effect: "Ignores opponent's Evasiveness for three turns, add Ground immunity.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/telekinesis.shtml"},
+ {id: "magic room", name: "Magic Room", type: "Psychic", cat: "Status", pp: 10, effect: "Suppresses the effects of held items for five turns.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/magicroom.shtml"},
+ {id: "smack down", name: "Smack Down", type: "Rock", cat: "Physical", power: 50, pp: 15, acc: 100, effect: "Makes Flying-type Pokémon vulnerable to Ground moves.", wiki: "http://www.serebii.net/attackdex-sm/smackdown.shtml"},
+ {id: "storm throw", name: "Storm Throw", type: "Fighting", cat: "Physical", power: 60, pp: 10, acc: 100, effect: "Always results in a critical hit.", wiki: "http://www.serebii.net/attackdex-sm/stormthrow.shtml"},
+ {id: "flame burst", name: "Flame Burst", type: "Fire", cat: "Special", power: 70, pp: 15, acc: 100, effect: "May also injure nearby Pokémon.", wiki: "http://www.serebii.net/attackdex-sm/flameburst.shtml"},
+ {id: "sludge wave", name: "Sludge Wave", type: "Poison", cat: "Special", power: 95, pp: 10, acc: 100, effect: "May poison opponent.", wiki: "http://www.serebii.net/attackdex-sm/sludgewave.shtml"},
+ {id: "quiver dance", name: "Quiver Dance", type: "Bug", cat: "Status", pp: 20, effect: "Raises user's Special Attack, Special Defense and Speed.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/quiverdance.shtml"},
+ {id: "heavy slam", name: "Heavy Slam", type: "Steel", cat: "Physical", pp: 10, acc: 100, effect: "The heavier the user, the stronger the attack.", wiki: "http://www.serebii.net/attackdex-sm/heavyslam.shtml"},
+ {id: "synchronoise", name: "Synchronoise", type: "Psychic", cat: "Special", power: 120, pp: 15, acc: 100, effect: "Hits any Pokémon that shares a type with the user.", wiki: "http://www.serebii.net/attackdex-sm/synchronoise.shtml"},
+ {id: "electro ball", name: "Electro Ball", type: "Electric", cat: "Special", pp: 10, acc: 100, effect: "The faster the user, the stronger the attack.", wiki: "http://www.serebii.net/attackdex-sm/electroball.shtml"},
+ {id: "soak", name: "Soak", type: "Water", cat: "Status", pp: 20, acc: 100, effect: "Changes the target's type to water.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/soak.shtml"},
+ {id: "flame charge", name: "Flame Charge", type: "Fire", cat: "Physical", power: 50, pp: 20, acc: 100, effect: "Raises user's Speed.", wiki: "http://www.serebii.net/attackdex-sm/flamecharge.shtml"},
+ {id: "coil", name: "Coil", type: "Poison", cat: "Status", pp: 20, effect: "Raises user's Attack, Defense and Accuracy.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/coil.shtml"},
+ {id: "low sweep", name: "Low Sweep", type: "Fighting", cat: "Physical", power: 65, pp: 20, acc: 100, effect: "Lowers opponent's Speed.", wiki: "http://www.serebii.net/attackdex-sm/lowsweep.shtml"},
+ {id: "acid spray", name: "Acid Spray", type: "Poison", cat: "Special", power: 40, pp: 20, acc: 100, effect: "Sharply lowers opponent's Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/acidspray.shtml"},
+ {id: "foul play", name: "Foul Play", type: "Dark", cat: "Physical", power: 95, pp: 15, acc: 100, effect: "Uses the opponent's Attack stat.", wiki: "http://www.serebii.net/attackdex-sm/foulplay.shtml"},
+ {id: "simple beam", name: "Simple Beam", type: "Normal", cat: "Status", pp: 15, acc: 100, effect: "Changes target's ability to Simple.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/simplebeam.shtml"},
+ {id: "entrainment", name: "Entrainment", type: "Normal", cat: "Status", pp: 15, acc: 100, effect: "Makes target's ability same as user's.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/entrainment.shtml"},
+ {id: "after you", name: "After You", type: "Normal", cat: "Status", pp: 15, effect: "Gives target priority in the next turn.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/afteryou.shtml"},
+ {id: "round", name: "Round", type: "Normal", cat: "Special", power: 60, pp: 15, acc: 100, effect: "Power increases if teammates use it in the same turn.", wiki: "http://www.serebii.net/attackdex-sm/round.shtml"},
+ {id: "echoed voice", name: "Echoed Voice", type: "Normal", cat: "Special", power: 40, pp: 15, acc: 100, effect: "Power increases each turn.", wiki: "http://www.serebii.net/attackdex-sm/echoedvoice.shtml"},
+ {id: "chip away", name: "Chip Away", type: "Normal", cat: "Physical", power: 70, pp: 20, acc: 100, effect: "Ignores opponent's stat changes.", wiki: "http://www.serebii.net/attackdex-sm/chipaway.shtml"},
+ {id: "clear smog", name: "Clear Smog", type: "Poison", cat: "Special", power: 50, pp: 15, effect: "Removes all of the target's stat changes.", wiki: "http://www.serebii.net/attackdex-sm/clearsmog.shtml"},
+ {id: "stored power", name: "Stored Power", type: "Psychic", cat: "Special", power: 20, pp: 10, acc: 100, effect: "Power increases when user's stats have been raised.", wiki: "http://www.serebii.net/attackdex-sm/storedpower.shtml"},
+ {id: "quick guard", name: "Quick Guard", type: "Fighting", cat: "Status", pp: 15, effect: "Fast moves won't damage the user or its teammates.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/quickguard.shtml"},
+ {id: "ally switch", name: "Ally Switch", type: "Psychic", cat: "Status", pp: 15, effect: "User switches with opposite teammate.", zeffect: "Speed ↑↑", wiki: "http://www.serebii.net/attackdex-sm/allyswitch.shtml"},
+ {id: "scald", name: "Scald", type: "Water", cat: "Special", power: 80, pp: 15, acc: 100, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/scald.shtml"},
+ {id: "shell smash", name: "Shell Smash", type: "Normal", cat: "Status", pp: 15, effect: "Sharply raises user's Attack, Special Attack and Speed but lowers Defense and Special Defense.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/shellsmash.shtml"},
+ {id: "heal pulse", name: "Heal Pulse", type: "Psychic", cat: "Status", pp: 10, effect: "Restores half the target's max HP.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/healpulse.shtml"},
+ {id: "hex", name: "Hex", type: "Ghost", cat: "Special", power: 65, pp: 10, acc: 100, effect: "Inflicts more damage if the target has a status condition.", wiki: "http://www.serebii.net/attackdex-sm/hex.shtml"},
+ {id: "sky drop", name: "Sky Drop", type: "Flying", cat: "Physical", power: 60, pp: 10, acc: 100, effect: "Takes opponent into the air on first turn, drops them on second turn.", wiki: "http://www.serebii.net/attackdex-sm/skydrop.shtml"},
+ {id: "shift gear", name: "Shift Gear", type: "Steel", cat: "Status", pp: 10, effect: "Raises user's Attack and sharply raises Speed.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/shiftgear.shtml"},
+ {id: "circle throw", name: "Circle Throw", type: "Fighting", cat: "Physical", power: 60, pp: 10, acc: 90, effect: "In battles, the opponent switches. In the wild, the Pokémon runs.", wiki: "http://www.serebii.net/attackdex-sm/circlethrow.shtml"},
+ {id: "incinerate", name: "Incinerate", type: "Fire", cat: "Special", power: 60, pp: 15, acc: 100, effect: "Destroys the target's held berry.", wiki: "http://www.serebii.net/attackdex-sm/incinerate.shtml"},
+ {id: "quash", name: "Quash", type: "Dark", cat: "Status", pp: 15, acc: 100, effect: "Makes the target act last this turn.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/quash.shtml"},
+ {id: "acrobatics", name: "Acrobatics", type: "Flying", cat: "Physical", power: 55, pp: 15, acc: 100, effect: "Stronger when the user does not have a held item.", wiki: "http://www.serebii.net/attackdex-sm/acrobatics.shtml"},
+ {id: "reflect type", name: "Reflect Type", type: "Normal", cat: "Status", pp: 15, effect: "User becomes the target's type.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/reflecttype.shtml"},
+ {id: "retaliate", name: "Retaliate", type: "Normal", cat: "Physical", power: 70, pp: 5, acc: 100, effect: "Inflicts double damage if a teammate fainted on the last turn.", wiki: "http://www.serebii.net/attackdex-sm/retaliate.shtml"},
+ {id: "final gambit", name: "Final Gambit", type: "Fighting", cat: "Special", pp: 5, acc: 100, effect: "Inflicts damage equal to the user's remaining HP. User faints.", wiki: "http://www.serebii.net/attackdex-sm/finalgambit.shtml"},
+ {id: "bestow", name: "Bestow", type: "Normal", cat: "Status", pp: 15, effect: "Gives the user's held item to the target.", zeffect: "Speed ↑↑", wiki: "http://www.serebii.net/attackdex-sm/bestow.shtml"},
+ {id: "inferno", name: "Inferno", type: "Fire", cat: "Special", power: 100, pp: 5, acc: 50, effect: "Burns opponent.", wiki: "http://www.serebii.net/attackdex-sm/inferno.shtml"},
+ {id: "water pledge", name: "Water Pledge", type: "Water", cat: "Special", power: 80, pp: 10, acc: 100, effect: "Added effects appear if preceded by Fire Pledge or succeeded by Grass Pledge.", wiki: "http://www.serebii.net/attackdex-sm/waterpledge.shtml"},
+ {id: "fire pledge", name: "Fire Pledge", type: "Fire", cat: "Special", power: 80, pp: 10, acc: 100, effect: "Added effects appear if combined with Grass Pledge or Water Pledge.", wiki: "http://www.serebii.net/attackdex-sm/firepledge.shtml"},
+ {id: "grass pledge", name: "Grass Pledge", type: "Grass", cat: "Special", power: 80, pp: 10, acc: 100, effect: "Added effects appear if preceded by Water Pledge or succeeded by Fire Pledge.", wiki: "http://www.serebii.net/attackdex-sm/grasspledge.shtml"},
+ {id: "volt switch", name: "Volt Switch", type: "Electric", cat: "Special", power: 70, pp: 20, acc: 100, effect: "User must switch out after attacking.", wiki: "http://www.serebii.net/attackdex-sm/voltswitch.shtml"},
+ {id: "struggle bug", name: "Struggle Bug", type: "Bug", cat: "Special", power: 50, pp: 20, acc: 100, effect: "Lowers opponent's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/strugglebug.shtml"},
+ {id: "bulldoze", name: "Bulldoze", type: "Ground", cat: "Physical", power: 60, pp: 20, acc: 100, effect: "Lowers opponent's Speed.", wiki: "http://www.serebii.net/attackdex-sm/bulldoze.shtml"},
+ {id: "frost breath", name: "Frost Breath", type: "Ice", cat: "Special", power: 60, pp: 10, acc: 90, effect: "Always results in a critical hit.", wiki: "http://www.serebii.net/attackdex-sm/frostbreath.shtml"},
+ {id: "dragon tail", name: "Dragon Tail", type: "Dragon", cat: "Physical", power: 60, pp: 10, acc: 90, effect: "In battles, the opponent switches. In the wild, the Pokémon runs.", wiki: "http://www.serebii.net/attackdex-sm/dragontail.shtml"},
+ {id: "work up", name: "Work Up", type: "Normal", cat: "Status", pp: 30, effect: "Raises user's Attack and Special Attack.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/workup.shtml"},
+ {id: "electroweb", name: "Electroweb", type: "Electric", cat: "Special", power: 55, pp: 15, acc: 95, effect: "Lowers opponent's Speed.", wiki: "http://www.serebii.net/attackdex-sm/electroweb.shtml"},
+ {id: "wild charge", name: "Wild Charge", type: "Electric", cat: "Physical", power: 90, pp: 15, acc: 100, effect: "User receives recoil damage.", wiki: "http://www.serebii.net/attackdex-sm/wildcharge.shtml"},
+ {id: "drill run", name: "Drill Run", type: "Ground", cat: "Physical", power: 80, pp: 10, acc: 95, effect: "High critical hit ratio.", wiki: "http://www.serebii.net/attackdex-sm/drillrun.shtml"},
+ {id: "dual chop", name: "Dual Chop", type: "Dragon", cat: "Physical", power: 40, pp: 15, acc: 90, effect: "Hits twice in one turn.", wiki: "http://www.serebii.net/attackdex-sm/dualchop.shtml"},
+ {id: "heart stamp", name: "Heart Stamp", type: "Psychic", cat: "Physical", power: 60, pp: 25, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/heartstamp.shtml"},
+ {id: "horn leech", name: "Horn Leech", type: "Grass", cat: "Physical", power: 75, pp: 10, acc: 100, effect: "User recovers half the HP inflicted on opponent.", wiki: "http://www.serebii.net/attackdex-sm/hornleech.shtml"},
+ {id: "sacred sword", name: "Sacred Sword", type: "Fighting", cat: "Physical", power: 90, pp: 15, acc: 100, effect: "Ignores opponent's stat changes.", wiki: "http://www.serebii.net/attackdex-sm/sacredsword.shtml"},
+ {id: "razor shell", name: "Razor Shell", type: "Water", cat: "Physical", power: 75, pp: 10, acc: 95, effect: "May lower opponent's Defense.", wiki: "http://www.serebii.net/attackdex-sm/razorshell.shtml"},
+ {id: "heat crash", name: "Heat Crash", type: "Fire", cat: "Physical", pp: 10, acc: 100, effect: "The heavier the user, the stronger the attack.", wiki: "http://www.serebii.net/attackdex-sm/heatcrash.shtml"},
+ {id: "leaf tornado", name: "Leaf Tornado", type: "Grass", cat: "Special", power: 65, pp: 10, acc: 90, effect: "May lower opponent's Accuracy.", wiki: "http://www.serebii.net/attackdex-sm/leaftornado.shtml"},
+ {id: "steamroller", name: "Steamroller", type: "Bug", cat: "Physical", power: 65, pp: 20, acc: 100, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/steamroller.shtml"},
+ {id: "cotton guard", name: "Cotton Guard", type: "Grass", cat: "Status", pp: 10, effect: "Drastically raises user's Defense.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/cottonguard.shtml"},
+ {id: "night daze", name: "Night Daze", type: "Dark", cat: "Special", power: 85, pp: 10, acc: 95, effect: "May lower opponent's Accuracy.", wiki: "http://www.serebii.net/attackdex-sm/nightdaze.shtml"},
+ {id: "psystrike", name: "Psystrike", type: "Psychic", cat: "Special", power: 100, pp: 10, acc: 100, effect: "Inflicts damage based on the target's Defense, not Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/psystrike.shtml"},
+ {id: "tail slap", name: "Tail Slap", type: "Normal", cat: "Physical", power: 25, pp: 10, acc: 85, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/tailslap.shtml"},
+ {id: "hurricane", name: "Hurricane", type: "Flying", cat: "Special", power: 110, pp: 10, acc: 70, effect: "May confuse opponent.", wiki: "http://www.serebii.net/attackdex-sm/hurricane.shtml"},
+ {id: "head charge", name: "Head Charge", type: "Normal", cat: "Physical", power: 120, pp: 15, acc: 100, effect: "User receives recoil damage.", wiki: "http://www.serebii.net/attackdex-sm/headcharge.shtml"},
+ {id: "gear grind", name: "Gear Grind", type: "Steel", cat: "Physical", power: 50, pp: 15, acc: 85, effect: "Hits twice in one turn.", wiki: "http://www.serebii.net/attackdex-sm/geargrind.shtml"},
+ {id: "searing shot", name: "Searing Shot", type: "Fire", cat: "Special", power: 100, pp: 5, acc: 100, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/searingshot.shtml"},
+ {id: "techno blast", name: "Techno Blast", type: "Normal", cat: "Special", power: 120, pp: 5, acc: 100, effect: "Type depends on the Drive being held.", wiki: "http://www.serebii.net/attackdex-sm/technoblast.shtml"},
+ {id: "relic song", name: "Relic Song", type: "Normal", cat: "Special", power: 75, pp: 10, acc: 100, effect: "May put the target to sleep.", wiki: "http://www.serebii.net/attackdex-sm/relicsong.shtml"},
+ {id: "secret sword", name: "Secret Sword", type: "Fighting", cat: "Special", power: 85, pp: 10, acc: 100, effect: "Inflicts damage based on the target's Defense, not Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/secretsword.shtml"},
+ {id: "glaciate", name: "Glaciate", type: "Ice", cat: "Special", power: 65, pp: 10, acc: 95, effect: "Lowers opponent's Speed.", wiki: "http://www.serebii.net/attackdex-sm/glaciate.shtml"},
+ {id: "bolt strike", name: "Bolt Strike", type: "Electric", cat: "Physical", power: 130, pp: 5, acc: 85, effect: "May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/boltstrike.shtml"},
+ {id: "blue flare", name: "Blue Flare", type: "Fire", cat: "Special", power: 130, pp: 5, acc: 85, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/blueflare.shtml"},
+ {id: "fiery dance", name: "Fiery Dance", type: "Fire", cat: "Special", power: 80, pp: 10, acc: 100, effect: "May raise user's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/fierydance.shtml"},
+ {id: "freeze shock", name: "Freeze Shock", type: "Ice", cat: "Physical", power: 140, pp: 5, acc: 90, effect: "Charges on first turn, attacks on second. May paralyze opponent.", wiki: "http://www.serebii.net/attackdex-sm/freezeshock.shtml"},
+ {id: "ice burn", name: "Ice Burn", type: "Ice", cat: "Special", power: 140, pp: 5, acc: 90, effect: "Charges on first turn, attacks on second. May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/iceburn.shtml"},
+ {id: "snarl", name: "Snarl", type: "Dark", cat: "Special", power: 55, pp: 15, acc: 95, effect: "Lowers opponent's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/snarl.shtml"},
+ {id: "icicle crash", name: "Icicle Crash", type: "Ice", cat: "Physical", power: 85, pp: 10, acc: 90, effect: "May cause flinching.", wiki: "http://www.serebii.net/attackdex-sm/iciclecrash.shtml"},
+ {id: "v-create", name: "V-create", type: "Fire", cat: "Physical", power: 180, pp: 5, acc: 95, effect: "Lowers user's Defense, Special Defense and Speed.", wiki: "http://www.serebii.net/attackdex-sm/v-create.shtml"},
+ {id: "fusion flare", name: "Fusion Flare", type: "Fire", cat: "Special", power: 100, pp: 5, acc: 100, effect: "Power increases if Fusion Bolt is used in the same turn.", wiki: "http://www.serebii.net/attackdex-sm/fusionflare.shtml"},
+ {id: "fusion bolt", name: "Fusion Bolt", type: "Electric", cat: "Physical", power: 100, pp: 5, acc: 100, effect: "Power increases if Fusion Flare is used in the same turn.", wiki: "http://www.serebii.net/attackdex-sm/fusionbolt.shtml"},
+ {id: "flying press", name: "Flying Press", type: "Fighting", cat: "Physical", power: 80, pp: 10, acc: 95, effect: "Deals Fighting and Flying type damage.", wiki: "http://www.serebii.net/attackdex-sm/flyingpress.shtml"},
+ {id: "mat block", name: "Mat Block", type: "Fighting", cat: "Status", pp: 10, effect: "Protects teammates from damaging moves.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/matblock.shtml"},
+ {id: "belch", name: "Belch", type: "Poison", cat: "Special", power: 120, pp: 10, acc: 90, effect: "User must have consumed a Berry.", wiki: "http://www.serebii.net/attackdex-sm/belch.shtml"},
+ {id: "rototiller", name: "Rototiller", type: "Ground", cat: "Status", pp: 10, effect: "Raises Attack and Special Attack of Grass-types.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/rototiller.shtml"},
+ {id: "sticky web", name: "Sticky Web", type: "Bug", cat: "Status", pp: 20, effect: "Lowers opponent's Speed when switching into battle.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/stickyweb.shtml"},
+ {id: "fell stinger", name: "Fell Stinger", type: "Bug", cat: "Physical", power: 50, pp: 25, acc: 100, effect: "Drastically raises user's Attack if target is KO'd.", wiki: "http://www.serebii.net/attackdex-sm/fellstinger.shtml"},
+ {id: "phantom force", name: "Phantom Force", type: "Ghost", cat: "Physical", power: 90, pp: 10, acc: 100, effect: "Disappears on first turn, attacks on second. Can strike through Protect/Detect.", wiki: "http://www.serebii.net/attackdex-sm/phantomforce.shtml"},
+ {id: "trick-or-treat", name: "Trick-or-treat", type: "Ghost", cat: "Status", pp: 20, acc: 100, effect: "Adds Ghost type to opponent.", zeffect: "All stats ↑", wiki: "http://www.serebii.net/attackdex-sm/trick-or-treat.shtml"},
+ {id: "noble roar", name: "Noble Roar", type: "Normal", cat: "Status", pp: 30, acc: 100, effect: "Lowers opponent's Attack and Special Attack.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/nobleroar.shtml"},
+ {id: "ion deluge", name: "Ion Deluge", type: "Electric", cat: "Status", pp: 25, effect: "Changes Normal-type moves to Electric-type.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/iondeluge.shtml"},
+ {id: "parabolic charge", name: "Parabolic Charge", type: "Electric", cat: "Special", power: 50, pp: 20, acc: 100, effect: "User recovers half the HP inflicted on opponent.", wiki: "http://www.serebii.net/attackdex-sm/paraboliccharge.shtml"},
+ {id: "forest's curse", name: "Forests Curse", type: "Grass", cat: "Status", pp: 20, acc: 100, effect: "Adds Grass type to opponent.", zeffect: "All stats ↑", wiki: "http://www.serebii.net/attackdex-sm/forestscurse.shtml"},
+ {id: "petal blizzard", name: "Petal Blizzard", type: "Grass", cat: "Physical", power: 90, pp: 15, acc: 100, effect: "Hits all adjacent Pokémon.", wiki: "http://www.serebii.net/attackdex-sm/petalblizzard.shtml"},
+ {id: "freeze-dry", name: "Freeze-dry", type: "Ice", cat: "Special", power: 70, pp: 20, acc: 100, effect: "May freeze opponent. Super-effective against Water types.", wiki: "http://www.serebii.net/attackdex-sm/freeze-dry.shtml"},
+ {id: "disarming voice", name: "Disarming Voice", type: "Fairy", cat: "Special", power: 40, pp: 15, effect: "Ignores Accuracy and Evasiveness.", wiki: "http://www.serebii.net/attackdex-sm/disarmingvoice.shtml"},
+ {id: "parting shot", name: "Parting Shot", type: "Dark", cat: "Status", pp: 20, acc: 100, effect: "Lowers opponent's Attack and Special Attack then switches out.", zeffect: "Restores replacement’s HP 100%", wiki: "http://www.serebii.net/attackdex-sm/partingshot.shtml"},
+ {id: "topsy-turvy", name: "Topsy-turvy", type: "Dark", cat: "Status", pp: 20, acc: 100, effect: "Reverses stat changes of opponent.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/topsy-turvy.shtml"},
+ {id: "draining kiss", name: "Draining Kiss", type: "Fairy", cat: "Special", power: 50, pp: 10, acc: 100, effect: "User recovers most the HP inflicted on opponent.", wiki: "http://www.serebii.net/attackdex-sm/drainingkiss.shtml"},
+ {id: "crafty shield", name: "Crafty Shield", type: "Fairy", cat: "Status", pp: 10, effect: "Protects the Pokémon from status moves.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/craftyshield.shtml"},
+ {id: "flower shield", name: "Flower Shield", type: "Fairy", cat: "Status", pp: 10, effect: "Sharply raises Defense of all Grass-type Pokémon on the field.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/flowershield.shtml"},
+ {id: "grassy terrain", name: "Grassy Terrain", type: "Grass", cat: "Status", pp: 10, effect: "Restores a little HP of all Pokémon for 5 turns.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/grassyterrain.shtml"},
+ {id: "misty terrain", name: "Misty Terrain", type: "Fairy", cat: "Status", pp: 10, effect: "Protects the field from status conditions for 5 turns.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/mistyterrain.shtml"},
+ {id: "electrify", name: "Electrify", type: "Electric", cat: "Status", pp: 20, effect: "Changes the target's move to Electric type.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/electrify.shtml"},
+ {id: "play rough", name: "Play Rough", type: "Fairy", cat: "Physical", power: 90, pp: 10, acc: 90, effect: "May lower opponent's Attack.", wiki: "http://www.serebii.net/attackdex-sm/playrough.shtml"},
+ {id: "fairy wind", name: "Fairy Wind", type: "Fairy", cat: "Special", power: 40, pp: 30, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/fairywind.shtml"},
+ {id: "moonblast", name: "Moonblast", type: "Fairy", cat: "Special", power: 95, pp: 15, acc: 100, effect: "May lower opponent's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/moonblast.shtml"},
+ {id: "boomburst", name: "Boomburst", type: "Normal", cat: "Special", power: 140, pp: 10, acc: 100, effect: "Hits all adjacent Pokémon.", wiki: "http://www.serebii.net/attackdex-sm/boomburst.shtml"},
+ {id: "fairy lock", name: "Fairy Lock", type: "Fairy", cat: "Status", pp: 10, effect: "Prevents fleeing in the next turn.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/fairylock.shtml"},
+ {id: "king's shield", name: "King's Shield", type: "Steel", cat: "Status", pp: 10, effect: "Protects against attacks, and lowers opponent's Attack on contact.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/kingsshield.shtml"},
+ {id: "play nice", name: "Play Nice", type: "Normal", cat: "Status", pp: 20, effect: "Lowers opponent's Attack. Always hits.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/playnice.shtml"},
+ {id: "confide", name: "Confide", type: "Normal", cat: "Status", pp: 20, effect: "Lowers opponent's Special Attack.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/confide.shtml"},
+ {id: "diamond storm", name: "Diamond Storm", type: "Rock", cat: "Physical", power: 100, pp: 5, acc: 95, effect: "May raise user's Defense", wiki: "http://www.serebii.net/attackdex-sm/diamondstorm.shtml"},
+ {id: "steam eruption", name: "Steam Eruption", type: "Water", cat: "Special", power: 110, pp: 5, acc: 95, effect: "May burn opponent.", wiki: "http://www.serebii.net/attackdex-sm/steameruption.shtml"},
+ {id: "hyperspace hole", name: "Hyperspace Hole", type: "Psychic", cat: "Special", power: 80, pp: 5, effect: "Can strike through Protect/Detect.", wiki: "http://www.serebii.net/attackdex-sm/hyperspacehole.shtml"},
+ {id: "water shuriken", name: "Water Shuriken", type: "Water", cat: "Physical", power: 15, pp: 20, acc: 100, effect: "Hits 2-5 times in one turn.", wiki: "http://www.serebii.net/attackdex-sm/watershuriken.shtml"},
+ {id: "mystical fire", name: "Mystical Fire", type: "Fire", cat: "Special", power: 65, pp: 10, acc: 100, effect: "Lowers opponent's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/mysticalfire.shtml"},
+ {id: "spiky shield", name: "Spiky Shield", type: "Grass", cat: "Status", pp: 10, effect: "Protects user and inflicts damage on contact moves.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/spikyshield.shtml"},
+ {id: "aromatic mist", name: "Aromatic Mist", type: "Fairy", cat: "Status", pp: 20, effect: "Raises Special Defense of allies.", zeffect: "Special Defense ↑↑", wiki: "http://www.serebii.net/attackdex-sm/aromaticmist.shtml"},
+ {id: "eerie impulse", name: "Eerie Impulse", type: "Electric", cat: "Status", pp: 15, acc: 100, effect: "Sharply lowers opponent's Special Attack.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/eerieimpulse.shtml"},
+ {id: "venom drench", name: "Venom Drench", type: "Poison", cat: "Status", pp: 20, acc: 100, effect: "Lowers poisoned opponent's Special Attack and Speed.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/venomdrench.shtml"},
+ {id: "powder", name: "Powder", type: "Bug", cat: "Status", pp: 20, acc: 100, effect: "Damages Pokémon using Fire type moves.", zeffect: "Special Defense ↑↑", wiki: "http://www.serebii.net/attackdex-sm/powder.shtml"},
+ {id: "geomancy", name: "Geomancy", type: "Fairy", cat: "Status", pp: 10, effect: "Charges on first turn, sharply raises user's Sp. Attack, Sp. Defense and Speed on the second.", zeffect: "All stats ↑", wiki: "http://www.serebii.net/attackdex-sm/geomancy.shtml"},
+ {id: "magnetic flux", name: "Magnetic Flux", type: "Electric", cat: "Status", pp: 20, effect: "Raises Defense and Sp. Defense of Plus/Minus Pokémon.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/magneticflux.shtml"},
+ {id: "happy hour", name: "Happy Hour", type: "Normal", cat: "Status", pp: 30, effect: "Doubles prize money from trainer battles.", zeffect: "All stats ↑", wiki: "http://www.serebii.net/attackdex-sm/happyhour.shtml"},
+ {id: "electric terrain", name: "Electric Terrain", type: "Electric", cat: "Status", pp: 10, effect: "Prevents all Pokémon from falling asleep for 5 turns.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/electricterrain.shtml"},
+ {id: "dazzling gleam", name: "Dazzling Gleam", type: "Fairy", cat: "Special", power: 80, pp: 10, acc: 100, effect: "Hits all adjacent opponents.", wiki: "http://www.serebii.net/attackdex-sm/dazzlinggleam.shtml"},
+ {id: "celebrate", name: "Celebrate", type: "Normal", cat: "Status", pp: 40, effect: "The Pokémon congratulates you on your special day. No battle effect.", zeffect: "All stats ↑", wiki: "http://www.serebii.net/attackdex-sm/celebrate.shtml"},
+ {id: "hold hands", name: "Hold Hands", type: "Normal", cat: "Status", pp: 40, effect: "Makes the user and an ally very happy.", zeffect: "All stats ↑", wiki: "http://www.serebii.net/attackdex-sm/holdhands.shtml"},
+ {id: "baby-doll eyes", name: "Baby-doll Eyes", type: "Fairy", cat: "Status", pp: 30, acc: 100, effect: "Always goes first. Lowers the target's attack.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/baby-dolleyes.shtml"},
+ {id: "nuzzle", name: "Nuzzle", type: "Electric", cat: "Physical", power: 20, pp: 20, acc: 100, effect: "Paralyzes opponent.", wiki: "http://www.serebii.net/attackdex-sm/nuzzle.shtml"},
+ {id: "hold back", name: "Hold Back", type: "Normal", cat: "Physical", power: 40, pp: 40, acc: 100, effect: "Always leaves opponent with at least 1 HP.", wiki: "http://www.serebii.net/attackdex-sm/holdback.shtml"},
+ {id: "infestation", name: "Infestation", type: "Bug", cat: "Special", power: 20, pp: 20, acc: 100, effect: "Traps opponent, damaging them for 4-5 turns.", wiki: "http://www.serebii.net/attackdex-sm/infestation.shtml"},
+ {id: "power-up punch", name: "Power-up Punch", type: "Fighting", cat: "Physical", power: 40, pp: 20, acc: 100, effect: "Raises Attack.", wiki: "http://www.serebii.net/attackdex-sm/power-uppunch.shtml"},
+ {id: "oblivion wing", name: "Oblivion Wing", type: "Flying", cat: "Special", power: 80, pp: 10, acc: 100, effect: "User recovers most of the HP inflicted on opponent.", wiki: "http://www.serebii.net/attackdex-sm/oblivionwing.shtml"},
+ {id: "thousand arrows", name: "Thousand Arrows", type: "Ground", cat: "Physical", power: 90, pp: 10, acc: 100, effect: "Makes Flying-type Pokémon vulnerable to Ground moves.", wiki: "http://www.serebii.net/attackdex-sm/thousandarrows.shtml"},
+ {id: "thousand waves", name: "Thousand Waves", type: "Ground", cat: "Physical", power: 90, pp: 10, acc: 100, effect: "Opponent cannot flee or switch.", wiki: "http://www.serebii.net/attackdex-sm/thousandwaves.shtml"},
+ {id: "lands wrath", name: "Lands Wrath", type: "Ground", cat: "Physical", power: 90, pp: 10, acc: 100, effect: "None", wiki: "http://www.serebii.net/attackdex-sm/landswrath.shtml"},
+ {id: "light of ruin", name: "Light Of Ruin", type: "Fairy", cat: "Special", power: 140, pp: 5, acc: 90, effect: "User receives recoil damage.", wiki: "http://www.serebii.net/attackdex-sm/lightofruin.shtml"},
+ {id: "origin pulse", name: "Origin Pulse", type: "Water", cat: "Special", power: 110, pp: 10, acc: 85, effect: "Hits all adjacent opponents.", wiki: "http://www.serebii.net/attackdex-sm/originpulse.shtml"},
+ {id: "precipice blades", name: "Precipice Blades", type: "Ground", cat: "Physical", power: 120, pp: 10, acc: 85, effect: "Hits all adjacent opponents.", wiki: "http://www.serebii.net/attackdex-sm/precipiceblades.shtml"},
+ {id: "dragon ascent", name: "Dragon Ascent", type: "Flying", cat: "Physical", power: 120, pp: 5, acc: 100, effect: "Lowers user's Defense and Special Defense.", wiki: "http://www.serebii.net/attackdex-sm/dragonascent.shtml"},
+ {id: "hyperspace fury", name: "Hyperspace Fury", type: "Dark", cat: "Physical", power: 100, pp: 5, effect: "Lowers user's Defense. Can strike through Protect/Detect.", wiki: "http://www.serebii.net/attackdex-sm/hyperspacefury.shtml"},
+ {id: "10,000,000 volt thunderbolt", name: "10,000,000 Volt Thunderbolt", type: "Electric", cat: "Special", power: 195, pp: 1, effect: "Pikachu-exclusive Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/10000000voltthunderbolt.shtml"},
+ {id: "accelerock", name: "Accelerock", type: "Rock", cat: "Physical", power: 40, pp: 20, acc: 100, effect: "User attacks first.", wiki: "http://www.serebii.net/attackdex-sm/accelerock.shtml"},
+ {id: "acid downpour", name: "Acid Downpour", type: "Poison", cat: "N/A", pp: 1, effect: "Poison type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/aciddownpour.shtml"},
+ {id: "all-out pummeling", name: "All-out Pummeling", type: "Fighting", cat: "N/A", pp: 1, effect: "Fighting type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/all-outpummeling.shtml"},
+ {id: "anchor shot", name: "Anchor Shot", type: "Steel", cat: "Physical", power: 80, pp: 20, acc: 100, effect: "The user entangles the target with its anchor chain while attacking. The target becomes unable to flee.", wiki: "http://www.serebii.net/attackdex-sm/anchorshot.shtml"},
+ {id: "aurora veil", name: "Aurora Veil", type: "Ice", cat: "Status", pp: 20, effect: "Halves damage from Physical and Special attacks for five turns.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/auroraveil.shtml"},
+ {id: "baneful bunker", name: "Baneful Bunker", type: "Poison", cat: "Status", pp: 10, effect: "In addition to protecting the user from attacks, this move also poisons any attacker that makes direct contact.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/banefulbunker.shtml"},
+ {id: "beak blast", name: "Beak Blast", type: "Flying", cat: "Physical", power: 100, pp: 15, acc: 100, effect: "The user first heats up its beak, and then it attacks the target. Making direct contact with the Pokémon while it’s heating up its beak results in a burn.", wiki: "http://www.serebii.net/attackdex-sm/beakblast.shtml"},
+ {id: "black hole eclipse", name: "Black Hole Eclipse", type: "Dark", cat: "N/A", pp: 1, effect: "Dark type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/blackholeeclipse.shtml"},
+ {id: "bloom doom", name: "Bloom Doom", type: "Grass", cat: "N/A", pp: 1, effect: "Grass type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/bloomdoom.shtml"},
+ {id: "breakneck blitz", name: "Breakneck Blitz", type: "Normal", cat: "N/A", pp: 1, effect: "Normal type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/breakneckblitz.shtml"},
+ {id: "brutal swing", name: "Brutal Swing", type: "Dark", cat: "Physical", power: 60, pp: 20, acc: 100, effect: "The user swings its body around violently to inflict damage on everything in its vicinity.", wiki: "http://www.serebii.net/attackdex-sm/brutalswing.shtml"},
+ {id: "burn up", name: "Burn Up", type: "Fire", cat: "Special", power: 130, pp: 5, acc: 100, effect: "To inflict massive damage, the user burns itself out. After using this move, the user will no longer be Fire type.", wiki: "http://www.serebii.net/attackdex-sm/burnup.shtml"},
+ {id: "catastropika", name: "Catastropika", type: "Electric", cat: "Physical", power: 210, pp: 1, effect: "Pikachu-exclusive Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/catastropika.shtml"},
+ {id: "clanging scales", name: "Clanging Scales", type: "Dragon", cat: "Special", power: 110, pp: 5, acc: 100, effect: "Lowers user's Defense.", wiki: "http://www.serebii.net/attackdex-sm/clangingscales.shtml"},
+ {id: "continental crush", name: "Continental Crush", type: "Rock", cat: "N/A", pp: 1, effect: "Rock type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/continentalcrush.shtml"},
+ {id: "core enforcer", name: "Core Enforcer", type: "Dragon", cat: "Special", power: 100, pp: 10, acc: 100, effect: "Scorches a 'Z' pattern on the ground.", wiki: "http://www.serebii.net/attackdex-sm/coreenforcer.shtml"},
+ {id: "corkscrew crash", name: "Corkscrew Crash", type: "Steel", cat: "N/A", pp: 1, effect: "Steel type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/corkscrewcrash.shtml"},
+ {id: "darkest lariat", name: "Darkest Lariat", type: "Dark", cat: "Physical", power: 85, pp: 10, acc: 100, effect: "Ignores opponent's stat changes.", wiki: "http://www.serebii.net/attackdex-sm/darkestlariat.shtml"},
+ {id: "devastating drake", name: "Devastating Drake", type: "Dragon", cat: "N/A", pp: 1, effect: "Dragon type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/devastatingdrake.shtml"},
+ {id: "dragon hammer", name: "Dragon Hammer", type: "Dragon", cat: "Physical", power: 90, pp: 15, acc: 100, effect: "The user uses its body like a hammer to attack the target and inflict damage.", wiki: "http://www.serebii.net/attackdex-sm/dragonhammer.shtml"},
+ {id: "extreme evoboost", name: "Extreme Evoboost", type: "Normal", cat: "Status", pp: 1, effect: "Eevee-exclusive Z-Move. Sharply raises all stats.", wiki: "http://www.serebii.net/attackdex-sm/extremeevoboost.shtml"},
+ {id: "fire lash", name: "Fire Lash", type: "Fire", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "The user strikes the target with a burning lash. This also lowers the target’s Defense stat.", wiki: "http://www.serebii.net/attackdex-sm/firelash.shtml"},
+ {id: "first impression", name: "First Impression", type: "Bug", cat: "Physical", power: 90, pp: 10, acc: 100, effect: "Although this move has great power, it only works the first turn the user is in battle.", wiki: "http://www.serebii.net/attackdex-sm/firstimpression.shtml"},
+ {id: "fleur cannon", name: "Fleur Cannon", type: "Fairy", cat: "Special", power: 130, pp: 5, acc: 90, effect: "Sharply lowers user's Special Attack.", wiki: "http://www.serebii.net/attackdex-sm/fleurcannon.shtml"},
+ {id: "floral healing", name: "Floral Healing", type: "Fairy", cat: "Status", pp: 10, effect: "The user restores the target’s HP by up to half of its max HP. It restores more HP when the terrain is grass.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/floralhealing.shtml"},
+ {id: "gear up", name: "Gear Up", type: "Steel", cat: "Status", pp: 20, effect: "The user engages its gears to raise the Attack and Sp. Atk stats of ally Pokémon with the Plus or Minus Ability.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/gearup.shtml"},
+ {id: "genesis supernova", name: "Genesis Supernova", type: "Psychic", cat: "Special", power: 185, pp: 1, effect: "Mew-exclusive Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/genesissupernova.shtml"},
+ {id: "gigavolt havoc", name: "Gigavolt Havoc", type: "Electric", cat: "N/A", pp: 1, effect: "Electric type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/gigavolthavoc.shtml"},
+ {id: "guardian of alola", name: "Guardian Of Alola", type: "Fairy", cat: "N/A", pp: 1, effect: "Tapu-exclusive Z-move. Cuts opponent's HP by 75%.", wiki: "http://www.serebii.net/attackdex-sm/guardianofalola.shtml"},
+ {id: "high horsepower", name: "High Horsepower", type: "Ground", cat: "Physical", power: 95, pp: 10, acc: 95, effect: "The user fiercely attacks the target using its entire body.", wiki: "http://www.serebii.net/attackdex-sm/highhorsepower.shtml"},
+ {id: "hydro vortex", name: "Hydro Vortex", type: "Water", cat: "N/A", pp: 1, effect: "Water type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/hydrovortex.shtml"},
+ {id: "ice hammer", name: "Ice Hammer", type: "Ice", cat: "Physical", power: 100, pp: 10, acc: 90, effect: "The user swings and hits with its strong, heavy fist. It lowers the user’s Speed, however.", wiki: "http://www.serebii.net/attackdex-sm/icehammer.shtml"},
+ {id: "inferno overdrive", name: "Inferno Overdrive", type: "Fire", cat: "N/A", pp: 1, effect: "Fire type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/infernooverdrive.shtml"},
+ {id: "instruct", name: "Instruct", type: "Psychic", cat: "Status", pp: 15, effect: "Allows an ally to use a move instead.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/instruct.shtml"},
+ {id: "laser focus", name: "Laser Focus", type: "Normal", cat: "Status", pp: 30, effect: "User's next attack is guaranteed to result in a critical hit.", zeffect: "Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/laserfocus.shtml"},
+ {id: "leafage", name: "Leafage", type: "Grass", cat: "Physical", power: 40, pp: 40, acc: 100, effect: "Strikes opponent with leaves.", wiki: "http://www.serebii.net/attackdex-sm/leafage.shtml"},
+ {id: "liquidation", name: "Liquidation", type: "Water", cat: "Physical", power: 85, pp: 10, acc: 100, effect: "The user slams into the target using a full-force blast of water. This may also lower the target’s Defense stat.", wiki: "http://www.serebii.net/attackdex-sm/liquidation.shtml"},
+ {id: "lunge", name: "Lunge", type: "Bug", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "The user makes a lunge at the target, attacking with full force. This also lowers the target’s Attack stat.", wiki: "http://www.serebii.net/attackdex-sm/lunge.shtml"},
+ {id: "malicious moonsault", name: "Malicious Moonsault", type: "Dark", cat: "Physical", power: 180, pp: 1, effect: "Incineroar-exclusive Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/maliciousmoonsault.shtml"},
+ {id: "moongeist beam", name: "Moongeist Beam", type: "Ghost", cat: "Special", power: 100, pp: 5, acc: 100, effect: "Ignores the target's ability.", wiki: "http://www.serebii.net/attackdex-sm/moongeistbeam.shtml"},
+ {id: "multi-attack", name: "Multi-Attack", type: "Normal", cat: "Physical", power: 90, pp: 10, acc: 100, effect: "Type matches user's current type.", wiki: "http://www.serebii.net/attackdex-sm/multi-attack.shtml"},
+ {id: "natures madness", name: "Nature's Madness", type: "Fairy", cat: "Special", pp: 10, acc: 90, effect: "Halves the foe's HP.", wiki: "http://www.serebii.net/attackdex-sm/nature'smadness.shtml"},
+ {id: "never-ending nightmare", name: "Never-ending Nightmare", type: "Ghost", cat: "N/A", pp: 1, effect: "Ghost type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/never-endingnightmare.shtml"},
+ {id: "oceanic operetta", name: "Oceanic Operetta", type: "Water", cat: "Special", power: 195, pp: 1, effect: "Primarina-exclusive Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/oceanicoperetta.shtml"},
+ {id: "pollen puff", name: "Pollen Puff", type: "Bug", cat: "Special", power: 90, pp: 15, acc: 100, effect: "The user attacks the enemy with a pollen puff that explodes. If the target is an ally, it gives the ally a pollen puff that restores its HP instead.", wiki: "http://www.serebii.net/attackdex-sm/pollenpuff.shtml"},
+ {id: "power trip", name: "Power Trip", type: "Dark", cat: "Physical", power: 20, pp: 10, acc: 100, effect: "The user boasts its strength and attacks the target. The more the user’s stats are raised, the greater the move’s power.", wiki: "http://www.serebii.net/attackdex-sm/powertrip.shtml"},
+ {id: "prismatic laser", name: "Prismatic Laser", type: "Psychic", cat: "Special", power: 160, pp: 10, acc: 100, effect: "The user shoots powerful lasers using the power of a prism. The user can’t move on the next turn.", wiki: "http://www.serebii.net/attackdex-sm/prismaticlaser.shtml"},
+ {id: "psychic fangs", name: "Psychic Fangs", type: "Psychic", cat: "Physical", power: 85, pp: 10, acc: 100, effect: "The user bites the target with its psychic capabilities. This can also destroy Light Screen and Reflect.", wiki: "http://www.serebii.net/attackdex-sm/psychicfangs.shtml"},
+ {id: "psychic terrain", name: "Psychic Terrain", type: "Psychic", cat: "Status", pp: 10, effect: "Prevents priority moves from being used for 5 turns.", zeffect: "Special Attack ↑", wiki: "http://www.serebii.net/attackdex-sm/psychicterrain.shtml"},
+ {id: "pulverizing pancake", name: "Pulverizing Pancake", type: "Normal", cat: "Physical", power: 210, pp: 1, effect: "Snorlax-exclusive Normal type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/pulverizingpancake.shtml"},
+ {id: "purify", name: "Purify", type: "Poison", cat: "Status", pp: 20, effect: "The user heals the target’s status condition. If the move succeeds, it also restores the user’s own HP.", zeffect: "All stats ↑", wiki: "http://www.serebii.net/attackdex-sm/purify.shtml"},
+ {id: "revelation dance", name: "Revelation Dance", type: "Normal", cat: "Special", power: 90, pp: 15, acc: 100, effect: "Type changes based on Oricorio's form.", wiki: "http://www.serebii.net/attackdex-sm/revelationdance.shtml"},
+ {id: "savage spin-out", name: "Savage Spin-out", type: "Bug", cat: "N/A", pp: 1, effect: "Bug type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/savagespin-out.shtml"},
+ {id: "shadow bone", name: "Shadow Bone", type: "Ghost", cat: "Physical", power: 85, pp: 10, acc: 100, effect: "The user attacks by beating the target with a bone that contains a spirit. This may also lower the target’s Defense stat.", wiki: "http://www.serebii.net/attackdex-sm/shadowbone.shtml"},
+ {id: "shattered psyche", name: "Shattered Psyche", type: "Psychic", cat: "N/A", pp: 1, effect: "Psychic type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/shatteredpsyche.shtml"},
+ {id: "shell trap", name: "Shell Trap", type: "Fire", cat: "Special", power: 150, pp: 5, acc: 100, effect: "Deals more damage to opponent if hit by a Physical move.", wiki: "http://www.serebii.net/attackdex-sm/shelltrap.shtml"},
+ {id: "shore up", name: "Shore Up", type: "Ground", cat: "Status", pp: 10, effect: "The user regains up to half of its max HP. It restores more HP in a sandstorm.", zeffect: "Remove user's stat debuffs", wiki: "http://www.serebii.net/attackdex-sm/shoreup.shtml"},
+ {id: "sinister arrow raid", name: "Sinister Arrow Raid", type: "Ghost", cat: "Physical", power: 180, pp: 1, effect: "Decidueye-exclusive Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/sinisterarrowraid.shtml"},
+ {id: "smart strike", name: "Smart Strike", type: "Steel", cat: "Physical", power: 70, pp: 10, effect: "The user stabs the target with a sharp horn. This attack never misses.", wiki: "http://www.serebii.net/attackdex-sm/smartstrike.shtml"},
+ {id: "solar blade", name: "Solar Blade", type: "Grass", cat: "Physical", power: 125, pp: 10, acc: 100, effect: "Charges on first turn, attacks on second.", wiki: "http://www.serebii.net/attackdex-sm/solarblade.shtml"},
+ {id: "soul-stealing 7-star strike", name: "Soul-Stealing 7-Star Strike", type: "Ghost", cat: "Physical", power: 195, pp: 1, effect: "Marshadow-exclusive Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/soul-stealing7-starstrike.shtml"},
+ {id: "sparkling aria", name: "Sparkling Aria", type: "Water", cat: "Special", power: 90, pp: 10, acc: 100, effect: "Heals the burns of its target.", wiki: "http://www.serebii.net/attackdex-sm/sparklingaria.shtml"},
+ {id: "spectral thief", name: "Spectral Thief", type: "Ghost", cat: "Physical", power: 90, pp: 10, acc: 100, effect: "The user hides in the target’s shadow, steals the target’s stat boosts, and then attacks.", wiki: "http://www.serebii.net/attackdex-sm/spectralthief.shtml"},
+ {id: "speed swap", name: "Speed Swap", type: "Psychic", cat: "Status", pp: 10, effect: "The user exchanges Speed stats with the target.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/speedswap.shtml"},
+ {id: "spirit shackle", name: "Spirit Shackle", type: "Ghost", cat: "Physical", power: 80, pp: 10, acc: 100, effect: "Prevents the opponent switching out.", wiki: "http://www.serebii.net/attackdex-sm/spiritshackle.shtml"},
+ {id: "spotlight", name: "Spotlight", type: "Normal", cat: "Status", pp: 15, effect: "The user shines a spotlight on the target so that only the target will be attacked during the turn.", zeffect: "Special Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/spotlight.shtml"},
+ {id: "stoked sparksurfer", name: "Stoked Sparksurfer", type: "Electric", cat: "Special", power: 175, pp: 1, effect: "Raichu-exclusive Electric type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/stokedsparksurfer.shtml"},
+ {id: "stomping tantrum", name: "Stomping Tantrum", type: "Ground", cat: "Physical", power: 75, pp: 10, acc: 100, effect: "Driven by frustration, the user attacks the target. If the user’s previous move has failed, the power of this move doubles.", wiki: "http://www.serebii.net/attackdex-sm/stompingtantrum.shtml"},
+ {id: "strength sap", name: "Strength Sap", type: "Grass", cat: "Status", pp: 10, acc: 100, effect: "The user restores its HP by the same amount as the target’s Attack stat. It also lowers the target’s Attack stat.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/strengthsap.shtml"},
+ {id: "subzero slammer", name: "Subzero Slammer", type: "Ice", cat: "N/A", pp: 1, effect: "Ice type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/subzeroslammer.shtml"},
+ {id: "sunsteel strike", name: "Sunsteel Strike", type: "Steel", cat: "Physical", power: 100, pp: 5, acc: 100, effect: "Ignores the target's ability.", wiki: "http://www.serebii.net/attackdex-sm/sunsteelstrike.shtml"},
+ {id: "supersonic skystrike", name: "Supersonic Skystrike", type: "Flying", cat: "N/A", pp: 1, effect: "Flying type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/supersonicskystrike.shtml"},
+ {id: "tearful look", name: "Tearful Look", type: "Normal", cat: "Status", pp: 20, effect: "The user gets teary eyed to make the target lose its combative spirit. This lowers the target’s Attack and Sp. Atk stats.", zeffect: "Defense ↑", wiki: "http://www.serebii.net/attackdex-sm/tearfullook.shtml"},
+ {id: "tectonic rage", name: "Tectonic Rage", type: "Ground", cat: "N/A", pp: 1, effect: "Ground type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/tectonicrage.shtml"},
+ {id: "throat chop", name: "Throat Chop", type: "Dark", cat: "Physical", power: 80, pp: 15, acc: 100, effect: "Prevents use of sound moves for two turns.", wiki: "http://www.serebii.net/attackdex-sm/throatchop.shtml"},
+ {id: "toxic thread", name: "Toxic Thread", type: "Poison", cat: "N/A", pp: 20, acc: 100, effect: "The user shoots poisonous threads to poison the target and lower the target’s Speed stat.", zeffect: "Speed ↑", wiki: "http://www.serebii.net/attackdex-sm/toxicthread.shtml"},
+ {id: "trop kick", name: "Trop Kick", type: "Grass", cat: "Physical", power: 70, pp: 15, acc: 100, effect: "Lowers opponent's Attack.", wiki: "http://www.serebii.net/attackdex-sm/tropkick.shtml"},
+ {id: "twinkle tackle", name: "Twinkle Tackle", type: "Fairy", cat: "Status", pp: 1, effect: "Fairy type Z-Move.", wiki: "http://www.serebii.net/attackdex-sm/twinkletackle.shtml"},
+ {id: "zing zap", name: "Zing Zap", type: "Electric", cat: "Physical", power: 80, pp: 10, acc: 100, effect: "A strong electric blast crashes down on the target, giving it an electric shock. This may also make the target flinch.", wiki: "http://www.serebii.net/attackdex-sm/zingzap.shtml"}];
+ 
+ var tms = [{id: "hm01", name: "HM01", desc: "Teaches the move Cut.", wiki: "http://www.serebii.net/itemdex/hm01.shtml"},
+ {id: "hm02", name: "HM02", desc: "Teaches the move Fly.", wiki: "http://www.serebii.net/itemdex/hm02.shtml"},
+ {id: "hm03", name: "HM03", desc: "Teaches the move Surf.", wiki: "http://www.serebii.net/itemdex/hm03.shtml"},
+ {id: "hm04", name: "HM04", desc: "Teaches the move Strength.", wiki: "http://www.serebii.net/itemdex/hm04.shtml"},
+ {id: "hm05", name: "HM05", desc: "Teaches the move Flash/Defog/Whirlpool/Waterfall.", wiki: "http://www.serebii.net/itemdex/hm05.shtml"},
+ {id: "hm06", name: "HM06", desc: "Teaches the move Whirlpool/Rock Smash/Dive.", wiki: "http://www.serebii.net/itemdex/hm06.shtml"},
+ {id: "hm07", name: "HM07", desc: "Teaches the move Waterfall.", wiki: "http://www.serebii.net/itemdex/hm07.shtml"},
+ {id: "hm08", name: "HM08", desc: "Teaches the move Dive/Rock Climb.", wiki: "http://www.serebii.net/itemdex/hm08.shtml"},
+ {id: "tm01", name: "TM01", desc: "Teaches the move Mega Punch/DynamicPunch/Focus Punch/Hone Claws.", wiki: "http://www.serebii.net/itemdex/tm01.shtml"},
+ {id: "tm02", name: "TM02", desc: "Teaches the move Razor Wind/Headbutt/Dragon Claw.", wiki: "http://www.serebii.net/itemdex/tm02.shtml"},
+ {id: "tm03", name: "TM03", desc: "Teaches the move Swords Dance/Curse/Water Pulse/Psyshock.", wiki: "http://www.serebii.net/itemdex/tm03.shtml"},
+ {id: "tm04", name: "TM04", desc: "Teaches the move Whirlwind/Rollout/Calm Mind.", wiki: "http://www.serebii.net/itemdex/tm04.shtml"},
+ {id: "tm05", name: "TM05", desc: "Teaches the move Mega Kick/Roar.", wiki: "http://www.serebii.net/itemdex/tm05.shtml"},
+ {id: "tm06", name: "TM06", desc: "Teaches the move Toxic.", wiki: "http://www.serebii.net/itemdex/tm06.shtml"},
+ {id: "tm07", name: "TM07", desc: "Teaches the move Horn Drill/Zap Cannon/Hail.", wiki: "http://www.serebii.net/itemdex/tm07.shtml"},
+ {id: "tm08", name: "TM08", desc: "Teaches the move Body Slam/Rock Smash/Bulk Up.", wiki: "http://www.serebii.net/itemdex/tm08.shtml"},
+ {id: "tm09", name: "TM09", desc: "Teaches the move Take Down/Psych Up/Bullet Seed/Venoshock.", wiki: "http://www.serebii.net/itemdex/tm09.shtml"},
+ {id: "tm10", name: "TM10", desc: "Teaches the move Double-Edge/Hidden Power.", wiki: "http://www.serebii.net/itemdex/tm10.shtml"},
+ {id: "tm100", name: "TM100", desc: "Teaches the move Confide.", wiki: "http://www.serebii.net/itemdex/tm100.shtml"},
+ {id: "tm11", name: "TM11", desc: "Teaches the move BubbleBeam/Sunny Day.", wiki: "http://www.serebii.net/itemdex/tm11.shtml"},
+ {id: "tm12", name: "TM12", desc: "Teaches the move Water Gun/Sweet Scent/Taunt.", wiki: "http://www.serebii.net/itemdex/tm12.shtml"},
+ {id: "tm13", name: "TM13", desc: "Teaches the move Snore/Ice Beam.", wiki: "http://www.serebii.net/itemdex/tm13.shtml"},
+ {id: "tm14", name: "TM14", desc: "Teaches the move Blizzard.", wiki: "http://www.serebii.net/itemdex/tm14.shtml"},
+ {id: "tm15", name: "TM15", desc: "Teaches the move Hyper Beam.", wiki: "http://www.serebii.net/itemdex/tm15.shtml"},
+ {id: "tm16", name: "TM16", desc: "Teaches the move Pay Day/Icy Wind/Light Screen.", wiki: "http://www.serebii.net/itemdex/tm16.shtml"},
+ {id: "tm17", name: "TM17", desc: "Teaches the move Submission/Protect.", wiki: "http://www.serebii.net/itemdex/tm17.shtml"},
+ {id: "tm18", name: "TM18", desc: "Teaches the move Counter/Rain Dance.", wiki: "http://www.serebii.net/itemdex/tm18.shtml"},
+ {id: "tm19", name: "TM19", desc: "Teaches the move Seismic Toss/Giga Drain/Telekinesis/Roost.", wiki: "http://www.serebii.net/itemdex/tm19.shtml"},
+ {id: "tm20", name: "TM20", desc: "Teaches the move Rage/Endure/Safeguard.", wiki: "http://www.serebii.net/itemdex/tm20.shtml"},
+ {id: "tm21", name: "TM21", desc: "Teaches the move Mega Drain/Frustration.", wiki: "http://www.serebii.net/itemdex/tm21.shtml"},
+ {id: "tm22", name: "TM22", desc: "Teaches the move SolarBeam.", wiki: "http://www.serebii.net/itemdex/tm22.shtml"},
+ {id: "tm23", name: "TM23", desc: "Teaches the move Dragon Rage/Iron Tail/Smack Down.", wiki: "http://www.serebii.net/itemdex/tm23.shtml"},
+ {id: "tm24", name: "TM24", desc: "Teaches the move Thunderbolt/DragonBreath.", wiki: "http://www.serebii.net/itemdex/tm24.shtml"},
+ {id: "tm25", name: "TM25", desc: "Teaches the move Thunder.", wiki: "http://www.serebii.net/itemdex/tm25.shtml"},
+ {id: "tm26", name: "TM26", desc: "Teaches the move Earthquake.", wiki: "http://www.serebii.net/itemdex/tm26.shtml"},
+ {id: "tm27", name: "TM27", desc: "Teaches the move Fissure/Return.", wiki: "http://www.serebii.net/itemdex/tm27.shtml"},
+ {id: "tm28", name: "TM28", desc: "Teaches the move Dig.", wiki: "http://www.serebii.net/itemdex/tm28.shtml"},
+ {id: "tm29", name: "TM29", desc: "Teaches the move Psychic.", wiki: "http://www.serebii.net/itemdex/tm29.shtml"},
+ {id: "tm30", name: "TM30", desc: "Teaches the move Teleport/Shadow Ball.", wiki: "http://www.serebii.net/itemdex/tm30.shtml"},
+ {id: "tm31", name: "TM31", desc: "Teaches the move Mimic/Mud-Slap/Brick Break.", wiki: "http://www.serebii.net/itemdex/tm31.shtml"},
+ {id: "tm32", name: "TM32", desc: "Teaches the move Double Team.", wiki: "http://www.serebii.net/itemdex/tm32.shtml"},
+ {id: "tm33", name: "TM33", desc: "Teaches the move Ice Punch/Reflect.", wiki: "http://www.serebii.net/itemdex/tm33.shtml"},
+ {id: "tm34", name: "TM34", desc: "Teaches the move Bide/Swagger/Shock Wave/Sludge Wave.", wiki: "http://www.serebii.net/itemdex/tm34.shtml"},
+ {id: "tm35", name: "TM35", desc: "Teaches the move Metronome/Sleep Talk/Flamethrower.", wiki: "http://www.serebii.net/itemdex/tm35.shtml"},
+ {id: "tm36", name: "TM36", desc: "Teaches the move Selfdestruct/Sludge Bomb.", wiki: "http://www.serebii.net/itemdex/tm36.shtml"},
+ {id: "tm37", name: "TM37", desc: "Teaches the move Egg Bomb/Sandstorm.", wiki: "http://www.serebii.net/itemdex/tm37.shtml"},
+ {id: "tm38", name: "TM38", desc: "Teaches the move Fire Blast.", wiki: "http://www.serebii.net/itemdex/tm38.shtml"},
+ {id: "tm39", name: "TM39", desc: "Teaches the move Swift/Rock Tomb.", wiki: "http://www.serebii.net/itemdex/tm39.shtml"},
+ {id: "tm40", name: "TM40", desc: "Teaches the move Skull Bash/Defense Curl/Aerial Ace.", wiki: "http://www.serebii.net/itemdex/tm40.shtml"},
+ {id: "tm41", name: "TM41", desc: "Teaches the move Softboiled/ThunderPunch/Torment.", wiki: "http://www.serebii.net/itemdex/tm41.shtml"},
+ {id: "tm42", name: "TM42", desc: "Teaches the move Dream Eater/Facade.", wiki: "http://www.serebii.net/itemdex/tm42.shtml"},
+ {id: "tm43", name: "TM43", desc: "Teaches the move Sky Attack/Detect/Secret Power/Flame Charge.", wiki: "http://www.serebii.net/itemdex/tm43.shtml"},
+ {id: "tm44", name: "TM44", desc: "Teaches the move Rest.", wiki: "http://www.serebii.net/itemdex/tm44.shtml"},
+ {id: "tm45", name: "TM45", desc: "Teaches the move Thunder Wave/Attract.", wiki: "http://www.serebii.net/itemdex/tm45.shtml"},
+ {id: "tm46", name: "TM46", desc: "Teaches the move Psywave/Thief.", wiki: "http://www.serebii.net/itemdex/tm46.shtml"},
+ {id: "tm47", name: "TM47", desc: "Teaches the move Explosion/Steel Wing/Low Sweep.", wiki: "http://www.serebii.net/itemdex/tm47.shtml"},
+ {id: "tm48", name: "TM48", desc: "Teaches the move Rock Slide/Fire Punch/Skill Swap/Round.", wiki: "http://www.serebii.net/itemdex/tm48.shtml"},
+ {id: "tm49", name: "TM49", desc: "Teaches the move Tri Attack/Fury Cutter/Snatch/Echoed Voice.", wiki: "http://www.serebii.net/itemdex/tm49.shtml"},
+ {id: "tm50", name: "TM50", desc: "Teaches the move Substitute/Nightmare/Overheat.", wiki: "http://www.serebii.net/itemdex/tm50.shtml"},
+ {id: "tm51", name: "TM51", desc: "Teaches the move Roost/Ally Switch/Steel Wing.", wiki: "http://www.serebii.net/itemdex/tm51.shtml"},
+ {id: "tm52", name: "TM52", desc: "Teaches the move Focus Blast.", wiki: "http://www.serebii.net/itemdex/tm52.shtml"},
+ {id: "tm53", name: "TM53", desc: "Teaches the move Energy Ball.", wiki: "http://www.serebii.net/itemdex/tm53.shtml"},
+ {id: "tm54", name: "TM54", desc: "Teaches the move False Swipe.", wiki: "http://www.serebii.net/itemdex/tm54.shtml"},
+ {id: "tm55", name: "TM55", desc: "Teaches the move Brine/Scald.", wiki: "http://www.serebii.net/itemdex/tm55.shtml"},
+ {id: "tm56", name: "TM56", desc: "Teaches the move Fling.", wiki: "http://www.serebii.net/itemdex/tm56.shtml"},
+ {id: "tm57", name: "TM57", desc: "Teaches the move Charge Beam.", wiki: "http://www.serebii.net/itemdex/tm57.shtml"},
+ {id: "tm58", name: "TM58", desc: "Teaches the move Endure/Sky Drop.", wiki: "http://www.serebii.net/itemdex/tm58.shtml"},
+ {id: "tm59", name: "TM59", desc: "Teaches the move Dragon Pulse/Incinerate.", wiki: "http://www.serebii.net/itemdex/tm59.shtml"},
+ {id: "tm60", name: "TM60", desc: "Teaches the move Drain Punch/Quash.", wiki: "http://www.serebii.net/itemdex/tm60.shtml"},
+ {id: "tm61", name: "TM61", desc: "Teaches the move Will-O-Wisp.", wiki: "http://www.serebii.net/itemdex/tm61.shtml"},
+ {id: "tm62", name: "TM62", desc: "Teaches the move Silver Wind/Acrobatics.", wiki: "http://www.serebii.net/itemdex/tm62.shtml"},
+ {id: "tm63", name: "TM63", desc: "Teaches the move Embargo.", wiki: "http://www.serebii.net/itemdex/tm63.shtml"},
+ {id: "tm64", name: "TM64", desc: "Teaches the move Explosion.", wiki: "http://www.serebii.net/itemdex/tm64.shtml"},
+ {id: "tm65", name: "TM65", desc: "Teaches the move Shadow Claw.", wiki: "http://www.serebii.net/itemdex/tm65.shtml"},
+ {id: "tm66", name: "TM66", desc: "Teaches the move Payback.", wiki: "http://www.serebii.net/itemdex/tm66.shtml"},
+ {id: "tm67", name: "TM67", desc: "Teaches the move Recycle/Retaliate.", wiki: "http://www.serebii.net/itemdex/tm67.shtml"},
+ {id: "tm68", name: "TM68", desc: "Teaches the move Giga Impact.", wiki: "http://www.serebii.net/itemdex/tm68.shtml"},
+ {id: "tm69", name: "TM69", desc: "Teaches the move Rock Polish.", wiki: "http://www.serebii.net/itemdex/tm69.shtml"},
+ {id: "tm70", name: "TM70", desc: "Teaches the move Flash.", wiki: "http://www.serebii.net/itemdex/tm70.shtml"},
+ {id: "tm71", name: "TM71", desc: "Teaches the move Stone Edge.", wiki: "http://www.serebii.net/itemdex/tm71.shtml"},
+ {id: "tm72", name: "TM72", desc: "Teaches the move Avalanche/Volt Switch.", wiki: "http://www.serebii.net/itemdex/tm72.shtml"},
+ {id: "tm73", name: "TM73", desc: "Teaches the move Thunder Wave.", wiki: "http://www.serebii.net/itemdex/tm73.shtml"},
+ {id: "tm74", name: "TM74", desc: "Teaches the move Gyro Ball.", wiki: "http://www.serebii.net/itemdex/tm74.shtml"},
+ {id: "tm75", name: "TM75", desc: "Teaches the move Swords Dance.", wiki: "http://www.serebii.net/itemdex/tm75.shtml"},
+ {id: "tm76", name: "TM76", desc: "Teaches the move Stealth Rock/Struggle Bug.", wiki: "http://www.serebii.net/itemdex/tm76.shtml"},
+ {id: "tm77", name: "TM77", desc: "Teaches the move Psych Up.", wiki: "http://www.serebii.net/itemdex/tm77.shtml"},
+ {id: "tm78", name: "TM78", desc: "Teaches the move Captivate/Bulldoze.", wiki: "http://www.serebii.net/itemdex/tm78.shtml"},
+ {id: "tm79", name: "TM79", desc: "Teaches the move Dark Pulse/Frost Breath.", wiki: "http://www.serebii.net/itemdex/tm79.shtml"},
+ {id: "tm80", name: "TM80", desc: "Teaches the move Rock Slide.", wiki: "http://www.serebii.net/itemdex/tm80.shtml"},
+ {id: "tm81", name: "TM81", desc: "Teaches the move X-Scissor.", wiki: "http://www.serebii.net/itemdex/tm81.shtml"},
+ {id: "tm82", name: "TM82", desc: "Teaches the move Sleep Talk/Dragon Tail.", wiki: "http://www.serebii.net/itemdex/tm82.shtml"},
+ {id: "tm83", name: "TM83", desc: "Teaches the move Natural Gift/Work Up/Infestation.", wiki: "http://www.serebii.net/itemdex/tm83.shtml"},
+ {id: "tm84", name: "TM84", desc: "Teaches the move Poison Jab.", wiki: "http://www.serebii.net/itemdex/tm84.shtml"},
+ {id: "tm85", name: "TM85", desc: "Teaches the move Dream Eater.", wiki: "http://www.serebii.net/itemdex/tm85.shtml"},
+ {id: "tm86", name: "TM86", desc: "Teaches the move Grass Knot.", wiki: "http://www.serebii.net/itemdex/tm86.shtml"},
+ {id: "tm87", name: "TM87", desc: "Teaches the move Swagger.", wiki: "http://www.serebii.net/itemdex/tm87.shtml"},
+ {id: "tm88", name: "TM88", desc: "Teaches the move Pluck/Sleep Talk.", wiki: "http://www.serebii.net/itemdex/tm88.shtml"},
+ {id: "tm89", name: "TM89", desc: "Teaches the move U-turn.", wiki: "http://www.serebii.net/itemdex/tm89.shtml"},
+ {id: "tm90", name: "TM90", desc: "Teaches the move Substitute.", wiki: "http://www.serebii.net/itemdex/tm90.shtml"},
+ {id: "tm91", name: "TM91", desc: "Teaches the move Flash Cannon.", wiki: "http://www.serebii.net/itemdex/tm91.shtml"},
+ {id: "tm92", name: "TM92", desc: "Teaches the move Trick Room.", wiki: "http://www.serebii.net/itemdex/tm92.shtml"},
+ {id: "tm93", name: "TM93", desc: "Teaches the move Wild Charge.", wiki: "http://www.serebii.net/itemdex/tm93.shtml"},
+ {id: "tm94", name: "TM94", desc: "Teaches the move Rock Smash.", wiki: "http://www.serebii.net/itemdex/tm94.shtml"},
+ {id: "tm95", name: "TM95", desc: "Teaches the move Snarl.", wiki: "http://www.serebii.net/itemdex/tm95.shtml"},
+ {id: "tm96", name: "TM96", desc: "Teaches the move Nature Power.", wiki: "http://www.serebii.net/itemdex/tm96.shtml"},
+ {id: "tm97", name: "TM97", desc: "Teaches the move Dark Pulse.", wiki: "http://www.serebii.net/itemdex/tm97.shtml"},
+ {id: "tm98", name: "TM98", desc: "Teaches the move Power-Up Punch.", wiki: "http://www.serebii.net/itemdex/tm98.shtml"},
+ {id: "tm99", name: "TM99", desc: "Teaches the move Dazzling Gleam.", wiki: "http://www.serebii.net/itemdex/tm99.shtml"}];
