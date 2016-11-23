@@ -1,5 +1,5 @@
-var moveprops = ["name", "desc", "wiki"];
-console.log("tms3");
+var moveprops = ["name", "type", "cat", "power", "pp", "acc", "effect", "zeffect", "wiki"];
+console.log("tms4");
 
 function clicked(){
 	var out = "var moves = [";
