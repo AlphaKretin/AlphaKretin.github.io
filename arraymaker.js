@@ -1,10 +1,10 @@
 var moveprops = ["name", "desc", "wiki"];
-console.log("tms2");
+console.log("tms3");
 
 function clicked(){
 	var out = "var moves = [";
 	var len = 0;
-	var t = "tm: \""
+	var t = ""
 	for (var mon of moves){
 		out += "{id: \"" + mon.id + "\", ";
 		for (var prop of moveprops){
@@ -16,6 +16,7 @@ function clicked(){
 				}				
 			}
 		}
+		t = "tm: \"";
 		for (var tm of tms){
 			if (tm.desc.indexOf(mon.name) !== -1){
 				t += tm.name + ", ";
