@@ -90,9 +90,9 @@ function pokemon(message) {
 			sendMessage("I don't recognise that Pokémon, " + user + "!");
 		} else {
 			if (current.alola === -1) {
-				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki;
+				out = "Image: <img src=\"" + current.image + "\" /><br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: <a href=\"" + current.wiki + "\">" + current.wiki + "</a>";
 			} else {
-				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Alola Dex No.: " + current.alola + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki;
+				out = "Image: <img src=\"" + current.image + "\" /><br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Alola Dex No.: " + current.alola + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: <a href=\"" + current.wiki + "\">" + current.wiki + "</a>";
 			}
 			sendMessage(out);
 		}
