@@ -1,3 +1,5 @@
+var user = "user";
+console.log("Ver: Userfix");
 document.getElementById("input").addEventListener("keyup", function(event) { //makes pressing enter in the textbox click submit
     event.preventDefault();
     if (event.keyCode == 13) {
