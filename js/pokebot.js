@@ -68,7 +68,7 @@ function help(message) {
 		"<br />!nature: Displays a chart of the effects of each Nature on a Pokémon's stats." +
 		"<br />For more detail on each command, call it with 'help' as the first argument. For example, '!pokemon help'." + 
 		"<br />By the way, I can respond to direct messages as well. Please feel free to try it if you don't want to clutter up a server!" + 
-		"<br />I was created by AlphaKretin, using discord.io in node.js."
+		"<br />I was created by AlphaKretin, using discord.io in node.js. This is a port to raw HTML and JS."
 	);
 }
 
@@ -156,10 +156,7 @@ function move(message) {
 	var mov = message.substring(6);
 	mov = mov.toLowerCase();
 	if (mov === "help") {
-		sendMessage(
-
-"This command serves information about Pokémon's moves! Use the move's name as the argument, with spaces where appropriate."
-		);
+		sendMessage("This command serves information about Pokémon's moves! Use the move's name as the argument, with spaces where appropriate.");
 	} else {
 		var out = "";
 		for (var move of moves) {//find move in array that matches user input
@@ -588,23 +585,23 @@ function rap(message) {
 }
 
 function typechart(message) {
-	sendMessage("http://i.imgur.com/fylyCdC.png");
+	sendMessage("<img src=\"http://i.imgur.com/fylyCdC.png\" />");
 }
 
 function evolution(message) {
 	if (message !== "!evolution confirm spoiler") {
 		sendMessage("Spoiler alert! This command displays an image that spoils aspects of the new Sun and Moon! If you're sure you, and everyone else in the channel, are fine with seeing it, type '!evolution confirm spoiler'.");
 	} else {
-		sendMessage("https://a.pomf.cat/lmesct.png");
+		sendMessage("<img src=\"https://a.pomf.cat/lmesct.png\" />");
 	}
 }
 
 function qr(message) {
-	sendMessage("http://imgur.com/a/EFOqs");
+	sendMessage("<a href=\"http://imgur.com/a/EFOqs\">http://imgur.com/a/EFOqs</a>");
 }
 
 function nature(message) {
-	sendMessage("http://faqs.neoseeker.com/Games/DS/pokemon_bw_2_nature.png");
+	sendMessage("<a href=\"http://faqs.neoseeker.com/Games/DS/pokemon_bw_2_nature.png\">http://faqs.neoseeker.com/Games/DS/pokemon_bw_2_nature.png</a>");
 }
 
 function c(string) {
