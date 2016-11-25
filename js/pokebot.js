@@ -52,21 +52,21 @@ function sendMessage(message){
 //outputs help text
 function help(message) {
 	sendMessage("Hello, I am Colress. My job is to serve information about data in the Pokémon games. I recognise the following commands: " +
-		"\n!help: Displays this help message." + 
-		"\n!pokemon: Serves information about individual Pokémon." + 
-		"\n!pokedex: Serves Pokémon information by Pokédex number lookup." +
-		"\n!aloladex: Serves Pokémon information by Alola Pokédex number lookup." +
-		"\n!move: Serves information about Pokémon moves." + 
-		"\n!item: Serves information about items." + 
-		"\n!ability: Serves information about pokemon abilites." + 
-		"\n!weak: Calculates the type relationships of a Pokémon." + 
-		"\n!typechart: Displays a chart of type strengths and weaknesses." + 
-		"\n!evolution: Displays an image guide for evolving new Alolan Pokémon. Spoiler alert!" + 
-		"\n!qr: Links a list of QR codes for Pokémon Sun and Moon's scanning feature. Spoilers, and maybe cheating?" + 
-		"\n!nature: Displays a chart of the effects of each Nature on a Pokémon's stats." +
-		"\nFor more detail on each command, call it with 'help' as the first argument. For example, '!pokemon help'." + 
-		"\nBy the way, I can respond to direct messages as well. Please feel free to try it if you don't want to clutter up a server!" + 
-		"\nI was created by AlphaKretin, using discord.io in node.js."
+		"<br />!help: Displays this help message." + 
+		"<br />!pokemon: Serves information about individual Pokémon." + 
+		"<br />!pokedex: Serves Pokémon information by Pokédex number lookup." +
+		"<br />!aloladex: Serves Pokémon information by Alola Pokédex number lookup." +
+		"<br />!move: Serves information about Pokémon moves." + 
+		"<br />!item: Serves information about items." + 
+		"<br />!ability: Serves information about pokemon abilites." + 
+		"<br />!weak: Calculates the type relationships of a Pokémon." + 
+		"<br />!typechart: Displays a chart of type strengths and weaknesses." + 
+		"<br />!evolution: Displays an image guide for evolving new Alolan Pokémon. Spoiler alert!" + 
+		"<br />!qr: Links a list of QR codes for Pokémon Sun and Moon's scanning feature. Spoilers, and maybe cheating?" + 
+		"<br />!nature: Displays a chart of the effects of each Nature on a Pokémon's stats." +
+		"<br />For more detail on each command, call it with 'help' as the first argument. For example, '!pokemon help'." + 
+		"<br />By the way, I can respond to direct messages as well. Please feel free to try it if you don't want to clutter up a server!" + 
+		"<br />I was created by AlphaKretin, using discord.io in node.js."
 	);
 }
 
@@ -90,9 +90,9 @@ function pokemon(message) {
 			sendMessage("I don't recognise that Pokémon, " + user + "!");
 		} else {
 			if (current.alola === -1) {
-				out = "Image: " + current.image + "\nName: " + current.name + "\nPokédex No.: " + current.dex + "\nType: " + current.type + "\nAbility: " + current.ability + "\nWiki Link: " + current.wiki;
+				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki;
 			} else {
-				out = "Image: " + current.image + "\nName: " + current.name + "\nPokédex No.: " + current.dex + "\nAlola Dex No.: " + current.alola + "\nType: " + current.type + "\nAbility: " + current.ability + "\nWiki Link: " + current.wiki;
+				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Alola Dex No.: " + current.alola + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki;
 			}
 			sendMessage(out);
 		}
@@ -116,9 +116,9 @@ function pokedex(message) {
 			sendMessage("I don't recognise that Pokémon, " + user + "!");
 		} else {
 			if (current.alola === -1) {
-				out = "Image: " + current.image + "\nName: " + current.name + "\nPokédex No.: " + current.dex + "\nType: " + current.type + "\nAbility: " + current.ability + "\nWiki Link: " + current.wiki;
+				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki;
 			} else {
-				out = "Image: " + current.image + "\nName: " + current.name + "\nPokédex No.: " + current.dex + "\nAlola Dex No.: " + current.alola + "\nType: " + current.type + "\nAbility: " + current.ability + "\nWiki Link: " + current.wiki;
+				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Alola Dex No.: " + current.alola + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki;
 			}
 			sendMessage(out);
 		}
@@ -141,7 +141,7 @@ function aloladex(message) {
 		if (current === undefined) {
 			sendMessage("I don't recognise that Pokémon, " + user + "!");
 		} else {
-			sendMessage("Image: " + current.image + "\nName: " + current.name + "\nPokédex No.: " + current.dex + "\nAlola Dex No.: " + current.alola + "\nType: " + current.type + "\nAbility: " + current.ability + "\nWiki Link: " + current.wiki);
+			sendMessage("Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Alola Dex No.: " + current.alola + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki);
 		}
 	}
 }
@@ -170,7 +170,7 @@ function move(message) {
 		} else {
 			for (var prop of moveprops){//not every move object has every property, so this iterates through them
 				if (current[prop] !== undefined){//to see which ones it has and add them to the output
-					out += propToString(prop) + ": " + current[prop] + "\n";
+					out += propToString(prop) + ": " + current[prop] + "<br />";
 				}
 			}
 			sendMessage(out);
@@ -209,7 +209,7 @@ function item(message) {
 		if (current === undefined) {
 			sendMessage("I don't recognise that item, " + user + "!");
 		} else {
-			sendMessage("Name: " + current.name + "\nDescription: " + current.desc + "\nWiki Link: " + current.wiki);
+			sendMessage("Name: " + current.name + "<br />Description: " + current.desc + "<br />Wiki Link: " + current.wiki);
 		}
 	}
 }
@@ -230,7 +230,7 @@ function ability(message) {
 		if (current === undefined) {
 			sendMessage("I don't recognise that ability, " + user + "!");
 		} else {
-			sendMessage("Name: " + current.name + "\nDescription: " + current.desc + "\nWiki Link: " + current.wiki);
+			sendMessage("Name: " + current.name + "<br />Description: " + current.desc + "<br />Wiki Link: " + current.wiki);
 		}
 	}
 }
@@ -537,50 +537,50 @@ function weak(message) {
         imms = imms.slice(0, imms.length - 2);
         res = res.slice(0, res.length - 2);
         weaks = weaks.slice(0, weaks.length - 2);
-        sendMessage("Pokémon: " + current.name + "\nWeaknesses: " + weaks + "\nResistances: " + res + "\nImmunities: " + imms);
+        sendMessage("Pokémon: " + current.name + "<br />Weaknesses: " + weaks + "<br />Resistances: " + res + "<br />Immunities: " + imms);
     }
 }
 
 function rap(message) {
-	var out = "Electrode, Diglett, Nidoran, Mankey\n" +
-		"Venusaur, Rattata, Fearow, Pidgey\n" +
-		"Seaking, Jolteon, Dragonite, Gastly\n" +
-		"Ponyta, Vaporeon, Poliwrath, Butterfree\n" +
-		"Venomoth, Poliwag, Nidorino, Golduck\n" +
-		"Ivysaur, Grimer, Victreebel, Moltres\n" +
-		"Nidoking, Farfetch'd, Abra, Jigglypuff\n" +
-		"Kingler, Rhyhorn, Clefable, Wigglytuff\n" +
-		"Zubat, Primeape, Meowth, Onix\n" +
-		"Geodude, Rapidash, Magneton, Snorlax\n" +
-		"Gengar, Tangela, Goldeen, Spearow\n" +
-		"Weezing, Seel, Gyarados, Slowbro\n" +
-		"Kabuto, Persian, Paras, Horsea\n" +
-		"Raticate, Magnemite, Kadabra, Weepinbell\n" +
-		"Ditto, Cloyster, Caterpie, Sandshrew\n" +
-		"Bulbasaur, Charmander, Golem, Pikachu\n" +
-		"Alakazam, Doduo, Venonat, Machoke\n" +
-		"Kangaskhan, Hypno, Electabuzz, Flareon\n" +
-		"Blastoise, Poliwhirl, Oddish, Drowzee\n" +
-		"Raichu, Nidoqueen, Bellsprout, Starmie\n" +
-		"Metapod, Marowak, Kakuna, Clefairy\n" +
-		"Dodrio, Seadra, Vileplume, Krabby\n" +
-		"Lickitung, Tauros, Weedle, Nidoran\n" +
-		"Machop, Shellder, Porygon, Hitmonchan\n" +
-		"Articuno, Jynx, Nidorina, Beedrill\n" +
-		"Haunter, Squirtle, Chansey (Pokémon!)\n" +
-		"Parasect, Exeggcute, Muk, Dewgong\n" +
-		"Pidgeotto, Lapras, Vulpix, Rhydon\n" +
-		"Charizard, Machamp, Pinsir, Koffing\n" +
-		"Dugtrio, Golbat, Staryu, Magikarp\n" +
-		"Ninetales, Ekans, Omastar\n" +
-		"Scyther, Tentacool, Dragonair, Magmar\n" +
-		"Sandslash, Hitmonlee, Psyduck, Arcanine\n" +
-		"Eevee, Exeggutor, Kabutops, Zapdos\n" +
-		"Dratini, Growlithe, Mr. Mime, Cubone\n" +
-		"Graveler, Voltorb, Gloom - We're almost home!\n" +
-		"Charmeleon, Wartortle\n" +
-		"Mewtwo, Tentacruel, Aerodactyl\n" +
-		"Omanyte, Slowpoke\n" +
+	var out = "Electrode, Diglett, Nidoran, Mankey<br />" +
+		"Venusaur, Rattata, Fearow, Pidgey<br />" +
+		"Seaking, Jolteon, Dragonite, Gastly<br />" +
+		"Ponyta, Vaporeon, Poliwrath, Butterfree<br />" +
+		"Venomoth, Poliwag, Nidorino, Golduck<br />" +
+		"Ivysaur, Grimer, Victreebel, Moltres<br />" +
+		"Nidoking, Farfetch'd, Abra, Jigglypuff<br />" +
+		"Kingler, Rhyhorn, Clefable, Wigglytuff<br />" +
+		"Zubat, Primeape, Meowth, Onix<br />" +
+		"Geodude, Rapidash, Magneton, Snorlax<br />" +
+		"Gengar, Tangela, Goldeen, Spearow<br />" +
+		"Weezing, Seel, Gyarados, Slowbro<br />" +
+		"Kabuto, Persian, Paras, Horsea<br />" +
+		"Raticate, Magnemite, Kadabra, Weepinbell<br />" +
+		"Ditto, Cloyster, Caterpie, Sandshrew<br />" +
+		"Bulbasaur, Charmander, Golem, Pikachu<br />" +
+		"Alakazam, Doduo, Venonat, Machoke<br />" +
+		"Kangaskhan, Hypno, Electabuzz, Flareon<br />" +
+		"Blastoise, Poliwhirl, Oddish, Drowzee<br />" +
+		"Raichu, Nidoqueen, Bellsprout, Starmie<br />" +
+		"Metapod, Marowak, Kakuna, Clefairy<br />" +
+		"Dodrio, Seadra, Vileplume, Krabby<br />" +
+		"Lickitung, Tauros, Weedle, Nidoran<br />" +
+		"Machop, Shellder, Porygon, Hitmonchan<br />" +
+		"Articuno, Jynx, Nidorina, Beedrill<br />" +
+		"Haunter, Squirtle, Chansey (Pokémon!)<br />" +
+		"Parasect, Exeggcute, Muk, Dewgong<br />" +
+		"Pidgeotto, Lapras, Vulpix, Rhydon<br />" +
+		"Charizard, Machamp, Pinsir, Koffing<br />" +
+		"Dugtrio, Golbat, Staryu, Magikarp<br />" +
+		"Ninetales, Ekans, Omastar<br />" +
+		"Scyther, Tentacool, Dragonair, Magmar<br />" +
+		"Sandslash, Hitmonlee, Psyduck, Arcanine<br />" +
+		"Eevee, Exeggutor, Kabutops, Zapdos<br />" +
+		"Dratini, Growlithe, Mr. Mime, Cubone<br />" +
+		"Graveler, Voltorb, Gloom - We're almost home!<br />" +
+		"Charmeleon, Wartortle<br />" +
+		"Mewtwo, Tentacruel, Aerodactyl<br />" +
+		"Omanyte, Slowpoke<br />" +
 		"Pidgeot, Arbok - That's all, folks!";
 	sendMessage("" + out);
 }
