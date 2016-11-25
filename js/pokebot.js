@@ -1,3 +1,10 @@
+document.getElementById("input").addEventListener("keyup", function(event) { //makes pressing enter in the textbox click submit
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        document.getElementById("checkButton").click();
+    }
+});
+
 function clicked(){
 	var message = document.getElementById("input").value;
 	if (message.toLowerCase().substring(0, 5) === "!help") {
