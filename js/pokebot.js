@@ -1,5 +1,5 @@
 var user = "user";
-console.log("Ver: Discordfix");
+console.log("Ver: Naturefix");
 document.getElementById("input").addEventListener("keyup", function(event) { //makes pressing enter in the textbox click submit
 	event.preventDefault();
 	if (event.keyCode == 13) {
@@ -601,7 +601,7 @@ function qr(message) {
 }
 
 function nature(message) {
-	sendMessage("<a href=\"http://faqs.neoseeker.com/Games/DS/pokemon_bw_2_nature.png\">http://faqs.neoseeker.com/Games/DS/pokemon_bw_2_nature.png</a>");
+	sendMessage("<img src=\"http://faqs.neoseeker.com/Games/DS/pokemon_bw_2_nature.png\" />");
 }
 
 function c(string) {
