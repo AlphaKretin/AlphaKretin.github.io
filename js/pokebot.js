@@ -116,9 +116,9 @@ function pokedex(message) {
 			sendMessage("I don't recognise that Pokémon, " + user + "!");
 		} else {
 			if (current.alola === -1) {
-				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki;
+				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: <a href=\"" + current.wiki + "\">" + current.wiki + "</a>"
 			} else {
-				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Alola Dex No.: " + current.alola + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki;
+				out = "Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Alola Dex No.: " + current.alola + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: <a href=\"" + current.wiki + "\">" + current.wiki + "</a>"
 			}
 			sendMessage(out);
 		}
@@ -141,7 +141,7 @@ function aloladex(message) {
 		if (current === undefined) {
 			sendMessage("I don't recognise that Pokémon, " + user + "!");
 		} else {
-			sendMessage("Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Alola Dex No.: " + current.alola + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: " + current.wiki);
+			sendMessage("Image: " + current.image + "<br />Name: " + current.name + "<br />Pokédex No.: " + current.dex + "<br />Alola Dex No.: " + current.alola + "<br />Type: " + current.type + "<br />Ability: " + current.ability + "<br />Wiki Link: <a href=\"" + current.wiki + "\">" + current.wiki + "</a>")
 		}
 	}
 }
@@ -209,7 +209,7 @@ function item(message) {
 		if (current === undefined) {
 			sendMessage("I don't recognise that item, " + user + "!");
 		} else {
-			sendMessage("Name: " + current.name + "<br />Description: " + current.desc + "<br />Wiki Link: " + current.wiki);
+			sendMessage("Name: " + current.name + "<br />Description: " + current.desc + "<br />Wiki Link: <a href=\"" + current.wiki + "\">" + current.wiki + "</a>")
 		}
 	}
 }
@@ -230,7 +230,7 @@ function ability(message) {
 		if (current === undefined) {
 			sendMessage("I don't recognise that ability, " + user + "!");
 		} else {
-			sendMessage("Name: " + current.name + "<br />Description: " + current.desc + "<br />Wiki Link: " + current.wiki);
+			sendMessage("Name: " + current.name + "<br />Description: " + current.desc + "<br />Wiki Link: <a href=\"" + current.wiki + "\">" + current.wiki + "</a>")
 		}
 	}
 }
@@ -519,7 +519,7 @@ function weak(message) {
         //output
         for (var typ of types) {
             if (typ.value === 2) {
-                weaks += "**" + c(typ.id) + "**, ";
+                weaks += "<b>" + c(typ.id) + "</b>, ";
             }
             if (typ.value === 1) {
                 weaks += c(typ.id) + ", ";
@@ -528,7 +528,7 @@ function weak(message) {
                 res += c(typ.id) + ", ";
             }
             if (typ.value === -2) {
-                res += "**" + c(typ.id) + "**, ";
+                res += "<b>" + c(typ.id) + "</b>, ";
             }
             if (typ.value < -2) {
                 imms += c(typ.id) + ", ";
