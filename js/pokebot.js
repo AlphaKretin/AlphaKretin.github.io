@@ -1,5 +1,5 @@
 var user = "user";
-console.log("Ver: Userfix");
+console.log("Ver: Discordfix");
 document.getElementById("input").addEventListener("keyup", function(event) { //makes pressing enter in the textbox click submit
     event.preventDefault();
     if (event.keyCode == 13) {
