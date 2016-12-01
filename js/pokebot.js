@@ -47,7 +47,6 @@ function clicked(){
 	}
 }
 
-document.getElementById("input").value = "!help";
 clicked();
 
 function sendMessage(message){
