@@ -1,5 +1,5 @@
 var user = "user";
-console.log("Ver: TM/Help");
+console.log("Mobile 1");
 document.getElementById("input").addEventListener("keyup", function(event) { //makes pressing enter in the textbox click submit
 	event.preventDefault();
 	if (event.keyCode == 13) {
@@ -8,7 +8,7 @@ document.getElementById("input").addEventListener("keyup", function(event) { //m
 });
 
 function clicked(){
-	var message = document.getElementById("input").value;
+	var message = document.getElementById("command").value + " " + document.getElementById("input").value;
 	if (message.toLowerCase().substring(0, 5) === "!help") {
 		help(message);
 	}
