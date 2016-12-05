@@ -1,3 +1,5 @@
+console.log("trail9");
+
 function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=left //startPoint = {row: "A" column: 1}
     var isMoving = false;
     var currentCell = {
@@ -13,6 +15,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
         column: 3
     };
     var tempImage = "butts";
+    var oldImage = "hole";
     var timesLooped = 0;
     console.log("butts");
     isMoving = true;
@@ -23,6 +26,8 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
             colourAssign();
             if (isMoving === true) {
                 colourLoop();
+            } else {
+                document.getElementById(destination.row + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/hole.png\" />";
             }
         }, 150);
     }
@@ -63,6 +68,20 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
             tempImage = "blank";
         }
         document.getElementById(destination.row + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/ball.png\" />";
+        switch (direction) {
+            case 0:
+                document.getElementById(incrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
+                break;
+            case 1:
+                document.getElementById(destination.row + (destination.column - 1).toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
+                break;
+            case 2:
+                document.getElementById(decrementLetter(destination.row) + destination.column.toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
+                break;
+            case 3:
+                document.getElementById(destination.row + (destination.column + 1).toString()).innerHTML = "<img src=\"../images/mirrors/" + oldImage + ".png\" />";
+                break;
+        }
         switch (tempImage) {
             case "slash":
                 switch (direction) {
@@ -104,6 +123,7 @@ function move(direction, startPoint) { //direction: 0=up, 1= right, 2=down, 3=le
             default:
                 break;
         }
+        oldImage = tempImage;
         previousCell = currentCell;
         currentCell = destination;
     }
