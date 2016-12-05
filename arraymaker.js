@@ -3,7 +3,7 @@ console.log("catch rates");
 
 function clicked(){
 	var out = "var mons = [";
-	var tempOut;
+	var tempOut = "";
 	var len = 0;
 	var curRate = 0;
 	for (var mon of mons){
@@ -12,7 +12,7 @@ function clicked(){
 				curRate = rate.cr;
 			}
 		}
-		tempOut = "{id: \"" + mon.id "\", name: \"" + mon.name + "\", dex: " + mon.dex + ", cr: " + curRate + "},";
+		tempOut = "{id: \"" + mon.id + "\", name: \"" + mon.name + "\", dex: " + mon.dex + ", cr: " + curRate + "},";
 		out += tempOut;
 	}
 	len = out.length - 2;
