@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon Catch Rates</title>
+    <link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="AlphaKretin">
+    <meta name="application-name" content="AlphaKretin">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Pokémon's Max HP:</th>
+            <th><input type="text" id="maxHP" /></th>
+        </tr>
+        <tr>
+            <td>Pokémon's Current HP:</td>
+            <td><input type="text" id="currentHP" /></td>
+        </tr>
+        <tr>
+            <td>Pokémon's Catch Rate:</td>
+            <td><input type="text" id="monRate" /></td>
+        </tr>
+        <tr>
+            <td>Poké Ball's Catch Rate Multiplier:</td>
+            <td><input type="text" id="ballBonus" /></td>
+        </tr>
+        <tr>
+            <td>Status Effect Catch Rate Multiplier:</td>
+            <td><input type="text" id="statusBonus" /></td>
+        </tr>
+        <tr>
+            <td>Pokédex Completion Multiplier for Critical Capture Rate:</td>
+            <td><input type="text" id="dexMult" /></td>
+        </tr>
+    </table>
+    <input type="button" value="Calculate Catch Rates" onclick="calcRates();" /><input type="button" value="Simulate Throwing a Poké Ball" onclick="throwBall();" /><br />
+    <table>
+        <tr>
+            <th>Modified Catch Rate:</th>
+            <th id="finalRate"></th>
+        </tr>
+        <tr>
+            <td>Poké Ball Shake Chance:</td>
+            <td id="shakeRate"></td>
+        </tr>
+        <tr>
+            <td>Critical Capture Chance:</td>
+            <td id="critRate"></td>
+        </tr>
+        <tr>
+            <td>Capture Attempt Results:</td>
+            <td id="out"></td>
+        </tr>
+        <tr>
+            <td>Poké Balls Thrown:</td>
+            <td id="balls"></td>
+        </tr>
+        <tr>
+            <td>Successful Captures:</td>
+            <td id="catches"></td>
+        </tr>
+    </table>
+    <script src="../js/catchrate.js"></script>
+    <div id="links">
+        <a href="../index.html">Click here to return to the index!</a><br />
+    </div>
+</body>
+
+</html>
