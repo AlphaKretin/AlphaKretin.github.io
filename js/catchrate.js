@@ -10,7 +10,17 @@ var shakeThree = false;
 var isCaught = true;
 var balls = 0;
 var catches = 0;
-console.log("fix rate output");
+
+console.log("help links");
+
+window.onload = function() {
+    var a = document.getElementById("mylink");
+    a.onclick = function() {
+        alert("Sleep: 2.5\nFreeze: 2.5\nParalyze: 1.5\nPoison: 1.5\nBurn: 1.5");
+        return false;
+    };
+};
+
 function calcRates() {
     var maxHP = 0;
     var currentHP = 0;
@@ -42,7 +52,7 @@ function calcRates() {
 
 function throwBall() {
     if (calcedYet) {
-    	balls++;
+        balls++;
         if (getRandomIntInclusive(0, 255) < critRate) {
             isCrit = true;
             criticalCapture();
