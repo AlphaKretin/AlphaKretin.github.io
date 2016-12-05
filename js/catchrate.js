@@ -10,7 +10,7 @@ var shakeThree = false;
 var isCaught = true;
 var balls = 0;
 var catches = 0;
-
+console.log("fix rate output");
 function calcRates() {
     var maxHP = 0;
     var currentHP = 0;
@@ -31,8 +31,8 @@ function calcRates() {
     critRate = Math.round((finalRate * dexMult) / 6);
 
     document.getElementById("finalRate").innerHTML = finalRate;
-    document.getElementById("shakeRate").innerHTML = finalRate;
-    document.getElementById("critRate").innerHTML = finalRate;
+    document.getElementById("shakeRate").innerHTML = shakeRate;
+    document.getElementById("critRate").innerHTML = critRate;
     if (!(isNaN(maxHP) && isNaN(currentHP) && isNaN(monRate) && isNaN(ballBonus) && isNaN(statusBonus) && isNaN(dexMult))) {
         calcedYet = true;
     } else {
