@@ -40,14 +40,18 @@ function calcRates() {
     shakeRate = 65536 / Math.pow((255 / finalRate), 0.1875);
     critRate = Math.round((finalRate * dexMult) / 6);
 
-    document.getElementById("finalRate").innerHTML = finalRate;
-    document.getElementById("shakeRate").innerHTML = shakeRate;
-    document.getElementById("critRate").innerHTML = critRate;
+    document.getElementById("finalRate").innerHTML = round4096(finalRate);
+    document.getElementById("shakeRate").innerHTML = round4096(shakeRate);
+    document.getElementById("critRate").innerHTML = round4096(critRate);
     if (!(isNaN(maxHP) && isNaN(currentHP) && isNaN(monRate) && isNaN(ballBonus) && isNaN(statusBonus) && isNaN(dexMult))) {
         calcedYet = true;
     } else {
         alert("All entries must be numbers!");
     }
+}
+
+function round4096(num){
+    return Math.ceil(num*4096)/4096;
 }
 
 function throwBall() {
