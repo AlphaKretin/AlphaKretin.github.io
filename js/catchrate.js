@@ -10,8 +10,9 @@ var shakeThree = false;
 var isCaught = true;
 var balls = 0;
 var catches = 0;
+var oops = false;
 
-console.log("stop loops");
+console.log("oops");
 
 window.onload = function() {
     var a = document.getElementById("mylink");
@@ -106,7 +107,7 @@ function throwBall() {
         out = "";
     } else {
         alert("You must calculate a catch rate before you simulate a capture attempt!");
-        return;
+        oops = true;
     }
 }
 
@@ -144,6 +145,9 @@ function lotsOfBalls() {
         while (i < numBalls) {
             throwBall();
             i++;
+            if (oops) {
+                return;
+            }
         }
     }
 }
