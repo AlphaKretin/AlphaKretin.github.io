@@ -11,7 +11,7 @@ var isCaught = true;
 var balls = 0;
 var catches = 0;
 
-console.log("numBalls");
+console.log("stop loops");
 
 window.onload = function() {
     var a = document.getElementById("mylink");
