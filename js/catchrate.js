@@ -11,7 +11,7 @@ var isCaught = true;
 var balls = 0;
 var catches = 0;
 
-console.log("help links");
+console.log("round4096");
 
 window.onload = function() {
     var a = document.getElementById("mylink");
