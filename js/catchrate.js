@@ -12,7 +12,7 @@ var balls = 0;
 var catches = 0;
 var oops = false;
 
-console.log("oops");
+console.log("unoops");
 
 window.onload = function() {
     var a = document.getElementById("mylink");
@@ -140,6 +140,7 @@ function getRandomIntInclusive(min, max) {
 
 function lotsOfBalls() {
     var numBalls = parseInt(document.getElementById("numBalls").value);
+    oops = false;
     if (!isNaN(numBalls)) {
         var i = 0;
         while (i < numBalls) {
