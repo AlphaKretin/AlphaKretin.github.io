@@ -11,7 +11,7 @@ var isCaught = true;
 var balls = 0;
 var catches = 0;
 
-console.log("round4096");
+console.log("numBalls");
 
 window.onload = function() {
     var a = document.getElementById("mylink");
@@ -50,8 +50,8 @@ function calcRates() {
     }
 }
 
-function round4096(num){
-    return Math.ceil(num*4096)/4096;
+function round4096(num) {
+    return Math.ceil(num * 4096) / 4096;
 }
 
 function throwBall() {
@@ -134,4 +134,15 @@ function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function lotsOfBalls() {
+    var numBalls = parseInt(document.getElementById("numBalls").value);
+    if (!isNaN(numBalls)) {
+        var i = 0;
+        while (i < numBalls) {
+            throwBall();
+            i++;
+        }
+    }
 }
