@@ -106,6 +106,7 @@ function throwBall() {
         out = "";
     } else {
         alert("You must calculate a catch rate before you simulate a capture attempt!");
+        return;
     }
 }
 
