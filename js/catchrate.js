@@ -12,7 +12,7 @@ var balls = 0;
 var catches = 0;
 var oops = false;
 
-console.log("unoops");
+console.log("thanks bulbapedia");
 
 window.onload = function() {
     var a = document.getElementById("mylink");
@@ -37,13 +37,15 @@ function calcRates() {
     statusBonus = parseFloat(document.getElementById("statusBonus").value);
     dexMult = parseFloat(document.getElementById("dexMult").value);
 
-    finalRate = (((3 * maxHP - 2 * currentHP) * monRate * ballBonus) / (3 * maxHP)) * statusBonus;
-    shakeRate = 65536 / Math.pow((255 / finalRate), 0.1875);
-    critRate = Math.round((finalRate * dexMult) / 6);
+    finalRate = Math.floor(r4k((((3 * maxHP - 2 * currentHP) * monRate * ballBonus) / (3 * maxHP))) * statusBonus);
+    if (finalRate < 1) { finalRate = 1; }
+    shakeRate = Math.floor(r4k(65536 / Math.pow(r4k((255 / finalRate)), 0.1875)));
+    if (shakeRate < 1) { shakeRate = 1; }
+    critRate = Math.floor(Math.round((finalRate * dexMult) / 6));
 
-    document.getElementById("finalRate").innerHTML = round4096(finalRate);
-    document.getElementById("shakeRate").innerHTML = round4096(shakeRate);
-    document.getElementById("critRate").innerHTML = round4096(critRate);
+    document.getElementById("finalRate").innerHTML = finalRate;
+    document.getElementById("shakeRate").innerHTML = shakeRate;
+    document.getElementById("critRate").innerHTML = critRate;
     if (!(isNaN(maxHP) && isNaN(currentHP) && isNaN(monRate) && isNaN(ballBonus) && isNaN(statusBonus) && isNaN(dexMult))) {
         calcedYet = true;
     } else {
@@ -51,7 +53,7 @@ function calcRates() {
     }
 }
 
-function round4096(num) {
+function r4k(num) {
     return Math.ceil(num * 4096) / 4096;
 }
 
