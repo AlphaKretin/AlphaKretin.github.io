@@ -3,7 +3,7 @@ var dexNum = document.getElementById("dexNum");
 var monName = document.getElementById("monName");
 var catchRate = document.getElementById("catchRate");
 
-console.log("fix the dumb");
+console.log("fuck select options");
 
 function loadFromSelect(){
 	var currentMon;
@@ -849,5 +849,7 @@ var mons = [{id: "bulbasaur", name: "Bulbasaur", dex: 1, cr: 45},
 {id: "marshadow", name: "Marshadow", dex: 802, cr: 3}];
 
 for (var mon of mons){
-	list.add(mon.name);
+	var opt = document.createElement("option");
+	opt.text = mon.name
+	list.add(opt);
 }
