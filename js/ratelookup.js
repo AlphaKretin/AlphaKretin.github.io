@@ -3,9 +3,7 @@ var dexNum = document.getElementById("dexNum");
 var monName = document.getElementById("monName");
 var catchRate = document.getElementById("catchRate");
 
-for (var mon of mons){
-	list.add(mon.name);
-}
+console.log("fix the dumb");
 
 function loadFromSelect(){
 	var currentMon;
@@ -849,3 +847,7 @@ var mons = [{id: "bulbasaur", name: "Bulbasaur", dex: 1, cr: 45},
 {id: "necrozma", name: "Necrozma", dex: 800, cr: 3},
 {id: "magearna", name: "Magearna", dex: 801, cr: 3},
 {id: "marshadow", name: "Marshadow", dex: 802, cr: 3}];
+
+for (var mon of mons){
+	list.add(mon.name);
+}
