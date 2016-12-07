@@ -17,7 +17,7 @@ function calcHp() {
     		baseHp = currentMon.hp;
         	minHp = ((2 * baseHp) * monLevel / 100) + 10 + monLevel;
         	maxHp = ((31 + 2 * baseHp) * monLevel / 100) + 10 + monLevel;
-        	outDiv.innerHTML = "The wild " + currentMon.name + "'s Maximum HP should be between " + minHp + " and " + maxHp + ".";
+        	outDiv.innerHTML = "The wild " + currentMon.name + "'s Maximum HP should be between " + Math.floor(minHp) + " and " + Math.floor(maxHp) + ".";
         }
     }
 }
