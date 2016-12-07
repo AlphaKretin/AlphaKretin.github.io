@@ -3,6 +3,8 @@ var levelBox = document.getElementById("levelBox");
 var monName = document.getElementById("monName");
 var outDiv = document.getElementById("outDiv");
 
+console.log("fix the dumb typo");
+
 function calcHp() {
     var monLevel = parseInt(levelBox.value);
     if (!(isNaN(monLevel))) {
@@ -852,7 +854,7 @@ var mons = [{id: "bulbasaur", name: "Bulbasaur", dex: 1, hp: 45},
 {id: "guzzlord", name: "Guzzlord", dex: 799, hp: 223},
 {id: "necrozma", name: "Necrozma", dex: 800, hp: 97},
 {id: "magearna", name: "Magearna", dex: 801, hp: 80},
-{id: "marshadow", name: "Marshadow", dex: 802, hp: 90];
+{id: "marshadow", name: "Marshadow", dex: 802, hp: 90}];
 
 for (var mon of mons){
 	var opt = document.createElement("option");
