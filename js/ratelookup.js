@@ -3,47 +3,59 @@ var dexNum = document.getElementById("dexNum");
 var monName = document.getElementById("monName");
 var catchRate = document.getElementById("catchRate");
 
-console.log("fuck select options");
+console.log("fix misc errors");
 
-function loadFromSelect(){
-	var currentMon;
-	for (var mon of mons){
-		if (mon.name === list.value) { currentMon = mon; }
-	}
-	if (currentMon != undefined){
-		dexNum.value = currentMon.dex;
-		monName.value = currentMon.name;
-		catchRate = currentMon.cr;
-	}
+function loadFromSelect() {
+    var currentMon;
+    for (var mon of mons) {
+        if (mon.name === list.value) {
+            currentMon = mon;
+        }
+    }
+    if (currentMon !== undefined) {
+        dexNum.value = currentMon.dex;
+        monName.value = currentMon.name;
+        catchRate.value = currentMon.cr;
+    }
 }
 
-function loadFromDex(){
-	var currentMon;
-	for (var mon of mons){
-		if (mon.dex === dexNum.value) { currentMon = mon; }
-	}
-	if (currentMon != undefined){
-		list.value = currentMon.name;
-		monName.value = currentMon.name;
-		catchRate = currentMon.cr;
-	}
+function loadFromDex() {
+    var currentMon;
+    for (var mon of mons) {
+        if (mon.dex === parseInt(dexNum.value)) {
+            currentMon = mon;
+        }
+    }
+    if (currentMon !== undefined) {
+        list.value = currentMon.name;
+        monName.value = currentMon.name;
+        catchRate.value = currentMon.cr;
+    }
 }
 
-function loadFromName(){
-	var currentMon;
-	for (var mon of mons){
-		if (mon.name === monName.value) { currentMon = mon; }
-	}
-	if (currentMon != undefined){
-		list.value = currentMon.name;
-		dexNum.value = currentMon.dex;
-		catchRate = currentMon.cr;
-	}
+function loadFromName() {
+    var currentMon;
+    for (var mon of mons) {
+        if (mon.name === monName.value) {
+            currentMon = mon;
+        }
+    }
+    if (currentMon !== undefined) {
+        list.value = currentMon.name;
+        dexNum.value = currentMon.dex;
+        catchRate.value = currentMon.cr;
+    }
 }
 
-list.addEventListener("change", function(){ loadFromSelect(); });
-dexNum.addEventListener("input", function(){ loadFromDex(); });
-monName.addEventListener("input", function() { loadFromName(); });
+list.addEventListener("change", function() {
+    loadFromSelect();
+});
+dexNum.addEventListener("input", function() {
+    loadFromDex();
+});
+monName.addEventListener("input", function() {
+    loadFromName();
+});
 
 var mons = [{id: "bulbasaur", name: "Bulbasaur", dex: 1, cr: 45},
 {id: "ivysaur", name: "Ivysaur", dex: 2, cr: 45},
@@ -850,6 +862,6 @@ var mons = [{id: "bulbasaur", name: "Bulbasaur", dex: 1, cr: 45},
 
 for (var mon of mons){
 	var opt = document.createElement("option");
-	opt.text = mon.name
+	opt.text = mon.name;
 	list.add(opt);
 }
