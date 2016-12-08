@@ -5,7 +5,7 @@ var catchRate = document.getElementById("catchRate");
 var catchRate2 = document.getElementById("catchRate2");
 var listOutput = document.getElementById("listOutput");
 
-console.log("add listing");
+console.log("add enter submit");
 
 function loadFromSelect() {
     var currentMon;
@@ -881,3 +881,10 @@ for (var mon of mons){
 	opt.text = mon.name;
 	list.add(opt);
 }
+
+catchRate2.addEventListener("keyup", function(event) { //makes pressing enter in the textbox click submit
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        check.click();
+    }
+});
