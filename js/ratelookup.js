@@ -2,8 +2,10 @@ var list = document.getElementById("monList");
 var dexNum = document.getElementById("dexNum");
 var monName = document.getElementById("monName");
 var catchRate = document.getElementById("catchRate");
+var catchRate2 = document.getElementById("catchRate2");
+var listOutput = document.getElementById("listOutput");
 
-console.log("fix misc errors");
+console.log("add listing");
 
 function loadFromSelect() {
     var currentMon;
@@ -56,6 +58,20 @@ dexNum.addEventListener("input", function() {
 monName.addEventListener("input", function() {
     loadFromName();
 });
+
+function listMons() {
+	var cr = parseInt(catchRate2.value);
+	listOutput.innerHTML = "";
+	for (var mon of mons){
+		if (!(mon.cr > cr)){
+			var row = listOutput.insertRow(-1);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			cell1.innerHTML = mon.name;
+			cell2.innerHTML = mon.cr;
+		}
+	}
+}
 
 var mons = [{id: "bulbasaur", name: "Bulbasaur", dex: 1, cr: 45},
 {id: "ivysaur", name: "Ivysaur", dex: 2, cr: 45},
