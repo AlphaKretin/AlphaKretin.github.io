@@ -10,7 +10,7 @@ data.characters.azura = new data.Parent(
   [25, 50, 25, 60, 60, 40, 15, 35],
   [0, 0, 1, 3, 0, -3, 0],
   'Shigure',
-  ['Avatar', 'Jakob', 'Kaze', 'Silas', 'Subaki', 'Saizo', 'Azama', 'Hayato', 'Hinata', 'Takumi', 'Kaden', 'Ryoma', 'Leo', 'Arthur', 'Odin', 'Niles', 'Laslow', 'Benny', 'Keaton', 'Xander', 'Hinoka', 'Oboro', 'Reina', 'Camilla', 'Selena', 'Rinkah', 'Anna', 'Felicia']
+  ['Avatar', 'Jakob', 'Kaze', 'Silas', 'Subaki', 'Saizo', 'Azama', 'Hayato', 'Hinata', 'Takumi', 'Kaden', 'Ryoma', 'Leo', 'Arthur', 'Odin', 'Niles', 'Laslow', 'Benny', 'Keaton', 'Xander', 'Hinoka', 'Oboro', 'Reina', 'Camilla', 'Selena', 'Rinkah', 'Anna', 'Felicia', 'Peri', 'Charlotte']
 );
 
 data.characters.felicia = new data.Parent(
@@ -234,7 +234,7 @@ data.characters.peri = new data.Parent(
   [30, 50, 5, 30, 50, 35, 25, 45],
   [1, 0, -1, 1, 0, -2, 2],
   '',
-  ['Avatar', 'Jakob', 'Kaze', 'Silas', 'Hinata', 'Kaden', 'Leo', 'Arthur', 'Odin', 'Niles', 'Laslow', 'Benny', 'Keaton', 'Xander']
+  ['Avatar', 'Jakob', 'Kaze', 'Silas', 'Hinata', 'Kaden', 'Leo', 'Arthur', 'Odin', 'Niles', 'Laslow', 'Benny', 'Keaton', 'Xander', 'Azura']
 );
 
 data.characters.charlotte = new data.Parent(
@@ -245,7 +245,7 @@ data.characters.charlotte = new data.Parent(
   [65, 55, 0, 35, 50, 45, 20, 5],
   [3, 0, 0, 2, 0, -2, -2],
   '',
-  ['Avatar', 'Jakob', 'Kaze', 'Silas', 'Saizo', 'Kaden', 'Leo', 'Arthur', 'Odin', 'Niles', 'Laslow', 'Benny', 'Keaton', 'Xander', 'Subaki']
+  ['Avatar', 'Jakob', 'Kaze', 'Silas', 'Saizo', 'Kaden', 'Leo', 'Arthur', 'Odin', 'Niles', 'Laslow', 'Benny', 'Keaton', 'Xander', 'Subaki', 'Azura']
 );
 
 data.characters.flora = new data.Parent(
