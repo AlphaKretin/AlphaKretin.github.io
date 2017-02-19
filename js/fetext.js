@@ -1,4 +1,4 @@
-console.log("revision 2");
+console.log("revision 3");
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var ctx = document.getElementById("renderCanvas").getContext("2d");
 var input = document.getElementById("inputArea");
@@ -29,34 +29,34 @@ var charWidths = {
     x: 6,
     y: 5,
     z: 5,
-    A: 6,
-    B: 6,
-    C: 6,
-    D: 6,
-    E: 6,
-    F: 6,
-    G: 6,
-    H: 6,
-    I: 4,
-    J: 6,
-    K: 6,
-    L: 6,
-    M: 8,
-    N: 6,
-    O: 6,
-    P: 6,
-    Q: 7,
-    R: 6,
-    S: 7,
-    T: 6,
-    U: 6,
-    V: 6,
-    W: 8,
-    X: 8,
-    Y: 6,
-    Z: 6,
+    cA: 6,
+    cB: 6,
+    cC: 6,
+    cD: 6,
+    cE: 6,
+    cF: 6,
+    cG: 6,
+    cH: 6,
+    cI: 4,
+    cJ: 6,
+    cK: 6,
+    cL: 6,
+    cM: 8,
+    cN: 6,
+    cO: 6,
+    cP: 6,
+    cQ: 7,
+    cR: 6,
+    cS: 7,
+    cT: 6,
+    cU: 6,
+    cV: 6,
+    cW: 8,
+    cX: 8,
+    cY: 6,
+    cZ: 6,
     space: 4,
-    tilde: 5,
+    tilde: 7,
     0: 5,
     1: 4,
     2: 5,
@@ -86,12 +86,147 @@ var charWidths = {
     percent: 8
 };
 var images = {
-    a: new Image(charWidths["a"], 15)
+    a: new Image(charWidths["a"], 15),
+    b: new Image(charWidths["b"], 15),
+    c: new Image(charWidths["c"], 15),
+    d: new Image(charWidths["d"], 15),
+    e: new Image(charWidths["e"], 15),
+    f: new Image(charWidths["f"], 15),
+    g: new Image(charWidths["g"], 15),
+    h: new Image(charWidths["h"], 15),
+    i: new Image(charWidths["i"], 15),
+    j: new Image(charWidths["j"], 15),
+    k: new Image(charWidths["k"], 15),
+    l: new Image(charWidths["l"], 15),
+    m: new Image(charWidths["m"], 15),
+    n: new Image(charWidths["n"], 15),
+    o: new Image(charWidths["o"], 15),
+    p: new Image(charWidths["p"], 15),
+    q: new Image(charWidths["q"], 15),
+    r: new Image(charWidths["r"], 15),
+    s: new Image(charWidths["s"], 15),
+    t: new Image(charWidths["t"], 15),
+    u: new Image(charWidths["u"], 15),
+    v: new Image(charWidths["v"], 15),
+    w: new Image(charWidths["w"], 15),
+    x: new Image(charWidths["x"], 15),
+    y: new Image(charWidths["y"], 15),
+    z: new Image(charWidths["z"], 15),
+    cA: new Image(charWidths["cA"], 15),
+    cB: new Image(charWidths["cB"], 15),
+    cC: new Image(charWidths["cC"], 15),
+    cD: new Image(charWidths["cD"], 15),
+    cE: new Image(charWidths["cE"], 15),
+    cF: new Image(charWidths["cF"], 15),
+    cG: new Image(charWidths["cG"], 15),
+    cH: new Image(charWidths["cH"], 15),
+    cI: new Image(charWidths["cI"], 15),
+    cJ: new Image(charWidths["cJ"], 15),
+    cK: new Image(charWidths["cK"], 15),
+    cL: new Image(charWidths["cL"], 15),
+    cM: new Image(charWidths["cM"], 15),
+    cN: new Image(charWidths["cN"], 15),
+    cO: new Image(charWidths["cO"], 15),
+    cP: new Image(charWidths["cP"], 15),
+    cQ: new Image(charWidths["cQ"], 15),
+    cR: new Image(charWidths["cR"], 15),
+    cS: new Image(charWidths["cS"], 15),
+    cT: new Image(charWidths["cT"], 15),
+    cU: new Image(charWidths["cU"], 15),
+    cV: new Image(charWidths["cV"], 15),
+    cW: new Image(charWidths["cW"], 15),
+    cX: new Image(charWidths["cX"], 15),
+    cY: new Image(charWidths["cY"], 15),
+    cZ: new Image(charWidths["cZ"], 15),
+    space: new Image(charWidths["space"], 15),
+    tilde: new Image(charWidths["tilde"], 15),
+    0: new Image(charWidths["0"], 15),
+    1: new Image(charWidths["1"], 15),
+    2: new Image(charWidths["2"], 15),
+    3: new Image(charWidths["3"], 15),
+    4: new Image(charWidths["4"], 15),
+    5: new Image(charWidths["5"], 15),
+    6: new Image(charWidths["6"], 15),
+    7: new Image(charWidths["7"], 15),
+    8: new Image(charWidths["8"], 15),
+    9: new Image(charWidths["9"], 15),
+    dot: new Image(charWidths["dot"], 15),
+    comma: new Image(charWidths["comma"], 15),
+    bang: new Image(charWidths["bang"], 15),
+    openBrack: new Image(charWidths["openBrack"], 15),
+    closeBrack: new Image(charWidths["closeBrack"], 15),
+    dash: new Image(charWidths["dash"], 15),
+    slash: new Image(charWidths["slash"], 15),
+    backSlash: new Image(charWidths["backSlash"], 15),
+    question: new Image(charWidths["question"], 15),
+    semicolon: new Image(charWidths["semicolon"], 15),
+    colon: new Image(charWidths["colon"], 15),
+    hash: new Image(charWidths["hash"], 15),
+    amp: new Image(charWidths["amp"], 15),
+    quote: new Image(charWidths["quote"], 15),
+    apos: new Image(charWidths["apos"], 15),
+    plus: new Image(charWidths["plus"], 15),
+    percent: new Image(charWidths["percent"], 15)
 };
-images["a"].src = "../images/fetext/a.png"
+
+for (var i = 0; i < images.length; i++){
+	images[i].src = "../images/fetext/" + charToName(legalChars[i]) + ".png";
+}
 
 function charToName(letter) {
     switch (letter) {
+    case "A":
+        return "cA";
+    case "B":
+        return "cB";
+    case "C":
+        return "cC";
+    case "D":
+        return "cD";
+    case "E":
+        return "cE";
+    case "F":
+        return "cF";
+    case "G":
+        return "cG";
+    case "H":
+        return "cH";
+    case "I":
+        return "cI";
+    case "J":
+        return "cJ";
+    case "K":
+        return "cK";
+    case "L":
+        return "cL";
+    case "M":
+        return "cM";
+    case "N":
+        return "cN";
+    case "O":
+        return "cO";
+    case "P":
+        return "cP";
+    case "Q":
+        return "cQ";
+    case "R":
+        return "cR";
+    case "S":
+        return "cS";
+    case "T":
+        return "cT";
+    case "U":
+        return "cU";
+    case "V":
+        return "cV";
+    case "W":
+        return "cW";
+    case "X":
+        return "cX";
+    case "Y":
+        return "cY";
+    case "Z":
+        return "cZ";
     case " ":
         return "space";
     case "~":
