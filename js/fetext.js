@@ -1,4 +1,4 @@
-console.log("revision 1");
+console.log("revision 2");
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var ctx = document.getElementById("renderCanvas").getContext("2d");
 var input = document.getElementById("inputArea");
@@ -85,6 +85,10 @@ var charWidths = {
     plus: 8,
     percent: 8
 };
+var images = {
+    a: new Image(charWidths["a"], 15)
+};
+images["a"].src = "../images/fetext/a.png"
 
 function charToName(letter) {
     switch (letter) {
@@ -148,7 +152,7 @@ function render() {
             location.y += 16;
         } else {
             var charName = charToName(inText[i]);
-            ctx.drawImage("../images/fetext/" + charName + ".png", location.x, location.y);
+            ctx.drawImage(images[charName], location.x, location.y);
             var width = charWidths[charName];
             location.x += width;
         }
