@@ -57,16 +57,16 @@ var charWidths = {
     cZ: 6,
     space: 4,
     tilde: 7,
-    0: 5,
-    1: 4,
-    2: 5,
-    3: 5,
-    4: 7,
-    5: 5,
-    6: 5,
-    7: 5,
-    8: 5,
-    9: 5,
+    zero: 5,
+    one: 4,
+    two: 5,
+    three: 5,
+    four: 7,
+    five: 5,
+    six: 5,
+    seven: 5,
+    eight: 5,
+    nine: 5,
     dot: 2,
     comma: 2,
     bang: 2,
@@ -85,98 +85,99 @@ var charWidths = {
     plus: 8,
     percent: 8
 };
-console.log("loaded charWidths");
+
 var images = {
-    a: new Image(charWidths["a"], 15),
-    b: new Image(charWidths["b"], 15),
-    c: new Image(charWidths["c"], 15),
-    d: new Image(charWidths["d"], 15),
-    e: new Image(charWidths["e"], 15),
-    f: new Image(charWidths["f"], 15),
-    g: new Image(charWidths["g"], 15),
-    h: new Image(charWidths["h"], 15),
-    i: new Image(charWidths["i"], 15),
-    j: new Image(charWidths["j"], 15),
-    k: new Image(charWidths["k"], 15),
-    l: new Image(charWidths["l"], 15),
-    m: new Image(charWidths["m"], 15),
-    n: new Image(charWidths["n"], 15),
-    o: new Image(charWidths["o"], 15),
-    p: new Image(charWidths["p"], 15),
-    q: new Image(charWidths["q"], 15),
-    r: new Image(charWidths["r"], 15),
-    s: new Image(charWidths["s"], 15),
-    t: new Image(charWidths["t"], 15),
-    u: new Image(charWidths["u"], 15),
-    v: new Image(charWidths["v"], 15),
-    w: new Image(charWidths["w"], 15),
-    x: new Image(charWidths["x"], 15),
-    y: new Image(charWidths["y"], 15),
-    z: new Image(charWidths["z"], 15),
-    cA: new Image(charWidths["cA"], 15),
-    cB: new Image(charWidths["cB"], 15),
-    cC: new Image(charWidths["cC"], 15),
-    cD: new Image(charWidths["cD"], 15),
-    cE: new Image(charWidths["cE"], 15),
-    cF: new Image(charWidths["cF"], 15),
-    cG: new Image(charWidths["cG"], 15),
-    cH: new Image(charWidths["cH"], 15),
-    cI: new Image(charWidths["cI"], 15),
-    cJ: new Image(charWidths["cJ"], 15),
-    cK: new Image(charWidths["cK"], 15),
-    cL: new Image(charWidths["cL"], 15),
-    cM: new Image(charWidths["cM"], 15),
-    cN: new Image(charWidths["cN"], 15),
-    cO: new Image(charWidths["cO"], 15),
-    cP: new Image(charWidths["cP"], 15),
-    cQ: new Image(charWidths["cQ"], 15),
-    cR: new Image(charWidths["cR"], 15),
-    cS: new Image(charWidths["cS"], 15),
-    cT: new Image(charWidths["cT"], 15),
-    cU: new Image(charWidths["cU"], 15),
-    cV: new Image(charWidths["cV"], 15),
-    cW: new Image(charWidths["cW"], 15),
-    cX: new Image(charWidths["cX"], 15),
-    cY: new Image(charWidths["cY"], 15),
-    cZ: new Image(charWidths["cZ"], 15),
-    space: new Image(charWidths["space"], 15),
-    tilde: new Image(charWidths["tilde"], 15),
-    0: new Image(charWidths["0"], 15),
-    1: new Image(charWidths["1"], 15),
-    2: new Image(charWidths["2"], 15),
-    3: new Image(charWidths["3"], 15),
-    4: new Image(charWidths["4"], 15),
-    5: new Image(charWidths["5"], 15),
-    6: new Image(charWidths["6"], 15),
-    7: new Image(charWidths["7"], 15),
-    8: new Image(charWidths["8"], 15),
-    9: new Image(charWidths["9"], 15),
-    dot: new Image(charWidths["dot"], 15),
-    comma: new Image(charWidths["comma"], 15),
-    bang: new Image(charWidths["bang"], 15),
-    openBrack: new Image(charWidths["openBrack"], 15),
-    closeBrack: new Image(charWidths["closeBrack"], 15),
-    dash: new Image(charWidths["dash"], 15),
-    slash: new Image(charWidths["slash"], 15),
-    backSlash: new Image(charWidths["backSlash"], 15),
-    question: new Image(charWidths["question"], 15),
-    semicolon: new Image(charWidths["semicolon"], 15),
-    colon: new Image(charWidths["colon"], 15),
-    hash: new Image(charWidths["hash"], 15),
-    amp: new Image(charWidths["amp"], 15),
-    quote: new Image(charWidths["quote"], 15),
-    apos: new Image(charWidths["apos"], 15),
-    plus: new Image(charWidths["plus"], 15),
-    percent: new Image(charWidths["percent"], 15)
+    a: new Image(charWidths.a, 15),
+    b: new Image(charWidths.b, 15),
+    c: new Image(charWidths.c, 15),
+    d: new Image(charWidths.d, 15),
+    e: new Image(charWidths.e, 15),
+    f: new Image(charWidths.f, 15),
+    g: new Image(charWidths.g, 15),
+    h: new Image(charWidths.h, 15),
+    i: new Image(charWidths.i, 15),
+    j: new Image(charWidths.j, 15),
+    k: new Image(charWidths.k, 15),
+    l: new Image(charWidths.l, 15),
+    m: new Image(charWidths.m, 15),
+    n: new Image(charWidths.n, 15),
+    o: new Image(charWidths.o, 15),
+    p: new Image(charWidths.p, 15),
+    q: new Image(charWidths.q, 15),
+    r: new Image(charWidths.r, 15),
+    s: new Image(charWidths.s, 15),
+    t: new Image(charWidths.t, 15),
+    u: new Image(charWidths.u, 15),
+    v: new Image(charWidths.v, 15),
+    w: new Image(charWidths.w, 15),
+    x: new Image(charWidths.x, 15),
+    y: new Image(charWidths.y, 15),
+    z: new Image(charWidths.z, 15),
+    cA: new Image(charWidths.cA, 15),
+    cB: new Image(charWidths.cB, 15),
+    cC: new Image(charWidths.cC, 15),
+    cD: new Image(charWidths.cD, 15),
+    cE: new Image(charWidths.cE, 15),
+    cF: new Image(charWidths.cF, 15),
+    cG: new Image(charWidths.cG, 15),
+    cH: new Image(charWidths.cH, 15),
+    cI: new Image(charWidths.cI, 15),
+    cJ: new Image(charWidths.cJ, 15),
+    cK: new Image(charWidths.cK, 15),
+    cL: new Image(charWidths.cL, 15),
+    cM: new Image(charWidths.cM, 15),
+    cN: new Image(charWidths.cN, 15),
+    cO: new Image(charWidths.cO, 15),
+    cP: new Image(charWidths.cP, 15),
+    cQ: new Image(charWidths.cQ, 15),
+    cR: new Image(charWidths.cR, 15),
+    cS: new Image(charWidths.cS, 15),
+    cT: new Image(charWidths.cT, 15),
+    cU: new Image(charWidths.cU, 15),
+    cV: new Image(charWidths.cV, 15),
+    cW: new Image(charWidths.cW, 15),
+    cX: new Image(charWidths.cX, 15),
+    cY: new Image(charWidths.cY, 15),
+    cZ: new Image(charWidths.cZ, 15),
+    space: new Image(charWidths.space, 15),
+    tilde: new Image(charWidths.tilde, 15),
+    zero: new Image(charWidths.zero, 15),
+    one: new Image(charWidths.one, 15),
+    two: new Image(charWidths.two, 15),
+    three: new Image(charWidths.three, 15),
+    four: new Image(charWidths.four, 15),
+    five: new Image(charWidths.five, 15),
+    six: new Image(charWidths.six, 15),
+    seven: new Image(charWidths.seven, 15),
+    eight: new Image(charWidths.eight, 15),
+    nine: new Image(charWidths.nine, 15),
+    dot: new Image(charWidths.dot, 15),
+    comma: new Image(charWidths.comma, 15),
+    bang: new Image(charWidths.bang, 15),
+    openBrack: new Image(charWidths.openBrack, 15),
+    closeBrack: new Image(charWidths.closeBrack, 15),
+    dash: new Image(charWidths.dash, 15),
+    slash: new Image(charWidths.slash, 15),
+    backSlash: new Image(charWidths.backSlash, 15),
+    question: new Image(charWidths.question, 15),
+    semicolon: new Image(charWidths.semicolon, 15),
+    colon: new Image(charWidths.colon, 15),
+    hash: new Image(charWidths.hash, 15),
+    amp: new Image(charWidths.amp, 15),
+    quote: new Image(charWidths.quote, 15),
+    apos: new Image(charWidths.apos, 15),
+    plus: new Image(charWidths.plus, 15),
+    percent: new Image(charWidths.percent, 15)
 };
-console.log("loaded images");
+
+console.log("loaded maps");
 
 images.onload = function() {
 	for (var i = 0; i < images.length; i++){
 		images[i].src = "../images/fetext/" + charToName(legalChars[i]) + ".png";
 		console.log("finished loading");
 	}
-}
+};
 
 
 
@@ -240,6 +241,26 @@ function charToName(letter) {
         return "space";
     case "~":
         return "tilde";
+    case "0":
+        return "zero";
+    case "1":
+        return "one";
+    case "2":
+        return "two";
+    case "3":
+        return "three";
+    case "4":
+        return "four";
+    case "5":
+        return "five";
+    case "6":
+        return "six";
+    case "7":
+        return "seven";
+    case "8":
+        return "eight";
+    case "9":
+        return "nine";
     case ".":
         return "dot";
     case ",":
