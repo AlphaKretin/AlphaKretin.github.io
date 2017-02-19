@@ -334,8 +334,6 @@ atlas.src = "../images/fetext/atlas.png";
 
 console.log("loaded atlas");
 
-console.log("set images onload");
-
 function charToName(letter) {
     switch (letter) {
     case "A":
