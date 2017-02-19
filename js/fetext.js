@@ -1,4 +1,4 @@
-console.log("revision 10");
+console.log("revision 11");
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var ctx = document.getElementById("renderCanvas").getContext("2d");
 var input = document.getElementById("inputArea");
@@ -148,186 +148,186 @@ var charWidths = {
         index: 179
     },
     cK: {
-        wid: 6,
+        wid: 5,
         index: 185
     },
     cL: {
         wid: 6,
-        index: 191
+        index: 190
     },
     cM: {
         wid: 8,
-        index: 197
+        index: 196
     },
     cN: {
         wid: 6,
-        index: 205
+        index: 204
     },
     cO: {
         wid: 6,
-        index: 211
+        index: 210
     },
     cP: {
         wid: 6,
-        index: 217
+        index: 216
     },
     cQ: {
         wid: 7,
-        index: 223
+        index: 222
     },
     cR: {
         wid: 6,
-        index: 230
+        index: 229
     },
     cS: {
         wid: 7,
-        index: 236
+        index: 235
     },
     cT: {
         wid: 6,
-        index: 243
+        index: 242
     },
     cU: {
         wid: 6,
-        index: 249
+        index: 248
     },
     cV: {
         wid: 6,
-        index: 255
+        index: 254
     },
     cW: {
         wid: 8,
-        index: 261
+        index: 260
     },
     cX: {
         wid: 8,
-        index: 269
+        index: 268
     },
     cY: {
         wid: 6,
-        index: 277
+        index: 276
     },
     cZ: {
         wid: 6,
-        index: 283
+        index: 282
     },
     space: {
         wid: 4,
-        index: 289
+        index: 288
     },
     tilde: {
         wid: 7,
-        index: 293
+        index: 292
     },
     zero: {
         wid: 5,
-        index: 300
+        index: 299
     },
     one: {
         wid: 4,
-        index: 305
+        index: 304
     },
     two: {
         wid: 5,
-        index: 309
+        index: 308
     },
     three: {
         wid: 5,
-        index: 314
+        index: 313
     },
     four: {
         wid: 7,
-        index: 319
+        index: 318
     },
     five: {
         wid: 5,
-        index: 326
+        index: 325
     },
     six: {
         wid: 5,
-        index: 331
+        index: 330
     },
     seven: {
         wid: 5,
-        index: 336
+        index: 335
     },
     eight: {
         wid: 5,
-        index: 341
+        index: 340
     },
     nine: {
         wid: 5,
-        index: 346
+        index: 345
     },
     dot: {
         wid: 2,
-        index: 351
+        index: 350
     },
     comma: {
         wid: 2,
-        index: 353
+        index: 352
     },
     bang: {
         wid: 2,
-        index: 355
+        index: 354
     },
     openBrack: {
         wid: 4,
-        index: 357
+        index: 356
     },
     closeBrack: {
         wid: 4,
-        index: 361
+        index: 360
     },
     dash: {
         wid: 4,
-        index: 365
+        index: 364
     },
     slash: {
         wid: 7,
-        index: 369
+        index: 368
     },
     backSlash: {
         wid: 7,
-        index: 376
+        index: 375
     },
     question: {
         wid: 7,
-        index: 383
+        index: 382
     },
     semicolon: {
         wid: 2,
-        index: 390
+        index: 389
     },
     colon: {
         wid: 2,
-        index: 392
+        index: 391
     },
     hash: {
         wid: 6,
-        index: 394
+        index: 393
     },
     amp: {
         wid: 7,
-        index: 400
+        index: 399
     },
     quote: {
         wid: 4,
-        index: 407
+        index: 406
     },
     apos: {
         wid: 2,
-        index: 411
+        index: 410
     },
     plus: {
         wid: 8,
-        index: 413
+        index: 412
     },
     percent: {
         wid: 8,
-        index: 421
+        index: 420
     }
-};
+}
 
 var atlas = new Image();
 atlas.src = "../images/fetext/atlas.png";
