@@ -89,7 +89,7 @@ function clicked(){
 	var out = "var charWidths = {<br />";
 	for (var i = 0; i < charWidths.length; i++){
 		out += charToName(legalChars[i]) + ": { wid: " + charWidths[i] + ", index: " + index + " },<br />";
-		index += cha;
+		index += charWidths[i];
 	}
 	document.getElementById("myDiv").innerHTML = out;
 }
