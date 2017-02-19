@@ -1,6 +1,6 @@
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var ctx = document.getElementById("renderCanvas").getContext("2d");
-var input = document.getElementById("inputArea")
+var input = document.getElementById("inputArea");
 var charWidths = {
 	a: 6,
 	b: 5,
@@ -85,28 +85,30 @@ var charWidths = {
 	percent: 8
 };
 
-function charToName(letter) = switch (letter) {
-	case " ": return "space";
-	case "~": return "tilde";
-	case: ".": return "dot";
-	case: ",": return "comma";
-	case: "!": return "bang";
-	case: "(": return "openBrack";
-	case: ")": return "closeBrack";
-	case: "-": return "dash";
-	case: "/": return "slash";
-	case: "\\": return "backSlash";
-	case: "?": return "question";
-	case: ";": return "semicolon";
-	case: ":": return "colon";
-	case: "#": return "hash";
-	case: "&": return "amp";
-	case: "\"": return "quote";
-	case: "'": return "apos";
-	case: "+": return "plus";
-	case: "%": return "percent";
-	default: return letter;
-};
+function charToName(letter) {
+	switch (letter) {
+		case " ": return "space";
+		case "~": return "tilde";
+		case ".": return "dot";
+		case ",": return "comma";
+		case "!": return "bang";
+		case "(": return "openBrack";
+		case ")": return "closeBrack";
+		case "-": return "dash";
+		case "/": return "slash";
+		case "\\": return "backSlash";
+		case "?": return "question";
+		case ";": return "semicolon";
+		case ":": return "colon";
+		case "#": return "hash";
+		case "&": return "amp";
+		case "\"": return "quote";
+		case "'": return "apos";
+		case "+": return "plus";
+		case "%": return "percent";
+		default: return letter;
+	}
+}
 
 
 input.addEventListener("oninput", function() { render(); });
