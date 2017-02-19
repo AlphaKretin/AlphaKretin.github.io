@@ -1,185 +1,338 @@
-console.log("revision 8");
+console.log("revision 9");
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var ctx = document.getElementById("renderCanvas").getContext("2d");
 var input = document.getElementById("inputArea");
 var charWidths = {
-    a: 6,
-    b: 5,
-    c: 5,
-    d: 5,
-    e: 5,
-    f: 5,
-    g: 7,
-    h: 5,
-    i: 2,
-    j: 3,
-    k: 5,
-    l: 2,
-    m: 6,
-    n: 5,
-    o: 5,
-    p: 5,
-    q: 5,
-    r: 4,
-    s: 5,
-    t: 4,
-    u: 5,
-    v: 6,
-    w: 6,
-    x: 6,
-    y: 5,
-    z: 5,
-    cA: 6,
-    cB: 6,
-    cC: 6,
-    cD: 6,
-    cE: 6,
-    cF: 6,
-    cG: 6,
-    cH: 6,
-    cI: 4,
-    cJ: 6,
-    cK: 6,
-    cL: 6,
-    cM: 8,
-    cN: 6,
-    cO: 6,
-    cP: 6,
-    cQ: 7,
-    cR: 6,
-    cS: 7,
-    cT: 6,
-    cU: 6,
-    cV: 6,
-    cW: 8,
-    cX: 8,
-    cY: 6,
-    cZ: 6,
-    space: 4,
-    tilde: 7,
-    zero: 5,
-    one: 4,
-    two: 5,
-    three: 5,
-    four: 7,
-    five: 5,
-    six: 5,
-    seven: 5,
-    eight: 5,
-    nine: 5,
-    dot: 2,
-    comma: 2,
-    bang: 2,
-    openBrack: 4,
-    closeBrack: 4,
-    dash: 4,
-    slash: 7,
-    backSlash: 7,
-    question: 7,
-    semicolon: 2,
-    colon: 2,
-    hash: 6,
-    amp: 7,
-    quote: 4,
-    apos: 2,
-    plus: 8,
-    percent: 8
+    a: {
+        wid: 6,
+        index: 0
+    },
+    b: {
+        wid: 5,
+        index: 6
+    },
+    c: {
+        wid: 5,
+        index: 11
+    },
+    d: {
+        wid: 5,
+        index: 16
+    },
+    e: {
+        wid: 5,
+        index: 21
+    },
+    f: {
+        wid: 5,
+        index: 26
+    },
+    g: {
+        wid: 7,
+        index: 31
+    },
+    h: {
+        wid: 5,
+        index: 38
+    },
+    i: {
+        wid: 2,
+        index: 43
+    },
+    j: {
+        wid: 3,
+        index: 45
+    },
+    k: {
+        wid: 5,
+        index: 48
+    },
+    l: {
+        wid: 2,
+        index: 53
+    },
+    m: {
+        wid: 6,
+        index: 55
+    },
+    n: {
+        wid: 5,
+        index: 61
+    },
+    o: {
+        wid: 5,
+        index: 66
+    },
+    p: {
+        wid: 5,
+        index: 71
+    },
+    q: {
+        wid: 5,
+        index: 76
+    },
+    r: {
+        wid: 4,
+        index: 81
+    },
+    s: {
+        wid: 5,
+        index: 85
+    },
+    t: {
+        wid: 4,
+        index: 90
+    },
+    u: {
+        wid: 5,
+        index: 94
+    },
+    v: {
+        wid: 6,
+        index: 99
+    },
+    w: {
+        wid: 6,
+        index: 105
+    },
+    x: {
+        wid: 6,
+        index: 111
+    },
+    y: {
+        wid: 5,
+        index: 117
+    },
+    z: {
+        wid: 5,
+        index: 122
+    },
+    cA: {
+        wid: 6,
+        index: 127
+    },
+    cB: {
+        wid: 6,
+        index: 133
+    },
+    cC: {
+        wid: 6,
+        index: 139
+    },
+    cD: {
+        wid: 6,
+        index: 145
+    },
+    cE: {
+        wid: 6,
+        index: 151
+    },
+    cF: {
+        wid: 6,
+        index: 157
+    },
+    cG: {
+        wid: 6,
+        index: 163
+    },
+    cH: {
+        wid: 6,
+        index: 169
+    },
+    cI: {
+        wid: 4,
+        index: 175
+    },
+    cJ: {
+        wid: 6,
+        index: 179
+    },
+    cK: {
+        wid: 6,
+        index: 185
+    },
+    cL: {
+        wid: 6,
+        index: 191
+    },
+    cM: {
+        wid: 8,
+        index: 197
+    },
+    cN: {
+        wid: 6,
+        index: 205
+    },
+    cO: {
+        wid: 6,
+        index: 211
+    },
+    cP: {
+        wid: 6,
+        index: 217
+    },
+    cQ: {
+        wid: 7,
+        index: 223
+    },
+    cR: {
+        wid: 6,
+        index: 230
+    },
+    cS: {
+        wid: 7,
+        index: 236
+    },
+    cT: {
+        wid: 6,
+        index: 243
+    },
+    cU: {
+        wid: 6,
+        index: 249
+    },
+    cV: {
+        wid: 6,
+        index: 255
+    },
+    cW: {
+        wid: 8,
+        index: 261
+    },
+    cX: {
+        wid: 8,
+        index: 269
+    },
+    cY: {
+        wid: 6,
+        index: 277
+    },
+    cZ: {
+        wid: 6,
+        index: 283
+    },
+    space: {
+        wid: 4,
+        index: 289
+    },
+    tilde: {
+        wid: 7,
+        index: 293
+    },
+    zero: {
+        wid: 5,
+        index: 300
+    },
+    one: {
+        wid: 4,
+        index: 305
+    },
+    two: {
+        wid: 5,
+        index: 309
+    },
+    three: {
+        wid: 5,
+        index: 314
+    },
+    four: {
+        wid: 7,
+        index: 319
+    },
+    five: {
+        wid: 5,
+        index: 326
+    },
+    six: {
+        wid: 5,
+        index: 331
+    },
+    seven: {
+        wid: 5,
+        index: 336
+    },
+    eight: {
+        wid: 5,
+        index: 341
+    },
+    nine: {
+        wid: 5,
+        index: 346
+    },
+    dot: {
+        wid: 2,
+        index: 351
+    },
+    comma: {
+        wid: 2,
+        index: 353
+    },
+    bang: {
+        wid: 2,
+        index: 355
+    },
+    openBrack: {
+        wid: 4,
+        index: 357
+    },
+    closeBrack: {
+        wid: 4,
+        index: 361
+    },
+    dash: {
+        wid: 4,
+        index: 365
+    },
+    slash: {
+        wid: 7,
+        index: 369
+    },
+    backSlash: {
+        wid: 7,
+        index: 376
+    },
+    question: {
+        wid: 7,
+        index: 383
+    },
+    semicolon: {
+        wid: 2,
+        index: 390
+    },
+    colon: {
+        wid: 2,
+        index: 392
+    },
+    hash: {
+        wid: 6,
+        index: 394
+    },
+    amp: {
+        wid: 7,
+        index: 400
+    },
+    quote: {
+        wid: 4,
+        index: 407
+    },
+    apos: {
+        wid: 2,
+        index: 411
+    },
+    plus: {
+        wid: 8,
+        index: 413
+    },
+    percent: {
+        wid: 8,
+        index: 421
+    }
 };
 
-var images = {
-    a: new Image(charWidths.a, 15),
-    b: new Image(charWidths.b, 15),
-    c: new Image(charWidths.c, 15),
-    d: new Image(charWidths.d, 15),
-    e: new Image(charWidths.e, 15),
-    f: new Image(charWidths.f, 15),
-    g: new Image(charWidths.g, 15),
-    h: new Image(charWidths.h, 15),
-    i: new Image(charWidths.i, 15),
-    j: new Image(charWidths.j, 15),
-    k: new Image(charWidths.k, 15),
-    l: new Image(charWidths.l, 15),
-    m: new Image(charWidths.m, 15),
-    n: new Image(charWidths.n, 15),
-    o: new Image(charWidths.o, 15),
-    p: new Image(charWidths.p, 15),
-    q: new Image(charWidths.q, 15),
-    r: new Image(charWidths.r, 15),
-    s: new Image(charWidths.s, 15),
-    t: new Image(charWidths.t, 15),
-    u: new Image(charWidths.u, 15),
-    v: new Image(charWidths.v, 15),
-    w: new Image(charWidths.w, 15),
-    x: new Image(charWidths.x, 15),
-    y: new Image(charWidths.y, 15),
-    z: new Image(charWidths.z, 15),
-    cA: new Image(charWidths.cA, 15),
-    cB: new Image(charWidths.cB, 15),
-    cC: new Image(charWidths.cC, 15),
-    cD: new Image(charWidths.cD, 15),
-    cE: new Image(charWidths.cE, 15),
-    cF: new Image(charWidths.cF, 15),
-    cG: new Image(charWidths.cG, 15),
-    cH: new Image(charWidths.cH, 15),
-    cI: new Image(charWidths.cI, 15),
-    cJ: new Image(charWidths.cJ, 15),
-    cK: new Image(charWidths.cK, 15),
-    cL: new Image(charWidths.cL, 15),
-    cM: new Image(charWidths.cM, 15),
-    cN: new Image(charWidths.cN, 15),
-    cO: new Image(charWidths.cO, 15),
-    cP: new Image(charWidths.cP, 15),
-    cQ: new Image(charWidths.cQ, 15),
-    cR: new Image(charWidths.cR, 15),
-    cS: new Image(charWidths.cS, 15),
-    cT: new Image(charWidths.cT, 15),
-    cU: new Image(charWidths.cU, 15),
-    cV: new Image(charWidths.cV, 15),
-    cW: new Image(charWidths.cW, 15),
-    cX: new Image(charWidths.cX, 15),
-    cY: new Image(charWidths.cY, 15),
-    cZ: new Image(charWidths.cZ, 15),
-    space: new Image(charWidths.space, 15),
-    tilde: new Image(charWidths.tilde, 15),
-    zero: new Image(charWidths.zero, 15),
-    one: new Image(charWidths.one, 15),
-    two: new Image(charWidths.two, 15),
-    three: new Image(charWidths.three, 15),
-    four: new Image(charWidths.four, 15),
-    five: new Image(charWidths.five, 15),
-    six: new Image(charWidths.six, 15),
-    seven: new Image(charWidths.seven, 15),
-    eight: new Image(charWidths.eight, 15),
-    nine: new Image(charWidths.nine, 15),
-    dot: new Image(charWidths.dot, 15),
-    comma: new Image(charWidths.comma, 15),
-    bang: new Image(charWidths.bang, 15),
-    openBrack: new Image(charWidths.openBrack, 15),
-    closeBrack: new Image(charWidths.closeBrack, 15),
-    dash: new Image(charWidths.dash, 15),
-    slash: new Image(charWidths.slash, 15),
-    backSlash: new Image(charWidths.backSlash, 15),
-    question: new Image(charWidths.question, 15),
-    semicolon: new Image(charWidths.semicolon, 15),
-    colon: new Image(charWidths.colon, 15),
-    hash: new Image(charWidths.hash, 15),
-    amp: new Image(charWidths.amp, 15),
-    quote: new Image(charWidths.quote, 15),
-    apos: new Image(charWidths.apos, 15),
-    plus: new Image(charWidths.plus, 15),
-    percent: new Image(charWidths.percent, 15)
-};
+var atlas = new Image();
+atlas.src = "../images/fetext/atlas.png";
 
-console.log("loaded maps");
-
-images.onload = function() {
-	for (var i = 0; i < images.length; i++){
-		images[i].src = "../images/fetext/" + charToName(legalChars[i]) + ".png";
-		console.log("finished loading");
-	}
-};
-
-
+console.log("loaded atlas");
 
 console.log("set images onload");
 
@@ -317,9 +470,9 @@ function render() {
             location.y += 16;
         } else {
             var charName = charToName(inText[i]);
-            ctx.drawImage(images[charName], location.x, location.y);
-            var width = charWidths[charName];
-            location.x += width;
+            var cha = charWidths[charName];
+            ctx.drawImage(atlas, cha.index, 0, cha.wid, 15, location.x, location.y);
+            location.x += cha.wid;
         }
     }
 }
