@@ -170,10 +170,10 @@ var images = {
 };
 
 for (var i = 0; i < images.length; i++){
-	images[i].addEventListener("onready", function() {
+	images[i].onload = function() {
 		images[i].src = "../images/fetext/" + charToName(legalChars[i]) + ".png";
 		console.log("finished loading" + legalChars[i]);
-	});
+	}
 }
 
 function charToName(letter) {
