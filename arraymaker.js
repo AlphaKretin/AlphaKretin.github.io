@@ -81,15 +81,132 @@ var charWidths = {
     plus: 8,
     percent: 8
 };
-console.log("chars");
+console.log("chars2");
+var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 
 function clicked(){
 	var index = 0;
 	var out = "var charWidths = {<br />";
-	for (var cha of charWidths){
-		out += charWidths[i] + ": { wid: " + cha + ", index: " + index + " },<br />";
+	for (var i = 0; i < charWidths.length; i++){
+		out += charToName(legalChars[i]) + ": { wid: " + charWidths[i] + ", index: " + index + " },<br />";
 		index += cha;
 	}
 	document.getElementById("myDiv").innerHTML = out;
 }
 
+function charToName(letter) {
+    switch (letter) {
+    case "A":
+        return "cA";
+    case "B":
+        return "cB";
+    case "C":
+        return "cC";
+    case "D":
+        return "cD";
+    case "E":
+        return "cE";
+    case "F":
+        return "cF";
+    case "G":
+        return "cG";
+    case "H":
+        return "cH";
+    case "I":
+        return "cI";
+    case "J":
+        return "cJ";
+    case "K":
+        return "cK";
+    case "L":
+        return "cL";
+    case "M":
+        return "cM";
+    case "N":
+        return "cN";
+    case "O":
+        return "cO";
+    case "P":
+        return "cP";
+    case "Q":
+        return "cQ";
+    case "R":
+        return "cR";
+    case "S":
+        return "cS";
+    case "T":
+        return "cT";
+    case "U":
+        return "cU";
+    case "V":
+        return "cV";
+    case "W":
+        return "cW";
+    case "X":
+        return "cX";
+    case "Y":
+        return "cY";
+    case "Z":
+        return "cZ";
+    case " ":
+        return "space";
+    case "~":
+        return "tilde";
+    case "0":
+        return "zero";
+    case "1":
+        return "one";
+    case "2":
+        return "two";
+    case "3":
+        return "three";
+    case "4":
+        return "four";
+    case "5":
+        return "five";
+    case "6":
+        return "six";
+    case "7":
+        return "seven";
+    case "8":
+        return "eight";
+    case "9":
+        return "nine";
+    case ".":
+        return "dot";
+    case ",":
+        return "comma";
+    case "!":
+        return "bang";
+    case "(":
+        return "openBrack";
+    case ")":
+        return "closeBrack";
+    case "-":
+        return "dash";
+    case "/":
+        return "slash";
+    case "\\":
+        return "backSlash";
+    case "?":
+        return "question";
+    case ";":
+        return "semicolon";
+    case ":":
+        return "colon";
+    case "#":
+        return "hash";
+    case "&":
+        return "amp";
+    case "\"":
+        return "quote";
+    case "'":
+        return "apos";
+    case "+":
+        return "plus";
+    case "%":
+        return "percent";
+    default:
+        return letter;
+    }
+}
