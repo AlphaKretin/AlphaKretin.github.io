@@ -1,4 +1,4 @@
-console.log("revision 6");
+console.log("revision 7");
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var ctx = document.getElementById("renderCanvas").getContext("2d");
 var input = document.getElementById("inputArea");
@@ -85,6 +85,7 @@ var charWidths = {
     plus: 8,
     percent: 8
 };
+console.log("loaded charWidths");
 var images = {
     a: new Image(charWidths["a"], 15),
     b: new Image(charWidths["b"], 15),
@@ -168,6 +169,7 @@ var images = {
     plus: new Image(charWidths["plus"], 15),
     percent: new Image(charWidths["percent"], 15)
 };
+console.log("loaded images");
 
 for (var i = 0; i < images.length; i++){
 	images[i].onload = function() {
@@ -175,6 +177,8 @@ for (var i = 0; i < images.length; i++){
 		console.log("finished loading" + legalChars[i]);
 	}
 }
+
+console.log("set images onload");
 
 function charToName(letter) {
     switch (letter) {
