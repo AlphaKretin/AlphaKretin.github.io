@@ -35,7 +35,7 @@ var charWidths = {
     cH: 6,
     cI: 4,
     cJ: 6,
-    cK: 6,
+    cK: 5,
     cL: 6,
     cM: 8,
     cN: 6,
@@ -81,7 +81,7 @@ var charWidths = {
     plus: 8,
     percent: 8
 };
-console.log("chars7");
+console.log("new widths");
 
 function clicked(){
 	var index = 0;
