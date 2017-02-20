@@ -1,4 +1,4 @@
-console.log("revision 10");
+console.log("revision 11");
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var ctx = document.getElementById("renderCanvas").getContext("2d");
 var input = document.getElementById("inputArea");
@@ -220,114 +220,114 @@ var charWidths = {
         index: 293
     },
     zero: {
-        wid: 5,
+        wid: 6,
         index: 300
     },
     one: {
         wid: 4,
-        index: 305
+        index: 306
     },
     two: {
         wid: 5,
-        index: 309
+        index: 310
     },
     three: {
         wid: 5,
-        index: 314
+        index: 315
     },
     four: {
         wid: 7,
-        index: 319
+        index: 320
     },
     five: {
         wid: 5,
-        index: 326
+        index: 327
     },
     six: {
         wid: 5,
-        index: 331
+        index: 332
     },
     seven: {
         wid: 5,
-        index: 336
+        index: 337
     },
     eight: {
         wid: 5,
-        index: 341
+        index: 342
     },
     nine: {
         wid: 5,
-        index: 346
+        index: 347
     },
     dot: {
         wid: 2,
-        index: 351
+        index: 352
     },
     comma: {
         wid: 2,
-        index: 353
+        index: 354
     },
     bang: {
         wid: 2,
-        index: 355
+        index: 356
     },
     openBrack: {
         wid: 4,
-        index: 357
+        index: 358
     },
     closeBrack: {
         wid: 4,
-        index: 361
+        index: 362
     },
     dash: {
         wid: 4,
-        index: 365
+        index: 366
     },
     slash: {
         wid: 7,
-        index: 369
+        index: 370
     },
     backSlash: {
         wid: 7,
-        index: 376
+        index: 377
     },
     question: {
         wid: 7,
-        index: 383
+        index: 384
     },
     semicolon: {
         wid: 2,
-        index: 390
+        index: 391
     },
     colon: {
         wid: 2,
-        index: 392
+        index: 393
     },
     hash: {
         wid: 6,
-        index: 394
+        index: 395
     },
     amp: {
         wid: 7,
-        index: 400
+        index: 401
     },
     quote: {
         wid: 4,
-        index: 407
+        index: 408
     },
     apos: {
         wid: 2,
-        index: 411
+        index: 412
     },
     plus: {
         wid: 8,
-        index: 413
+        index: 414
     },
     percent: {
         wid: 8,
-        index: 421
+        index: 422
     }
-};
+}
 
 var atlas = new Image();
 atlas.src = "../images/fetext/atlas.png";
