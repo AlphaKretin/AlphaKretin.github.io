@@ -1,4 +1,4 @@
-console.log("revision 12");
+console.log("revision 13");
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var ctx = document.getElementById("renderCanvas").getContext("2d");
 var input = document.getElementById("inputArea");
@@ -256,79 +256,78 @@ var charWidths = {
         index: 347
     },
     nine: {
-        wid: 9,
+        wid: 6,
         index: 353
     },
     dot: {
         wid: 2,
-        index: 362
+        index: 359
     },
     comma: {
         wid: 2,
-        index: 364
+        index: 361
     },
     bang: {
         wid: 2,
-        index: 366
+        index: 363
     },
     openBrack: {
         wid: 4,
-        index: 368
+        index: 365
     },
     closeBrack: {
         wid: 4,
-        index: 372
+        index: 369
     },
     dash: {
         wid: 4,
-        index: 376
+        index: 373
     },
     slash: {
         wid: 7,
-        index: 380
+        index: 377
     },
     backSlash: {
         wid: 7,
-        index: 387
+        index: 384
     },
     question: {
         wid: 7,
-        index: 394
+        index: 391
     },
     semicolon: {
         wid: 2,
-        index: 401
+        index: 398
     },
     colon: {
         wid: 2,
-        index: 403
+        index: 400
     },
     hash: {
         wid: 6,
-        index: 405
+        index: 402
     },
     amp: {
         wid: 7,
-        index: 411
+        index: 408
     },
     quote: {
         wid: 4,
-        index: 418
+        index: 415
     },
     apos: {
         wid: 2,
-        index: 422
+        index: 419
     },
     plus: {
         wid: 8,
-        index: 424
+        index: 421
     },
     percent: {
         wid: 8,
-        index: 432
+        index: 429
     }
 }
-
 var atlas = new Image();
 atlas.src = "../images/fetext/atlas.png";
 
