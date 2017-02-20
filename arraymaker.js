@@ -65,7 +65,7 @@ var charWidths = {
     nine: 6,
     dot: 2,
     comma: 2,
-    bang: 2,
+    bang: 3,
     openBrack: 4,
     closeBrack: 4,
     dash: 4,
@@ -81,7 +81,7 @@ var charWidths = {
     plus: 8,
     percent: 8
 };
-console.log("new widths 9");
+console.log("new widths !");
 
 function clicked(){
 	var index = 0;
