@@ -1,4 +1,4 @@
-console.log("revision 14");
+console.log("revision 15");
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var canvas = document.getElementById("renderCanvas");
 var ctx = canvas.getContext("2d");
@@ -269,66 +269,66 @@ var charWidths = {
         index: 361
     },
     bang: {
-        wid: 2,
+        wid: 3,
         index: 363
     },
     openBrack: {
         wid: 4,
-        index: 365
+        index: 366
     },
     closeBrack: {
         wid: 4,
-        index: 369
+        index: 370
     },
     dash: {
         wid: 4,
-        index: 373
+        index: 374
     },
     slash: {
         wid: 7,
-        index: 377
+        index: 378
     },
     backSlash: {
         wid: 7,
-        index: 384
+        index: 385
     },
     question: {
         wid: 7,
-        index: 391
+        index: 392
     },
     semicolon: {
         wid: 2,
-        index: 398
+        index: 399
     },
     colon: {
         wid: 2,
-        index: 400
+        index: 401
     },
     hash: {
         wid: 6,
-        index: 402
+        index: 403
     },
     amp: {
         wid: 7,
-        index: 408
+        index: 409
     },
     quote: {
         wid: 4,
-        index: 415
+        index: 416
     },
     apos: {
         wid: 2,
-        index: 419
+        index: 420
     },
     plus: {
         wid: 8,
-        index: 421
+        index: 422
     },
     percent: {
         wid: 8,
-        index: 429
+        index: 430
     }
-}
+};
 var atlas = new Image();
 atlas.src = "../images/fetext/atlas.png";
 
