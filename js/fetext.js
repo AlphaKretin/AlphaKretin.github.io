@@ -1,4 +1,4 @@
-console.log("revision 11");
+console.log("revision 12");
 var legalChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "~", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "!", "(", ")", "-", "/", "\\", "?", ";", ":", "#", "&", "\"", "'", "+", "%", "\n"];
 var ctx = document.getElementById("renderCanvas").getContext("2d");
 var input = document.getElementById("inputArea");
@@ -228,104 +228,104 @@ var charWidths = {
         index: 306
     },
     two: {
-        wid: 5,
+        wid: 6,
         index: 310
     },
     three: {
-        wid: 5,
-        index: 315
+        wid: 6,
+        index: 316
     },
     four: {
         wid: 7,
-        index: 320
+        index: 322
     },
     five: {
-        wid: 5,
-        index: 327
+        wid: 6,
+        index: 329
     },
     six: {
-        wid: 5,
-        index: 332
+        wid: 6,
+        index: 335
     },
     seven: {
-        wid: 5,
-        index: 337
+        wid: 6,
+        index: 341
     },
     eight: {
-        wid: 5,
-        index: 342
+        wid: 6,
+        index: 347
     },
     nine: {
-        wid: 5,
-        index: 347
+        wid: 9,
+        index: 353
     },
     dot: {
         wid: 2,
-        index: 352
+        index: 362
     },
     comma: {
         wid: 2,
-        index: 354
+        index: 364
     },
     bang: {
         wid: 2,
-        index: 356
+        index: 366
     },
     openBrack: {
         wid: 4,
-        index: 358
+        index: 368
     },
     closeBrack: {
         wid: 4,
-        index: 362
+        index: 372
     },
     dash: {
         wid: 4,
-        index: 366
+        index: 376
     },
     slash: {
         wid: 7,
-        index: 370
+        index: 380
     },
     backSlash: {
         wid: 7,
-        index: 377
+        index: 387
     },
     question: {
         wid: 7,
-        index: 384
+        index: 394
     },
     semicolon: {
         wid: 2,
-        index: 391
+        index: 401
     },
     colon: {
         wid: 2,
-        index: 393
+        index: 403
     },
     hash: {
         wid: 6,
-        index: 395
+        index: 405
     },
     amp: {
         wid: 7,
-        index: 401
+        index: 411
     },
     quote: {
         wid: 4,
-        index: 408
+        index: 418
     },
     apos: {
         wid: 2,
-        index: 412
+        index: 422
     },
     plus: {
         wid: 8,
-        index: 414
+        index: 424
     },
     percent: {
         wid: 8,
-        index: 422
+        index: 432
     }
 }
 
