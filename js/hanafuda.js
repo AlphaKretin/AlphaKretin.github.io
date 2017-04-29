@@ -33,7 +33,6 @@ function hTS(array) {
     for (var card of array) {
         str += card.name;
     }
-    str.pop();
     return str;
 }
 
