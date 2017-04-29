@@ -28,12 +28,82 @@ function prepare() {
     divOut.innerHTML = out;
 }
 
+function decideOya(){
+	var oyaDecided = false;
+	var p1Card;
+	var p2Card;
+	var oya = 1;
+	var method = "month";
+	var out = "";
+	while (!oyaDecided){
+		cardDeck = shuffle(cardsBase);
+		p1Card = cardDeck.pop();
+		p2Card = cardDeck.pop();
+		if (p1Card.month === p2Card.month){
+			if (p1Card.points === p2Card.month){
+				oyaDecided = false;
+			} else if (p1Card.points > p2Card.points){
+				oya = 1;
+				oyaDecided = true;
+				method = "points";
+			} else {
+				oya = 2;
+				oyaDecided = true;
+				method = "points";
+			}
+		} else if (p1Card.month > p2Card.month) {
+			oya = 1;
+			oyaDecided = true;
+			method = "month";
+		} else {
+			oya = 2;
+			oyaDecided = true;
+			method = "month";
+		}
+	}
+	//declare oya
+	if (method === "month"){
+		out = "Player one's card was " + p1Card.name + " (" + numToMonth(p1Card.month) + ")!<br/>Player two's card was " + p2Card.name + " (" + numToMonth(p2Card.month) + ")!<br/>";
+		if (oya === 2) {
+			out += "Thus, Player two is the oya!";
+		} else {
+			out += "Thus, Player one is the oya!";
+		}
+	} else {
+		out = "Player one's card was " + p1Card.name + " (" + numToMonth(p1Card.month) + ")!<br/>Player two's card was " + p2Card.name + " (" + numToMonth(p2Card.month) + ")!<br/>That's a tie! Comparing point values.<br/>" + p1Card.name + " is worth "+  p1Card.points + " + points! " + p2Card.name + " is worth " + p2Card.points + "!";
+		if (oya === 2) {
+			out += "Thus, Player two is the oya!";
+		} else {
+			out += "Thus, Player one is the oya!";
+		}
+	}
+	divOut.innerHTML = out;
+}
+
 function hTS(array) {
     var str = "";
     for (var card of array) {
         str += card.name + " (" + card.points + "), ";
     }
     return str;
+}
+
+function numToMonth(num){
+	switch(num){
+		case 1: return "January";
+		case 2: return "February";
+		case 3: return "March";
+		case 4: return "April";
+		case 5: return "May";
+		case 6: return "June";
+		case 7: return "July";
+		case 8: return "August";
+		case 9: return "September";
+		case 10: return "October";
+		case 11: return "November";
+		case 12: return "December";
+		default: return "err";
+	}
 }
 
 var cardsBase = [
