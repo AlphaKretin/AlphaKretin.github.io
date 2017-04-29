@@ -31,7 +31,7 @@ function prepare() {
 function hTS(array) {
     var str = "";
     for (var card of array) {
-        str += card.name + ", ";
+        str += card.name + " (" + card.points + "), ";
     }
     return str;
 }
