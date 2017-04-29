@@ -70,7 +70,7 @@ function decideOya(){
 			out += "Thus, Player one is the oya!";
 		}
 	} else {
-		out = "Player one's card was " + p1Card.name + " (" + numToMonth(p1Card.month) + ")!<br/>Player two's card was " + p2Card.name + " (" + numToMonth(p2Card.month) + ")!<br/>That's a tie! Comparing point values.<br/>" + p1Card.name + " is worth "+  p1Card.points + " + points! " + p2Card.name + " is worth " + p2Card.points + "!";
+		out = "Player one's card was " + p1Card.name + " (" + numToMonth(p1Card.month) + ")!<br/>Player two's card was " + p2Card.name + " (" + numToMonth(p2Card.month) + ")!<br/>That's a tie! Comparing point values.<br/>" + p1Card.name + " is worth " +  p1Card.points + " points! " + p2Card.name + " is worth " + p2Card.points + "!<br/>";
 		if (oya === 2) {
 			out += "Thus, Player two is the oya!";
 		} else {
