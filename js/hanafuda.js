@@ -91,6 +91,122 @@ function decideOya() {
     divOut.innerHTML = out;
 }
 
+function checkForYaku(player) {
+	var oldPlayerPoints = player.points;
+    player.yaku = [];
+    player.points = 0;
+    var card;
+    //sankou, shikou, ameshikou and gokou
+    var sankouCount = 0;
+    var hasWillow = false;
+    for (card of player.stash) {
+        if (card.points === 20 && card.id !== "willow20") {
+            sankouCount++;
+        }
+        if (card.id === "willow20") {
+            hasWillow = true;
+        }
+    }
+    if (sankouCount === 3) {
+        if (hasWillow) {
+            player.yaku.push("Ameshikou");
+            player.points += 7;
+        } else {
+            player.yaku.push("Sankou");
+            player.points += 6;
+        }
+    }
+    if (sankouCount === 4) {
+        if (hasWillow) {
+            player.yaku.push("Gokou");
+            player.points += 15;
+        } else {
+            player.yaku.push("Shikou");
+            player.points += 8;
+        }
+    }
+    //inoshikachou
+    var hasBoar = false;
+    var hasDeer = false;
+    var hasFly = false;
+    var inoshCount = 0;
+    for (card of player.stash){
+    	if (card.id === "clover10"){
+    		hasBoar = true;
+    	} else if (card.id === "maple10"){
+    		hasDeer = true;
+    	} else if (card.id === "peony10"){
+    		hasFly = true;
+    	} else if (card.points === 10){
+    		inoshCount++;
+    	}
+    }
+    if (hasBoar && hasDeer && hasFly){
+    	player.yaku.push("Inoshikachou");
+    	player.points += (5 + inoshCount);
+    }
+    //tane
+    var taneCount = 0;
+    for (card of player.stash){
+    	if (card.points === 10){
+    		taneCount++;
+    	}
+    }
+    if (taneCount > 4){
+    	player.yaku.push("Tane");
+    	player.points += (taneCount - 4);
+    }
+    //TODO: Ribbon shit
+    //Tanzaku
+    var tanzCount = 0;
+    for (card of player.stash){
+    	if (card.points === 5){
+    		tanzCount++;
+    	}
+    }
+    if (tanzCount > 4){
+    	player.yaku.push("Tanzaku");
+    	player.points += (tanzCount - 4);
+    }
+    //Tsukimi-zake and Hanami-zake
+    var hasSake = false;
+    var hasMoon = false;
+    var hasCurtain = true;
+    for (card of player.stash){
+    	if (card.id === "chrys10"){
+    		hasSake = true;
+    	}
+    	if (card.id === "grass20"){
+    		hasMoon = true;
+    	}
+    	if (card.id === "cherry20"){
+    		hasCurtain = true;
+    	}
+    }
+    if (hasSake){
+    	if (hasMoon){
+    		player.yaku.push("Tsukimi-zake");
+    		player.points += 5
+    	}
+    	if (hasCurtain){
+    		player.yaku.push("Hanami-zake");
+    		player.points += 5;
+    	}
+    }
+    //kasu
+    var kasuCount = 0;
+    for (card of player.stash){
+    	if (card.points === 1){
+    		kasuCount++;
+    	}
+    }
+    if (kasuCount > 9){
+    	player.yaku.push("Kasu");
+    	player.points += (kasuCount - 9);
+    }
+    //TODO: if player score higher than old, do koi koi stuff
+}
+
 function hTS(array) {
     var str = "";
     for (var card of array) {
