@@ -1,3 +1,4 @@
+console.log("add debug");
 var cardDeck = [];
 var p1Hand = [];
 var p1Stash = [];
@@ -24,6 +25,7 @@ function prepare() {
         p1Hand.push(cardDeck.pop());
         p1Hand.push(cardDeck.pop());
     } while (p1Hand.length < 8);
+    console.dir(p1Hand);
     out = "Player one's hand consists of the following cards:<br/>" + hTS(p1Hand) + "<br/>Player two's hand consists of the following cards:<br/>" + hTS(p2Hand) + "<br/>The board consists of the following cards:<br/>" + hTS(gameBoard);
     divOut.innerHTML = out;
 }
@@ -51,7 +53,7 @@ function decideOya(){
 				oyaDecided = true;
 				method = "points";
 			}
-		} else if (p1Card.month > p2Card.month) {
+		} else if (p1Card.month < p2Card.month) {
 			oya = 1;
 			oyaDecided = true;
 			method = "month";
