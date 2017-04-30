@@ -1,5 +1,4 @@
-console.log("change deck shuffling");
-var cardDeck = cardsBase;
+console.log("slice");
 var p1Hand = [];
 var p1Stash = [];
 var p2Hand = [];
@@ -10,7 +9,7 @@ var divOut = document.getElementById("output");
 
 function prepare() {
     //init everything for start of game
-    cardDeck = cardsBase;
+    cardDeck = cardsBase.slice();
     cardDeck = shuffle(cardDeck);
     p1Hand = [];
     p1Stash = [];
@@ -38,7 +37,7 @@ function decideOya(){
 	var method = "month";
 	var out = "";
 	while (!oyaDecided){
-		cardDeck = cardsBase;
+		cardDeck = cardsBase.slice();
 		cardDeck = shuffle(cardDeck);
 		p1Card = cardDeck.pop();
 		p2Card = cardDeck.pop();
