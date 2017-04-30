@@ -1,8 +1,17 @@
-console.log("slice");
-var p1Hand = [];
-var p1Stash = [];
-var p2Hand = [];
-var p2Stash = [];
+console.log("objects");
+var p1 = {
+    hand: [],
+    stash: [],
+    yaku: [],
+    points: 0
+};
+var p2 = {
+    hand: [],
+    stash: [],
+    yaku: [],
+    points: 0
+};
+var cardDeck = [];
 var gameBoard = [];
 var out = "";
 var divOut = document.getElementById("output");
@@ -11,75 +20,75 @@ function prepare() {
     //init everything for start of game
     cardDeck = cardsBase.slice();
     cardDeck = shuffle(cardDeck);
-    p1Hand = [];
-    p1Stash = [];
-    p2Hand = [];
-    p2Stash = [];
+    p1.hand = [];
+    p1.stash = [];
+    p2.hand = [];
+    p2.stash = [];
     gameBoard = [];
     //deal, assuming p1 is oya
     do {
-        p2Hand.push(cardDeck.pop());
-        p2Hand.push(cardDeck.pop());
+        p2.hand.push(cardDeck.pop());
+        p2.hand.push(cardDeck.pop());
         gameBoard.push(cardDeck.pop());
         gameBoard.push(cardDeck.pop());
-        p1Hand.push(cardDeck.pop());
-        p1Hand.push(cardDeck.pop());
-    } while (p1Hand.length < 8);
-    out = "Player one's hand consists of the following cards:<br/>" + hTS(p1Hand) + "<br/>Player two's hand consists of the following cards:<br/>" + hTS(p2Hand) + "<br/>The board consists of the following cards:<br/>" + hTS(gameBoard);
+        p1.hand.push(cardDeck.pop());
+        p1.hand.push(cardDeck.pop());
+    } while (p1.hand.length < 8);
+    out = "Player one's hand consists of the following cards:<br/>" + hTS(p1.hand) + "<br/>Player two's hand consists of the following cards:<br/>" + hTS(p2.hand) + "<br/>The board consists of the following cards:<br/>" + hTS(gameBoard);
     divOut.innerHTML = out;
 }
 
-function decideOya(){
-	var oyaDecided = false;
-	var p1Card;
-	var p2Card;
-	var oya = 1;
-	var method = "month";
-	var out = "";
-	while (!oyaDecided){
-		cardDeck = cardsBase.slice();
-		cardDeck = shuffle(cardDeck);
-		p1Card = cardDeck.pop();
-		p2Card = cardDeck.pop();
-		if (p1Card.month === p2Card.month){
-			if (p1Card.points === p2Card.month){
-				oyaDecided = false;
-			} else if (p1Card.points > p2Card.points){
-				oya = 1;
-				oyaDecided = true;
-				method = "points";
-			} else {
-				oya = 2;
-				oyaDecided = true;
-				method = "points";
-			}
-		} else if (p1Card.month < p2Card.month) {
-			oya = 1;
-			oyaDecided = true;
-			method = "month";
-		} else {
-			oya = 2;
-			oyaDecided = true;
-			method = "month";
-		}
-	}
-	//declare oya
-	if (method === "month"){
-		out = "Player one's card was " + p1Card.name + " (" + numToMonth(p1Card.month) + ")!<br/>Player two's card was " + p2Card.name + " (" + numToMonth(p2Card.month) + ")!<br/>";
-		if (oya === 2) {
-			out += "Thus, Player two is the oya!";
-		} else {
-			out += "Thus, Player one is the oya!";
-		}
-	} else {
-		out = "Player one's card was " + p1Card.name + " (" + numToMonth(p1Card.month) + ")!<br/>Player two's card was " + p2Card.name + " (" + numToMonth(p2Card.month) + ")!<br/>That's a tie! Comparing point values.<br/>" + p1Card.name + " is worth " +  p1Card.points + " points! " + p2Card.name + " is worth " + p2Card.points + "!<br/>";
-		if (oya === 2) {
-			out += "Thus, Player two is the oya!";
-		} else {
-			out += "Thus, Player one is the oya!";
-		}
-	}
-	divOut.innerHTML = out;
+function decideOya() {
+    var oyaDecided = false;
+    var p1Card;
+    var p2Card;
+    var oya = 1;
+    var method = "month";
+    var out = "";
+    while (!oyaDecided) {
+        cardDeck = cardsBase.slice();
+        cardDeck = shuffle(cardDeck);
+        p1Card = cardDeck.pop();
+        p2Card = cardDeck.pop();
+        if (p1Card.month === p2Card.month) {
+            if (p1Card.points === p2Card.month) {
+                oyaDecided = false;
+            } else if (p1Card.points > p2Card.points) {
+                oya = 1;
+                oyaDecided = true;
+                method = "points";
+            } else {
+                oya = 2;
+                oyaDecided = true;
+                method = "points";
+            }
+        } else if (p1Card.month < p2Card.month) {
+            oya = 1;
+            oyaDecided = true;
+            method = "month";
+        } else {
+            oya = 2;
+            oyaDecided = true;
+            method = "month";
+        }
+    }
+    //declare oya
+    if (method === "month") {
+        out = "Player one's card was " + p1Card.name + " (" + numToMonth(p1Card.month) + ")!<br/>Player two's card was " + p2Card.name + " (" + numToMonth(p2Card.month) + ")!<br/>";
+        if (oya === 2) {
+            out += "Thus, Player two is the oya!";
+        } else {
+            out += "Thus, Player one is the oya!";
+        }
+    } else {
+        out = "Player one's card was " + p1Card.name + " (" + numToMonth(p1Card.month) + ")!<br/>Player two's card was " + p2Card.name + " (" + numToMonth(p2Card.month) + ")!<br/>That's a tie! Comparing point values.<br/>" + p1Card.name + " is worth " + p1Card.points + " points! " + p2Card.name + " is worth " + p2Card.points + "!<br/>";
+        if (oya === 2) {
+            out += "Thus, Player two is the oya!";
+        } else {
+            out += "Thus, Player one is the oya!";
+        }
+    }
+    divOut.innerHTML = out;
 }
 
 function hTS(array) {
@@ -90,22 +99,35 @@ function hTS(array) {
     return str;
 }
 
-function numToMonth(num){
-	switch(num){
-		case 1: return "January";
-		case 2: return "February";
-		case 3: return "March";
-		case 4: return "April";
-		case 5: return "May";
-		case 6: return "June";
-		case 7: return "July";
-		case 8: return "August";
-		case 9: return "September";
-		case 10: return "October";
-		case 11: return "November";
-		case 12: return "December";
-		default: return "err";
-	}
+function numToMonth(num) {
+    switch (num) {
+    case 1:
+        return "January";
+    case 2:
+        return "February";
+    case 3:
+        return "March";
+    case 4:
+        return "April";
+    case 5:
+        return "May";
+    case 6:
+        return "June";
+    case 7:
+        return "July";
+    case 8:
+        return "August";
+    case 9:
+        return "September";
+    case 10:
+        return "October";
+    case 11:
+        return "November";
+    case 12:
+        return "December";
+    default:
+        return "err";
+    }
 }
 
 var cardsBase = [
