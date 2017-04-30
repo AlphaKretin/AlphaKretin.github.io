@@ -1,5 +1,5 @@
 console.log("add debug");
-var cardDeck = [];
+var cardDeck = cardsBase;
 var p1Hand = [];
 var p1Stash = [];
 var p2Hand = [];
@@ -10,7 +10,8 @@ var divOut = document.getElementById("output");
 
 function prepare() {
     //init everything for start of game
-    cardDeck = shuffle(cardsBase);
+    cardDeck = cardsBase;
+    cardDeck = shuffle(cardDeck);
     p1Hand = [];
     p1Stash = [];
     p2Hand = [];
@@ -25,7 +26,6 @@ function prepare() {
         p1Hand.push(cardDeck.pop());
         p1Hand.push(cardDeck.pop());
     } while (p1Hand.length < 8);
-    console.dir(p1Hand);
     out = "Player one's hand consists of the following cards:<br/>" + hTS(p1Hand) + "<br/>Player two's hand consists of the following cards:<br/>" + hTS(p2Hand) + "<br/>The board consists of the following cards:<br/>" + hTS(gameBoard);
     divOut.innerHTML = out;
 }
@@ -38,7 +38,8 @@ function decideOya(){
 	var method = "month";
 	var out = "";
 	while (!oyaDecided){
-		cardDeck = shuffle(cardsBase);
+		cardDeck = cardsBase;
+		cardDeck = shuffle(cardDeck);
 		p1Card = cardDeck.pop();
 		p2Card = cardDeck.pop();
 		if (p1Card.month === p2Card.month){
