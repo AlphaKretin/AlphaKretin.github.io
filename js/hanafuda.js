@@ -1,4 +1,4 @@
-console.log("add debug");
+console.log("change deck shuffling");
 var cardDeck = cardsBase;
 var p1Hand = [];
 var p1Stash = [];
