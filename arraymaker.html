@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Word Game</title>
+    <title>Text Formatter</title>
     <link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon.png">
     <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
@@ -16,9 +16,10 @@
 </head>
 
 <body>
-    <input type="button" value="Check" onclick="clicked()" id="checkButton" />
+	<textarea id="checkbox"></textarea>
+    <input type="button" value="Format" onclick="format(document.getElementById('checkbox').value)" id="checkButton" />
     <div id="myDiv"></div>
-    <script src="./arraymaker.js"></script>
+    <script src="./format.js"></script>
 </body>
 
 </html>
