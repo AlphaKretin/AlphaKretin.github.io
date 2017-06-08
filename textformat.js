@@ -3,7 +3,7 @@ function format(text){
 	lines[0] = "<p><h2>" + lines[0] + "</h2><ol>";
 	var i;
 	for (i = 1; i < lines.length - 1; i++) {
-		lines[i] = "<li>" + lines[i].slice(2) + "</li>";
+		lines[i] = "<li>" + lines[i].slice(5) + "</li>";
 	}
 	lines[lines.length - 1] = "</ol><b>" + lines[lines.length - 1] + "</b></p>";
 	var out = "";
@@ -12,3 +12,5 @@ function format(text){
 	}
 	console.log(out);
 }
+
+console.log("loaded");
