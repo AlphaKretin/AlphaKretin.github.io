@@ -5,7 +5,7 @@ function format(text){
 	for (i = 1; i < lines.length - 1; i++) {
 		lines[i] = "<li>" + lines[i].slice(5) + "</li>";
 	}
-	lines[lines.length - 1] = "</ol><b>" + lines[lines.length - 1] + "</b></p>";
+	lines[lines.length - 1] = "</ol><b>" + lines[lines.length - 1].slice(2) + "</b></p>";
 	var out = "";
 	for (var line of lines){
 		out += line;
