@@ -8,7 +8,7 @@ function format(text){
 	lines[lines.length - 1] = "</ol><b>" + lines[lines.length - 1] + "</b></p>";
 	var out = "";
 	for (var line of lines){
-		out += line + "\n";
+		out += line;
 	}
 	console.log(out);
 }
