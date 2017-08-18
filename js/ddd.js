@@ -78,15 +78,17 @@ function search() {
     hand = [card1, card2, card3, card4, card5];
     combos = [];
     out = "";
-    for (var [key, req] of reqs) {
-        var boo = true;
-        for (var card of req) {
-            if (!hand.includes(card)) {
-                boo = false;
+    for (var key in reqs) {
+        if (reqs.hasOwnProperty(key)) {
+            var boo = true;
+            for (var card of reqs[key]) {
+                if (!hand.includes(card)) {
+                    boo = false;
+                }
             }
-        }
-        if (boo) {
-            combos.push(key);
+            if (boo) {
+                combos.push(key);
+            }
         }
     }
     for (var com of combos) {
@@ -97,4 +99,4 @@ function search() {
     }
     output.innerHTML = out;
 }
-console.log("loaded ver. refactor");
+console.log("loaded ver. refactor fix");
