@@ -22,25 +22,42 @@ const kepler = "D/D Savant Kepler";
 const coper = "D/D Savant Copernicus";
 const ragna = "D/D/D Oblivion King Abyss Ragnarok";
 const gate = "Dark Contract With The Gate";
+const reqs = {
+    "swirlA": [swirl, necro, lamia],
+    "swirlB": [swirl, necro, kepler],
+    "swirlC": [swirl, necro, coper],
+    "swirlD": [swirl, necro, ragna],
+    "swirlE": [swirl, lamia, gate],
+    "swirlF": [swirl, lamia, kepler],
+    "swirlG": [swirl, lamia, coper],
+    "swirlH": [swirl, lamia, ragna],
+    "swirlI": [swirl, necro, gate],
+    "swirlJ": [swirl, kepler, coper],
+    "swirlK": [swirl, kepler, ragna],
+    "swirlL": [swirl, kepler, gate],
+    "swirlM": [swirl, coper, ragna],
+    "swirlN": [swirl, coper, gate],
+    "swirlO": [swirl, ragna, gate]
+};
 const c1 = document.getElementById("card1");
 const c2 = document.getElementById("card2");
 const c3 = document.getElementById("card3");
 const c4 = document.getElementById("card4");
 const c5 = document.getElementById("card5");
 const output = document.getElementById("out");
-c1.addEventListener("change", function () {
+c1.addEventListener("change", function() {
     search();
 });
-c2.addEventListener("change", function () {
+c2.addEventListener("change", function() {
     search();
 });
-c3.addEventListener("change", function () {
+c3.addEventListener("change", function() {
     search();
 });
-c4.addEventListener("change", function () {
+c4.addEventListener("change", function() {
     search();
 });
-c5.addEventListener("change", function () {
+c5.addEventListener("change", function() {
     search();
 });
 var card1 = "";
@@ -61,50 +78,16 @@ function search() {
     hand = [card1, card2, card3, card4, card5];
     combos = [];
     out = "";
-    if (hand.includes(swirl) && hand.includes(necro) && hand.includes(lamia)) {
-        combos.push("swirlA");
-    }
-    if (hand.includes(swirl) && hand.includes(necro) && hand.includes(kepler)) {
-        combos.push("swirlB");
-    }
-    if (hand.includes(swirl) && hand.includes(necro) && hand.includes(coper)) {
-        combos.push("swirlC");
-    }
-    if (hand.includes(swirl) && hand.includes(necro) && hand.includes(ragna)) {
-        combos.push("swirlD");
-    }
-    if (hand.includes(swirl) && hand.includes(lamia) && hand.includes(gate)) {
-        combos.push("swirlE");
-    }
-    if (hand.includes(swirl) && hand.includes(lamia) && hand.includes(kepler)) {
-        combos.push("swirlF");
-    }
-    if (hand.includes(swirl) && hand.includes(lamia) && hand.includes(coper)) {
-        combos.push("swirlG");
-    }
-    if (hand.includes(swirl) && hand.includes(lamia) && hand.includes(ragna)) {
-        combos.push("swirlH");
-    }
-    if (hand.includes(swirl) && hand.includes(necro) && hand.includes(gate)) {
-        combos.push("swirlI");
-    }
-    if (hand.includes(swirl) && hand.includes(kepler) && hand.includes(coper)) {
-        combos.push("swirlJ");
-    }
-    if (hand.includes(swirl) && hand.includes(kepler) && hand.includes(ragna)) {
-        combos.push("swirlK");
-    }
-    if (hand.includes(swirl) && hand.includes(kepler) && hand.includes(gate)) {
-        combos.push("swirlL");
-    }
-    if (hand.includes(swirl) && hand.includes(coper) && hand.includes(ragna)) {
-        combos.push("swirlM");
-    }
-    if (hand.includes(swirl) && hand.includes(coper) && hand.includes(gate)) {
-        combos.push("swirlN");
-    }
-    if (hand.includes(swirl) && hand.includes(ragna) && hand.includes(gate)) {
-        combos.push("swirlO");
+    for (var [key, req] of reqs) {
+        var boo = true;
+        for (var card of req) {
+            if (!hand.includes(card)) {
+                boo = false;
+            }
+        }
+        if (boo) {
+            combos.push(key);
+        }
     }
     for (var com of combos) {
         out += guides[com];
@@ -114,3 +97,4 @@ function search() {
     }
     output.innerHTML = out;
 }
+console.log("loaded ver. refactor");
