@@ -20,7 +20,13 @@ const guides = {
     "necroD": "<p><h2>D. Necro, Keplar, Ragnarok</h2><ol><li>NS Keplar => Search Gate via Keplar => Search Swirl via Gate</li><li>Pend Zone Ragnarok</li><li>Fusion Genghis (Swirl + Necro)</li><li>fusion Genghis (Swirl in Grave + NEcro in Grave)</li><li>Xyz Beatricce (2 Gennghis) => Mill Lamia</li><li>Destroy Gate via SS Lamia (Grave) => SS Genghis (Grave) via Ragnarok [Pend Zone]</li><li>Synchro Formula (Lamia + Keplar) => Synchro Omega (Formula + Ragnarok)</li></ol><b>Final (Beatrice + Omega + Ragnarok [Pend Zone] + 1 Draw)</b></p>",
     "necroE": "<p><h2>E. Necro, Keplar, Gate</h2><ol><li>Search Swirl Via Gate</li><li>Fusion Genghis (Necro + Swirl)</li><li>SS Keplar via Swirl (Grave) => Chain!!![SS Necro (Grave) Via Genghis/Search Swamp via Keplar]</li><li>Fusion Genghis via Swamp (Keplar [Field] + Necro [Field])</li><li>Xyz Beatrice (2 Genghis) => Mill Lamia</li><li>Destroy Swamp via SS Lamia (Grave) => Fusion d'Arc (Necro + Genghis) => Synchro Omega (Lamia + d'ARc)</li></ol><b>Final (Omega + Beatrice + Gate)</b></p>",
     "necroF": "<p><h2>F. Necro, Copper, Gate</h2><ol><li>Search Swirl via Gate</li><li>Fusion Genghis (Necro + Swirl)</li><li>NS Copper => Mill Keplar</li><li>Fusion Genghis (Necro in Grave + Swirl in Grave) => SS Keplar (Grave) Via Genghis => Search Swamp via Keplar</li><li>Fusion d'Arc via Swamp (Keplar [Field] + Copper [Field])</li><li>Xyz Beatrice (2 Genghis) => Mill Lamia</li><li>Destroy Swamp via SS Lamia (Grave) => Synchro Omega (d'ARc + Lamia)</li></ol><b>Final (Omega + Beatrice + Gate)</b></p>",
-    "necroG": "<p><h2>G. Swirl, Ragnar, Gate</h2><ol><li>Search Necro via Gate</li><li>Fusion Genghis (Swirl + Necro)</li><li>Fusion Genghis (NEcro in Grave + Swirl in Grave)</li><li>Beatrice (2 Genghis) => Mill Swirl</li><li>SS Ragnarok via Swirl (Grave) => SS Genghis (Grave) Via Ragnarok</li></ol><b>Final (Ragnarok + Beatrice + Genghis + Gate)</b></p>"
+    "necroG": "<p><h2>G. Swirl, Ragnar, Gate</h2><ol><li>Search Necro via Gate</li><li>Fusion Genghis (Swirl + Necro)</li><li>Fusion Genghis (NEcro in Grave + Swirl in Grave)</li><li>Beatrice (2 Genghis) => Mill Swirl</li><li>SS Ragnarok via Swirl (Grave) => SS Genghis (Grave) Via Ragnarok</li></ol><b>Final (Ragnarok + Beatrice + Genghis + Gate)</b></p>",
+    "lamiaA": "<p><h2>A. Lamia, Keplar, Copper</h2><ol><li>NS Keplar => Search Gate via Keplar => Search Swirl via Gate</li><li>Fusion Genghis (Copper + Swirl)</li><li>SS Lamia via Swirl (Grave) => SS Copper (Grave) Via Genghis => Mill Necro</li><li>Synchro Alex (Genghis + Lamia)</li><li>Fusion Genghis (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) Via Alexander</li><li>Synchro formula (Lamia + Keplar) => Synchro Siegfried (Formula + Genghis)</li><li>Destroy Gate via SS Lamia (Grave) => Synchro Crystal (Alex + Lamia)</li></ol><b>Final (Crystal + Siegfried + Copper + 1 Draw)</b></p>",
+    "lamiaB": "<p><h2>B. Lamia, Keplar, Ragnarok</h2><ol><li>NS Keplar => Search Gate Via Keplar => Search Swirl via Gate</li><li>Fusion Genghis (Swirl + Ragnarok)</li><li>SS Lamia via Swirl (Grave) => SS Ragnarok (Grave) Via Genghis</li><li>Synchro Formula (Lamia + Keplar) => Synchro Omega (Genghis + Formula)</li></ol><b>Final (Omega + Ragnarok + 1 Draw + Gate)</b></p>",
+    "lamiaC": "<p><h2>C. Lamia, Keplar, Gate</h2><ol><li>Search Swirl Via Gate</li><li>Fusion Genghis (Keplar + Swirl)</li><li>SS Lamia via Swirl (Grave) => SS Keplar (Grave) Via Genghis => Search Swamp Via Keplar</li><li>Synchro Alex (Genghis + Lamia)</li><li>Fusion d'Arc Via Swamp (Keplar [Field] + Genghis [Grave]) => SS Lamia (Grave) Via Alex</li><li>Sycnrho Crystal (Lamia + Alex) => Destroy Swamp Via SS Lamia (Grave) => Synchro Siegfried (d'ARc + Lamia)</li></ol><b>Final (Crystal Wing + Siegfried + Gate)</b></p>",
+    "lamiaD": "<p><h2>D. Lamia, Copper, Ragnarok</h2><ol><li>NS Copper => Mill Necro</li><li>Destroy Ragnarok (Hand) Via SS Lamia (Hand)</li><li>Fusion d'Arc (Necro in Grave + Ragnarok in Grave)</li><li>Synchro Omega (Lamia + d'Arc)</li></ol><b>Final (Copper [ATK] + Omega)</b></p>",
+    "lamiaE": "<p><h2>E. Lamia, Copper, Gate</h2><ol><li>Search Swirl via Gate</li><li>Fusion Genghis (Copper + Swirl)</li><li>SS Lamia via Swirl (Grave) => SS Copper (Grave) Via Genghis => Mill Necro</li><li>Synchro Alex (Lamia + Genghis)</li><li>Fusion d'Arc (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) Via Alexander</li><li>Synchro Crystal (Alex + Lamia) => Destroy Gate via SS Lamia =>  Synchro Sieg (Lamia + d'Arc)</li></ol><b>Final (Sieg + Crystal + Copper)</b></p>",
+    "lamiaF": "<p><h2>F. Lamia, Ragnarok, Gate</h2><ol><li>Search Swirl via Gate</li><li>Pend Zone Ragnarok</li><li>Fusion Genghis (Lamia + Swirl) => SS Swirl (Grave) Via Ragnarok => SS Lamia (Grave) Via Genghis</li><li>Synchro Alex (Genghis + Lamia) => Destroy Swirl Via SS Lamia (Grave) => SS Swirl (Grave) Via Alex</li><li>Sycnrho Siegfried (Alex + Lamia)</li></ol><b>Final (Ragnarok [Pend Zone] + Siegfried + Gate + Swirl)</b></p>"
 };
 const swirl = "D/D Swirl Slime";
 const necro = "D/D Necro Slime";
@@ -51,7 +57,13 @@ const reqs = {
     "necroD": [necro, kepler, ragna],
     "necroE": [necro, kepler, gate],
     "necroF": [necro, coper, gate],
-    "necroG": [swirl, ragna, gate]
+    "necroG": [swirl, ragna, gate],
+    "lamiaA": [lamia, kepler, coper],
+    "lamiaB": [lamia, kepler, ragna],
+    "lamiaC": [lamia, kepler, gate],
+    "lamiaD": [lamia, coper, ragna],
+    "lamiaE": [lamia, coper, gate],
+    "lamiaF": [lamia, ragna, gate]
 };
 const c1 = document.getElementById("card1");
 const c2 = document.getElementById("card2");
