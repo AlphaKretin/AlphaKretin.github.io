@@ -1,0 +1,423 @@
+===================================================[Summary]==========================================================
+              C O M B O      P I E C I E S                []                   R E S U L T
+       []   1   []   2   []   3    []    4   []   Flush   []     1      []      2      []       3       []    4      []
+Swirl  []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Swirl [] Necro [] Lamia  []        []           [] Siegfried  []  Crystal    []               []           []
+B.     [] Swirl [] Necro [] Keplar []        []           [] Siegfried  []  Crystal    [] Alexander     []           []
+C.     [] Swirl [] Necro [] Copper []        []           [] Omega      []  Beatrice   []               []           []
+D.     [] Swirl [] Necro [] Ragnar []        []           [] Beatrice   []  Genghis    [] Ragnarok      []           []
+E.     [] Swirl [] Necro [] Gate   []        []           [] Omega      []  Beatrice   [] Gate          []           []
+F.     [] Swirl [] Lamia [] Keplar []        []           [] Siegfried  []  Crystal    [] Alexander     []           []
+G.     [] Swirl [] Lamia [] Copper []        []           [] Omega      []  Librarian  [] 1 Draw        []           []
+H.     [] Swirl [] Lamia [] Ragnar []        []           [] Siegfried  []  Swirl      [] Ragnarok [PZ] []           []
+I.     [] Swirl [] Lamia [] Gate   []        []           [] Genghis    []  Siegfried  [] Crystal       []           []
+J.     [] Swirl [] Keplar[] Copper []        []           [] Crystal    []  Siegfried  [] Copper        [] 1 Draw    []
+K.     [] Swirl [] Keplar[] Ragnar []        []           [] Ragna [PZ] []  Beatrice   [] Omega         [] 1 Draw    []
+L.     [] Swirl [] Keplar[] Gate   []        []           [] Siegfried  []  Crystal    [] Gate          []           []
+M.     [] Swirl [] Copper[] Ragnar []        []           [] Ragnarok   []  Copper ATK [] Beatrice (Res)[]           []
+N.     [] Swirl [] Copper[] Gate   []        []           [] Siegfreid  []  Crystal    [] Copper        []           []
+O.     [] Swirl [] Ragnar[] Gate   []        []           [] Harbinger  []  Beatrice   [] Gate          [] Swamp     []
+Necro  []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Necro [] Lamia [] Keplar []        []           [] Crystal    []  Siegfried  [] Alexander     [] 1 Draw    []
+B.     [] Necro [] Lamia [] Copper []        []           [] Omega      []  1 Draw     []               []           []
+C.     [] Necro [] Keplar[] Copper []        []           [] Omega      []  1 Draw     [] Beowulf [B.]  []           []
+D.     [] Necro [] Keplar[] Ragnar []        []           [] Omega      []  Beatrice   [] Ragnarok [PZ] [] 1 Draw    []
+E.     [] Necro [] Keplar[] Gate   []        []           [] Omega      []  Beatrice   [] Gate          []           []
+F.     [] Necro [] Copper[] Gate   []        []           [] Omega      []  Beatrice   [] Gate          []           []
+G.     [] Necro [] Ragnar[] Gate   []        []           [] Ragnarok   []  Beatrice   [] Genghis       [] Gate      []
+Lamia  []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Lamia [] Keplar[] Copper []        []           [] Crystal    []  Siegfried  [] 1 Draw        [] Copper    []
+B.     [] Lamia [] Keplar[] Ragnar []        []           [] Omega      []  Ragnarok   [] Gate          [] 1 Draw    []
+C.     [] Lamia [] Keplar[] Gate   []        []           [] Crystal    []  Siegfried  [] Gate          []           []
+D.     [] Lamia [] Copper[] Ragnar []        []           [] Omega      []  Copper(ATK)[]               []           []
+E.     [] Lamia [] Copper[] Gate   []        []           [] Crystal    []  Siegfried  [] Copper        []           []
+F.     [] Lamia [] Ragnar[] Gate   []        []           [] Ragnar (PZ)[]  Siegfried  [] Gate          [] Swirl     []
+Kep&Cop[]=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Keplar[] Copper[] Ragnar []        []           [] Omega      []  Ragnarok   [] Copper        [] 1 Draw    []
+B.     [] Keplar[] Copper[] Gate   []        []           [] Omega      []  Beatrice   [] Gate          []           []
+C.     [] Keplar[] Ragnar[] Gate   []        []           [] Harbinger  []  Beatrice   [] Gate          [] Swamp     []
+D.     [] Copper[] Ragnar[] Gate   []        []           [] Ragnarok   []  Copper(ATK)[] Beatrice (Res)[] Gate      []
+Ragnar []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Keplar[(Lamia/ Copper/Ragnar /Swirl)]           [] Ragnar (PZ)[]  Crystal    [] Siegfried     [] Librar(4D)[]
+B.     [] Gate  [(Lamia/ Keplar/Ragnar /Swirl)]           [] Crystal    []  Harbinger  [] Siegfried     [] Swamp (1D)[]
+C.     [] Keplar[(Lamia/ Necro /Ragnar /Swirl)]           [] Ragnar (PZ)[]  Crystal    [] Siegfried     [] Omega     []
+Thomas []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Gate  [(Swirl / Lamia / Ragnar / Copper / Thomas)] Crystal    [] Siegfried   [] Harbinger     [] Gate      []
+B.     [] Gate  [(Swirl / Lamia / Ragnar / Copper / Thomas)] Crystal    [] Siegfried   [] Harbinger     [] Copper    []
+C.     [] Keplar[] Swirl [] Lamia  [] Ragnar []           [] Crystal    [] Siegfried   [] Harbinger     [] 1 Draw    []
+=======[]=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+
+
+===================================[Swirl (Crucial Combo Enabler) All 3 Pieces]=========================================
+A. Swirl,Necro,Lamia 
+  1. Fusion Genghis (Necro + Swirl)
+  2. NS Lamia
+  3. Synchro Alexander (Lamia + Genghis)
+  4. Fusion Genghis (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) Via Alexander
+  5. Synchro Siegfried (Lamia + Alexander) => SS Alexander(Grave) Via Genghis 
+  6. Destroy Genghis to SS Lamia (Grave)
+  7. Synchro Crystal Wing (Lamia + Alexander)
+  Final. (Siegfried + Crystal Wing)
+B. Swirl, Necro, Keplar 
+  1. NS Keplar Search Gate => Search Lamia via Gate
+  2. Fusion Genghis (Necro + Swirl)
+  3. SS Lamia Via Swirl (Grave)
+  4. Synchro Alexander (Lamia + Genghis)
+  5. Fusion Genghis (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) via Alexander
+  6. Synchro Crystal Wing (Lamia + Alexander)
+  7. Destroy Gate to SS Lamia (Grave) => SS Alexander (Grave) via Genghis
+  8  Synchro Formula (Keplar + Lamia) => Synchro Siegfried (Genghis + Formula)
+  Final (Crystal Wing + Alexander + Siegfried)
+C. Swirl, Necro, Copper
+  1. Fusion Genghis (Necro + Swirl)
+  2. NS Copper => Mill Keplar
+  3. Fusion Genghis (Necro in Grave + Genghis in Grave) => ss Keplar (Grave) via Genghis => Search Swamp Via Keplar
+  4. Fusion d'Arc via Swamp (Copper + Keplar in Field)
+  5. Xyz Beatrice (2 Genghis) => Mill Lamia (Via Detach Genghis)
+  6. Destroy Swamp to SS Lamia (Grave) => Synchro Omega (Lamia + d'Arc)
+  Final (Omega + Beatrice)
+D. Swirl, Necro, Ragnarok
+  1. Fusion Genghis (Necro + Swirl)
+  2. Fusion Genghis (Necro in Grave + Swirl in Grave) => Xyz Beatrice (2 Genghis) => Mill Swirl (Via Detach Genghis)
+  3. SS Ragnarok via Swirl (Grave) => SS Genghis (Grave) via Ragnarok
+  Final (Beatrice + Genghis + Ragnarok)
+E. Swirl, Lamia, Gate
+  1. Search Necro via Gate
+  2. Fusion Genghis (Necro + Swirl)
+  3. NS Lamia => Synchro Alexander (Lamia + Genghis)
+  4. Fusion Genghis (Necro in Grave + Swirl in Grave) => SS Lamia (Grave) via Alexander
+  5. Synchro Siegfried (Lamia + Alexander) => SS Alexander (Grave) via Genghis
+  6. Destroy Gate to SS Lamia (Grave) => Synchro Crystal (Lamia + Alexander)
+  Final (Genghis + Siegfried + Crystal)
+F.Swirl, Lamia, Keplar
+  1. NS Keplar => Search Gate via Keplar => Necro
+  2. Fusion Genghis (Necro + Swirl)
+  3. SS Lamia via Swirl (Grave) => Synchro Alexander (Genghis + Lamia)
+  4  Fusion Genghis (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) via Alexander 
+  5. Synchro Crystal (Alexander + Lamia)
+  6. Destroy Gate to SS Lamia (Grave) => SS Alexander (Grave) Via Genghis 
+  7. Synchro Formula (Keplar + Lamia) => Synchro Siegfried (Formula + Genghis)
+  Final (Crystal Wing + Siegfried + Alexander + 1 Draw)
+G. Swirl, Lamia, Copper
+  1. Fusion Genghis (Swirl + Copper)
+  2. SS Lamia via Swirl (Grave)'=> SS Copper (Grave) via Genghis => Mill Necro
+  3. Synchro Alexander (Genghis + Lamia)
+  4. Fusion Genghis (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) via Alexander
+  5. Synchro Librarian
+  6. Destroy Genghis via SS Lamia (Grave)
+  7. Synchro Omega (Alexander + Lamia)
+  Final (Omega + Librarian + 1 Draw)
+H. Swirl, Lamia, Ragnarok
+  1. Pend Zone Ragnarok
+  2. Fusion Genghis (Lamia + Swirl) => SS Swirl (Grave) Via Ragnarok => SS Lamia (Grave) Via Genghis
+  3. Synchro Alexander (Genghis + Lamia)
+  4. Destroy Swirl via SS Lamia (Grave) => SS Swirl (Grave) Via Alexander
+  5. Synchro Siegfried (Alexander + Lamia
+  Final (Siegfried + Swirl + Ragnarok [Pend Zone])
+I.(& E) Swirl, Necro, Gate
+  1. Search Lamia via Gate
+  2. Fusion Genghis (Necro + Swirl)
+  3. NS Lamia => Synchro Alexander (Lamia + Genghis)
+  4. Fusion Genghis (Necro in Grave + Swirl in Grave) => SS Lamia (Grave) via Alexander
+  5. Synchro Siegfried (Lamia + Alexander) => SS Alexander (Grave) via Genghis
+  6. Destroy Gate to SS Lamia (Grave) => Synchro Crystal (Lamia + Alexander)
+  Final (Genghis + Siegfried + Crystal)
+J. Swirl, Keplar, Copper
+  1. NS Keplar => Search Gate via Keplar => Search Lamia Via Gate
+  2. Fusion Genghis => (Copper + Swirl)
+  3. SS Lamia via Swirl (Grave) => SS Copper (Grave) via Genghis => Mill NEcro
+  4. Synchro Alexander (Genghis + Lamia)
+  5. Fusion Genghis (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) Via Alexander
+  6. Synchro Crystal (Alexander + Lamia)
+  7. Destroy Gate via SS Lamia (Grave) => Synchro Formula (Lamia + Keplar) => Synchro Siegfried
+  Final (Copper + Crystal Wing + Siegfried + 1 Draw)
+K. Swirl, Keplar, Ragnarok
+  1. NS Keplar => Search Gate via Keplar => Search Necro Via Gate
+  2. Fusion Genghis (Necro + Swirl)
+  3. Fusion Genghis (Necro in Grave + Swirl in Grave)
+  4. Xyz Beatrice (2 Genghis) => Mill Lamia (Via Detach Genghis)
+  5. Pend Zone Ragnarok
+  6. Destroy Gate Via SS Lamia (Grave) => SS Genghis (Grave) Via Ragnarok
+  7. Synchro Formula (Lamia + Keplar) => Synchro Omega (Genghis + Formula)
+  Final (Ragnarok [Pend Zone] + Beatrice + Omega + 1 Draw)
+L. Swirl, Keplar, Gate
+  1. Search Lamia via Gate
+  2. Fusion Genghis (Swirl + Keplar)
+  3. SS Lamia Via Swirl (Grave) => SS Keplar (Grave) via Genghis => Search Swamp Via Keplar
+  4. Synchro Alexander (Lamia + Genghis)
+  5. Fusion d'Arc via Swamp (Keplar + Genghis [Grave]) => SS Lamia (Grave) Via Alexander
+  6. Synchro Crystal (Lamia + Alexander) => Destroy Swamp Via SS Lamia (Grave) => Synchro Siegfried (d'ARc + Lamia)
+  Final (Siegfried + Crystal Wing + Gate)
+M. Swirl, Copper, Ragnarok
+  1. Fusion Genghis (Swirl + Ragnarok)
+  2. NS Copper => Mill Necro
+  3. Fusion Genghis (Necro in Grave + Swirl in Grave) => SS Ragnarok (Grave) Via Genghis
+  4. Xyz Beatrice (2 Genghis) => Mill Something
+  Final (Ragnarok + Copper [ATK] + Beatrice [Later Mill] )
+N.swirl, Copper, Gate
+  1. Search Lamia via Gate
+  2. Fusion Genghis (Copper + Swirl)
+  3. SS Lamia via Swirl (Grave) => SS Copper (Grave) Via Genghis => Mill Necro
+  4. Synchro Alex (Lamia + Genghis)
+  5. Fusion d'Arc (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) Via Alexander
+  6. Synchro Crystal (Alex + Lamia) => Destroy Gate via SS Lamia =>  Synchro Sieg (Lamia + d'Arc)
+  Final (Sieg + Crystal + Copper)
+O. Swirl, Ragnarok, Gate
+  1. Search Keplar Via Gate
+  2. NS Keplar => Search Swamp via Keplar
+  3. Fusion Genghis (Swirl + Ragnarok)
+  4. Fusion Genghis via Swamp (Keplar [Field] + Swirl [Grave]) => SS Ragnarok (Grave) Via Genghis
+  5. Xyz Beatrice (2 Genghis) => Mill Necro via Beatrice
+  6. Fusion Beowulf (Genghis in Grave + Necro in Grave) => Xyz Harbinger (Beowulf + Ragnarok)
+  Final (Swamp + Gate + Beatrice + Harbinger)
+================================[Necro (Combo Extender) All 3 Pieces]===================================================
+A.Necro, Lamia, Keplar
+  1. NS Keplar => Search Gate via Keplar => Search Swirl
+  2. Fusion Genghis (Necro + Swirl)
+  3. SS Lamia via Swirl (Grave) => Synchro Alexander (Genghis + Lamia)
+  4  Fusion Genghis (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) via Alexander 
+  5. Synchro Crystal (Alexander + Lamia)
+  6. Destroy Gate to SS Lamia (Grave) => SS Alexander (Grave) Via Genghis 
+  7. Synchro Formula (Keplar + Lamia) => Synchro Siegfried (Formula + Genghis)
+  Final (Crystal Wing + Siegfried + Alexander + 1 Draw)
+B. Necro, Lamia, Copper
+  1. Destroy Copper [Hand] Via SS Lamia [Hand]
+  2. NS Necro => Formula Synchro (Necro + Lamia)
+  3. Fusion Genghis (Copper in Grave + Necro in Grave) => Synchro Omega (Formula + Genghis)
+  Final (Omega + 1 Draw)
+C. Necro, Keplar, Copper
+  1. NS Keplar => Search Gate via Keplar => Search Swirl via Gate
+  2. Fusion Genghis (Necro + Swirl)
+  3. SS Copper via Swirl (Grave) => Mill Lamia (Don't Activate Genghis)
+  4. Destroy Gate vua SS Lamia (Grave) => Synchro Formula (Lamia + Keplar) => Synchro Omega (Genghis + Formula)
+  5. Fusion Beowulf (Necro + Genghis) [Bonus]
+  Final (Omega + 1 Draw + Beowulf [Bonus])
+D. Necro, Keplar, Ragnarok
+  1. NS Keplar => Search Gate via Keplar => Search Swirl via Gate
+  2. Pend Zone Ragnarok
+  3. Fusion Genghis (Swirl + Necro)
+  4. fusion Genghis (Swirl in Grave + NEcro in Grave)
+  5. Xyz Beatricce (2 Gennghis) => Mill Lamia
+  6. Destroy Gate via SS Lamia (Grave) => SS Genghis (Grave) via Ragnarok [Pend Zone]
+  7. Synchro Formula (Lamia + Keplar) => Synchro Omega (Formula + Ragnarok)
+  Final (Beatrice + Omega + Ragnarok [Pend Zone] + 1 Draw)
+E. Necro, Keplar, Gate
+  1. Search Swirl Via Gate
+  2. Fusion Genghis (Necro + Swirl)
+  3. SS Keplar via Swirl (Grave) => Chain!!![SS Necro (Grave) Via Genghis/Search Swamp via Keplar]
+  4. Fusion Genghis via Swamp (Keplar [Field] + Necro [Field])
+  5. Xyz Beatrice (2 Genghis) => Mill Lamia
+  6. Destroy Swamp via SS Lamia (Grave) => Fusion d'Arc (Necro + Genghis) => Synchro Omega (Lamia + d'ARc)
+  Final (Omega + Beatrice + Gate)
+F. Necro, Copper, Gate
+  1. Search Swirl via Gate
+  2. Fusion Genghis (Necro + Swirl)
+  3. NS Copper => Mill Keplar
+  4. Fusion Genghis (Necro in Grave + Swirl in Grave) => SS Keplar (Grave) Via Genghis => Search Swamp via Keplar
+  5. Fusion d'Arc via Swamp (Keplar [Field] + Copper [Field])
+  6. Xyz Beatrice (2 Genghis) => Mill Lamia
+  7. Destroy Swamp via SS Lamia (Grave) => Synchro Omega (d'ARc + Lamia)
+  Final (Omega + Beatrice + Gate)
+G. Swirl, Ragnar, Gate
+  1. Search Necro via Gate
+  2. Fusion Genghis (Swirl + Necro)
+  3. Fusion Genghis (NEcro in Grave + Swirl in Grave)
+  4. Beatrice (2 Genghis) => Mill Swirl
+  5. SS Ragnarok via Swirl (Grave) => SS Genghis (Grave) Via Ragnarok
+  Final (Ragnarok + Beatrice + Genghis + Gate)
+===========================================[Lamia (Reusable Lv 1 Tuner)]================================================
+A. Lamia, Keplar, Copper
+  1. NS Keplar => Search Gate via Keplar => Search Swirl via Gate
+  2. Fusion Genghis (Copper + Swirl)
+  3. SS Lamia via Swirl (Grave) => SS Copper (Grave) Via Genghis => Mill Necro
+  4. Synchro Alex (Genghis + Lamia)
+  5. Fusion Genghis (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) Via Alexander
+  6. Synchro formula (Lamia + Keplar) => Synchro Siegfried (Formula + Genghis)
+  7. Destroy Gate via SS Lamia (Grave) => Synchro Crystal (Alex + Lamia)
+  Final (Crystal + Siegfried + Copper + 1 Draw)
+B. Lamia, Keplar, Ragnarok
+  1. NS Keplar => Search Gate Via Keplar => Search Swirl via Gate
+  2. Fusion Genghis (Swirl + Ragnarok)
+  3. SS Lamia via Swirl (Grave) => SS Ragnarok (Grave) Via Genghis
+  4. Synchro Formula (Lamia + Keplar) => Synchro Omega (Genghis + Formula)
+  Final (Omega + Ragnarok + 1 Draw + Gate)
+C. Lamia, Keplar, Gate
+  1. Search Swirl Via Gate
+  2. Fusion Genghis (Keplar + Swirl)
+  3. SS Lamia via Swirl (Grave) => SS Keplar (Grave) Via Genghis => Search Swamp Via Keplar
+  4. Synchro Alex (Genghis + Lamia)
+  5. Fusion d'Arc Via Swamp (Keplar [Field] + Genghis [Grave]) => SS Lamia (Grave) Via Alex
+  6. Sycnrho Crystal (Lamia + Alex) => Destroy Swamp Via SS Lamia (Grave) => Synchro Siegfried (d'ARc + Lamia)
+  Final (Crystal Wing + Siegfried + Gate)
+D. Lamia, Copper, Ragnarok
+  1. NS Copper => Mill Necro
+  2. Destroy Ragnarok (Hand) Via SS Lamia (Hand)
+  3. Fusion d'Arc (Necro in Grave + Ragnarok in Grave)
+  4. Synchro Omega (Lamia + d'Arc)
+  Final (Copper [ATK] + Omega)
+E. Lamia, Copper, Gate
+  1. Search Swirl via Gate
+  2. Fusion Genghis (Copper + Swirl)
+  3. SS Lamia via Swirl (Grave) => SS Copper (Grave) Via Genghis => Mill Necro
+  4. Synchro Alex (Lamia + Genghis)
+  5. Fusion d'Arc (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) Via Alexander
+  6. Synchro Crystal (Alex + Lamia) => Destroy Gate via SS Lamia =>  Synchro Sieg (Lamia + d'Arc)
+  Final (Sieg + Crystal + Copper)
+F. Lamia, Ragnarok, Gate
+  1. Search Swirl via Gate
+  2. Pend Zone Ragnarok
+  3. Fusion Genghis (Lamia + Swirl) => SS Swirl (Grave) Via Ragnarok => SS Lamia (Grave) Via Genghis
+  4. Synchro Alex (Genghis + Lamia) => Destroy Swirl Via SS Lamia (Grave) => SS Swirl (Grave) Via Alex
+  5. Sycnrho Siegfried (Alex + Lamia)
+  Final (Ragnarok [Pend Zone] + Siegfried + Gate + Swirl)
+=========================[Keplar & Coppernicus (Combo Pieces Fetcher Savant Duo)]=======================================
+A. Keplar, Copper, Ragnarok
+  1. NS Keplar => Search Gate via Keplar => Search Swirl via Gate
+  2. Fusion Genghis (Swirl + Ragnarok)
+  3. SS Copper via Swirl (Grave) => CHAIN!!! (Mill Lamia/SS Ragnarok [Grave] Via Genghis)
+  4. Destroy Gate via SS Lamia (Grave)
+  5. Synchro Formula (Lamia + Keplar) => Synchro Omega (Genghis + Formula)
+  Final (Ragnarok + Omega + Copper + 1 Draw)
+B. Keplar, Copper, Gate
+  1. Search Swirl via Gate
+  2. Fusion Genghis (Copper + Swirl)
+  3. SS Keplar via Swirl (Grave) => CHAIN!!! (Search Swamp via Keplar/SS Copper (Grave) Via Genghis) => Mill Lamia
+  4. Fusion Genghis Via Swamp (Keplar [Field] + Copper [Field])
+  5. Xyz Beatrice (2 Genghis) => Mill Necro
+  6. Fusion d'Arc (Necro in Grave + Genghis in Grave) => Destroy Swamp via SS Lamia (Grave) => Synchro Omega (d'aRc + Lamia)
+  Final (Omega + Beatrice + Gate)
+C. Keplar, Ragnarok, Gate
+  1. Search Swirl via Gate
+  2. NS Keplar => Search Swamp via Keplar
+  3. Fusion Genghis (Swirl + Ragnarok)
+  4. Fusion Genghis via Swamp (Keplar [Field] + Swirl [Grave]) => SS Ragnarok (Grave) Via Genghis
+  5. Xyz Beatrice (2 Genghis) => Mill Necro
+  6. Fusion Beowulf (Necro in Grave + Genghis in Grave) => Xyz Harbinger (Beowulf + Ragnarok)
+  Final (Harbinger + Beatrice + Swamp + Gate)
+D. Copper, Ragnarok, Gate
+  1. Search Swirl via Gate
+  2. Fusion Genghis (Swirl + Ragnarok)
+  3. NS Copper => Mill Necro
+  4. Fusion Genghis (Necro in Grave + Swirl in Grave) => SS Ragnarok (Grave) via Genghis
+  5. Xyz Beatrice (2 Genghis) => Mill Something
+  Final (Ragnarok + Copper [ATK] + Beatrice [Something] + Gate)
+==================================[Ragnarok (Powerful Combo Extender) 4 card]===========================================
+A. Keplar, Pieces 3/4 (Lamia/Copper/Ragnarok/Swirl)
+  1. NS Keplar => Search Gate via Keplar => Search Pieces via Gate
+  2. Fusion Genghis (Lamia + Swirl)
+  3. SS Copper via Swirl (Grave) => CHAIN!!! (Mill Necro/SS Lamia (Grave) Via Genghis)
+  4. Pend Zone Ragnarok
+  5. Synchro Alex (Genghis + Lamia) => SS Lamia (grave) Via Ragnarok
+  6. Synchro Librarian (Lamia + Copper)
+  7. Fusion Genghis (Necro in Grave + Genghis in Grave) => SS Lamia (Grave) Via Alex
+  8. Synchro Crystal (Alex + Lamia)
+  9. Destroy Gate via SS Lamia (Grave)
+  10. Sycnhro Formula (Lamia + Keplar) => Synchro Siegfried (Genghis + Formula)
+  Final (Ragnarok [Pend Zone] + Crystal Wing + Siegfried + Librarian + 4 Draw)
+B. Gate, Pieces 3/4 (Lamia/Keplar/Swirl/Ragnarok)
+  1. Search Pieces via Gate
+  2. Fusion Genghis (Swirl + Keplar)
+  3. NS Lamia => Synchro Alex (Lamia + Genghis)
+  4. SS Ragnarok via Swirl (Grave) => CHAIN!!! (SS Genghis [Grave] Via Ragnarok/SS Lamia [Grave] Via Alex) => SS      Keplar (Grave) Via Genghis => Search Swamp Via Keplar
+  5. Synchro Crystal (Alex + Lamia)
+  6. Destroy Gate via SS Lamia (Grave)
+  7. Synchro Formula (Lamia + Keplar) => Synchro Siegfried (Genghis + Formula)
+  8. Fusion Beowulf Via Swamp (Alex [Grave] + Genghis [Grave]) => Xyz Harbinger (Beowulf + Ragnarok)
+  Final (Harbinger + Crystal Wing + Siegfried + 1 Draw + Swamp)
+C. Keplar, Pieces 3/4 (Lamia/Necro/Ragnarok/Swirl)
+  1. NS Keplar => Search Gate via Keplar => Search Pieces via Gate
+  2. Fusion Genghis (Swirl + Necro)
+  3. SS Lamia Via Swirl (Grave) [Don't Activate Genghis Effect[
+  4. Pend Zone Ragnarok
+  5. Synchro Alex (Lamia + Genghis) => SS Genghis (Grave) Via Ragnarok => SS Lamia (Grave) Via Alex
+  6. Synchro Crystal (Alex + Lamia)
+  7. Fusion d'Arc (Necro in Grave + Alex in Grave) => SS Lamia (grave) via Genghis
+  8. Synchro Formula (Lamia + Keplar) => Synchro Siegfried (Formula + Genghis)
+  9. Destroy Gate via SS Lamia (Grave) => Synchro Omega (d'ARc + Lamia)
+  Final (Ragnarok [Pend Zone] + Crystal Wing + Siegfried + Omega)
+===================================[Thomas (The Lightbulb Straight Flush)]==============================================
+A. Gate, Pieces 4/5 (Swirl/Lamia/Copper/Ragnarok/Thomas)
+  1. Search Pieces via Gate
+  2. NS Copper => Mill Keplar
+  3. Pend Zone Ragnarok
+  4. Fusion Genghis (Thomas + Swirl) => SS Thomas (Grave) via Ragnarok => SS Keplar (Grave) Via Genghis => Search      Swamp Via Keplar
+  5. SS Lamia via Swirl (Grave)
+  6. Synchro Alex (Genghis + Lamia)
+  7. Fusion d'Arc via Swamp (Keplar [Field] + Copper [Field]) => SS Lamia (Grave) Via Alex 
+  8. Synchor Crystal (Alex + Lamia)
+  9. Destroy Swamp via SS Lamia (Grave) 
+  10.Synchro Siegfried (Lamia + d'arc)
+  11. Destroy Ragnarok (Pend Zone) via Thomas to SS Lv 8 D/D/D => Xyz Harbinger (Thomas + Ragnarok)
+  Final (Crystal Wing + Siegfried + Harbinger + Gate)
+B. Gate, 4/5 Pieces (Lamia/Swirl/Ragnarok/Thomas/Copper) [Alt. Route]
+  1. Search Piece via Gate
+  2. Fusion Genghis (Copper + Swirl)
+  3. NS Lamia => Synchro Alex (Lamia + Genghis)
+  4. Pend Zone Ragnarok
+  5. SS Thomas via Swirl (Grave) => SS Copper (Grave) Via Ragnarok => Mill Necro
+  6. Destroy Ragnarok [Pend Zone] via Thomas to SS Lv 8 D/D/D => SS Lamia (Grave) Via Alex
+  7. Synchro Crystal (Lamia + Alex)
+  8. Xyz Harbinger (Lv 8 D/D/D + Thomas)
+  9. Fusion d'Arc (Necro in Grave + Genghis in Grave)
+  10. Destroy Gate via SS Lamia (Grave)
+  11. Synchro Siegfried (d'ARc + Lamia)
+  Final (Siegfried + Harbinger + Crystal Wing + Copper)
+C. Keplar, Swirl, Lamia, Ragnarok
+  1. Fusion Genghis (Swirl + Keplar)
+  2. Pend Zone Ragnarok
+  3. NS Lamia => Synchro Alex (Lamia + Genghis) => SS Genghis (Grave) via Ragnarok => SS Lamia (Grave) Via Alex => 
+     SS Keplar (Grave) Via Genghis => Search Gate
+  4. Search Thomas via Gate
+  5. Synchro Crystal (Alex + Lamia)
+  6. Destroy Gate via SS Lamia (Grave)
+  7. Synchro Formula (Keplar + Lamia) => Synchro Siegfried (Genghis + Formula)
+  8. SS Thomas via Swirl (Grave) => Destroy Ragnarok Via Thomas to Summon Lv 8 D/D/D => Xyz Harbinger (Thomas + Lv 8      D/D/D)
+  Final (Siegfried + Crystal Wing + Harbinger + 1 Draw)
+===================================================[Summary]========================================================
+              C O M B O      P I E C I E S                []                   R E S U L T
+       []   1   []   2   []   3    []    4   []   Flush   []     1      []      2      []       3       []    4      []
+Swirl  []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Swirl [] Necro [] Lamia  []        []           [] Siegfried  []  Crystal    []               []           []
+B.     [] Swirl [] Necro [] Keplar []        []           [] Siegfried  []  Crystal    [] Alexander     []           []
+C.     [] Swirl [] Necro [] Copper []        []           [] Omega      []  Beatrice   []               []           []
+D.     [] Swirl [] Necro [] Ragnar []        []           [] Beatrice   []  Genghis    [] Ragnarok      []           []
+E.     [] Swirl [] Necro [] Gate   []        []           [] Omega      []  Beatrice   [] Gate          []           []
+F.     [] Swirl [] Lamia [] Keplar []        []           [] Siegfried  []  Crystal    [] Alexander     []           []
+G.     [] Swirl [] Lamia [] Copper []        []           [] Omega      []  Librarian  [] 1 Draw        []           []
+H.     [] Swirl [] Lamia [] Ragnar []        []           [] Siegfried  []  Swirl      [] Ragnarok [PZ] []           []
+I.     [] Swirl [] Lamia [] Gate   []        []           [] Genghis    []  Siegfried  [] Crystal       []           []
+J.     [] Swirl [] Keplar[] Copper []        []           [] Crystal    []  Siegfried  [] Copper        [] 1 Draw    []
+K.     [] Swirl [] Keplar[] Ragnar []        []           [] Ragna [PZ] []  Beatrice   [] Omega         [] 1 Draw    []
+L.     [] Swirl [] Keplar[] Gate   []        []           [] Siegfried  []  Crystal    [] Gate          []           []
+M.     [] Swirl [] Copper[] Ragnar []        []           [] Ragnarok   []  Copper ATK [] Beatrice (Res)[]           []
+N.     [] Swirl [] Copper[] Gate   []        []           [] Siegfreid  []  Crystal    [] Copper        []           []
+O.     [] Swirl [] Ragnar[] Gate   []        []           [] Harbinger  []  Beatrice   [] Gate          [] Swamp     []
+Necro  []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Necro [] Lamia [] Keplar []        []           [] Crystal    []  Siegfried  [] Alexander     [] 1 Draw    []
+B.     [] Necro [] Lamia [] Copper []        []           [] Omega      []  1 Draw     []               []           []
+C.     [] Necro [] Keplar[] Copper []        []           [] Omega      []  1 Draw     [] Beowulf [B.]  []           []
+D.     [] Necro [] Keplar[] Ragnar []        []           [] Omega      []  Beatrice   [] Ragnarok [PZ] [] 1 Draw    []
+E.     [] Necro [] Keplar[] Gate   []        []           [] Omega      []  Beatrice   [] Gate          []           []
+F.     [] Necro [] Copper[] Gate   []        []           [] Omega      []  Beatrice   [] Gate          []           []
+G.     [] Necro [] Ragnar[] Gate   []        []           [] Ragnarok   []  Beatrice   [] Genghis       [] Gate      []
+Lamia  []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Lamia [] Keplar[] Copper []        []           [] Crystal    []  Siegfried  [] 1 Draw        [] Copper    []
+B.     [] Lamia [] Keplar[] Ragnar []        []           [] Omega      []  Ragnarok   [] Gate          [] 1 Draw    []
+C.     [] Lamia [] Keplar[] Gate   []        []           [] Crystal    []  Siegfried  [] Gate          []           []
+D.     [] Lamia [] Copper[] Ragnar []        []           [] Omega      []  Copper(ATK)[]               []           []
+E.     [] Lamia [] Copper[] Gate   []        []           [] Crystal    []  Siegfried  [] Copper        []           []
+F.     [] Lamia [] Ragnar[] Gate   []        []           [] Ragnar (PZ)[]  Siegfried  [] Gate          [] Swirl     []
+Kep&Cop[]=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Keplar[] Copper[] Ragnar []        []           [] Omega      []  Ragnarok   [] Copper        [] 1 Draw    []
+B.     [] Keplar[] Copper[] Gate   []        []           [] Omega      []  Beatrice   [] Gate          []           []
+C.     [] Keplar[] Ragnar[] Gate   []        []           [] Harbinger  []  Beatrice   [] Gate          [] Swamp     []
+D.     [] Copper[] Ragnar[] Gate   []        []           [] Ragnarok   []  Copper(ATK)[] Beatrice (Res)[] Gate      []
+Ragnar []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Keplar[(Lamia/ Copper/Ragnar /Swirl)]           [] Ragnar (PZ)[]  Crystal    [] Siegfried     [] Librar(4D)[]
+B.     [] Gate  [(Lamia/ Keplar/Ragnar /Swirl)]           [] Crystal    []  Harbinger  [] Siegfried     [] Swamp (1D)[]
+C.     [] Keplar[(Lamia/ Necro /Ragnar /Swirl)]           [] Ragnar (PZ)[]  Crystal    [] Siegfried     [] Omega     []
+Thomas []=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
+A.     [] Gate  [(Swirl / Lamia / Ragnar / Copper / Thomas)] Crystal    [] Siegfried   [] Harbinger     [] Gate      []
+B.     [] Gate  [(Swirl / Lamia / Ragnar / Copper / Thomas)] Crystal    [] Siegfried   [] Harbinger     [] Copper    []
+C.     [] Keplar[] Swirl [] Lamia  [] Ragnar []           [] Crystal    [] Siegfried   [] Harbinger     [] 1 Draw    []
+=======[]=======[]=======[]========[]========[]===========[]============[]=============[]===============[]===========[]
