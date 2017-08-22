@@ -335,3 +335,48 @@ Pieces: D/D Lamia, D/D/D Oblivion King Ragnarok and Dark Contract with the Gate
   7. Synchro Summon Cursed King Siegfried with Lamia and Alexander.
   End on D/D/D Cursed King Siegfried, D/D Swirl Slime and D/D/D Oblivion King Ragnarok in the Pendulum Zone.
 lamiaF
+
+Kepler/Copernicus A
+Pieces: D/D Savant Kepler, D/D Savant Copernicus and D/D/D Oblivion King Ragnarok
+  1. Normal Summon Kepler to search Dark Contract with the Gate, then activate it to search D/D Swirl Slime.
+  2. Activate Swirl Slime to Fusion Summon Flame King Genghis with Ragnarok and Swirl.
+  3. Activate Swirl Slime, banishing it from the graveyard to Special Summon Copernicus to send D/D Lamia from the deck to the graveyard.
+  4. When Flame King Genghis triggers, Special Summon Oblivion King Ragnarok.
+  5. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it.
+  6. Synchro Summon Formula Synchro with Lamia and Kepler, then PSY-Framelord Omega with Formula and Genghis.
+  End on PSY-Framelord Omega, D/D/D Oblivion King Ragnarok and D/D Savant Copernicus.
+kepcopA
+
+Kepler/Copernicus B
+Pieces: D/D Savant Kepler, D/D Savant Copernicus and Dark Contract with the Gate
+  1. Activate Contract with the Gate to search D/D Swirl Slime.
+  2. Activate Swirl Slime to Fusion Summon Flame King Genghis with Copernicus and Swirl.
+  3. Activate Swirl Slime, banishing it from the graveyard to Special Summon Kepler to search Dark Contract with the Swamp King.
+  4. When Genghis triggers, Special Summon Copernicus to send D/D Lamia from the deck to the graveyard.
+  5. Activate Contract with the Swamp to Fusion Summon another Flame King Genghis with Kepler and Copernicus.
+  6. Xyz Summon Beatrice, the Eternal Lady with both Genghises, then activate her effect to send D/D Necro Slime from the deck to the graveyard.
+  7. Activate Necro Slime to Fusion Summon Oracle King d'Arc with Necro and Genghis.
+  8. Activate D/D Lamia, sending Contract with the Swamp to the graveyard to Special Summon it, then Synchro Summon PSY-Framelord Omega with d'Arc and Lamia.
+  End on PSY-Framelord Omega, Beatrice, the Eternal Lady, and Dark Contract with the Gate.
+kepcopB
+  
+Kepler/Copernicus C
+Pieces: D/D Savant Kepler, D/D/D Oblivion King Ragnarok and Dark Contract with the Gate
+  1. Activate Contract with the Gate to search D/D Swirl Slime.
+  2. Normal Summon Kepler to search Dark Contract with the Swamp King.
+  3. Activate Swirl Slime to Fusion Summon Flame King Genghis with Ragnarok and Swirl.
+  4. Activate Contract with the Swamp to Fusion Summon another Flame King Genghis with Kepler and Swirl. When Genghis triggers, Special Summon Ragnarok.
+  5. Xyz Summon Beatrice, the Eternal Lady with both Genghises, then activate her effect to send D/D Necro Slime from the deck to the graveyard.
+  6. Activate Necro Slime to Fusion Summon Dragonbane King Beowulf with Necro and Genghis, then Xyz Summon Hope Harbinger Dragon with Beowulf and Ragnarok.
+  End on Beatrice, Lady of the Eternal, Number 38: Hope Harbinger Dragon Titantic Galaxy, Dark Contract with the Gate and Dark Contract with the Swamp King.
+kepcopC
+
+Kepler/Copernicus D
+Pieces: D/D Savant Copernicus, D/D/D Oblivion King Ragnarok and Dark Contract with the Gate
+  1. Activate Contract with the Gate to search D/D Swirl Slime.
+  2. Activate Swirl Slime to Fusion Summon Flame King Genghis with Ragnarok and Swirl.
+  3. Normal Summon Copernicus to send D/D Necro Slime from the deck to the graveyard.
+  4. Activate Necro Slime to Fusion Summon another Flame King Genghis with Necro and Swirl. When Genghis triggers, Special Summon Ragnarok.
+  5. Xyz Summon Beatrice, the Eternal Lady with both Genghises.
+  End on Beatrice, the Eternal Lady, D/D/D Oblivion King Ragnarok, D/D Savant Copernicus in attack position, and Dark Contract with the Gate.
+kepcopD
