@@ -3,7 +3,7 @@ function format(text){
 	var name = lines[lines.length - 1];
 	var name2 = "\\\"" + name + "\\\"";
 	lines[0] = "<p><h2>" + lines[0] + "</h2>";
-	lines[1] = "<h3>" + lines[1] + "</h3><input type='button' value='Show' onclick='unhide(" + name2 + ")'/><ol id='" + name + "'>";
+	lines[1] = "<h3>" + lines[1] + "<input type='button' value='Show' onclick='unhide(" + name2 + ")'/></h3><input type='button' value='Show' onclick='unhide(" + name2 + ")'/><ol id='" + name + "'>";
 	var i;
 	for (i = 2; i < lines.length - 2; i++) {
 		lines[i] = "<li>" + lines[i].slice(5) + "</li>";
@@ -18,4 +18,4 @@ function format(text){
 	console.log(out);
 }
 
-console.log("loaded 11am");
+console.log("loaded 11.1am");
