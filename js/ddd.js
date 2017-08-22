@@ -161,6 +161,10 @@ function search() {
     }
     output.innerHTML = out;
 }
+
+function unhide(id) {
+    document.getElementById(id).style.display = "inline";
+}
 window.addEventListener("load", function() {
     search();
     console.log("loaded ver. hide test");
