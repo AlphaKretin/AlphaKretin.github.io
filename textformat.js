@@ -1,7 +1,7 @@
 function format(text){
 	var lines = text.split("\n");
 	var name = lines[lines.length - 1];
-	var name2 = "\"" + name + "\"";
+	var name2 = "\\\"" + name + "\\\"";
 	lines[0] = "<p><h2>" + lines[0] + "</h2>";
 	lines[1] = "<h3>" + lines[1] + "</h3><input type='button' value='Show' onclick='unhide(" + name2 + ")' id='" + name + "' /><ol>";
 	var i;
@@ -18,4 +18,4 @@ function format(text){
 	console.log(out);
 }
 
-console.log("loaded 10.7am");
+console.log("loaded 10.8am");
