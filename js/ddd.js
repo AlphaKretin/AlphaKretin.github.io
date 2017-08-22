@@ -163,9 +163,10 @@ function search() {
 }
 
 function unhide(id) {
-    document.getElementById(id).style.display = "inline";
+	console.log("unhiding " + id);
+    document.getElementById(id).style.display = "unset";
 }
 window.addEventListener("load", function() {
     search();
-    console.log("loaded ver. hide test");
+    console.log("loaded ver. hide fix");
 });
