@@ -265,3 +265,73 @@ Pieces: D/D Swirl Slime, D/D/D Oblivion King Ragnarok and Dark Contract with the
   5. Activate Swirl Slime, banishing it from the graveyard to Special Summon Oblivion King Ragnarok. When it triggers, Special Summon Genghis.
   End on Beatrice, Lady of the Eternal, D/D/D Oblivion King Ragnarok, D/D/D Flame King Genghis and Dark Contract with the Gate.
 necroG
+  
+Lamia A
+Pieces: D/D Lamia, D/D Savant Kepler and D/D Savant Copernicus
+  1. Normal Summon Kepler to search Dark Contract with the Gate, then activate it to search D/D Swirl Slime.
+  2. Activate Swirl Slime to Fusion Summon Flame King Genghis with Copernicus and Swirl.
+  3. Activate Swirl Slime, banishing it from the graveyard to Special Summon Lamia.
+  4. When Flame King Genghis triggers, Special Summon Copernicus to send D/D Necro Slime from the deck to the graveyard.
+  5. Synchro Summon Gust King Alexander with Genghis and Lamia.
+  6. Activate Necro Slime to Fusion Summon a second Flame King Genghis with Necro Slime and the other Genghis.
+  7. When Gust King Alexander triggers, Special Summon Lamia.
+  8. Synchro Summon Formula Synchron with Lamia and Kepler, then Synchro Summon Cursed King Siegfried with Formula and Genghis.
+  9. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it, then Synchro Summon Crystal Wing Synchro Dragon with Lamia and Alexander.
+  End on Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried and D/D Savant Copernicus.
+lamiaA
+
+Lamia B
+Pieces: D/D Lamia, D/D Savant Kepler and D/D/D Oblivion King Ragnarok
+  1. Normal Summon Kepler to search Dark Contract with the Gate, then activate it to search D/D Swirl Slime.
+  2. Activate Swirl Slime to Fusion Summon Flame King Genghis with Ragnarok and Swirl.
+  3. Activate Swirl Slime, banishing it from the graveyard to Special Summon Lamia. When Genghis triggers, Special Summon Ragnarok.
+  4. Synchro Summon Formula Synchron with Lamia and Kepler, then PSY-Framelord Omega with Formula and Genghis.
+  End on PSY-Framelord, D/D/D Oblivion King Ragnarok and Dark Contract with the Gate.
+lamiaB
+
+Lamia C
+Pieces: D/D Lamia, D/D Savant Kepler and Dark Contract with the Gate
+  1. Activate Contract with the Gate to search D/D Swirl Slime.
+  2. Activate Swirl Slime to Fusion Summon Flame King Genghis with Kepler and Swirl.
+  3. Activate Swirl Slime, banishing it from the graveyard to Special Summon Lamia.
+  4. When Flame King Genghis triggers, Special Summon Kepler to search Dark Contract with the Swamp King.
+  5. Synchro Summon Gust King Alexander with Lamia and Genghis.
+  6. Activate Contract with the Swamp to Fusion Summon Oracle King d'Arc with Kepler and Genghis. When Alexander triggers, Special Summon Lamia.
+  7. Synchro Summon Crystal Wing Synchro Dragon with Lamia and Alexander.
+  8. Activate D/D Lamia, sending Contract with the Swamp to the graveyard to Special Summon it, then Synchro Summon Cursed King Siegfried with d'Arc and Lamia.
+  End on Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried and Dark Contract with the Gate.
+lamiaC
+
+Lamia D
+Pieces: D/D Lamia, D/D Savant Copernicus and D/D/D Oblivion King Ragnarok
+  1. Normal Summon Copernicus to send D/D Necro Slime from the deck to the graveyard.
+  2. Activate D/D Lamia, sending Oblivion King Ragnarok to the graveyard to Special Summon it.
+  3. Activate Necro Slime to Fusion Summon Oracle King d'Arc with Necro and Ragnarok.
+  4. Synchro Summon PSY-Framelord Omega with Lamia and d'Arc.
+  End on PSY-Framelord Omega and D/D Savant Copernicus in attack position.
+lamiaD
+
+Lamia E
+Pieces: D/D Lamia, D/D Savant Copernicus and Dark Contract with the Gate
+  1. Activate Contract with the Gate to search D/D Swirl Slime.
+  2. Activate Swirl Slime to Fusion Summon Flame King Genghis with Copernicus and Swirl.
+  3. Activate Swirl Slime, banishing it from the graveyard to Special Summon Lamia.
+  4. When Flame King Genghis triggers, Special Summon Copernicus to send D/D Necro Slime from the deck to the graveyard.
+  5. Synchro Summon Gust King Alexander with Lamia and Genghis.
+  6. Activate Necro Slime to Fusion Summon Oracle King d'Arc with Necro and Genghis. When Alexander triggers, Special Summon Lamia.
+  7. Synchro Summon Crystal Wing Synchro Dragon with Alexander and Lamia.
+  8. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it, then Synchro Summon Cursed King Siegfried with d'Arc and Lamia.
+  End on Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried and D/D Savant Copernicus.
+lamiaE
+
+Lamia F
+Pieces: D/D Lamia, D/D/D Oblivion King Ragnarok and Dark Contract with the Gate
+  1. Activate Contract with the Gate to search D/D Swirl Slime.
+  2. Activate Oblivion King Ragnarok in the Pendulum Zone.
+  3. Activate Swirl Slime to Fusion Summon Flame King Genghis with Lamia and Swirl. 
+  4. When Ragnarok triggers, Special Summon Swirl Slime, and when Genghis triggers, Special Summon Lamia.
+  5. Synchro Summon Gust King Alexander with Genghis and Lamia.
+  6. Activate D/D Lamia, sending Swirl Slime to the graveyard to Special Summon it. When Alexander triggers, Special Summon Swirl Slime.
+  7. Synchro Summon Cursed King Siegfried with Lamia and Alexander.
+  End on D/D/D Cursed King Siegfried, D/D Swirl Slime and D/D/D Oblivion King Ragnarok in the Pendulum Zone.
+lamiaF
