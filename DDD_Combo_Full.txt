@@ -9,6 +9,7 @@ Pieces: D/D Swirl Slime, D/D Necro Slime, D/D Lamia
   7. Activate D/D Lamia, sending Flame King Genghis to the graveyard to Special Summon it.
   8. Synchro Summon Crystal Wing Synchro Dragon with Lamia and Alexander.
   End on D/D/D Cursed King Siegfried and Crystal Wing Synchro Dragon.
+swirlA
 
 Swirl Slime B
 Pieces: D/D Swirl Slime, D/D Necro Slime and D/D Savant Kepler 
@@ -22,6 +23,7 @@ Pieces: D/D Swirl Slime, D/D Necro Slime and D/D Savant Kepler
   8. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it. When Flame King Genghis triggers, Special Summon Alexander.
   9. Synchro Summon Formula Synchron with Kepler and Lamia, then Cursed King Siegfried with Genghis and Formula.
   End on Crystal Wing Synchro Dragon, D/D/D Gust King Alexander and D/D/D Cursed King Siegfried.
+swirlB
   
 Swirl Slime C
 Pieces: D/D Swirl Slime, D/D Necro Slime and D/D Savant Copernicus
@@ -34,6 +36,7 @@ Pieces: D/D Swirl Slime, D/D Necro Slime and D/D Savant Copernicus
   7. Activate D/D Lamia, sending Contract with the Swamp to the graveyard to Special Summon it.
   8. Synchro Summon PSY-Framelord Omega with Lamia and d'Arc.
   End on Beatrice, Lady of the Eternal and PSY-Framelord Omega.
+swirlC
   
 Swirl Slime D
 Pieces: D/D Swirl Slime, D/D Necro Slime and D/D/D Oblivion King Ragnarok
@@ -43,6 +46,7 @@ Pieces: D/D Swirl Slime, D/D Necro Slime and D/D/D Oblivion King Ragnarok
   4. Activate Swirl Slime, banishing it from the graveyard to Special Summon Oblivion King Ragnarok.
   5. When Oblivion King Ragnarok triggers, Special Summon Flame King Genghis from the graveyard.
   End on Beatrice, Lady of the Eternal, D/D/D Flame King Genghis and D/D/D Oblivion King Ragnarok.
+swirlD
   
 Swirl Slime E
 Pieces: D/D Swirl Slime, D/D Lamia and Dark Contract with the Gate
@@ -56,6 +60,7 @@ Pieces: D/D Swirl Slime, D/D Lamia and Dark Contract with the Gate
   8. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it.
   9. Synchro Summon Crystal Wing Synchro Dragon with Lamia and Alexander.
   End on D/D/D Cursed King Siegfried, D/D/D Flame King Genghis and Crystal Wing Synchro Dragon.
+swirlE
   
 Swirl Slime F
 Pieces: D/D Swirl Slime, D/D Lamia and D/D Savant Kepler
@@ -68,6 +73,7 @@ Pieces: D/D Swirl Slime, D/D Lamia and D/D Savant Kepler
   7. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it. When Flame King Genghis triggers, Special Summon Alexander.
   8. Synchro Summon Formula Synchron with Kepler and Lamia, then Cursed King Siegfried with Genghis and Formula.
   End on Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried and D/D/D Gust King Alexander.
+swirlF
   
 Swirl Slime G
 Pieces: D/D Swirl Slime, D/D Lamia and D/D Savant Copernicus
@@ -81,6 +87,7 @@ Pieces: D/D Swirl Slime, D/D Lamia and D/D Savant Copernicus
   8. Activate D/D Lamia, sending Flame King Genghis to the graveyard to Special Summon it.
   9. Synchro Summon PSY-Framelord Omega with Lamia and Alexander.
   End on PSY-Framelord Omega and T.G. Hyper Librarian.
+swirlG
   
 Swirl Slime H
 Pieces: D/D Swirl Slime, D/D Lamia and D/D/D Oblivion King Ragnarok
@@ -91,6 +98,7 @@ Pieces: D/D Swirl Slime, D/D Lamia and D/D/D Oblivion King Ragnarok
   5. Activate D/D Lamia, sending Swirl Slime to the graveyard to Special Summon it.
   6. Synchro Summon Cursed King Siegfried with Lamia and Alexander.
   End on D/D/D Cursed King Siegfried, D/D Swirl Slime, and D/D/D Oblivion King Ragnarok in the Pendulum Zone.
+swirlH
 
 Swirl Slime I
 Pieces: D/D Swirl Slime, D/D Necro Slime and Dark Contract with the Gate
@@ -104,6 +112,7 @@ Pieces: D/D Swirl Slime, D/D Necro Slime and Dark Contract with the Gate
   8. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it.
   9. Synchro Summon Crystal Wing Synchro Dragon with Lamia and Alexander.
   End on D/D/D Cursed King Siegfried, D/D/D Flame King Genghis and Crystal Wing Synchro Dragon.
+swirlI
   
 Swirl Slime J
 Pieces: D/D Swirl Slime, D/D Savant Kepler and D/D Savant Copernicus
@@ -118,6 +127,7 @@ Pieces: D/D Swirl Slime, D/D Savant Kepler and D/D Savant Copernicus
   9. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it.
   0. Synchro Summon Formula Synchron with Kepler and Lamia, then Cursed King Siegfried with Genghis and Formula.
   End on Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried and D/D Savant Copernicus.
+swirlJ
   
 Swirl Slime K
 Pieces: D/D Swirl Slime, D/D Savant Kepler and D/D/D Oblivion King Ragnarok
@@ -129,6 +139,7 @@ Pieces: D/D Swirl Slime, D/D Savant Kepler and D/D/D Oblivion King Ragnarok
   6. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it. When Ragnarok triggers, Special Summon Flame King Genghis.
   7. Synchro Summon Formula Synchron with Kepler and Lamia, then PSY-Framelord Omega with Genghis and Formula.
   End on Beatrice, Lady of the Eternal, PSY-Framelord Omega and D/D/D Oblivion King Ragnarok in the Pendulum Zone.
+swirlK
   
 Swirl Slime L
 Pieces: D/D Swirl Slime, D/D Savant Kepler and Dark Contract with the Gate
@@ -141,6 +152,7 @@ Pieces: D/D Swirl Slime, D/D Savant Kepler and Dark Contract with the Gate
   7. Synchro Summon Crystal Wing Synchro Dragon with Lamia and Alexander.
   8. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it, then Synchro Summon Cursed King Siegfried with d'Arc and Lamia.
   End on D/D/D Cursed King Siegfried, Crystal Wing Synchro Dragon and Dark Contract with the Gate.
+swirlL
   
 Swirl Slime M
 Pieces: D/D Swirl Slime, D/D Savant Copernicus, D/D/D Oblivion King Ragnarok
@@ -149,6 +161,7 @@ Pieces: D/D Swirl Slime, D/D Savant Copernicus, D/D/D Oblivion King Ragnarok
   3. Activate Necro Slime to Fusion Summon Flame King Genghis with Necro and Swirl. When the first Genghis triggers, Special Summon Oblivion King Ragnarok.
   4. Xyz Summon Beatrice, Lady of the Eternal with both Genghises.
   End on Beatrice, Lady of the Eternal, D/D/D Oblivion King Ragnarok and D/D Savant Copernicus in attack position
+swirlM
   
 Swirl Slime N
 Pieces: D/D Swirl Slime, D/D Savant Copernicus, Dark Contract with the Gate
@@ -161,6 +174,7 @@ Pieces: D/D Swirl Slime, D/D Savant Copernicus, Dark Contract with the Gate
   7. Synchro Summon Crystal Wing Synchro Dragon with Alexander and Lamia.
   8. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it, then Synchro Summon Cursed King Siegfried with d'Arc and Lamia.
   End on Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried and D/D Savant Copernicus.
+swirlN
   
 Swirl Slime O
 Pieces: D/D Swirl Slime, D/D/D Oblivion King Ragnarok and Dark Contract with the Gate
@@ -171,6 +185,7 @@ Pieces: D/D Swirl Slime, D/D/D Oblivion King Ragnarok and Dark Contract with the
   5. Xyz Summon Beatrice, Lady of the Eternal with both Genghises, then activate her effect to send D/D Necro Slime from the deck to the graveyard.
   6. Activate Necro Slime to Fusion Summon Dragonbane King Beowulf with Necro and Genghis, then Xyz Summon Hope Harbinger Dragon with Beowulf and Ragnarok.
   End on Beatrice, Lady of the Eternal, D/D/D Dragonbane King Beowulf, Dark Contract with the Gate and Dark Contract with the Swamp King.
+swirlO
   
 Necro Slime A
 Pieces: D/D Necro Slime, D/D Lamia and D/D Savant Kepler
@@ -182,6 +197,7 @@ Pieces: D/D Necro Slime, D/D Lamia and D/D Savant Kepler
   6. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it. When Flame King Genghis triggers, Special Summon Gust King Alexander.
   7. Synchro Summon Formula Synchron with Kepler and Lamia, then Cursed King Siegfried with Genghis and Formula.
   End on Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried and D/D/D Gust King Alexander.
+necroA
   
 Necro Slime B
 Pieces: D/D Necro Slime, D/D Lamia and D/D Savant Copernicus
@@ -189,6 +205,7 @@ Pieces: D/D Necro Slime, D/D Lamia and D/D Savant Copernicus
   2. Normal Summon Necro Slime, then Synchro Summon Formula Synchron with Necro and Lamia.
   3. Activate Necro Slime to Fusion Summon Flame King Genghis with Necro and Copernicus, then Synchro Summon PSY-Framelord Omega with Formula and Genghis.
   End on PSY-Framelord Omega.
+necroB
   
 Necro Slime C
 Pieces: D/D Necro Slime, D/D Savant Kepler and D/D Savant Copernicus
@@ -199,6 +216,7 @@ Pieces: D/D Necro Slime, D/D Savant Kepler and D/D Savant Copernicus
   5. Synchro Summon Formula Synchron with Lamia and Kepler, then PSY-Framelord Omega with Formula and Genghis.
   6. Activate Necro Slime to Fusion Summon Dragonbane King Beowulf with Necro and Genghis.
   End on PSY-Framelord Omega and D/D/D Dragonbane King Beowulf.
+necroC
   
 Necro Slime D
 Pieces: D/D Necro Slime, D/D Savant Kepler and D/D/D Oblivion King Ragnarok
@@ -210,6 +228,7 @@ Pieces: D/D Necro Slime, D/D Savant Kepler and D/D/D Oblivion King Ragnarok
   6. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it. When Ragnarok triggers, Special Summon Flame King Genghis.
   7. Synchro Summon Formula Synchron with Lamia and Kepler, then PSY-Framelord Omega with Formula and Genghis.
   End on Beatrice, Lady of the Eternal, PSY-Framelord Omega, and D/D/D Oblivion King Ragnarok in the Pendulum Zone.
+necroD
   
 Necro Slime E
 Pieces: D/D Necro Slime, D/D Savant Kepler and Dark Contract with the Gate
@@ -222,6 +241,7 @@ Pieces: D/D Necro Slime, D/D Savant Kepler and Dark Contract with the Gate
   7. Activate D/D Lamia, sending Contract with the Swamp to the graveyard to Special Summon it.
   8. Activate Necro Slime to Fusion Summon Oracle King d'Arc with Necro and Genghis, then Synchro Summon PSY-Framelord Omega with Lamia and d'Arc.
   End on Beatrice, Lady of the Eternal, PSY-Framelord Omega and Dark Contract with the Gate.
+necroE
   
 Necro Slime F
 Pieces: D/D Necro Slime, D/D Savant Copernicus and Dark Contract with the Gate
@@ -234,6 +254,7 @@ Pieces: D/D Necro Slime, D/D Savant Copernicus and Dark Contract with the Gate
   7. Xyz Summon Beatrice, Lady of the Eternal with both Genghises, then activate her effect to send D/D Lamia from the deck to the graveyard.
   8. Activate D/D Lamia, sending Contract with the Swamp to the graveyard to Special Summon it, then Synchro Summon PSY-Framelord Omega with d'Arc and Lamia.
   End on Beatrice, Lady of the Eternal, PSY-Framelord Omega and Dark Contract with the Gate.
+necroF
   
 Necro Slime G
 Pieces: D/D Swirl Slime, D/D/D Oblivion King Ragnarok and Dark Contract with the Gate
@@ -243,3 +264,4 @@ Pieces: D/D Swirl Slime, D/D/D Oblivion King Ragnarok and Dark Contract with the
   4. Xyz Summon Beatrice, Lady of the Eternal with both Genghises, then activate her effect to send D/D Swirl Slime from the deck to the graveyard.
   5. Activate Swirl Slime, banishing it from the graveyard to Special Summon Oblivion King Ragnarok. When it triggers, Special Summon Genghis.
   End on Beatrice, Lady of the Eternal, D/D/D Oblivion King Ragnarok, D/D/D Flame King Genghis and Dark Contract with the Gate.
+necroG
