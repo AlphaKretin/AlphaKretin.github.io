@@ -234,8 +234,8 @@ Necro Slime E
 Pieces: D/D Necro Slime, D/D Savant Kepler and Dark Contract with the Gate
   1. Activate Contract with the Gate to search D/D Swirl Slime.
   2. Activate Swirl Slime to Fusion Summon Flame King Genghis with Necro and Swirl.
-  3. Activate Swirl Slime, banishing it from the graveyard to Special Summon Kepler.
-  4. Kepler and Genghis will both trigger. Search Dark Contract with the Swamp King and Special Summon Necro Slime.
+  3. Activate Swirl Slime, banishing it from the graveyard to Special Summon Kepler to search Dark Contract with the Swamp King.
+  4. When Flame King Genghis triggers, Special Summon Necro Slime.
   5. Activate Contract with the Swamp to Fusion Summon another Genghis with Kepler and Necro.
   6. Xyz Summon Beatrice, Lady of the Eternal with both Genghises, then activate her effect to send D/D Lamia from the deck to the graveyard.
   7. Activate D/D Lamia, sending Contract with the Swamp to the graveyard to Special Summon it.
@@ -368,7 +368,7 @@ Pieces: D/D Savant Kepler, D/D/D Oblivion King Abyss Ragnarok and Dark Contract 
   4. Activate Contract with the Swamp to Fusion Summon another Flame King Genghis with Kepler and Swirl. When Genghis triggers, Special Summon Ragnarok.
   5. Xyz Summon Beatrice, the Eternal Lady with both Genghises, then activate her effect to send D/D Necro Slime from the deck to the graveyard.
   6. Activate Necro Slime to Fusion Summon Dragonbane King Beowulf with Necro and Genghis, then Xyz Summon Hope Harbinger Dragon with Beowulf and Ragnarok.
-  End on Beatrice, Lady of the Eternal, Number 38: Hope Harbinger Dragon Titantic Galaxy, Dark Contract with the Gate and Dark Contract with the Swamp King.
+  End on Beatrice, Lady of the Eternal, Number 38: Hope Harbinger Dragon Titanic Galaxy, Dark Contract with the Gate and Dark Contract with the Swamp King.
 kepcopC
 
 Kepler/Copernicus D
@@ -408,7 +408,7 @@ Pieces: Dark Contract with the Gate and any 3 of D/D Swirl Slime, D/D Lamia, D/D
   7. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it.
   8. Synchro Summon Formula Synchron with Lamia and Kepler, then Cursed Kin Siegfried with Genghis and Formula.
   9. Activate Contract with the Swamp to Fusion Summon Dragonbane King Beowulf with Alexander and Genghis, then Xyz Summon Hope Harbinger Dragon with Beowulf and Ragnarok.
-  End on Crystal Wing Synchro Dragon, Number 38: Hope Harbinger Dragon Titantic Galaxy, D/D/D Cursed King Siegfried and Dark Contract with the Swamp.
+  End on Crystal Wing Synchro Dragon, Number 38: Hope Harbinger Dragon Titanic Galaxy, D/D/D Cursed King Siegfried and Dark Contract with the Swamp.
 ragnaB
 
 Ragnarok C
@@ -424,3 +424,44 @@ Pieces: D/D Savant Kepler and any 3 of D/D Swirl Slime, D/D Necro Slime, D/D Lam
   9. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it, then Synchro Summon PSY-Framelord Omega with d'Arc and Lamia.
   End on Crystal Wing Synchro Dragon, PSY-Framelord Omega, D/D/D Cursed King Siegfried, and D/D/D Oblivion King Abyss Ragnarok in the Pendulum Zone.
 ragnaC
+
+Thomas A
+Pieces: Dark Contract with the Gate and any 4 of D/D Swirl Slime, D/D Lamia, D/D Savant Copernicus, D/D/D Oblivion King Abyss Ragnarok, and D/D Savant Thomas
+  1. Activate Contract with the Gate to search the missing piece.
+  2. Normal Summon Copernicus to send D/D Savant Kepler from the deck to the graveyard. Activate Abyss Ragnarok in the Pendulum Zone.
+  3. Activate Swirl Slime to Fusion Summon Flame King Genghis with Thomas and Swirl. When Ragnarok triggers, Special Summon Thomas.
+  4. When Flame King Genghis triggers, Special Summon Kepler to search Dark Contract with the Swamp King.
+  5. Activate Swirl Slime, banishing it from the graveyard to Special Summon Lamia, then Synchro Summon Gust King Alexander with Lamia and Genghis.
+  6. Activate Contract with the Swamp to Fusion Summon Oracle King d'Arc with Kepler and Copernicus. When Alexander triggers, Special Summon Lamia.
+  7. Synchro Summon Crystal Wing Synchro Dragon with Lamia and Alexander.
+  8. Activate D/D Lamia, sending Contract with the Swamp to the graveyard to Special Summon it, then Synchro Summon Cursed King Siegfried with Lamia and d'Arc.
+  9. Activate Thomas, destroying Abyss Ragnarok to Special Summon any Level 8 D/D/D monster from the deck, then Xyz Summon Hope Harbinger Dragon with that monster and Thomas.
+  End on Number 38: Hope Harbinger Dragon Titanic Galaxy, Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried and Dark Contract with the Gate.
+thomasA
+
+Thomas B
+Pieces: Dark Contract with the Gate and any 4 of D/D Swirl Slime, D/D Lamia, D/D Savant Copernicus, D/D/D Oblivion King Abyss Ragnarok, and D/D Savant Thomas
+  1. Activate Contract with the Gate to search the missing piece.
+  2. Activate Swirl Slime to Fusion Summon Flame King Genghis with Copernicus and Swirl.
+  3. Normal Summon Lamia and Synchro Summon Gust King Alexander with Lamia and Genghis. Activate Abyss Ragnarok in the Pendulum Zone.
+  4. Activate Swirl Slime, banishing it from the graveyard to Special Summon Thomas. When Ragnarok triggers, Special Summon Copernicus to send D/D Necro Slime from the deck to the graveyard.
+  5. Activate Thomas, destroying Abyss Ragnarok to Special Summon any Level 8 D/D/D monster from the deck. When Gust King Alexander triggers, Special Summon Lamia.
+  6. Synchro Summon Crystal Wing Synchro Dragon with Lamia and Alexander. Xyz Summon Hope Harbinger Dragon with the Level 8 and Thomas.
+  7. Activate D/D Necro Slime to Fusion Summon Oracle King d'Arc with Necro and Genghis.
+  8. Activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it, then Synchro Summon Cursed King Siegfried with Lamia and d'Arc.
+  End on Number 38: Hope Harbinger Dragon Titanic Galaxy, Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried and D/D Savant Copernicus.
+thomasB
+
+Thomas C
+Pieces: D/D Swirl Slime, D/D Lamia, D/D Savant Kepler and D/D/D Oblivion King Abyss Ragnarok
+  1. Activate Swirl Slime to Fusion Summon Flame King Genghis with Kepler and Swirl.
+  2. Activate Abyss Ragnarok in the Pendulum Zone.
+  3. Normal Summon Lamia and Synchro Summon Gust King Alexander with Lamia and Genghis. When Abyss Ragnarok triggers, Special Summon Flame King Genghis.
+  4. When Gust King Alexander triggers, Special Summon Lamia. When Flame King Genghis triggers, Special Summon Kepler to search Dark Contract with the Gate.
+  5. Activate Contract with the Gate to search D/D Savant Thomas.
+  6. Synchro Summon Crystal Wing Synchro Dragon with Lamia and Alexander, then activate D/D Lamia, sending Contract with the Gate to the graveyard to Special Summon it.
+  7. Synchro Summon Formula Synchron with Kepler and Lamia, then Cursed King Siegfried with Formula and Genghis.
+  8. Activate Swirl Slime, banishing it from the graveyard to Special Summon Thomas.
+  9. Activate Thomas, destroying Abyss Ragnarok to Special Summon any Level 8 D/D/D monster from the deck, then Xyz Summon Hope Harbinger Dragon with that monster and Thomas.
+  End on Number 38: Hope Harbinger Dragon Titanic Galaxy, Crystal Wing Synchro Dragon, D/D/D Cursed King Siegfried.
+thomasC
