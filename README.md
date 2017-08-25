@@ -7,10 +7,11 @@ The next section is a spot for various stuff I've made regarding Pokémon.
   - The Colress Bot is an HTML form version of a Discord bot I wrote that serves data about the Pokémon games.
   - The Catch Rate calculator calculates the chances of catching a Pokémon and simulates an attempt to. 
 
-The rest is just a spot for random stuff I make messing around in JavaScript. It currently has a 5 distinct toys in it: 
+The rest is just a spot for random stuff I make messing around in JavaScript. It currently has 6 distinct toys in it: 
 
   - bezier.html and all numbered variants draw Bezier curves according to user input 
   - mirrors.html bounces a ball around a grid according to mirrors placed by the user
   - words.html checks if the user has entered a word that starts with the specified string
   - hanafuda.html is undergoing development - one day it might play the game, right now it just deals Koi-Koi hands
+  - ddd.html is a pre-link combo guide for using the D/D/D archetype in Yu-Gi-Oh!
   - misc.html hosts some smaller things, at the moment a random letter generator and a tool to display every combination of entries from two arrays
