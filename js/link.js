@@ -10,7 +10,22 @@ mainButton.addEventListener('click', function() {
 function generate() {
     let template = templates[getRandInt(0, templates.length - 1)];
     let theme = themes[getRandInt(0, themes.length - 1)];
+    if (template.indexOf("a foo") > -1) {
+        template = aAn(template, theme);
+    }
     output.innerHTML = template.replace("foo", theme);
+}
+
+function aAn(template, theme) {
+    if (template.indexOf("a foo") === -1) {
+        return template;
+    }
+    let firstLetter = theme.slice(0, 1);
+    if (firstLetter === "a" || firstLetter === "e" || firstLetter === "i" || firstLetter === "o" || firstLetter === "u") {
+        return template.replace("a foo", "an foo");
+    } else {
+        return template;
+    }
 }
 
 function getRandInt(min, max) {
@@ -20,5 +35,5 @@ function getRandInt(min, max) {
 }
 
 window.addEventListener('load', function() {
-    console.log("Loaded");
+    console.log("Loaded ver. vowel check");
 });
