@@ -20,7 +20,7 @@ function aAn(template, theme) {
     if (template.indexOf("a foo") === -1) {
         return template;
     }
-    let firstLetter = theme.slice(0, 1);
+    let firstLetter = theme.slice(0, 1).toLowerCase();
     if (firstLetter === "a" || firstLetter === "e" || firstLetter === "i" || firstLetter === "o" || firstLetter === "u") {
         return template.replace("a foo", "an foo");
     } else {
@@ -35,5 +35,5 @@ function getRandInt(min, max) {
 }
 
 window.addEventListener('load', function() {
-    console.log("Loaded ver. vowel check");
+    console.log("Loaded ver. lowercase");
 });
