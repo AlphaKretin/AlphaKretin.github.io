@@ -14,7 +14,7 @@ function c515310211.filter(c)
 	return c:IsSetCard(0xf35) and c:IsFaceup()
 end
 function c515310211.target(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
-	if chkc then return chkc:IsLocation(LOCATION_SZONE) end
+	if chkc then return chkc:IsType(TYPE_SPELL+TYPE_TRAP) end
 	if chk==0 then return Duel.IsExistingTarget(aux.TRUE,tp,LOCATION_SZONE,LOCATION_SZONE,1,e:GetHandler()) 
 		and Duel.IsExistingMatchingCard(c515310211.filter,tp,LOCATION_ONFIELD,0,1,nil) end
 	local num=Duel.GetMatchingGroupCount(c515310211.filter,tp,LOCATION_ONFIELD,0,e:GetHandler())
