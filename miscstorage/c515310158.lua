@@ -3,7 +3,7 @@
 --[[
 	When an opponent's monster declares an attack on a face-up monster you control: 
 	discard 1 card, also any battle damage your opponent takes becomes halved for the rest of this turn; 
-	the monster being attacked gains ATK and DEF equal to the combined ATK of all attack position monsters your opponent controls.
+	the monster being attacked gains ATK and DEF equal to the combined ATK of all attack position monsters your opponent controls until the End Phase.
 ]]--
 function c515310158.initial_effect(c)
 	--Activate
