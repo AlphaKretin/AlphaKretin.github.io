@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Line</title>
+    <link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="AlphaKretin">
+    <meta name="application-name" content="AlphaKretin">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="../css/words.css" /> 
+</head>
+
+<body>
+	<h1>Random Line Selection</h1>
+	<textarea id="lines"></textarea>
+    <input type="button" value="Select Random Line" onclick="selectLine(document.getElementById('lines').value)" id="submitButton" />
+    <b><div id="output"></div><b>
+    <script src="../js/randline.js"></script>
+</body>
+
+</html>
