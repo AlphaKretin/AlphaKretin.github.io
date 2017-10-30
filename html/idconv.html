@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>YGOPro Card Name/ID converter</title>
+    <link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="AlphaKretin">
+    <meta name="application-name" content="AlphaKretin">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <h1>Input</h1>
+    <textarea id="inputArea" rows="2" cols = "50"></textarea>
+    <input type="button" value="Convert" onclick="convert()" id="convButton" /><br />
+    <h1>Output</h1>
+    <textarea id="outputArea" rows="2" cols = "50"></textarea>
+    Enter card IDs or card names (exact, sorry, but not case-sensitive) in the input box, then hit convert and the output box will change them to the other.
+    <script src="../js/idconv.js"></script>
+</body>
+
+</html>
