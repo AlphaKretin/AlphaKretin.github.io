@@ -10,6 +10,7 @@ The next section is a spot for various stuff I've made regarding Pokémon.
 Then there's a section for various Yu-Gi-Oh!-related things
   - The D/D/D combo guide accepts input of cards in hand and outputs the combos possible with those cards, including step-by-step and the field you end on.
   - The Link comment generator generates comments about decks doing well in Link format, taking the piss both at people asking if their terrible pet deck will be meta and people acting like decks are completely dead.
+  - The ID Converter converts text entries between passcodes and card names, useful for getting the IDs of a bunch of cards for scripting or converting a YGOPro deck file to card names for sharing.
 
 The rest is just a spot for random stuff I make messing around in JavaScript. It currently has 5 distinct toys in it: 
 
