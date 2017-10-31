@@ -5,10 +5,12 @@ var xhr = new XMLHttpRequest();
 xhr.open('GET', '../images/cards.cdb', true);
 xhr.responseType = 'arraybuffer';
 
+var contents;
+
 xhr.onload = function(e) {
   var uInt8Array = new Uint8Array(this.response);
   var db = new SQL.Database(uInt8Array);
-  var contents = db.exec("SELECT * FROM texts");
+  contents = db.exec("SELECT * FROM texts");
   // contents is now [{columns:['col1','col2',...], values:[[first row], [second row], ...]}]
 };
 xhr.send();
