@@ -28,7 +28,7 @@ function convert() {
 		if (idIndex > -1) { //line is an ID
 			outLines.push(contents[0]["values"][idIndex][1]);
 		} else if (nameIndex > -1){ //line is a card name
-			outLines.push(contents[0]["values"][idIndex][0]);
+			outLines.push(contents[0]["values"][nameIndex][0]);
 		} else { //line is not a card
 			outLines.push(line);
 		}
@@ -53,7 +53,7 @@ function idCheck(line) {
 function nameCheck(line) {
 	var index = -1;
 	for (var i = 0; i < contents[0]["values"].length; i++) {
-		if (contents[0]["values"][i][1] === line) {
+		if (contents[0]["values"][i][1].toLowerCase() === line.toLowerCase()) {
 			index = i;
 		} 
 	}
