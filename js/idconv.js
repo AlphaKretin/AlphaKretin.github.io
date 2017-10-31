@@ -19,17 +19,16 @@ var inBox = document.getElementById("inputArea");
 var outBox = document.getElementById("outputArea");
 
 function convert() {
-	console.log(JSON.stringify(contents));
 	var input = inBox.value;
 	var lines = input.split("\n")
 	var outLines = [];
 	for (var line of lines) {
-		var idIndex = contents[values][0].indexOf(line);
-		var nameIndex = lowerArray(contents[values][1]).indexOf(line.toLowerCase());
+		var idIndex = idCheck(line);
+		var nameIndex = nameCheck(line);
 		if (idIndex > -1) { //line is an ID
-			outLines.push(contents[values][1][idIndex]);
+			outLines.push(contents[0]["values"][idIndex][1]);
 		} else if (nameIndex > -1){ //line is a card name
-			outLines.push(contents[values][0][nameIndex]);
+			outLines.push(contents[0]["values"][idIndex][0]);
 		} else { //line is not a card
 			outLines.push(line);
 		}
@@ -39,6 +38,26 @@ function convert() {
 		output += outLine + "\n";
 	}
 	outBox.value = output;
+}
+
+function idCheck(line) {
+	var index = -1;
+	for (var i = 0; i < contents[0]["values"].length; i++) {
+		if (contents[0]["values"][i][0].toString() === line) {
+			index = i;
+		} 
+	}
+	return index;
+}
+
+function nameCheck(line) {
+	var index = -1;
+	for (var i = 0; i < contents[0]["values"].length; i++) {
+		if (contents[0]["values"][i][1] === line) {
+			index = i;
+		} 
+	}
+	return index;
 }
 
 function lowerArray(arr) {
