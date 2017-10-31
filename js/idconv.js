@@ -19,6 +19,7 @@ var inBox = document.getElementById("inputArea");
 var outBox = document.getElementById("outputArea");
 
 function convert() {
+	console.log(JSON.stringify(contents));
 	var input = inBox.value;
 	var lines = input.split("\n")
 	var outLines = [];
