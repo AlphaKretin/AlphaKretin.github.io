@@ -1,5 +1,5 @@
 var sql = window.SQL;
-
+var loaded = false;
 //open database
 var xhr = new XMLHttpRequest();
 xhr.open('GET', '../images/cards.cdb', true);
@@ -11,6 +11,7 @@ xhr.onload = function(e) {
   var uInt8Array = new Uint8Array(this.response);
   var db = new SQL.Database(uInt8Array);
   contents = db.exec("SELECT * FROM texts");
+  loaded = true;
   // contents is now [{columns:['col1','col2',...], values:[[first row], [second row], ...]}]
 };
 xhr.send();
@@ -19,6 +20,10 @@ var inBox = document.getElementById("inputArea");
 var outBox = document.getElementById("outputArea");
 
 function convert() {
+	if (!loaded) {
+		alert("Card database still loading, please wait a few seconds and try again.");
+		return;
+	}
 	var input = inBox.value;
 	var lines = input.split("\n")
 	var outLines = [];
