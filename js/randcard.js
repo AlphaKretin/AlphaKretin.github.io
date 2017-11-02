@@ -28,6 +28,6 @@ function convert() {
 		return;
 	}
 	var rand = ids[Math.floor(Math.random() * ids.length)];
-	var out = "<h1>" + names[0]["values"][rand][1] + "</h1>" + rand;
+	var out = "<h1>" + names[0]["values"][ids.indexOf(rand)][1] + "</h1>" + rand;
 	document.getElementById("output").innerHTML = out;
 }
