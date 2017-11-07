@@ -72,7 +72,7 @@ function getCardInfo(code) {
     var types = getTypes(index);
     if (types.indexOf("Monster") > -1) {
         var typesStr = types.toString().replace("Monster", getRace(index)).replace(/,/g, "/");
-        out += "<b>Type</b>: " + typesStr + "<br/>";
+        out += "<b>Type</b>: " + typesStr + " <b>Attribute</b>: " + getAtt(index) + "<br/>";
         var lvName = "Level";
         var lv = getLevelScales(index);
         var def = true;
@@ -95,8 +95,8 @@ function getCardInfo(code) {
     } else if (types.indexOf("Spell") > -1 || types.indexOf("Trap") > -1) {
         var lv = getLevelScales(index)[0];
         if (lv > 0) { //is trap monster
-            var typesStr = getRace(index) + types.toString().replace(/,/g, "/");
-            out += "<b>Type</b>: " + typesStr + "<br/>";
+            var typesStr = getRace(index) + "/" + types.toString().replace(/,/g, "/");
+            out += "<b>Type</b>: " + typesStr + " <b>Attribute</b>: " + getAtt(index) + "<br/>"<br/>";
             out += "<b>Level</b>: " + lv + " <b>ATK</b>: " + contents[0].values[index][5] + " <b>DEF</b>: " + contents[0].values[index][6] + "<br/>";
         } else {
             out += "<b>Type</b>: " + types.toString().replace(/,/g, "/") + "<br/>";
@@ -198,6 +198,28 @@ function getRace(index) {
             return "Cyberse";
         default:
             return "Null Race";
+    }
+}
+
+function getAtt(index) {
+	var att = contents[0].values[index][9];
+	switch (race) {
+        case 0x1:
+            return "EARTH";
+        case 0x2:
+            return "WATER";
+        case 0x4:
+            return "FIRE";
+        case 0x8:
+            return "WIND";
+        case 0x10:
+            return "LIGHT";
+        case 0x20:
+            return "DARK";
+        case 0x40:
+            return "DIVINE";
+        default:
+            return "Null Attribute";
     }
 }
 
