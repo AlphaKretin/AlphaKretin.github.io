@@ -203,7 +203,7 @@ function getRace(index) {
 
 function getAtt(index) {
 	var att = contents[0].values[index][9];
-	switch (race) {
+	switch (att) {
         case 0x1:
             return "EARTH";
         case 0x2:
