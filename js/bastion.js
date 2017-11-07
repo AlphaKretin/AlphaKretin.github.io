@@ -22,15 +22,51 @@ xhr.onload = function(e) {
 };
 xhr.send();
 
-function convert() {
-    if (!loaded) {
+function randomCard() {
+	if (!loaded) {
         alert("Card database still loading, please wait a few seconds and try again.");
         return;
     }
-    var rand = ids[Math.floor(Math.random() * ids.length)];
-    var index = ids.indexOf(rand);
+    var code = ids[Math.floor(Math.random() * ids.length)];
+	if (ids.indexOf(code) === -1) {
+		alert("Invalid card ID, please try again.");
+        return "Invalid card ID, please try again.";
+	}
+	document.getElementById("output").innerHTML = getCardInfo(code);
+}
+
+function go() {
+	if (!loaded) {
+        alert("Card database still loading, please wait a few seconds and try again.");
+        return;
+    }
+	var input = document.getElementById("inputBox").value;
+	if (ids.indexOf(input) > -1) {
+		document.getElementById("output").innerHTML = getCardInfo(input);
+	} else {
+		var index = nameCheck(input);
+		if (index > -1 && index in ids) {
+			document.getElementById("output").innerHTML = getCardInfo(ids[index]);
+		} else {
+			alert("Invalid card ID or name, please try again.");
+			return;
+		}
+	}
+	
+}
+
+function getCardInfo(code) {
+	if (!loaded) {
+        alert("Card database still loading, please wait a few seconds and try again.");
+        return "Card database still loading, please wait a few seconds and try again.";
+    }
+    var index = ids.indexOf(code);
+	if (index === -1) {
+		alert("Invalid card ID, please try again.");
+        return "Invalid card ID, please try again.";
+	}
     var out = "<h1>" + names[0].values[index][1] + "</h1>";
-    out += "<b>ID</b>: " + rand + "<br/><br/>";
+    out += "<b>ID</b>: " + code + "<br/><br/>";
     out += "<b>Region</b>: " + getOT(index) + "<br/>";
     var types = getTypes(index);
     if (types.indexOf("Monster") > -1) {
@@ -68,7 +104,7 @@ function convert() {
     } else {
         out += "<b>Card Text</b>: " + names[0].values[index][2].replace(/\n/g, "<br/>");
     }
-    document.getElementById("output").innerHTML = out;
+    return out;
 }
 
 function getLevelScales(index) {
@@ -241,4 +277,14 @@ function getTypes(index) {
         types.push("Effect")
     }
     return types;
+}
+
+function nameCheck(line) {
+	var index = -1;
+	for (var i = 0; i < names[0]["values"].length; i++) {
+		if (names[0]["values"][i][1].toLowerCase() === line.toLowerCase()) {
+			index = i;
+		} 
+	}
+	return index;
 }
