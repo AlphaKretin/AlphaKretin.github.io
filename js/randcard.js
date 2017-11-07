@@ -34,7 +34,7 @@ function convert() {
     out += "<b>Region</b>: " + getOT(index) + "<br/>";
     var types = getTypes(index);
     if (types.indexOf("Monster") > -1) {
-        var typesStr = types.toString().replace("Monster", getRace(index)).replace(",", "/");
+        var typesStr = types.toString().replace("Monster", getRace(index)).replace(/,/g, "/");
         out += "<b>Type</b>: " + typesStr + "<br/>";
         var lvName = "Level";
         var lv = getLevelScales(index);
@@ -58,11 +58,11 @@ function convert() {
     } else if (types.indexOf("Spell") > -1 || types.indexOf("Trap") > -1) {
         var lv = getLevelScales(index)[0];
         if (lv > 0) { //is trap monster
-            var typesStr = getRace(index) + types.toString().replace(",", "/");
+            var typesStr = getRace(index) + types.toString().replace(/,/g, "/");
             out += "<b>Type</b>: " + typesStr + "<br/>";
             out += "<b>Level</b>: " + lv + " <b>ATK</b>: " + contents[0].values[index][5] + " <b>DEF</b>: " + contents[0].values[index][6] + "<br/>";
         } else {
-            out += "<b>Type</b>: " + types.toString().replace(",", "/") + "<br/>";
+            out += "<b>Type</b>: " + types.toString().replace(/,/g, "/") + "<br/>";
         }
         out += "<b>Effect</b>: " + names[0].values[index][2];
     } else {
