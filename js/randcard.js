@@ -62,7 +62,7 @@ function convert() {
             out += "<b>Type</b>: " + typesStr + "<br/>";
             out += "<b>Level</b>: " + lv + " <b>ATK</b>: " + contents[0].values[index][5] + " <b>DEF</b>: " + contents[0].values[index][6] + "<br/>";
         } else {
-            out += types.toString().replace(",", "/") + "<br/>";
+            out += "<b>Type</b>: " + types.toString().replace(",", "/") + "<br/>";
         }
         out += "<b>Effect</b>: " + names[0].values[index][2];
     } else {
