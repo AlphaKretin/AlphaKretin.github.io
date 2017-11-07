@@ -86,7 +86,9 @@ function getCardInfo(code) {
         out += "<b>ATK</b>: " + contents[0].values[index][5] + " ";
         if (def) {
             out += "<b>DEF</b>: " + contents[0].values[index][6];
-        }
+        } else {
+			out += "<b>Link Markers</b>: " + getMarkers(index);
+		}
         if (types.indexOf("Pendulum") > -1) {
             out += " <b>Pendulum Scale</b>: " + lv[1] + "/" + lv[2];
         }
@@ -221,6 +223,36 @@ function getAtt(index) {
         default:
             return "Null Attribute";
     }
+}
+
+function getMarkers(index) {
+	var marks = contents[0].values[index][6];
+	var out = "";
+	if (marks & 0x001) {
+		out += "↙️";
+	}
+	if (marks & 0x002) {
+		out += "⬇️";
+	}
+	if (marks & 0x004) {
+		out += "↘️";
+	}
+	if (marks & 0x008) {
+		out += "⬅️";
+	}
+	if (marks & 0x020) {
+		out += "➡️";
+	}
+	if (marks & 0x040) {
+		out += "↖️";
+	}
+	if (marks & 0x080) {
+		out += "⬆️";
+	}
+	if (marks & 0x100) {
+		out += "↗️";
+	}
+	return out;
 }
 
 function getTypes(index) {
