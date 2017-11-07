@@ -33,15 +33,15 @@ function convert() {
     out += "<b>ID</b>: " + rand + "<br/><br/>";
     out += "<b>Region</b>: " + getOT(index) + "<br/>";
     var types = getTypes(index);
-    if ("Monster" in types) {
+    if (types.indexOf("Monster") > -1) {
         var typesStr = types.toString().replace("Monster", getRace(index)).replace(",", "/");
         out += "<b>Type</b>: " + typesStr + "<br/>";
         var lvName = "Level";
         var lv = getLevelScales(index);
         var def = true;
-        if ("Xyz" in types) {
+        if (types.indexOf("Xyz") > -1) {
             lvName = "Rank";
-        } else if ("Link" in types) {
+        } else if (types.indexOf("Link") > -1) {
             lvName = "Link Rating";
             def = false;
         }
@@ -50,12 +50,12 @@ function convert() {
         if (def) {
             out += "<b>DEF</b>: " + contents[0].values[index][6];
         }
-        if ("Pendulum" in types) {
+        if (types.indexOf("Pendulum") > -1) {
             out += " <b>Pendulum Scale</b>: " + lv[1] + "/" + lv[2];
         }
         out += "<br/>";
         out += "<b>Card Text</b>: " + names[0].values[index][2];
-    } else if ("Spell" in types || "Trap" in types) {
+    } else if (types.indexOf("Spell") > -1 || types.indexOf("Trap") > -1) {
         var lv = getLevelScales(index)[0];
         if (lv > 0) { //is trap monster
             var typesStr = getRace(index) + types.toString().replace(",", "/");
