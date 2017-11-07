@@ -54,19 +54,19 @@ function convert() {
             out += " <b>Pendulum Scale</b>: " + lv[1] + "/" + lv[2];
         }
         out += "<br/>";
-        out += "<b>Card Text</b>: " + names[0].values[index][2];
+        out += "<b>Card Text</b>: " + names[0].values[index][2].replace(/\n/g, "<br/>");
     } else if (types.indexOf("Spell") > -1 || types.indexOf("Trap") > -1) {
         var lv = getLevelScales(index)[0];
         if (lv > 0) { //is trap monster
-            var typesStr = getRace(index) + types.toString().replace(",", "/");
+            var typesStr = getRace(index) + types.toString().replace(/,/g, "/");
             out += "<b>Type</b>: " + typesStr + "<br/>";
             out += "<b>Level</b>: " + lv + " <b>ATK</b>: " + contents[0].values[index][5] + " <b>DEF</b>: " + contents[0].values[index][6] + "<br/>";
         } else {
-            out += "<b>Type</b>: " + types.toString().replace(",", "/") + "<br/>";
+            out += "<b>Type</b>: " + types.toString().replace(/,/g, "/") + "<br/>";
         }
-        out += "<b>Effect</b>: " + names[0].values[index][2];
+        out += "<b>Effect</b>: " + names[0].values[index][2].replace(/\n/g, "<br/>");
     } else {
-        out += "<b>Card Text</b>: " + names[0].values[index][2];
+        out += "<b>Card Text</b>: " + names[0].values[index][2].replace(/\n/g, "<br/>");
     }
     document.getElementById("output").innerHTML = out;
 }
