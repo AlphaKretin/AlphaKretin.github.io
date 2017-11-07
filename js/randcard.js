@@ -58,11 +58,11 @@ function convert() {
     } else if (types.indexOf("Spell") > -1 || types.indexOf("Trap") > -1) {
         var lv = getLevelScales(index)[0];
         if (lv > 0) { //is trap monster
-            var typesStr = getRace(index) + types.toString().replace(/,/g, "/");
+            var typesStr = getRace(index) + types.toString().replace(",", "/");
             out += "<b>Type</b>: " + typesStr + "<br/>";
             out += "<b>Level</b>: " + lv + " <b>ATK</b>: " + contents[0].values[index][5] + " <b>DEF</b>: " + contents[0].values[index][6] + "<br/>";
         } else {
-            out += "<b>Type</b>: " + types.toString().replace(/,/g, "/") + "<br/>";
+            out += "<b>Type</b>: " + types.toString().replace(",", "/") + "<br/>";
         }
         out += "<b>Effect</b>: " + names[0].values[index][2];
     } else {
@@ -179,9 +179,7 @@ function getTypes(index) {
     if (type & 0x10) {
         types.push("Normal")
     }
-    if (type & 0x20) {
-        types.push("Effect")
-    }
+    //effect goes here in numeric order but I put it at the end so that it's at the end of any list of types
     if (type & 0x40) {
         types.push("Fusion")
     }
@@ -238,6 +236,9 @@ function getTypes(index) {
     }
     if (type & 0x4000000) {
         types.push("Link")
+    }
+	if (type & 0x20) {
+        types.push("Effect")
     }
     return types;
 }
