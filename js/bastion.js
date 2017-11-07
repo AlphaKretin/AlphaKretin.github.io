@@ -41,8 +41,9 @@ function go() {
         return;
     }
 	var input = document.getElementById("inputBox").value;
-	if (ids.indexOf(input) > -1) {
-		document.getElementById("output").innerHTML = getCardInfo(input);
+	var inInt = parseInt(input);
+	if (ids.indexOf(inInt) > -1) {
+		document.getElementById("output").innerHTML = getCardInfo(inInt);
 	} else {
 		var index = nameCheck(input);
 		if (index > -1 && index in ids) {
