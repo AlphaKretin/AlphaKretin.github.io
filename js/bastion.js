@@ -96,7 +96,7 @@ function getCardInfo(code) {
         var lv = getLevelScales(index)[0];
         if (lv > 0) { //is trap monster
             var typesStr = getRace(index) + "/" + types.toString().replace(/,/g, "/");
-            out += "<b>Type</b>: " + typesStr + " <b>Attribute</b>: " + getAtt(index) + "<br/>"<br/>";
+            out += "<b>Type</b>: " + typesStr + " <b>Attribute</b>: " + getAtt(index) + "<br/>";
             out += "<b>Level</b>: " + lv + " <b>ATK</b>: " + contents[0].values[index][5] + " <b>DEF</b>: " + contents[0].values[index][6] + "<br/>";
         } else {
             out += "<b>Type</b>: " + types.toString().replace(/,/g, "/") + "<br/>";
