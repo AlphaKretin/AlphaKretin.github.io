@@ -89,11 +89,23 @@ function getCardInfo(code) {
         } else {
 			out += "<b>Link Markers</b>: " + getMarkers(index);
 		}
+		
         if (types.indexOf("Pendulum") > -1) {
-            out += " <b>Pendulum Scale</b>: " + lv[1] + "/" + lv[2];
-        }
-        out += "<br/>";
-        out += "<b>Card Text</b>: " + names[0].values[index][2].replace(/\n/g, "<br/>");
+            out += " <b>Pendulum Scale</b>: " + lv[1] + "/" + lv[2] + "<br/>";
+        } else {
+			out += "<br/>";
+		}
+		var cardText = getCardText(index);
+		var textName = "Monster Effect";
+		if (types.indexOf("Normal") > -1) {
+			textName = "Flavour Text";
+		}
+		if (cardText.length === 2) {
+			out += " <b>Pendulum Effect</b>: " + cardText[0] + "<br/>";
+			out += " <b>" + textName + "</b>: " + cardText[1];
+		} else {
+			out += " <b>" + textName + "</b>: " + cardText[0];
+		}
     } else if (types.indexOf("Spell") > -1 || types.indexOf("Trap") > -1) {
         var lv = getLevelScales(index)[0];
         if (lv > 0) { //is trap monster
@@ -332,6 +344,19 @@ function getTypes(index) {
         types.push("Effect")
     }
     return types;
+}
+
+function getCardText(index) {
+	var cardText = names[0].values[index][2];
+	var regx = cardText.match(/\][\s\S]*?\n([\S\s]*?)\n-/);
+	if (regx === null) {
+		return [cardText];
+	} else {
+		var outArr = [];
+		outArr.push(regx[1]);
+		outArr.push(cardText.match(/(?:r Effect|xt ) ?\]\n([\S\s]*)/)[1]);
+		return outArr;
+	}
 }
 
 function nameCheck(line) {
