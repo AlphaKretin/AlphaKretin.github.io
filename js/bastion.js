@@ -271,77 +271,78 @@ function getTypes(index) {
     var types = [];
     var type = contents[0].values[index][4];
     if (type & 0x1) {
-        types.push("Monster")
+        types.push("Monster");
     }
     if (type & 0x2) {
-        types.push("Spell")
+        types.push("Spell");
     }
     if (type & 0x4) {
-        types.push("Trap")
+        types.push("Trap");
     }
-    if (type & 0x10) {
-        types.push("Normal")
-    }
+	//normal goes here in numeric order but I put it at the end so that it's at the end of any list of types
     //effect goes here in numeric order but I put it at the end so that it's at the end of any list of types
     if (type & 0x40) {
-        types.push("Fusion")
+        types.push("Fusion");
     }
     if (type & 0x80) {
-        types.push("Ritual")
+        types.push("Ritual");
     }
     if (type & 0x200) {
-        types.push("Spirit")
+        types.push("Spirit");
     }
     if (type & 0x400) {
-        types.push("Union")
+        types.push("Union");
     }
     if (type & 0x800) {
-        types.push("Gemini")
+        types.push("Gemini");
     }
     if (type & 0x1000) {
-        types.push("Tuner")
+        types.push("Tuner");
     }
     if (type & 0x2000) {
-        types.push("Synchro")
+        types.push("Synchro");
     }
     if (type & 0x4000) {
-        types.push("Token")
+        types.push("Token");
     }
     if (type & 0x10000) {
-        types.push("Quick-Play")
+        types.push("Quick-Play");
     }
     if (type & 0x20000) {
-        types.push("Continuous")
+        types.push("Continuous");
     }
     if (type & 0x40000) {
-        types.push("Equip")
+        types.push("Equip");
     }
     if (type & 0x80000) {
-        types.push("Field")
+        types.push("Field");
     }
     if (type & 0x100000) {
-        types.push("Counter")
+        types.push("Counter");
     }
     if (type & 0x200000) {
-        types.push("Flip")
+        types.push("Flip");
     }
     if (type & 0x400000) {
-        types.push("Toon")
+        types.push("Toon");
     }
     if (type & 0x800000) {
-        types.push("Xyz")
+        types.push("Xyz");
     }
     if (type & 0x1000000) {
-        types.push("Pendulum")
+        types.push("Pendulum");
     }
     if (type & 0x2000000) {
-        types.push("Special Summon")
+        types.push("Special Summon");
     }
     if (type & 0x4000000) {
-        types.push("Link")
+        types.push("Link");
+    }
+	if (type & 0x10) {
+        types.push("Normal");
     }
 	if (type & 0x20) {
-        types.push("Effect")
+        types.push("Effect");
     }
     return types;
 }
@@ -361,8 +362,8 @@ function getCardText(index) {
 
 function nameCheck(line) {
 	var index = -1;
-	for (var i = 0; i < names[0]["values"].length; i++) {
-		if (names[0]["values"][i][1].toLowerCase() === line.toLowerCase()) {
+	for (var i = 0; i < names[0].values.length; i++) {
+		if (names[0].values[i][1].toLowerCase() === line.toLowerCase()) {
 			index = i;
 		} 
 	}
