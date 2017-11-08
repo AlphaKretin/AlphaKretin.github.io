@@ -352,7 +352,7 @@ function getCardText(index) {
     var re = /\][\s\S]*?\n([\S\s]*?)\n-/g;
     var regx = re.exec(cardText);
     if (regx === null) {
-        return [cardText];
+        return [cardText.replace(/\n/g, "<br/>")];
     } else {
         var outArr = [];
         outArr.push(regx[1].replace(/\n/g, "<br/>"));
