@@ -355,9 +355,9 @@ function getCardText(index) {
         return [cardText];
     } else {
         var outArr = [];
-        outArr.push(regx[1]);
+        outArr.push(regx[1].replace(/\n/g, "<br/>"));
         var re2 = /(?:r Effect|xt) ?\]\R*([\S\s]*)/g;
-        outArr.push(re2.exec(cardText)[1]);
+        outArr.push(re2.exec(cardText)[1].replace(/\n/g, "<br/>"));
         return outArr;
     }
 }
