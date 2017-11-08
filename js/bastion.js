@@ -23,49 +23,49 @@ xhr.onload = function(e) {
 xhr.send();
 
 function randomCard() {
-	if (!loaded) {
+    if (!loaded) {
         alert("Card database still loading, please wait a few seconds and try again.");
         return;
     }
     var code = ids[Math.floor(Math.random() * ids.length)];
-	if (ids.indexOf(code) === -1) {
-		alert("Invalid card ID, please try again.");
+    if (ids.indexOf(code) === -1) {
+        alert("Invalid card ID, please try again.");
         return "Invalid card ID, please try again.";
-	}
-	document.getElementById("output").innerHTML = getCardInfo(code);
+    }
+    document.getElementById("output").innerHTML = getCardInfo(code);
 }
 
 function go() {
-	if (!loaded) {
+    if (!loaded) {
         alert("Card database still loading, please wait a few seconds and try again.");
         return;
     }
-	var input = document.getElementById("inputBox").value;
-	var inInt = parseInt(input);
-	if (ids.indexOf(inInt) > -1) {
-		document.getElementById("output").innerHTML = getCardInfo(inInt);
-	} else {
-		var index = nameCheck(input);
-		if (index > -1 && index in ids) {
-			document.getElementById("output").innerHTML = getCardInfo(ids[index]);
-		} else {
-			alert("Invalid card ID or name, please try again.");
-			return;
-		}
-	}
-	
+    var input = document.getElementById("inputBox").value;
+    var inInt = parseInt(input);
+    if (ids.indexOf(inInt) > -1) {
+        document.getElementById("output").innerHTML = getCardInfo(inInt);
+    } else {
+        var index = nameCheck(input);
+        if (index > -1 && index in ids) {
+            document.getElementById("output").innerHTML = getCardInfo(ids[index]);
+        } else {
+            alert("Invalid card ID or name, please try again.");
+            return;
+        }
+    }
+
 }
 
 function getCardInfo(code) {
-	if (!loaded) {
+    if (!loaded) {
         alert("Card database still loading, please wait a few seconds and try again.");
         return "Card database still loading, please wait a few seconds and try again.";
     }
     var index = ids.indexOf(code);
-	if (index === -1) {
-		alert("Invalid card ID, please try again.");
+    if (index === -1) {
+        alert("Invalid card ID, please try again.");
         return "Invalid card ID, please try again.";
-	}
+    }
     var out = "<h1>" + names[0].values[index][1] + "</h1>";
     out += "<b>ID</b>: " + code + "<br/><br/>";
     out += "<b>Region</b>: " + getOT(index) + "<br/>";
@@ -87,25 +87,25 @@ function getCardInfo(code) {
         if (def) {
             out += "<b>DEF</b>: " + contents[0].values[index][6];
         } else {
-			out += "<b>Link Markers</b>: " + getMarkers(index);
-		}
-		
+            out += "<b>Link Markers</b>: " + getMarkers(index);
+        }
+
         if (types.indexOf("Pendulum") > -1) {
             out += " <b>Pendulum Scale</b>: " + lv[1] + "/" + lv[2] + "<br/>";
         } else {
-			out += "<br/>";
-		}
-		var cardText = getCardText(index);
-		var textName = "Monster Effect";
-		if (types.indexOf("Normal") > -1) {
-			textName = "Flavour Text";
-		}
-		if (cardText.length === 2) {
-			out += " <b>Pendulum Effect</b>: " + cardText[0] + "<br/>";
-			out += " <b>" + textName + "</b>: " + cardText[1];
-		} else {
-			out += " <b>" + textName + "</b>: " + cardText[0];
-		}
+            out += "<br/>";
+        }
+        var cardText = getCardText(index);
+        var textName = "Monster Effect";
+        if (types.indexOf("Normal") > -1) {
+            textName = "Flavour Text";
+        }
+        if (cardText.length === 2) {
+            out += " <b>Pendulum Effect</b>: " + cardText[0] + "<br/>";
+            out += " <b>" + textName + "</b>: " + cardText[1];
+        } else {
+            out += " <b>" + textName + "</b>: " + cardText[0];
+        }
     } else if (types.indexOf("Spell") > -1 || types.indexOf("Trap") > -1) {
         var lv = getLevelScales(index)[0];
         if (lv > 0) { //is trap monster
@@ -216,8 +216,8 @@ function getRace(index) {
 }
 
 function getAtt(index) {
-	var att = contents[0].values[index][9];
-	switch (att) {
+    var att = contents[0].values[index][9];
+    switch (att) {
         case 0x1:
             return "EARTH";
         case 0x2:
@@ -238,33 +238,33 @@ function getAtt(index) {
 }
 
 function getMarkers(index) {
-	var marks = contents[0].values[index][6];
-	var out = "";
-	if (marks & 0x001) {
-		out += "↙️";
-	}
-	if (marks & 0x002) {
-		out += "⬇️";
-	}
-	if (marks & 0x004) {
-		out += "↘️";
-	}
-	if (marks & 0x008) {
-		out += "⬅️";
-	}
-	if (marks & 0x020) {
-		out += "➡️";
-	}
-	if (marks & 0x040) {
-		out += "↖️";
-	}
-	if (marks & 0x080) {
-		out += "⬆️";
-	}
-	if (marks & 0x100) {
-		out += "↗️";
-	}
-	return out;
+    var marks = contents[0].values[index][6];
+    var out = "";
+    if (marks & 0x001) {
+        out += "↙️";
+    }
+    if (marks & 0x002) {
+        out += "⬇️";
+    }
+    if (marks & 0x004) {
+        out += "↘️";
+    }
+    if (marks & 0x008) {
+        out += "⬅️";
+    }
+    if (marks & 0x020) {
+        out += "➡️";
+    }
+    if (marks & 0x040) {
+        out += "↖️";
+    }
+    if (marks & 0x080) {
+        out += "⬆️";
+    }
+    if (marks & 0x100) {
+        out += "↗️";
+    }
+    return out;
 }
 
 function getTypes(index) {
@@ -279,7 +279,7 @@ function getTypes(index) {
     if (type & 0x4) {
         types.push("Trap");
     }
-	//normal goes here in numeric order but I put it at the end so that it's at the end of any list of types
+    //normal goes here in numeric order but I put it at the end so that it's at the end of any list of types
     //effect goes here in numeric order but I put it at the end so that it's at the end of any list of types
     if (type & 0x40) {
         types.push("Fusion");
@@ -338,34 +338,36 @@ function getTypes(index) {
     if (type & 0x4000000) {
         types.push("Link");
     }
-	if (type & 0x10) {
+    if (type & 0x10) {
         types.push("Normal");
     }
-	if (type & 0x20) {
+    if (type & 0x20) {
         types.push("Effect");
     }
     return types;
 }
 
 function getCardText(index) {
-	var cardText = names[0].values[index][2];
-	var regx = cardText.match(/\][\s\S]*?\n([\S\s]*?)\n-/);
-	if (regx === null) {
-		return [cardText];
-	} else {
-		var outArr = [];
-		outArr.push(regx[1]);
-		outArr.push(cardText.match(/(?:r Effect|xt ) ?\]\n([\S\s]*)/)[1]);
-		return outArr;
-	}
+    var cardText = names[0].values[index][2];
+    var re = /\][\s\S]*?\n([\S\s]*?)\n-/g;
+    var regx = re.exec(cardText);
+    if (regx === null) {
+        return [cardText];
+    } else {
+        var outArr = [];
+        outArr.push(regx[1]);
+        var re2 = /(?:r Effect|xt ) ?\]\n([\S\s]*)/g;
+        outArr.push(re2.exec(cardText)[1]);
+        return outArr;
+    }
 }
 
 function nameCheck(line) {
-	var index = -1;
-	for (var i = 0; i < names[0].values.length; i++) {
-		if (names[0].values[i][1].toLowerCase() === line.toLowerCase()) {
-			index = i;
-		} 
-	}
-	return index;
+    var index = -1;
+    for (var i = 0; i < names[0].values.length; i++) {
+        if (names[0].values[i][1].toLowerCase() === line.toLowerCase()) {
+            index = i;
+        }
+    }
+    return index;
 }
