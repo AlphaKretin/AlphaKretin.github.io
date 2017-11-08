@@ -356,7 +356,7 @@ function getCardText(index) {
     } else {
         var outArr = [];
         outArr.push(regx[1]);
-        var re2 = /(?:r Effect|xt ) ?\]\n([\S\s]*)/g;
+        var re2 = /(?:r Effect|xt) ?\]\R*([\S\s]*)/g;
         outArr.push(re2.exec(cardText)[1]);
         return outArr;
     }
