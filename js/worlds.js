@@ -19,7 +19,7 @@ function convert() {
     let ot = "";
     let cat = "";
     let date = "2016.1";
-    for (let line of file.split("\r\n")) {
+    for (let line of file.split("\n")) {
         if (line.startsWith("#")) {
             continue;
         }
