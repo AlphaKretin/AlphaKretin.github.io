@@ -1,6 +1,3 @@
-let inBox = document.getElementById("inputArea");
-let outBox = document.getElementById("outputArea");
-
 function checkDate(newDate, oldDate) {
     let n = newDate.split(".");
     let o = oldDate.split(".");
@@ -15,6 +12,8 @@ function checkDate(newDate, oldDate) {
 }
 
 function convert() {
+	let inBox = document.getElementById("inputArea");
+	let outBox = document.getElementById("outputArea");
 	let file = inBox.value;
     let lflist = {};
     let ot = "";
