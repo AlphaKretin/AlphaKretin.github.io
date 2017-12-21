@@ -108,6 +108,9 @@ document.getElementById('files').addEventListener('change', function(event) {
 	let file = event.target.files[0];
 	if (file) {
 		let reader = new FileReader();
-		generateWorlds(reader.readAsText(file));
+		reader.onload = function(evt) {
+			generateWorlds(evt.target.result.replace(/\r\n/g, "\n"));
+		};
+		reader.readAsText(file)
 	}
 }, false);
