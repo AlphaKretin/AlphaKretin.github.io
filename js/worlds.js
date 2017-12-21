@@ -11,11 +11,9 @@ function checkDate(newDate, oldDate) {
     return newYear > oldYear;
 }
 
-function convert() {
-	let inBox = document.getElementById("inputArea");
+function generateWorlds(file) {
 	let outBox = document.getElementById("outputArea");
-	let file = inBox.value;
-    let lflist = {};
+	let lflist = {};
     let ot = "";
     let cat = "";
     let date = "2016.1";
@@ -99,3 +97,17 @@ function convert() {
     outBox.value = out;
     console.log("All done!");
 }
+
+function convert() {
+	let inBox = document.getElementById("inputArea");
+	let file = inBox.value;
+    generateWorlds(file);
+}
+
+document.getElementById('files').addEventListener('change', function(event) {
+	let file = event.target.files[0];
+	if (file && file.type.startsWith("text")) {
+		let reader = new FileReader();
+		generateWorlds(reader.readAsText(file));
+	}
+}, false);
