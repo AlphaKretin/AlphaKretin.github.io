@@ -106,7 +106,7 @@ function convert() {
 
 document.getElementById('files').addEventListener('change', function(event) {
 	let file = event.target.files[0];
-	if (file && file.type.startsWith("text")) {
+	if (file) {
 		let reader = new FileReader();
 		generateWorlds(reader.readAsText(file));
 	}
