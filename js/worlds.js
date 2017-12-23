@@ -14,10 +14,10 @@ function checkDate(newDate, oldDate) {
 function generateWorlds(file) {
 	let outBox = document.getElementById("outputArea");
 	let lflist = {};
-    let ot = "";
-    let cat = "";
-    let date = "2016.1";
-    for (let line of file.split("\n")) {
+	let ot = "";
+	let cat = "";
+	let date = "2016.1";
+	for (let line of file.split("\n")) {
         if (line.startsWith("#")) {
             continue;
         }
@@ -109,7 +109,9 @@ document.getElementById('files').addEventListener('change', function(event) {
 	if (file) {
 		let reader = new FileReader();
 		reader.onload = function(evt) {
-			generateWorlds(evt.target.result.replace(/\r\n/g, "\n"));
+			let txt = evt.target.result.replace(/\r\n/g, "\n");
+			document.getElementById("inputArea").value = txt;
+			generateWorlds(txt);
 		};
 		reader.readAsText(file)
 	}
