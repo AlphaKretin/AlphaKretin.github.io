@@ -8,7 +8,7 @@ function convert() {
 	for (var line of lines) {
 		var arr = line.split(":");
 		if (arr.length > 1) {
-			line = arr[1].trim() + ": " + arr[0].trim()
+			line = arr[1].trim().replace(/,/g, "") + ": " + arr[0].trim() + ",";
 		}
 		outLines.push(line);
 	}
@@ -18,3 +18,5 @@ function convert() {
 	}
 	outBox.value = output;
 }
+
+inBox.value = "text goes here";
