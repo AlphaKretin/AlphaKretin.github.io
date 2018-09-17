@@ -83,7 +83,7 @@ function generateWorlds(file) {
         "T": "TRAP CARDS START HERE"
     };
     Object.keys(lflist).forEach(function (key, index) {
-        if (outs[lflist[key].count][lflist[key].cat].length === 0 && lflist[key].count < 2) { //Semi-limits don't have proper subheadings, so despite them coming sorted I can't re-sort them after assimilating the lists. TOUGH TITTIES
+        if (outs[lflist[key].count][lflist[key].cat] && outs[lflist[key].count][lflist[key].cat].length === 0 && lflist[key].count < 2) { //Semi-limits don't have proper subheadings, so despite them coming sorted I can't re-sort them after assimilating the lists. TOUGH TITTIES
             outs[lflist[key].count][lflist[key].cat] = key.padStart(8, "0") + " " + lflist[key].count + " " + lflist[key].comment + "\t\t\t\t\t\t" + catNames[lflist[key].cat] + "\r\n";
         } else {
             outs[lflist[key].count][lflist[key].cat] += key.padStart(8, "0") + " " + lflist[key].count + " " + lflist[key].comment + "\r\n";
