@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Test Hand Puzzle from YGOPro Deck</title>
+        <link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+        <link rel="manifest" href="../manifest.json" />
+        <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="apple-mobile-web-app-title" content="AlphaKretin" />
+        <meta name="application-name" content="AlphaKretin" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="stylesheet" type="text/css" href="./css/deck2puzzle.css" />
+    </head>
+
+    <body>
+        <h1>Test Hand Puzzle Generator</h1>
+        <div id="drop-area">
+            <form class="my-form">
+                <p>Upload a deck with the file dialog or by dragging and dropping the file onto the dashed region.</p>
+                <input type="file" id="fileElem" accept="text/plain" onchange="handleFiles(this.files)" />
+                <label class="button" for="fileElem">Select your deck</label>
+            </form>
+        </div>
+        <script src="./js/deck2puzzle.js"></script>
+    </body>
+</html>
