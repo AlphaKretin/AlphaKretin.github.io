@@ -171,7 +171,9 @@ function handleFiles(files) {
 }
 
 var input = document.getElementById("fileElem");
-input.onchange = handleFiles;
+input.on("change", function () {
+  handleFiles(input.files);
+});
 
 },{"@babel/runtime/helpers/asyncToGenerator":2,"@babel/runtime/helpers/interopRequireDefault":3,"@babel/runtime/regenerator":6}],2:[function(require,module,exports){
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
