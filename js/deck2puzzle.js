@@ -171,7 +171,7 @@ function handleFiles(files) {
 }
 
 var input = document.getElementById("fileElem");
-input.on("change", function () {
+input.addEventListener("change", function () {
   handleFiles(input.files);
 });
 
