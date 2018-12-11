@@ -52,7 +52,7 @@ function handleFiles(files) {
       var _ref = (0, _asyncToGenerator2.default)(
       /*#__PURE__*/
       _regenerator.default.mark(function _callee(evt) {
-        var deckFile, puzzleStart, puzzleEnd, boards, lines, puzzle, mode, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, line, selection, element;
+        var deckFile, puzzleStart, puzzleEnd, boards, lines, puzzle, mode, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, line, selection, b, element;
 
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
@@ -60,7 +60,7 @@ function handleFiles(files) {
               case 0:
                 deckFile = evt.target.result;
                 _context.next = 3;
-                return fetch("/../data.scriptHead.lua");
+                return fetch("/../data/scriptHead.lua");
 
               case 3:
                 _context.next = 5;
@@ -69,7 +69,7 @@ function handleFiles(files) {
               case 5:
                 puzzleStart = _context.sent;
                 _context.next = 8;
-                return fetch("/../data.scriptTail.lua");
+                return fetch("/../data/scriptTail.lua");
 
               case 8:
                 _context.next = 10;
@@ -170,21 +170,23 @@ function handleFiles(files) {
 
               case 54:
                 selection = boardBox.options[boardBox.selectedIndex].value;
+                b = false;
 
                 if (selection in boards) {
                   puzzle += boards[selection];
+                  b = true;
                 }
 
                 puzzle += puzzleEnd;
                 element = document.createElement("a");
                 element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(puzzle));
-                element.setAttribute("download", "hands_" + file.name.split(".")[0] + ".lua");
+                element.setAttribute("download", "hands_" + file.name.split(".")[0] + "_vs_" + (b ? selection : "") + ".lua");
                 element.style.display = "none";
                 document.body.appendChild(element);
                 element.click();
                 document.body.removeChild(element);
 
-              case 64:
+              case 65:
               case "end":
                 return _context.stop();
             }
