@@ -180,7 +180,7 @@ function handleFiles(files) {
                 puzzle += puzzleEnd;
                 element = document.createElement("a");
                 element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(puzzle));
-                element.setAttribute("download", "hands_" + file.name.split(".")[0] + "_vs_" + (b ? selection : "") + ".lua");
+                element.setAttribute("download", "hands_" + file.name.split(".")[0] + (b ? "_vs_" + selection : "") + ".lua");
                 element.style.display = "none";
                 document.body.appendChild(element);
                 element.click();
