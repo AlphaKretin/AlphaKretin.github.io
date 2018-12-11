@@ -8,6 +8,7 @@ var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"))
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 var dropArea = document.getElementById("drop-area");
+var boardBox = document.getElementById("board");
 ["dragenter", "dragover", "dragleave", "drop"].forEach(function (eventName) {
   dropArea.addEventListener(eventName, preventDefaults, false);
 });
@@ -40,9 +41,6 @@ function handleDrop(e) {
   handleFiles(files);
 }
 
-var PUZZLE_START = 'Debug.SetAIName("AI")\nDebug.ReloadFieldBegin(DUEL_ATTACK_FIRST_TURN,4)\n\nDebug.SetPlayerInfo(0,8000,0,1)\nDebug.SetPlayerInfo(1,8000,0,0)\n';
-var PUZZLE_END = '--The Morinphen Button\nlocal c = Debug.AddCard(55784832,0,0,LOCATION_REMOVED,0,POS_FACEUP)\n--Draw new hand\nlocal e1 = Effect.CreateEffect(c)\ne1:SetType(EFFECT_TYPE_IGNITION)\ne1:SetRange(LOCATION_REMOVED)\ne1:SetOperation(function(e,tp)\n	local g=Duel.GetMatchingGroup(nil,tp,0xff,0,e:GetHandler())\n	Duel.SendtoDeck(g,nil,0,REASON_COST)\n	Duel.ShuffleDeck(tp)\n	Duel.BreakEffect()\n	Duel.Draw(tp,5,REASON_RULE)\nend)\nc:RegisterEffect(e1)\n--Unaffected (to stay banished)\nlocal e2=Effect.CreateEffect(c)\ne2:SetType(EFFECT_TYPE_SINGLE)\ne2:SetProperty(EFFECT_FLAG_SINGLE_RANGE+EFFECT_FLAG_CANNOT_DISABLE)\ne2:SetRange(LOCATION_REMOVED)\ne2:SetCode(EFFECT_IMMUNE_EFFECT)\ne2:SetValue(1)\nc:RegisterEffect(e2)\n--Skip opponent\'s turn\nlocal e3=Effect.CreateEffect(c)\ne3:SetType(EFFECT_TYPE_FIELD)\ne3:SetProperty(EFFECT_FLAG_PLAYER_TARGET)\ne3:SetCode(EFFECT_SKIP_TURN)\ne3:SetTargetRange(0,1)\nDuel.RegisterEffect(e3,tp)\n\nDebug.ReloadFieldEnd() --Reloads the field to save the changes you specified above.\nDebug.ShowHint("Activate the banished Morinphen to reset and draw a new test hand. You can pass turn safely to draw a 6th card or Normal Summon again.")';
-
 function handleFiles(files) {
   if (files.length > 0) {
     var file = files[0];
@@ -54,97 +52,130 @@ function handleFiles(files) {
       var _ref = (0, _asyncToGenerator2.default)(
       /*#__PURE__*/
       _regenerator.default.mark(function _callee(evt) {
-        var deckFile, lines, puzzle, mode, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, line, element;
+        var deckFile, puzzleStart, puzzleEnd, boards, lines, puzzle, mode, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, line, selection, element;
 
         return _regenerator.default.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 deckFile = evt.target.result;
+                _context.next = 3;
+                return fetch("/../data.scriptHead.lua");
+
+              case 3:
+                _context.next = 5;
+                return _context.sent.text();
+
+              case 5:
+                puzzleStart = _context.sent;
+                _context.next = 8;
+                return fetch("/../data.scriptTail.lua");
+
+              case 8:
+                _context.next = 10;
+                return _context.sent.text();
+
+              case 10:
+                puzzleEnd = _context.sent;
+                _context.next = 13;
+                return fetch("/../data/boards.json");
+
+              case 13:
+                _context.next = 15;
+                return _context.sent.json();
+
+              case 15:
+                boards = _context.sent;
                 lines = deckFile.split(/\r|\n|\r\n/);
-                puzzle = PUZZLE_START;
+                puzzle = puzzleStart;
                 _iteratorNormalCompletion = true;
                 _didIteratorError = false;
                 _iteratorError = undefined;
-                _context.prev = 6;
+                _context.prev = 21;
                 _iterator = lines[Symbol.iterator]();
 
-              case 8:
+              case 23:
                 if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
-                  _context.next = 25;
+                  _context.next = 40;
                   break;
                 }
 
                 line = _step.value;
 
                 if (!(line.startsWith("#") || line.startsWith("!"))) {
-                  _context.next = 14;
+                  _context.next = 29;
                   break;
                 }
 
                 mode = line.slice(1);
-                _context.next = 22;
+                _context.next = 37;
                 break;
 
-              case 14:
+              case 29:
                 if (!(line.length > 1)) {
-                  _context.next = 22;
+                  _context.next = 37;
                   break;
                 }
 
                 _context.t0 = mode;
-                _context.next = _context.t0 === "main" ? 18 : _context.t0 === "extra" ? 20 : 22;
+                _context.next = _context.t0 === "main" ? 33 : _context.t0 === "extra" ? 35 : 37;
                 break;
 
-              case 18:
+              case 33:
                 puzzle += "Debug.AddCard(" + line + ",0,0,LOCATION_DECK,0,POS_FACEDOWN)\n";
-                return _context.abrupt("break", 22);
+                return _context.abrupt("break", 37);
 
-              case 20:
+              case 35:
                 puzzle += "Debug.AddCard(" + line + ",0,0,LOCATION_EXTRA,0,POS_FACEDOWN)\n";
-                return _context.abrupt("break", 22);
+                return _context.abrupt("break", 37);
 
-              case 22:
+              case 37:
                 _iteratorNormalCompletion = true;
-                _context.next = 8;
+                _context.next = 23;
                 break;
 
-              case 25:
-                _context.next = 31;
+              case 40:
+                _context.next = 46;
                 break;
 
-              case 27:
-                _context.prev = 27;
-                _context.t1 = _context["catch"](6);
+              case 42:
+                _context.prev = 42;
+                _context.t1 = _context["catch"](21);
                 _didIteratorError = true;
                 _iteratorError = _context.t1;
 
-              case 31:
-                _context.prev = 31;
-                _context.prev = 32;
+              case 46:
+                _context.prev = 46;
+                _context.prev = 47;
 
                 if (!_iteratorNormalCompletion && _iterator.return != null) {
                   _iterator.return();
                 }
 
-              case 34:
-                _context.prev = 34;
+              case 49:
+                _context.prev = 49;
 
                 if (!_didIteratorError) {
-                  _context.next = 37;
+                  _context.next = 52;
                   break;
                 }
 
                 throw _iteratorError;
 
-              case 37:
-                return _context.finish(34);
+              case 52:
+                return _context.finish(49);
 
-              case 38:
-                return _context.finish(31);
+              case 53:
+                return _context.finish(46);
 
-              case 39:
-                puzzle += PUZZLE_END;
+              case 54:
+                selection = boardBox.options[boardBox.selectedIndex].value;
+
+                if (selection in boards) {
+                  puzzle += boards[selection];
+                }
+
+                puzzle += puzzleEnd;
                 element = document.createElement("a");
                 element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(puzzle));
                 element.setAttribute("download", "hands_" + file.name.split(".")[0] + ".lua");
@@ -153,12 +184,12 @@ function handleFiles(files) {
                 element.click();
                 document.body.removeChild(element);
 
-              case 47:
+              case 64:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[6, 27, 31, 39], [32,, 34, 38]]);
+        }, _callee, this, [[21, 42, 46, 54], [47,, 49, 53]]);
       }));
 
       return function (_x) {
