@@ -24,13 +24,29 @@
         </select>
         <div id="drop-area">
             <form class="my-form">
-                <p>Upload a deck with the file dialog or by dragging and dropping the file onto the dashed region.</p>
+                <p>Upload a deck with the file dialog or by dragging and dropping the file onto the dashed region. (YGOPro Percy folder, /deck)</p>
                 <input type="file" id="fileElem" accept="text/plain,.ydk" />
                 <label class="button" for="fileElem">Select your deck</label>
             </form>
         </div>
         <p>
-            Converts a YGOPro .ydk file into a puzzle file that generates test hands and lets you play them out. The output will be a .lua script that should be saved to your YGOPro folder's "single" folder, then it can be found under Puzzle Mode in-game. Select a board to simulate playing through disruption, or going second. You control the opponent's actions, so you can simulate them playing correctly.
+            Before uploading your deck, you can select a board you'd like to face using the drop-down above. After you have uploaded your .ydk (Deck file) using the button above, a .lua file will automatically download. Go to your YGOPRO Percy's single folder and save it there. Then, open up Percy and go to Puzzle Mode. Look for the file "hands_" your deck name, and click the Morinphen card to draw a starting hand (you can do this as many times as you want, even after playing). You control the AI, so you can simulate "correct" gameplay from your opponent, and choose which disruptions you face. 
+        </p>
+        <p>
+            Please note the following: 
+            <ul>
+                <li>If it crashes straight after loading, just re-open the program and give it a few seconds to load.</li>
+                <li>You can't automatically simulate going second (however you can attack on the first turn), so after drawing a 5 card hand from Morinphen, you can just go to your End Phase, then it'll skip straight back to your turn and you draw a card for turn. You can also do this to regain your Normal Summon.</li>
+                <li>Unfortunately, you cannot reset the AI's hand and board state like your own. Simply leave (surrender) and re-enter the puzzle.</li>
+            </ul>
+        </p>
+	    <p> 
+            Current opponent's boards: 
+            <ul> 
+                <li><b>Thunder Dragon</b>: Opponent controls a face-up Thunder Dragon Titan and 2 Thunder Dragon Colossus, with 5 cards in grave (Thunder Dragonhawk, Dragonroar and Dragondark and 2 fodder cards), with a Thunder Dragonmatrix in hand.</li>
+                <li><b>Hand traps</b>: The opponent has one each of the following cards in their hand: Ghost Belle & Haunted Mansion, Ash Blossom & Joyous Spring, Ghost Ogre & Snow Rabbit, Effect Veiler, Droll & Lock Bird, Infinite Impermanence
+                </li>
+            </ul>
         </p>
         <script src="./js/polyfill.js"></script>
         <script src="./js/deck2puzzle.js"></script>
