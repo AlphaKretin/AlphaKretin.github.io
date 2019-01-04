@@ -24,13 +24,15 @@
         </select>
         <div id="drop-area">
             <form class="my-form">
-                <p>Upload a deck with the file dialog or by dragging and dropping the file onto the dashed region.</p>
+                <p>Upload a deck with the file dialog or by dragging and dropping the file onto the dashed region. (YGOPercy folder/deck</p>
                 <input type="file" id="fileElem" accept="text/plain,.ydk" />
                 <label class="button" for="fileElem">Select your deck</label>
             </form>
         </div>
         <p>
-            Converts a YGOPro .ydk file into a puzzle file that generates test hands and lets you play them out. The output will be a .lua script that should be saved to your YGOPro folder's "single" folder, then it can be found under Puzzle Mode in-game. Select a board to simulate playing through disruption, or going second. You control the opponent's actions, so you can simulate them playing correctly.
+           After you have upload your .ydk (Deck file) using the button above select the board you'd like to face it'll download a .lua file. Simply go back to your YGOPro Percy folder and go to Single and paste it in there then open up Percy and go to puzzle mode and look for the file (Hands_) than your deck name and click the Moprhein card to draw a starting hand. you can also control the AI to simulate "Correct" playing <br /> Please note the following: <br /> • If it crashes straight after loading just re open the program and give it a few seconds	<br /> • You can't by default simulate going second (However you can attack on the first turn) so after drawing a 5 card hand from "Morinphen" go to your end phase than it'll restart your turn and you draw a card for turn (Also applies if you want to gain your normal summon again <br /> • You cannot "reset" the cards in the AI's hand. just simply hit leave and re-open the puzzle.
+		   <p> Current Opp boards: <br/> "Thunder Dragon" <br/> Contains a face-up Thunder Dragon Titan and 2 Thunder Dragon colossus with 5 cards in grave (Hawk, Roar and dark and 2 fodder cards) and a matrix in hand. <br/> "Hand traps" <br/> 1 copy of the following cards in the opponents hand <br/> "Ghost belle & Haunted mansion", "Ash Blossom & Joyus Springs", "Ghost Ogre & Snow Rabbit", "Effect Veiler,", "Droll & lock bird", "Infinite Impermanence"
+		   
         </p>
         <script src="./js/polyfill.js"></script>
         <script src="./js/deck2puzzle.js"></script>
