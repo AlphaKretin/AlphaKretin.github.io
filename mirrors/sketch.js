@@ -7,13 +7,12 @@
 // collides with a mirror.
 // Use the slider to change the speed.
 
-//TODO: Undo most recent change
-
 const cells = [];
 const CELL_SIZE = 50;
 let ball
 let speedSlider;
 let highScore = 0;
+let lastCell
 
 function setup() {
   createCanvas(400, 400);
@@ -63,6 +62,16 @@ function mouseClicked() {
   });
   if (cell) {
     cell.click();
+    lastCell = cell;
+  }
+}
+
+function undoLast() {
+  if (lastCell) {
+    lastCell.type--;
+    if (lastCell.type < 0) {
+      lastCell.type = types.length - 1;
+    }
   }
 }
 
@@ -78,7 +87,7 @@ function loadLayout(str) {
   nums = [];
   for (let i = 0; i < str.length; i++) {
     const num = parseInt(str.charAt(i));
-    if (num < 0 || num > 2) {
+    if (num < 0 || num > 2 || isNaN(num)) {
       alert("Error loading! Input should be a string of 0s, 1s and 2s!")
       return;
     }
@@ -100,4 +109,8 @@ saveBut.addEventListener("click", () => {
 const loadBut = document.getElementById("load");
 loadBut.addEventListener("click", () => {
   loadLayout(saveBox.value);
-})
+});
+const undoBut = document.getElementById("undo");
+undoBut.addEventListener("click", () => {
+  undoLast();
+});
