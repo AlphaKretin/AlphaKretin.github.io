@@ -89,23 +89,20 @@ function loadLayout(str) {
     let num = parseInt(str.charAt(i));
     if (num < 0 || num > 2 || isNaN(num)) {
       let tempNum = str.charCodeAt(i) % 3;
-      if (isNaN(tempNum)) {
-        tempNum = 0;
-      }
-      num = tempNum;
     }
     nums.push(num);
   }
   if (nums.length < cells.length) {
-    if (nums.length === 0) {
-      nums.push(0);
-    }
     for (let i = 0; i < (cells.length - nums.length); i++) {
       nums.push(nums[i]);
     }
   }
   for (let i = 0; i < cells.length; i++) {
-    cells[i].type = nums[i];
+    if (nums[i] === 1 || nums[i] === 2) {
+      cells[i].type = nums[i]; 
+    } else {
+      cells[i].type = 0;
+    }
   }
 }
 const saveBox = document.getElementById("saveload");
