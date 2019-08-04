@@ -88,7 +88,7 @@ function loadLayout(str) {
   for (let i = 0; i < str.length; i++) {
     let num = parseInt(str.charAt(i));
     if (num < 0 || num > 2 || isNaN(num)) {
-      let tempNum = str.charCodeAt(i) % 3;
+      num = str.charCodeAt(i) % 3;
     }
     nums.push(num);
   }
