@@ -7,7 +7,7 @@
 // collides with a mirror.
 // Use the slider to change the speed.
 
-//TODO: Save/load layout, undo most recent change
+//TODO: Undo most recent change
 
 const cells = [];
 const CELL_SIZE = 50;
