@@ -24,19 +24,18 @@ class Cell {
     strokeWeight(2);
     stroke(100,100);
     square(this.x,this.y,this.size);
-    switch(this.type) {
-      case 1: 
-        strokeWeight(4);
-        stroke(0);
-        line(this.x+2,this.y+this.size-2,this.x+this.size-2,this.y+2);
-        break;
-      case 2: 
-        strokeWeight(4);
-        stroke(0);
-        line(this.x+2,this.y+2,this.x+this.size-2,this.y+this.size-2);
-        break;
+    if (this.type > 0) {
+      strokeWeight(4);
+      stroke(0);
+      push();
+      translate(this.x,this.y);
+      if (this.type == 2) {
+        translate(this.size,0);
+        rotate(HALF_PI);
+      }
+      line(2,this.size-2,this.size-2,2);
+      pop();
     }
-    
   }
   
   isColliding(ball) {
