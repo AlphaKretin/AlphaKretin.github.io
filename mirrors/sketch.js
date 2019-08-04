@@ -66,7 +66,7 @@ function mouseClicked() {
   }
 }
 
-function save() {
+function saveLayout() {
   let out = "";
   for (const cell of cells) {
     out += cell.type;
@@ -74,29 +74,30 @@ function save() {
   return out;
 }
 
-function load(str) {
+function loadLayout(str) {
   nums = [];
   for (let i = 0; i < str.length; i++) {
     const num = parseInt(str.charAt(i));
-    if (i < 0 || i > 2) {
+    if (num < 0 || num > 2) {
       alert("Error loading! Input should be a string of 0s, 1s and 2s!")
       return;
     }
+    nums.push(num);
   }
   if (nums.length !== cells.length) {
-    alert("Error loading! Input should be " + cells.length + "digits long!")
+    alert("Error loading! Input should be " + cells.length + " digits long!")
     return;
   }
-  for (const num of nums) {
-    cells.type = num;
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].type = nums[i];
   }
 }
 const saveBox = document.getElementById("saveload");
 const saveBut = document.getElementById("save");
 saveBut.addEventListener("click", () => {
-  saveBox.value = save();
+  saveBox.value = saveLayout();
 });
 const loadBut = document.getElementById("load");
 loadBut.addEventListener("click", () => {
-  load(saveBox.value);
+  loadLayout(saveBox.value);
 })
