@@ -7,6 +7,7 @@ class Ball {
     this.cellSize = cellSize;
     this.dir = 3;
     this.live = true;
+    this.score = 0;
   }
   
   draw() {
@@ -34,6 +35,8 @@ class Ball {
     if (this.x * this.cellSize > width || this.y * this.cellSize > height ||
        this.x < 0 || this.y < 0) {
       this.live = false;
+    } else {
+      this.score++;
     }
   }
   

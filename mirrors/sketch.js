@@ -11,6 +11,7 @@ const cells = [];
 const CELL_SIZE = 50;
 let ball
 let speedSlider;
+let highScore = 0;
 
 function setup() {
   createCanvas(400, 400);
@@ -42,6 +43,12 @@ function draw() {
     }
   }
   ball.draw();
+  noStroke();
+  if (ball.score > highScore) {
+    highScore = ball.score;
+  }
+  text("Score: " + ball.score,0,10);
+  text("High Score: " + highScore,0,20);
 }
 
 function mouseClicked() {
