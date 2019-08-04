@@ -7,6 +7,8 @@
 // collides with a mirror.
 // Use the slider to change the speed.
 
+//TODO: Save/load layout, undo most recent change
+
 const cells = [];
 const CELL_SIZE = 50;
 let ball
@@ -61,5 +63,31 @@ function mouseClicked() {
   });
   if (cell) {
     cell.click();
+  }
+}
+
+function save() {
+  let out = "";
+  for (const cell of cells) {
+    out += cell.type;
+  }
+  return out;
+}
+
+function load(str) {
+  nums = [];
+  for (let i = 0; i < str.length; i++) {
+    const num = parseInt(str.charAt(i));
+    if (i < 0 || i > 2) {
+      alert("Error loading! Input should be a string of 0s, 1s and 2s!")
+      return;
+    }
+  }
+  if (nums.length !== cells.length) {
+    alert("Error loading! Input should be " + cells.length + "digits long!")
+    return;
+  }
+  for (const num of nums) {
+    cells.type = num;
   }
 }
