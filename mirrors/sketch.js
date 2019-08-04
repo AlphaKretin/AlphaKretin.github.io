@@ -97,6 +97,9 @@ function loadLayout(str) {
     nums.push(num);
   }
   if (nums.length < cells.length) {
+    if (nums.length === 0) {
+      nums.push(0);
+    }
     for (let i = 0; i < (cells.length - nums.length); i++) {
       nums.push(nums[i]);
     }
