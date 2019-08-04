@@ -91,3 +91,12 @@ function load(str) {
     cells.type = num;
   }
 }
+const saveBox = document.getElementById("saveload");
+const saveBut = document.getElementById("save");
+saveBut.addEventListener("click", () => {
+  saveBox.value = save();
+});
+const loadBut = document.getElementById("load");
+loadBut.addEventListener("click", () => {
+  load(saveBox.value);
+})
