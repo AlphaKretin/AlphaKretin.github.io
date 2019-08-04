@@ -86,16 +86,16 @@ function saveLayout() {
 function loadLayout(str) {
   nums = [];
   for (let i = 0; i < str.length; i++) {
-    const num = parseInt(str.charAt(i));
+    let num = parseInt(str.charAt(i));
     if (num < 0 || num > 2 || isNaN(num)) {
-      alert("Error loading! Input should be a string of 0s, 1s and 2s!")
-      return;
+      num = str.charCodeAt(i) % 3;
     }
     nums.push(num);
   }
-  if (nums.length !== cells.length) {
-    alert("Error loading! Input should be " + cells.length + " digits long!")
-    return;
+  if (nums.length < cells.length) {
+    for (let i = 0; i < (cells.length - nums.length); i++) {
+      nums.push(nums[i]);
+    }
   }
   for (let i = 0; i < cells.length; i++) {
     cells[i].type = nums[i];

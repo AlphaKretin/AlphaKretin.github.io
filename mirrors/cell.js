@@ -43,7 +43,5 @@ class Cell {
     const ballX = ball.x * ball.cellSize;
     const ballY = ball.y * ball.cellSize;
     return ballX === this.x && ballY === this.y;
-  }
-  
-  
+  } 
 }
